@@ -16,4 +16,22 @@
         android:src="@drawable/logosmall"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:id="@+id/recipeButton"
+        android:src="@drawable/freebeer"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/timerButton"
+        android:layout_below="@+id/recipeButton"
+        android:src="@drawable/stopwatch"
+        android:layout_alignStart="@+id/recipeButton"
+        android:layout_marginTop="56dp"
+        android:background="#00ffffff" />
 </RelativeLayout>
