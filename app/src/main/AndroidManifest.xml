@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayRecipesMain" />
-        <activity android:name=".TimerActivity"></activity>
+        <activity android:name=".TimerActivity" />
+        <activity android:name=".RecipesStylesActivity" />
+        <activity android:name=".NameRecipeActivity"></activity>
     </application>
 
 </manifest>
