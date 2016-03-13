@@ -56,7 +56,8 @@
         android:src="@drawable/lager"
         android:background="#00ffffff"
         android:layout_alignBottom="@+id/imageButton5"
-        android:layout_alignStart="@+id/imageButton4" />
+        android:layout_alignStart="@+id/imageButton4"
+        android:onClick="goLagerStyleRecipes"/>
 
     <ImageButton
         android:layout_width="wrap_content"

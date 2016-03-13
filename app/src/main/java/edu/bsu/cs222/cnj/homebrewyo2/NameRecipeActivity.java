@@ -26,4 +26,8 @@ public class NameRecipeActivity extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, Punk.class);
         startActivity(recipeStyleIntent);
     }
+    public void goHoprockerRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, Hoprocker.class);
+        startActivity(recipeStyleIntent);
+    }
 }

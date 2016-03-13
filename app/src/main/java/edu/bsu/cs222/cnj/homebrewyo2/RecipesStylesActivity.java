@@ -27,4 +27,8 @@ public class RecipesStylesActivity extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, IPAStyle.class);
         startActivity(recipeStyleIntent);
     }
+    public void goLagerStyleRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, Lagers.class);
+        startActivity(recipeStyleIntent);
+    }
 }
