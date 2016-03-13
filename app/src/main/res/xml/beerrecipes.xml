@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<recipe1>
+	<name>Punk IPA</name>
+	<description>Our flagship beer that kick started the craft beer revolution. 
+					This is James and Martin's original take on an American IPA, subverted 
+					with punchy New Zealand hops. Layered with new world hops to create 
+					an all-out riot of grapefruit, pineapple and lychee before a spiky, 
+					mouth-puckering bitter finish.</description>
+	<style>IPA</style>
+	<temp>150F</temp>
+	<time>75mins</time>
+	<fermtemp>66F</fermtemp>
+	<abv>6%</abv>
+	<targetfg>1010</targetfg>
+	<targetog>1056</targetog>
+	<ibu>60</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Extra Pale</malt>
+				<maltweight>11.7lb</maltweight>
+			</malt1>
+		</malts>	
+		<hops>
+			<hops1>
+				<hopsname>Ahtanum</hopsname>
+				<hopsamount>17.5g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Chinook</hopsname>
+				<hopsamount>15g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Crystal</hopsname>
+				<hopsamount>17.5g</hopsamount>
+				<hopstime>Middle</hopstime>
+			</hops3>
+			<hops4>
+				<hopsname>Chinook</hopsname>
+				<hopsamount>17.5</hopsamount>
+				<hopstime>Middle</hopstime>
+			</hops4>
+			<hops5>
+				<hopsname>Ahtanum</hopsname>
+				<hopsamount>17.5g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops5>
+			<hops6>
+				<hopsname>Chinook</hopsname>
+				<hopsamount>27.5g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops6>
+			<hops7>
+				<hopsname>Crystal</hopsname>
+				<hopsamount>17.5g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops7>
+			<hops8>
+				<hopsname>Motueka</hopsname>
+				<hopsamount>17.5g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops8>
+		</hops>
+		<yeast>Wyeast 1056 - American Ale</yeast>
+	</ingredients>
+</recipe1>
+
+<recipe2>
+	<name>The Physics</name>
+	<description>A hoppy Amber Ale that won World's Best Amber Beer in the World Beer 
+					Awards 2007. Malt and hops are in perfect harmony in this incredibly 
+					balanced beer. Biscuity, bitter and packing a surprisingly hoppy punch, 
+					this beer ultimately morphed into 5AM Saint.</description>
+	<style>Amber Ale</style>
+	<temp>149F</temp>
+	<time>75mins</time>
+	<fermtemp>66F</fermtemp>
+	<abv>5%</abv>
+	<targetfg>1010</targetfg>
+	<targetog>1048.5</targetog>
+	<ibu>47</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Extra Pale</malt>
+				<maltweight>8.95lb</maltweight>
+			</malt1>
+			<malt2>
+				<malt>Caramalt</malt>
+				<maltweight>0.69lb</maltweight>
+			</malt2>
+			<malt3>
+				<malt>Crystal 120</malt>
+				<maltweight>0.5lb</maltweight>
+			</malt3>
+			<malt4>
+				<malt>Dark Crystal 350</malt>
+				<maltweight>0.2lb</maltweight>
+			</malt4>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>Amarillo</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Amarillo</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>Middle</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Bramling Cross</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops3>
+			<hops4>
+				<hopsname>Amarillo</hopsname>
+				<hopsamount>50g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops4>
+		</hops>
+		<yeast>Wyeast 1056 - American Ale</yeast>
+	</ingredients>
+</recipe2>
+
+<recipe3>
+	<name>Riptide</name>
+	<description>The original BrewDog, Bracken decided to make a beer that
+					best reflected himself; this is the beer equivalent of the big, 
+					cute chocolate monster. Soft, smooth, dark, chocolatey and a force to 
+					be reckoned with. This gentle giant will never bite, but you'll still 
+					want to be on your best behaviour!</description>
+	<style>Stout</style>
+	<temp>149F</temp>
+	<time>75mins</time>
+	<fermtemp>68F</fermtemp>
+	<abv>8%</abv>
+	<targetfg>1014</targetfg>
+	<targetog>1075</targetog>
+	<ibu>45</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Extra Pale - Maris Otter</malt>
+				<maltweight>11.8lb</maltweight>
+			</malt1>
+			<malt2>
+				<malt>Dark Crystal 350-400</malt>
+				<maltweight>1.6lb</maltweight>
+			</malt2>
+			<malt3>
+				<malt>Carafa Special Malt Type 3</malt>
+				<maltweight>0.4lb</maltweight>
+			</malt3>
+			<malt4>
+				<malt>Caramalt</malt>
+				<maltweight>1.2lb</maltweight>
+			</malt4>
+			<malt5>
+				<malt>Chocolate</malt>
+				<maltweight>0.6lb</maltweight>
+			</malt5>
+			<malt6>
+				<malt>Wheat</malt>
+				<maltweight>0.8lb</maltweight>
+			</malt6>
+			<malt7>
+				<malt>Flaked Oats</malt>
+				<maltweight>1.2lb</maltweight>
+			</malt7>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>Columbus</hopsname>
+				<hopsamount>14.3g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Galena</hopsname>
+				<hopsamount>14.3g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Galena</hopsname>
+				<hopsamount>21.4g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops3>
+			<hops4>
+				<hopsname>Cascade</hopsname>
+				<hopsamount>21.4g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops4>
+			<hops5>
+				<hopsname>Columbus</hopsname>
+				<hopsamount>21.4g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops5>
+		</hops>
+		<yeast>Wyeast 1272 - American Ale II</yeast>
+	</ingredients>
+</recipe3>
+
+<recipe4>
+	<name>Hop Rocker</name>
+	<description>The first of our foray into lager beer, Hop Rocker is a high impact,
+					hoppy behemoth made with 100% malt. Since 2007 we have been obsessive 
+					about quality, using only the best ingredients to ensure the flavour 
+					and craftsmanship of the beer in your glass. Hop Rocker is testament 
+					to that. The malt base gives this beer a sweet, balanced complexity 
+					while the combination of New Zealand and German hops merges new world 
+					tropical juiciness with old world peppery spice.</description>
+	<style>Lager</style>
+	<temp>149F</temp>
+	<time>75mins</time>
+	<fermtemp>50F</fermtemp>
+	<abv>5.5%</abv>
+	<targetfg>1010</targetfg>
+	<targetog>1052</targetog>
+	<ibu>40</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Extra Pale Maris Otter</malt>
+				<maltweight>8.3lb</maltweight>
+			</malt1>
+			<malt2>
+				<malt>Caramalt</malt>
+				<maltweight>0.7lb</maltweight>
+			</malt2>
+			<malt3>
+				<malt>Munich</malt>
+				<maltweight>0.7lb</maltweight>
+			</malt3>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>Cascade</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Saaz</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Cascade</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops3>
+			<hops4>
+				<hopsname>Motueka</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops4>
+			<hops5>
+				<hopsname>Chinook</hopsname>
+				<hopsamount>25</hopsamount>
+				<hopstime>End</hopstime>
+			</hops5>
+		</hops>
+		<yeast>Saflager S189</yeast>
+	</ingredients>
+</recipe4>
+
+<recipe5>
+	<name>Peroxide Punk</name>
+	<description>A trashy blonde concession for those who felt that our original 6% 
+					Punk IPA recipe was too hard hitting. This was also the first time we 
+					experimented with dry hopping our beers, giving Peroxide Punk a depth 
+					of flavour that belies its modest ABV. Zesty, aromatic and 
+					thirst quenching.</description>
+	<style>Pale Ale</style>
+	<temp>149F</temp>
+	<time>75mins</time>
+	<fermtemp>66F</fermtemp>
+	<abv>4%</abv>
+	<targetfg>1009</targetfg>
+	<targetog>1039</targetog>
+	<ibu>40</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Maris Otter</malt>
+				<maltweight>8.5lb</maltweight>
+			</malt1>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>Amarillo</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Simcoe</hopsname>
+				<hopsamount>20g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Amarillo</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops3>
+			<hops4>
+				<hopsname>Crystal</hopsname>
+				<hopsamount>20</hopsamount>
+				<hopstime>End</hopstime>
+			</hops4>
+			<hops5>
+				<hopsname>Liberty</hopsname>
+				<hopsamount>20g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops5>
+			<hops6>
+				<hopsname>Simcoe</hopsname>
+				<hopsamount>50g</hopsamount>
+				<hopstime>Dry Hop</hopstime>
+			</hops6>
+			<hops7>
+				<hopsname>Amarillo</hopsname>
+				<hopsamount>50g</hopsamount>
+				<hopstime>Dry Hop</hopstime>
+			</hops7>
+		</hops>
+		<yeast>Wyeast 1056 - American Ale</yeast>
+	</ingredients>
+</recipe5>
+
+<recipe6>
+	<name>Dogma</name>
+	<description>A strong ale, brewed with guarana, Californian poppy, kola nut and 
+					Scottish heather honey. A conspiracy of trans-continental ingredients 
+					infused with some devastatingly BrewDog imaginative thinking.</description>
+	<style>Ale</style>
+	<temp>143F</temp>
+	<time>75mins</time>
+	<fermtemp>70F</fermtemp>
+	<abv>7.8%</abv>
+	<targetfg>1012</targetfg>
+	<targetog>1071.3</targetog>
+	<ibu>60</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Extra Pale</malt>
+				<maltweight>9.9lb</maltweight>
+			</malt1>
+			<malt2>
+				<malt>Munich</malt>
+				<maltweight>1.10lb</maltweight>
+			</malt2>
+			<malt3>
+				<malt>Amber</malt>
+				<maltweight>0.11lb</maltweight>
+			</malt3>
+			<malt4>
+				<malt>Dark Crystal</malt>
+				<maltweight>0.18lb</maltweight>
+			</malt4>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>Amarillo</hopsname>
+				<hopsamount>30g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Amarillo</hopsname>
+				<hopsamount>10g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Bobek</hopsname>
+				<hopsamount>10g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops3>
+			<hops4>
+				<hopsname>Guarana Powder</hopsname>
+				<hopsamount>6g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops4>
+			<hops5>
+				<hopsname>Kola Nut Powder</hopsname>
+				<hopsamount>6g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops5>
+			<hops6>
+				<hopsname>Poppy Seed</hopsname>
+				<hopsamount>6g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops6>
+			<hops7>
+				<hopsname>Heather Honey</hopsname>
+				<hopsamount>100g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops7>
+		</hops>
+		<yeast>Safale US-05</yeast>
+	</ingredients>
+</recipe6>
+
+<recipe7>
+	<name>Bad Pixie</name>
+	<description>2008 Prototype beer, a 4.7% wheat ale with crushed juniper berries 
+					and citrus peel.</description>
+	<style>Wheat Beer</style>
+	<temp>153F</temp>
+	<time>75mins</time>
+	<fermtemp>66F</fermtemp>
+	<abv>4.7%</abv>
+	<targetfg>1010</targetfg>
+	<targetog>1047</targetog>
+	<ibu>45</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Wheat</malt>
+				<maltweight>5.5lb</maltweight>
+			</malt1>
+			<malt2>
+				<malt>Extra Pale</malt>
+				<maltweight>4.54lb</maltweight>
+			</malt2>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>First Gold</hopsname>
+				<hopsamount>18.75g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>First Gold</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Sorachi Ace</hopsname>
+				<hopsamount>16.25</hopsamount>
+				<hopstime>End</hopstime>
+			</hops3>
+			<hops4>
+				<hopsname>Crushed Juniper Berries</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops4>
+			<hops5>
+				<hopsname>Lemon Peel</hopsname>
+				<hopsamount>18.8g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops5>
+		</hops>
+		<yeast>Wyeast 1056 - American Ale</yeast>
+	</ingredients>
+</recipe7>
+
+<recipe8>
+	<name>Coffee Imperial Stout</name>
+	<description> Deep, dark, roasted flavours make this a perfect Sunday brunch beer.</description>
+	<style>Stout</style>
+	<temp>147F</temp>
+	<time>90mins</time>
+	<fermtemp>66F</fermtemp>
+	<abv>9%</abv>
+	<targetfg>1019</targetfg>
+	<targetog>1080</targetog>
+	<ibu>65</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Extra Pale</malt>
+				<maltweight>16.52lb</maltweight>
+			</malt1>
+			<malt2>
+				<malt>Dark Crystal</malt>
+				<maltweight>1.38lb</maltweight>
+			</malt2>
+			<malt3>
+				<malt>Chocolate</malt>
+				<maltweight>0.69lb</maltweight>
+			</malt3>
+			<malt4>
+				<malt>Roast Barley</malt>
+				<maltweight>0.69lb</maltweight>
+			</malt4>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>Chinook</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Galena</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Galena</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops3>
+			<hops4>
+				<hopsname>First Gold</hopsname>
+				<hopsamount>25g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops4>
+			<hops5>
+				<hopsname>Coffee</hopsname>
+				<hopsamount>9.4g</hopsamount>
+				<hopstime>End</hopstime>
+			</hops5>
+			<hops6>
+				<hopsname>Coffee</hopsname>
+				<hopsamount>9.4g</hopsamount>
+				<hopstime>Dry Hop</hopstime>
+			</hops6>
+		</hops>
+		<yeast>Wyeast 1056 - American Ale</yeast>
+	</ingredients>
+</recipe8>
+
+<recipe9>
+	<name>Rabiator</name>
+	<description>Imperial Wheat beer / Weizenbock brewed by a homesick German
+					in leather trousers. Think banana bread, bubble gum and 
+					David Hasselhoff.</description>
+	<style>Wheat</style>
+	<temp>147F</temp>
+	<time>60mins</time>
+	<fermtemp>70F</fermtemp>
+	<abv>10.27%</abv>
+	<targetfg>1014</targetfg>
+	<targetog>1092</targetog>
+	<ibu>26</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Extra Pale</malt>
+				<maltweight>12.39lb</maltweight>
+			</malt1>
+			<malt2>
+				<malt>Wheat</malt>
+				<maltweight>15.14lb</maltweight>
+			</malt2>
+			<malt3>
+				<malt>Crystal</malt>
+				<maltweight>1.37lb</maltweight>
+			</malt3>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>Columbus</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Hersbrucker</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>Middle</hopstime>
+			</hops2>
+		</hops>
+		<yeast>Wyeast 3333 German Wheat</yeast>
+	</ingredients>
+</recipe9>
+
+<recipe10>
+	<name>Brixton Porter</name>
+	<description>Brixton Porter delivers bold chocolate and coffee flavours with light 
+					smokiness and hints of autumn fruit all but built on a low ABV, 
+					lighter bodied backbone. Complex and intriguing, with spicy 
+					bitterness, but very sessionable.</description>
+	<style>Porter</style>
+	<temp>149F</temp>
+	<time>75mins</time>
+	<fermtemp>66F</fermtemp>
+	<abv>5%</abv>
+	<targetfg>1014</targetfg>
+	<targetog>1053</targetog>
+	<ibu>50</ibu>
+	<ingredients>
+		<malts>
+			<malt1>
+				<malt>Extra Pale</malt>
+				<maltweight>8.40lb</maltweight>
+			</malt1>
+			<malt2>
+				<malt>Dark Crystal</malt>
+				<maltweight>0.41lb</maltweight>
+			</malt2>
+			<malt3>
+				<malt>Roasted Barley</malt>
+				<maltweight>0.69lb</maltweight>
+			</malt3>
+			<malt4>
+				<malt>Black</malt>
+				<maltweight>0.28lb</maltweight>
+			</malt4>
+			<malt5>
+				<malt>Amber</malt>
+				<maltweight>0.69lb</maltweight>
+			</malt5>
+			<malt6>
+				<malt>Flaked Oats</malt>
+				<maltweight>0.55lb</maltweight>
+			</malt6>
+		</malts>
+		<hops>
+			<hops1>
+				<hopsname>Bravo</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>Start</hopstime>
+			</hops1>
+			<hops2>
+				<hopsname>Bramling Cross</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>Middle</hopstime>
+			</hops2>
+			<hops3>
+				<hopsname>Challenger</hopsname>
+				<hopsamount>12.5g</hopsamount>
+				<hopstime>Middle</hopstime>
+			</hops3>
+		</hops>
+		<yeast>Wyeast 1056 - American Ale</yeast>
+	</ingredients>
+</recipe10>
+</resources>

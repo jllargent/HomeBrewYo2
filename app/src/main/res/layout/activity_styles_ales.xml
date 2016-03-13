@@ -7,27 +7,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.bsu.cs222.cnj.homebrewyo2.MainActivity"
+    tools:context="edu.bsu.cs222.cnj.homebrewyo2.StylesAles"
     android:background="#d3af60">
 
-    <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:id="@+id/recipeButton"
-        android:src="@drawable/freebeer"
-        android:onClick="goRecipes"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView8"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp" />
+        android:src="@drawable/ale"/>
 
     <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/timerButton"
-        android:layout_below="@+id/recipeButton"
-        android:src="@drawable/stopwatch"
-        android:layout_alignStart="@+id/recipeButton"
-        android:layout_marginTop="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton9"
+        android:layout_below="@+id/imageView8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/dogma"
         android:background="#00ffffff"
-        android:onClick="goTimers"/>
+        android:onClick="goDogmaRecipes"/>
+
 </RelativeLayout>

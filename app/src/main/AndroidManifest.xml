@@ -18,7 +18,10 @@
         <activity android:name=".DisplayRecipesMain" />
         <activity android:name=".TimerActivity" />
         <activity android:name=".RecipesStylesActivity" />
-        <activity android:name=".NameRecipeActivity"></activity>
+        <activity android:name=".NameRecipeActivity" />
+        <activity android:name=".StylesAles" />
+        <activity android:name=".Dogma" />
+        <activity android:name=".DogmaIngredients"></activity>
     </application>
 
 </manifest>

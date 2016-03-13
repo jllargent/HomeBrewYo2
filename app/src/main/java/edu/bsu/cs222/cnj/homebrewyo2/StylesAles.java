@@ -5,18 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class RecipesStylesActivity extends AppCompatActivity {
-
-    Intent intent = getIntent();
+public class StylesAles extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipes_styles);
+        setContentView(R.layout.activity_styles_ales);
     }
-
-    public void goAleStyleRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, StylesAles.class);
+    public void goDogmaRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, Dogma.class);
         startActivity(recipeStyleIntent);
     }
 

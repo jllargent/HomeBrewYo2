@@ -22,4 +22,6 @@ public class MainActivity extends AppCompatActivity {
         Intent timerIntent = new Intent(this, TimerActivity.class);
         startActivity(timerIntent);
     }
+
+
 }
