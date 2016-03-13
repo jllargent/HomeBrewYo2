@@ -19,5 +19,12 @@ public class RecipesStylesActivity extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, StylesAles.class);
         startActivity(recipeStyleIntent);
     }
-
+    public void goAmberAleStyleRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, AmberAles.class);
+        startActivity(recipeStyleIntent);
+    }
+    public void goIPAStyleRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, IPAStyle.class);
+        startActivity(recipeStyleIntent);
+    }
 }
