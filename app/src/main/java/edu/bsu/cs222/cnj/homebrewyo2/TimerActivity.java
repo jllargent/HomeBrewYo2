@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextClock;
 import android.widget.TextView;
 
 public class TimerActivity extends AppCompatActivity {
@@ -40,5 +39,7 @@ public class TimerActivity extends AppCompatActivity {
                 timer.cancel();
             }
         });
+
+
     }
 }

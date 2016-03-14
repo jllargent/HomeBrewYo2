@@ -11,22 +11,24 @@ import java.util.concurrent.TimeUnit;
  */
 public class CounterClass extends CountDownTimer {
     TextView viewTime;
+    long initialMillis;
     public CounterClass(long millisInFuture, long countDownInterval, TextView textViewTime){
         super(millisInFuture, countDownInterval);
+        initialMillis = millisInFuture;
         viewTime = textViewTime;
     }
 
     @Override
     public void onTick(long millisUntilFinished) {
-        long millis = millisUntilFinished;
-        String hms = String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis),
-                TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
-                TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
-        viewTime.setText(hms);
+        int seconds = (int) (millisUntilFinished / 1000);
+        int minutes = seconds / 60;
+        seconds = seconds % 60;
+        String ms = String.format("%02d:%02d", minutes, seconds);
+        viewTime.setText(ms);
     }
 
     @Override
     public void onFinish() {
-        viewTime.setText("00:00:00");
+        viewTime.setText("00:00");
     }
 }
