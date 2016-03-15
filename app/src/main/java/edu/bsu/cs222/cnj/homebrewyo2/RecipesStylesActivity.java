@@ -31,4 +31,12 @@ public class RecipesStylesActivity extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, Lagers.class);
         startActivity(recipeStyleIntent);
     }
+    public void goPaleAleRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, PaleAleStyles.class);
+        startActivity(recipeStyleIntent);
+    }
+    public void goPorterRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, PorterStyles.class);
+        startActivity(recipeStyleIntent);
+    }
 }

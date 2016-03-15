@@ -30,4 +30,12 @@ public class NameRecipeActivity extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, Hoprocker.class);
         startActivity(recipeStyleIntent);
     }
+    public void goPeroxidePunkIngredients(View view){
+        Intent onClick = new Intent(this, PeroxidePunk.class);
+        startActivity(onClick);
+    }
+    public void goBrixtonPorter(View view){
+        Intent onClick = new Intent(this, BrixtonPorter.class);
+        startActivity(onClick);
+    }
 }

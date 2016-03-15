@@ -30,7 +30,13 @@
         <activity android:name=".PunkIngredients" />
         <activity android:name=".Lagers" />
         <activity android:name=".Hoprocker" />
-        <activity android:name=".HoprockerIngredients"></activity>
+        <activity android:name=".HoprockerIngredients" />
+        <activity android:name=".PeroxidePunk" />
+        <activity android:name=".PeroxidePunkIngredients" />
+        <activity android:name=".BrixtonPorter" />
+        <activity android:name=".PaleAleStyles" />
+        <activity android:name=".PorterStyles" />
+        <activity android:name=".BrixtonPorterIngredients"></activity>
     </application>
 
 </manifest>
