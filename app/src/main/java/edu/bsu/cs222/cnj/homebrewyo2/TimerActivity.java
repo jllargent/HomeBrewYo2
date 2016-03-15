@@ -39,7 +39,5 @@ public class TimerActivity extends AppCompatActivity {
                 timer.cancel();
             }
         });
-
-
     }
 }

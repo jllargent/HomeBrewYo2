@@ -1,5 +1,8 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
+import android.app.AlertDialog;
+import android.app.DialogFragment;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.TextView;
 
@@ -14,7 +17,7 @@ public class CounterClass extends CountDownTimer {
     long initialMillis;
     public CounterClass(long millisInFuture, long countDownInterval, TextView textViewTime){
         super(millisInFuture, countDownInterval);
-        initialMillis = millisInFuture;
+        this.initialMillis = millisInFuture;
         viewTime = textViewTime;
     }
 
@@ -25,6 +28,13 @@ public class CounterClass extends CountDownTimer {
         seconds = seconds % 60;
         String ms = String.format("%02d:%02d", minutes, seconds);
         viewTime.setText(ms);
+
+        if ((initialMillis / 120000) == minutes && (initialMillis % 120000) == seconds){
+            DialogFragment alert = new TimerDialogAlert();
+            Bundle args = new Bundle();
+            args.putString("title", "ATTENTION");
+            args.putString("message", "Your timer is halfway done!");
+        }
     }
 
     @Override
