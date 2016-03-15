@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d3af60">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".25">
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".5">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageView5"
+            android:src="@drawable/namebutton"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageButton16"
+            android:src="@drawable/brixtonporter"
+            android:background="#00ffffff"
+            android:onClick="goBrixtonPorter"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageButton11"
+            android:src="@drawable/dogma"
+            android:background="#00ffffff"
+            android:onClick="goDogmaRecipes"/>
+
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageButton14"
+            android:src="@drawable/hoprocker"
+            android:background="#00ffffff"
+            android:onClick="goHoprockerRecipes"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageButton15"
+            android:src="@drawable/peroxidepunk"
+            android:background="#00ffffff"
+            android:onClick="goPeroxidePunkIngredients"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageButton12"
+            android:src="@drawable/physics"
+            android:onClick="goPhysicsRecipes"
+            android:background="#00ffffff"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageButton13"
+            android:src="@drawable/punk"
+            android:background="#00ffffff"
+            android:onClick="goPunkRecipes"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".25">
+
+    </LinearLayout>
+</LinearLayout>

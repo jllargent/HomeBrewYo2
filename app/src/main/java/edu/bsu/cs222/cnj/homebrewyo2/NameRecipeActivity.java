@@ -12,7 +12,7 @@ public class NameRecipeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_name_recipe);
+        setContentView(R.layout.activity_name_recipe_2);
     }
     public void goDogmaRecipes(View view){
         Intent recipeStyleIntent = new Intent(this, Dogma.class);
