@@ -1,5 +1,6 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -18,6 +19,13 @@ public class TimerDialogAlert extends DialogFragment{
         return new AlertDialog.Builder(getActivity())
             .setTitle(title)
             .setMessage(message)
+            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    getTargetFragment().onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, null);
+                }
+            })
             .create();
+
     }
 }
