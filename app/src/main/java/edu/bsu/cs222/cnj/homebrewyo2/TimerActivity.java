@@ -12,9 +12,11 @@ import android.widget.TextView;
 
 public class TimerActivity extends AppCompatActivity {
 
-    Intent intent = getIntent();
-    Button btnStart, btnStop;
-    TextView textViewTime;
+    private Intent intent = getIntent();
+    private Button btnStart, btnStop;
+    public TextView textViewTime;
+    private static int milliseconds = 0;
+    private CounterClass timer;
 
 
     @Override
@@ -26,12 +28,12 @@ public class TimerActivity extends AppCompatActivity {
         btnStop = (Button) findViewById(R.id.btnStop);
         textViewTime = (TextView) findViewById(R.id.timer1);
 
-        textViewTime.setText("03:00");
-        final CounterClass timer = new CounterClass(180000, 1000, textViewTime);
+        textViewTime.setText("PREP");
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timer = new CounterClass(milliseconds, 1000, textViewTime);
                 timer.start();
             }
         });
@@ -42,5 +44,9 @@ public class TimerActivity extends AppCompatActivity {
                 timer.cancel();
             }
         });
+    }
+
+    public static void setTime(int seconds){
+        milliseconds = seconds * 1000;
     }
 }

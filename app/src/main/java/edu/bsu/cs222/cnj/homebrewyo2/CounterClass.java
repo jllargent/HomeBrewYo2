@@ -28,17 +28,10 @@ public class CounterClass extends CountDownTimer {
         seconds = seconds % 60;
         String ms = String.format("%02d:%02d", minutes, seconds);
         viewTime.setText(ms);
-
-        if ((initialMillis / 120000) == minutes && (initialMillis % 120000) == seconds){
-            DialogFragment alert = new TimerDialogAlert();
-            Bundle args = new Bundle();
-            args.putString("title", "ATTENTION");
-            args.putString("message", "Your timer is halfway done!");
-        }
     }
 
     @Override
     public void onFinish() {
-        viewTime.setText("00:00");
+        viewTime.setText("DONE");
     }
 }
