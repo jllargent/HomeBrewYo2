@@ -38,4 +38,20 @@ public class NameRecipeActivity extends AppCompatActivity {
         Intent onClick = new Intent(this, BrixtonPorter.class);
         startActivity(onClick);
     }
+    public void goRiptideIngredients(View view){
+        Intent onClick = new Intent(this, Riptide.class);
+        startActivity(onClick);
+    }
+    public void goCoffeeImpRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, CoffeeImperialStout.class);
+        startActivity(recipeStyleIntent);
+    }
+    public void goBadPixieRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, BadPixie.class);
+        startActivity(recipeStyleIntent);
+    }
+    public void goRabiatorRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, Rabiator.class);
+        startActivity(recipeStyleIntent);
+    }
 }

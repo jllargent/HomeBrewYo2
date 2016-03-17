@@ -88,7 +88,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="52dp"
-        android:background="#00ffffff" />
+        android:background="#00ffffff"
+        android:onClick="goStoutRecipes"/>
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -97,5 +98,6 @@
         android:src="@drawable/wheatbeer"
         android:layout_alignBottom="@+id/imageView6"
         android:layout_alignStart="@+id/imageButton8"
-        android:background="#00ffffff" />
+        android:background="#00ffffff"
+        android:onClick="goWheatRecipes"/>
 </RelativeLayout>

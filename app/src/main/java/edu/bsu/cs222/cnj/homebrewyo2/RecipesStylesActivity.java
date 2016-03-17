@@ -39,4 +39,12 @@ public class RecipesStylesActivity extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, PorterStyles.class);
         startActivity(recipeStyleIntent);
     }
+    public void goStoutRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, Stout.class);
+        startActivity(recipeStyleIntent);
+    }
+    public void goWheatRecipes(View view){
+        Intent recipeStyleIntent = new Intent(this, WheatBeer.class);
+        startActivity(recipeStyleIntent);
+    }
 }

@@ -36,7 +36,17 @@
         <activity android:name=".BrixtonPorter" />
         <activity android:name=".PaleAleStyles" />
         <activity android:name=".PorterStyles" />
-        <activity android:name=".BrixtonPorterIngredients"></activity>
+        <activity android:name=".BrixtonPorterIngredients" />
+        <activity android:name=".Stout" />
+        <activity android:name=".Riptide" />
+        <activity android:name=".RiptideIngredients" />
+        <activity android:name=".CoffeeImperialStout" />
+        <activity android:name=".CoffeeImperialIngredients" />
+        <activity android:name=".BadPixie" />
+        <activity android:name=".WheatBeer" />
+        <activity android:name=".BadPixieIngredients" />
+        <activity android:name=".Rabiator" />
+        <activity android:name=".RabiatorIngredients"></activity>
     </application>
 
 </manifest>
