@@ -14,9 +14,12 @@ public class TimerActivity extends AppCompatActivity {
 
     private Intent intent = getIntent();
     private Button btnStart, btnStop;
-    public TextView textViewTime;
+    private TextView textViewTime;
     private static int milliseconds = 0;
     private CounterClass timer;
+
+    public TimerActivity(){
+    }
 
 
     @Override
@@ -48,5 +51,9 @@ public class TimerActivity extends AppCompatActivity {
 
     public static void setTime(int seconds){
         milliseconds = seconds * 1000;
+    }
+
+    public TextView getTimerText(){
+        return textViewTime;
     }
 }
