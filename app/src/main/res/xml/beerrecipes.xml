@@ -9,7 +9,7 @@
 					mouth-puckering bitter finish.</description>
 	<style>IPA</style>
 	<temp>150F</temp>
-	<time>75mins</time>
+	<time>75</time>
 	<fermtemp>66F</fermtemp>
 	<abv>6%</abv>
 	<targetfg>1010</targetfg>
@@ -76,7 +76,7 @@
 					this beer ultimately morphed into 5AM Saint.</description>
 	<style>Amber Ale</style>
 	<temp>149F</temp>
-	<time>75mins</time>
+	<time>75</time>
 	<fermtemp>66F</fermtemp>
 	<abv>5%</abv>
 	<targetfg>1010</targetfg>
@@ -136,7 +136,7 @@
 					want to be on your best behaviour!</description>
 	<style>Stout</style>
 	<temp>149F</temp>
-	<time>75mins</time>
+	<time>75</time>
 	<fermtemp>68F</fermtemp>
 	<abv>8%</abv>
 	<targetfg>1014</targetfg>
@@ -215,7 +215,7 @@
 					tropical juiciness with old world peppery spice.</description>
 	<style>Lager</style>
 	<temp>149F</temp>
-	<time>75mins</time>
+	<time>75</time>
 	<fermtemp>50F</fermtemp>
 	<abv>5.5%</abv>
 	<targetfg>1010</targetfg>
@@ -276,7 +276,7 @@
 					thirst quenching.</description>
 	<style>Pale Ale</style>
 	<temp>149F</temp>
-	<time>75mins</time>
+	<time>75</time>
 	<fermtemp>66F</fermtemp>
 	<abv>4%</abv>
 	<targetfg>1009</targetfg>
@@ -337,7 +337,7 @@
 					infused with some devastatingly BrewDog imaginative thinking.</description>
 	<style>Ale</style>
 	<temp>143F</temp>
-	<time>75mins</time>
+	<time>75</time>
 	<fermtemp>70F</fermtemp>
 	<abv>7.8%</abv>
 	<targetfg>1012</targetfg>
@@ -409,7 +409,7 @@
 					and citrus peel.</description>
 	<style>Wheat Beer</style>
 	<temp>153F</temp>
-	<time>75mins</time>
+	<time>75</time>
 	<fermtemp>66F</fermtemp>
 	<abv>4.7%</abv>
 	<targetfg>1010</targetfg>
@@ -462,7 +462,7 @@
 	<description> Deep, dark, roasted flavours make this a perfect Sunday brunch beer.</description>
 	<style>Stout</style>
 	<temp>147F</temp>
-	<time>90mins</time>
+	<time>90</time>
 	<fermtemp>66F</fermtemp>
 	<abv>9%</abv>
 	<targetfg>1019</targetfg>
@@ -530,7 +530,7 @@
 					David Hasselhoff.</description>
 	<style>Wheat</style>
 	<temp>147F</temp>
-	<time>60mins</time>
+	<time>60</time>
 	<fermtemp>70F</fermtemp>
 	<abv>10.27%</abv>
 	<targetfg>1014</targetfg>
@@ -575,7 +575,7 @@
 					bitterness, but very sessionable.</description>
 	<style>Porter</style>
 	<temp>149F</temp>
-	<time>75mins</time>
+	<time>75</time>
 	<fermtemp>66F</fermtemp>
 	<abv>5%</abv>
 	<targetfg>1014</targetfg>

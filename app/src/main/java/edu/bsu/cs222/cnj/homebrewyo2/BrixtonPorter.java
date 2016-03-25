@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class BrixtonPorter extends AppCompatActivity {
 
-    private Button timeSet ;
+    private Button timeSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
