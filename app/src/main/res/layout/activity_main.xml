@@ -11,14 +11,15 @@
     android:background="#d3af60">
 
     <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/recipeButton"
-        android:src="@drawable/freebeer"
+        android:src="@drawable/recipes"
         android:onClick="goRecipes"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp" />
+        android:layout_marginTop="72dp"
+        android:background="#00ffffff" />
 
     <ImageButton
         android:layout_width="150dp"

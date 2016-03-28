@@ -12,7 +12,7 @@ public class RecipesStylesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipes_styles);
+        setContentView(R.layout.activity_recipes_styles_linear);
     }
 
     public void goAleStyleRecipes(View view){
