@@ -20,33 +20,15 @@
         <activity android:name=".RecipesStylesActivity" />
         <activity android:name=".NameRecipeActivity" />
         <activity android:name=".StylesAles" />
-        <activity android:name=".Dogma" />
-        <activity android:name=".DogmaIngredients" />
         <activity android:name=".AmberAles" />
-        <activity android:name=".Physics" />
-        <activity android:name=".PhysicsIngredients" />
         <activity android:name=".IPAStyle" />
-        <activity android:name=".Punk" />
-        <activity android:name=".PunkIngredients" />
         <activity android:name=".Lagers" />
-        <activity android:name=".Hoprocker" />
-        <activity android:name=".HoprockerIngredients" />
-        <activity android:name=".PeroxidePunk" />
-        <activity android:name=".PeroxidePunkIngredients" />
-        <activity android:name=".BrixtonPorter" />
         <activity android:name=".PaleAleStyles" />
         <activity android:name=".PorterStyles" />
-        <activity android:name=".BrixtonPorterIngredients" />
         <activity android:name=".Stout" />
-        <activity android:name=".Riptide" />
-        <activity android:name=".RiptideIngredients" />
-        <activity android:name=".CoffeeImperialStout" />
-        <activity android:name=".CoffeeImperialIngredients" />
         <activity android:name=".BadPixie" />
         <activity android:name=".WheatBeer" />
         <activity android:name=".BadPixieIngredients" />
-        <activity android:name=".Rabiator" />
-        <activity android:name=".RabiatorIngredients"></activity>
     </application>
 
 </manifest>
