@@ -12,7 +12,7 @@ public class NameRecipeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_name_recipe_2);
+        setContentView(R.layout.activity_name_recipe_scrollable);
     }
     public void goBadPixieRecipes(View view){
         Intent recipeStyleIntent = new Intent(this, BadPixie.class);
