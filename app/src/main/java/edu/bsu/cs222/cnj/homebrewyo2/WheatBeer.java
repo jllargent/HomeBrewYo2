@@ -16,8 +16,4 @@ public class WheatBeer extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, BadPixie.class);
         startActivity(recipeStyleIntent);
     }
-    public void goRabiatorRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, Rabiator.class);
-        startActivity(recipeStyleIntent);
-    }
 }

@@ -12,8 +12,4 @@ public class IPAStyle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ipastyle);
     }
-    public void goPunkRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, Punk.class);
-        startActivity(recipeStyleIntent);
-    }
 }

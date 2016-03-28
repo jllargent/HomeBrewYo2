@@ -12,8 +12,5 @@ public class PaleAleStyles extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pale_ale_styles);
     }
-    public void goPeroxidePunkRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, PeroxidePunk.class);
-        startActivity(recipeStyleIntent);
-    }
+
 }

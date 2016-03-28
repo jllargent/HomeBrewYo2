@@ -12,9 +12,5 @@ public class StylesAles extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_styles_ales);
     }
-    public void goDogmaRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, Dogma.class);
-        startActivity(recipeStyleIntent);
-    }
 
 }

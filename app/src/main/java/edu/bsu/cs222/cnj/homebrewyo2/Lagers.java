@@ -12,8 +12,4 @@ public class Lagers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lagers);
     }
-    public void goHoprockerRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, Hoprocker.class);
-        startActivity(recipeStyleIntent);
-    }
 }

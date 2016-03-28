@@ -12,8 +12,4 @@ public class AmberAles extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amber_ales);
     }
-    public void goPhysicsRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, Physics.class);
-        startActivity(recipeStyleIntent);
-    }
 }

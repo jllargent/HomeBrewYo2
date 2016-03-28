@@ -12,13 +12,5 @@ public class Stout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stout);
     }
-    public void goRiptideRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, Riptide.class);
-        startActivity(recipeStyleIntent);
-    }
-    public void goCoffeeImpRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, CoffeeImperialStout.class);
-        startActivity(recipeStyleIntent);
-    }
 
 }

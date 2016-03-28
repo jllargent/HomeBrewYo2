@@ -12,8 +12,4 @@ public class PorterStyles extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_porter_styles);
     }
-    public void goBrixtonPorter(View view){
-        Intent onClick = new Intent(this, BrixtonPorter.class);
-        startActivity(onClick);
-    }
 }
