@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    tools:context="edu.bsu.cs222.cnj.homebrewyo2.RecipesStylesActivity"
+    android:background="#d3af60"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".25">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".5">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/imageView4"
+            android:layout_weight="1"
+            android:src="@drawable/stylesbutton"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/scrollView"
+            android:layout_weight="4.06"
+            android:fillViewport="false">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton3"
+                    android:src="@drawable/ale"
+                    android:background="#00ffffff"
+                    android:onClick="goAleStyleRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton4"
+                    android:src="@drawable/amberale"
+                    android:background="#00ffffff"
+                    android:onClick="goAmberAleStyleRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton5"
+                    android:src="@drawable/ipa"
+                    android:background="#00ffffff"
+                    android:onClick="goIPAStyleRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton6"
+                    android:src="@drawable/lager"
+                    android:background="#00ffffff"
+                    android:onClick="goLagerStyleRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton7"
+                    android:src="@drawable/paleale"
+                    android:background="#00ffffff"
+                    android:onClick="goPaleAleRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton8"
+                    android:src="@drawable/porter"
+                    android:background="#00ffffff"
+                    android:onClick="goPorterRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/stout"
+                    android:background="#00ffffff"
+                    android:onClick="goStoutRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageView7"
+                    android:src="@drawable/wheatbeer"
+                    android:background="#00ffffff"
+                    android:onClick="goWheatRecipes"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".25">
+    </LinearLayout>
+</LinearLayout>

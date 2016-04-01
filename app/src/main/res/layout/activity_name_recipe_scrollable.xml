@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d3af60">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".25">
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".5">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageView5"
+            android:src="@drawable/namebutton"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/scrollView2"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2.94" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="fill_vertical"
+                android:contextClickable="false">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton19"
+                    android:src="@drawable/badpixie"
+                    android:onClick="goBadPixieRecipes"
+                    android:background="#00ffffff"
+                    android:clickable="false" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton16"
+                    android:src="@drawable/brixtonporter"
+                    android:background="#00ffffff"
+                    android:onClick="goBrixtonPorter"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageButton18"
+                    android:layout_weight="1"
+                    android:src="@drawable/coffeeimp"
+                    android:background="#00ffffff"
+                    android:onClick="goCoffeeImpRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton11"
+                    android:src="@drawable/dogma"
+                    android:background="#00ffffff"
+                    android:onClick="goDogmaRecipes"/>
+
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton14"
+                    android:src="@drawable/hoprocker"
+                    android:background="#00ffffff"
+                    android:onClick="goHoprockerRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton12"
+                    android:src="@drawable/physics"
+                    android:onClick="goPhysicsRecipes"
+                    android:background="#00ffffff"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton13"
+                    android:src="@drawable/punk"
+                    android:background="#00ffffff"
+                    android:onClick="goPunkRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton15"
+                    android:src="@drawable/peroxidepunk"
+                    android:background="#00ffffff"
+                    android:onClick="goPeroxidePunkIngredients"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton20"
+                    android:src="@drawable/rabiator"
+                    android:background="#00ffffff"
+                    android:onClick="goRabiatorRecipes"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton17"
+                    android:src="@drawable/riptide"
+                    android:background="#00ffffff"
+                    android:onClick="goRiptideIngredients"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".25">
+
+    </LinearLayout>
+</LinearLayout>
