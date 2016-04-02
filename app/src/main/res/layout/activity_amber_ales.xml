@@ -8,7 +8,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.bsu.cs222.cnj.homebrewyo2.AmberAles"
-    android:background="#d3af60">
+    android:background="#d3af60"
+    android:clickable="false">
 
     <ImageView
         android:layout_width="wrap_content"
