@@ -30,4 +30,10 @@ public class BeerClassUnitTest {
     public void descriptionOfBeer_isCorrect(){
         assertEquals(description, testBeer.getDescriptionOfBeer());
     }
+
+    @Test
+    public void aBVValue_isCorrect(){
+        assertEquals( "5%", testBeer.getValueOfABV());
+    }
 }
+
