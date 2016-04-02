@@ -62,6 +62,12 @@ public class IngredientsClassUnitTest {
         assertEquals("5.5lbs", listOfMalts.get(0).getAmountOfMalt());
     }
 
+    @Test
+    public void hopHasName_NameIsGold(){
+        assertEquals("First Gold", listOfHops.get(0).getNameOfHop() );
+    }
+
+
 
 
 }
