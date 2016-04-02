@@ -44,6 +44,10 @@ public class XMLFileProcessor{
                             Log.i("Name", "A name appears");
                             Log.i("Name", text);
                         }
+                        else if (name.equalsIgnoreCase("style")){
+                            Log.i("Style", "Here is the style");
+                            Log.i("Style", text);
+                        }
                         break;
                 }
                 event = myParser.next();
