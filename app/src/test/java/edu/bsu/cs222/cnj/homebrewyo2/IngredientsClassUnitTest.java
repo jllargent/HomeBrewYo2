@@ -57,5 +57,11 @@ public class IngredientsClassUnitTest {
         assertEquals("wheat", listOfMalts.get(0).getNameOfMalt() );
     }
 
+    @Test
+    public void maltHasAmount_AmountIs55(){
+        assertEquals("5.5lbs", listOfMalts.get(0).getAmountOfMalt());
+    }
+
+
 
 }
