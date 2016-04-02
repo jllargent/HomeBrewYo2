@@ -2,9 +2,6 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 import java.util.ArrayList;
 
-/**
- * Created by Nathan on 4/2/2016.
- */
 public class Ingredients {
     private ArrayList<Hop> listOfHops = new ArrayList<>();
     private ArrayList<Malt> listOfMalts = new ArrayList<>();
