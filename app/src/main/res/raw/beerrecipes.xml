@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<recipe1>
+<recipe>
 	<name>Punk IPA</name>
 	<description>An original take on an American IPA, subverted with punchy New Zealand hops. Layered with new world hops to create an all-out riot of grapefruit, pineapple and lychee before a spiky, mouth-puckering bitter finish.</description>
 	<style>IPA</style>
@@ -62,9 +62,9 @@
 		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	</ingredients>
-</recipe1>
+</recipe>
 
-<recipe2>
+<recipe>
 	<name>The Physics</name>
 	<description>Malt and hops are in perfect harmony in this incredibly balanced beer. Biscuity, bitter and packing a surprisingly hoppy punch.</description>
 	<style>Amber Ale</style>
@@ -118,9 +118,9 @@
 		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	</ingredients>
-</recipe2>
+</recipe>
 
-<recipe3>
+<recipe>
 	<name>Riptide</name>
 	<description>Soft, smooth, dark, chocolatey and a force to be reckoned with. This gentle giant will never bite, but you'll still want to be on your best behaviour!</description>
 	<style>Stout</style>
@@ -191,9 +191,9 @@
 		</hops>
 		<yeast>Wyeast 1272 - American Ale II</yeast>
 	</ingredients>
-</recipe3>
+</recipe>
 
-<recipe4>
+<recipe>
 	<name>Hop Rocker</name>
 	<description>Hop Rocker is a high impact, hoppy behemoth made with 100% malt. The malt base gives this beer a sweet, balanced complexity while the combination of New Zealand and German hops merges new world tropical juiciness with old world peppery spice.</description>
 	<style>Lager</style>
@@ -248,9 +248,9 @@
 		</hops>
 		<yeast>Saflager S189</yeast>
 	</ingredients>
-</recipe4>
+</recipe>
 
-<recipe5>
+<recipe>
 	<name>Peroxide Punk</name>
 	<description>Peroxide Punk has a depth of flavor that belies its modest ABV. Zesty, aromatic and thirst quenching.</description>
 	<style>Pale Ale</style>
@@ -307,9 +307,9 @@
 		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	</ingredients>
-</recipe5>
+</recipe>
 
-<recipe6>
+<recipe>
 	<name>Dogma</name>
 	<description>A strong ale, brewed with guarana, Californian poppy, kola nut and Scottish heather honey. A conspiracy of trans-continental ingredients.</description>
 	<style>Ale</style>
@@ -378,9 +378,9 @@
 		</hops>
 		<yeast>Safale US-05</yeast>
 	</ingredients>
-</recipe6>
+</recipe>
 
-<recipe7>
+<recipe>
 	<name>Bad Pixie</name>
 	<description>4.7% wheat ale with crushed juniper berries and citrus peel.</description>
 	<style>Wheat Beer</style>
@@ -431,9 +431,9 @@
 		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	</ingredients>
-</recipe7>
+</recipe>
 
-<recipe8>
+<recipe>
 	<name>Coffee Imperial Stout</name>
 	<description> Deep, dark, roasted flavours make this a perfect Sunday brunch beer.</description>
 	<style>Stout</style>
@@ -497,9 +497,9 @@
 		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	</ingredients>
-</recipe8>
+</recipe>
 
-<recipe9>
+<recipe>
 	<name>Rabiator</name>
 	<description>Imperial Wheat beer / Weizenbock brewed by a homesick German
 					in leather trousers. Think banana bread, bubble gum and 
@@ -541,9 +541,9 @@
 		</hops>
 		<yeast>Wyeast 3333 German Wheat</yeast>
 	</ingredients>
-</recipe9>
+</recipe>
 
-<recipe10>
+<recipe>
 	<name>Brixton Porter</name>
 	<description>Brixton Porter delivers bold chocolate and coffee flavours with light smokiness and hints of autumn fruit all but built on a low ABV, lighter bodied backbone. Complex and intriguing, with spicy bitterness, but very sessionable.</description>
 	<style>Porter</style>
@@ -600,5 +600,5 @@
 		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	</ingredients>
-</recipe10>
+</recipe>
 </resources>
