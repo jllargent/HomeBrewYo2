@@ -18,7 +18,7 @@ public class IngredientsClassUnitTest {
     ArrayList<Hop> listOfHops = new ArrayList<>();
 
     @Before
-    public void createIngredients(){
+    public void createIngredients() {
         wheat.setNameOfMalt("wheat");
         wheat.setWeightOfMaltsInPounds(5.5);
         ingredients.addToMaltsList(wheat);
@@ -47,29 +47,5 @@ public class IngredientsClassUnitTest {
         assertEquals(2, listOfHops.size());
     }
 
-    @Test
-    public void ingredientsHasYeast_YeastIsTestYeast(){
-        assertEquals("testYeast", ingredients.getYeast());
-    }
-
-    @Test
-    public void maltHasName_NameIsWheat(){
-        assertEquals("wheat", listOfMalts.get(0).getNameOfMalt() );
-    }
-
-    @Test
-    public void maltHasAmount_AmountIs55(){
-        assertEquals("5.5lbs", listOfMalts.get(0).getAmountOfMalt());
-    }
-
-    @Test
-    public void hopHasName_NameIsGold(){
-        assertEquals("First Gold", listOfHops.get(0).getNameOfHop() );
-    }
-
-    @Test
-    public void hopHasAmount_AmountIs1875(){
-        assertEquals("18.75g", listOfHops.get(0).getAmountOfHops());
-    }
 
 }
