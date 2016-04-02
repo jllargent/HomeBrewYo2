@@ -16,6 +16,11 @@ public class BeerClassUnitTest {
         testBeer.setValueOfABV(5);
     }
 
+    @Test
+    public void titleOfBeer_isCorrect(){
+        assertEquals("Test Beer", testBeer.getTitleOfBeer());
+    }
+
 
 
 }
