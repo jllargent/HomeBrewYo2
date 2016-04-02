@@ -21,6 +21,9 @@ public class BeerClassUnitTest {
         assertEquals("Test Beer", testBeer.getTitleOfBeer());
     }
 
-
+    @Test
+    public void typeOfBeer_isCorrect(){
+        assertEquals("TestingBeerType", testBeer.getStyleOfBeer());
+    }
 
 }
