@@ -52,5 +52,10 @@ public class IngredientsClassUnitTest {
         assertEquals("testYeast", ingredients.getYeast());
     }
 
+    @Test
+    public void maltHasName_NameIsWheat(){
+        assertEquals("wheat", listOfMalts.get(0).getNameOfMalt() );
+    }
+
 
 }
