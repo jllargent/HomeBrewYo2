@@ -47,5 +47,10 @@ public class IngredientsClassUnitTest {
         assertEquals(2, listOfHops.size());
     }
 
+    @Test
+    public void ingredientsHasYeast_YeastIsTestYeast(){
+        assertEquals("testYeast", ingredients.getYeast());
+    }
+
 
 }
