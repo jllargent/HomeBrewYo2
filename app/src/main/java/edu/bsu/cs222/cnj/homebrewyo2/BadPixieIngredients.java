@@ -8,6 +8,6 @@ public class BadPixieIngredients extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bad_pixie_ingredients);
+        setContentView(R.layout.activity_bad_pixie_ingredients_new);
     }
 }
