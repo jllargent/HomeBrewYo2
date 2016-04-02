@@ -3,13 +3,14 @@
     <string name="large_text">
     </string>
     <string name="action_settings">Settings</string>
-    <string name="beerDescription"></string>
-    <string name="beerName"></string>
-    <string name="beerTime"></string>
-    <string name="beerFerment"></string>
-    <string name="beerABVIBU"></string>
-    <string name="beerOrigGravity"></string>
-    <string name="beerFinalGravity"></string>
+    <string name="beerDescription"> </string>
+    <string name="beerName"> </string>
+    <string name="beerTime"> </string>
+    <string name="beerFerment"> </string>
+    <string name="beerABVIBU"> </string>
+    <string name="beerOrigGravity"> </string>
+    <string name="beerFinalGravity"> </string>
+    <string name="malts">Malt</string>
 
 
 </resources>
