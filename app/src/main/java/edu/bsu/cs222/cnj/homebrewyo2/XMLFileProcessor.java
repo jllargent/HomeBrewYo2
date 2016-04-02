@@ -36,9 +36,13 @@ public class XMLFileProcessor{
                         if(name.equals("recipe")){
                             Log.i("We got a hit", "Found a recipe here");
                         }
-                        if(name.equalsIgnoreCase("description")){
+                        else if(name.equalsIgnoreCase("description")){
                             Log.i("Description", "Here's a description");
                             Log.i("Description", text);
+                        }
+                        else if (name.equalsIgnoreCase("name")){
+                            Log.i("Name", "A name appears");
+                            Log.i("Name", text);
                         }
                         break;
                 }
