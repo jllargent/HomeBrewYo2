@@ -4,13 +4,12 @@
 	<name>Punk IPA</name>
 	<description>An original take on an American IPA, subverted with punchy New Zealand hops. Layered with new world hops to create an all-out riot of grapefruit, pineapple and lychee before a spiky, mouth-puckering bitter finish.</description>
 	<style>IPA</style>
-	<temp>150F</temp>
+	<temp>Boil for 75 minutes at 150F</temp>
 	<time>75</time>
-	<fermtemp>66F</fermtemp>
-	<abv>6%</abv>
-	<targetfg>1010</targetfg>
-	<targetog>1056</targetog>
-	<ibu>60</ibu>
+	<fermtemp>Ferment at 66F</fermtemp>
+	<abv>6% ABV | IBU 60</abv>
+	<targetfg>Final Gravity 1010</targetfg>
+	<targetog>Original Gravity 1056</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -68,13 +67,12 @@
 	<name>The Physics</name>
 	<description>Malt and hops are in perfect harmony in this incredibly balanced beer. Biscuity, bitter and packing a surprisingly hoppy punch.</description>
 	<style>Amber Ale</style>
-	<temp>149F</temp>
-	<time>75</time>
-	<fermtemp>66F</fermtemp>
-	<abv>5%</abv>
-	<targetfg>1010</targetfg>
-	<targetog>1048.5</targetog>
-	<ibu>47</ibu>
+	<temp>Boil for 75 minutes at 149F</temp>
+    	<time>75</time>
+    	<fermtemp>Ferment at 66F</fermtemp>
+    	<abv>5% ABV | IBU 47</abv>
+    	<targetfg>Final Gravity 1010</targetfg>
+    	<targetog>Original Gravity 1048.5</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -124,13 +122,12 @@
 	<name>Riptide</name>
 	<description>Soft, smooth, dark, chocolatey and a force to be reckoned with. This gentle giant will never bite, but you'll still want to be on your best behaviour!</description>
 	<style>Stout</style>
-	<temp>149F</temp>
-	<time>75</time>
-	<fermtemp>68F</fermtemp>
-	<abv>8%</abv>
-	<targetfg>1014</targetfg>
-	<targetog>1075</targetog>
-	<ibu>45</ibu>
+	<temp>Boil for 75 minutes at 149F</temp>
+    	<time>75</time>
+    	<fermtemp>Ferment at 68F</fermtemp>
+    	<abv>8% ABV | IBU 45</abv>
+    	<targetfg>Final Gravity 1014</targetfg>
+    	<targetog>Original Gravity 1075</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -197,13 +194,12 @@
 	<name>Hop Rocker</name>
 	<description>Hop Rocker is a high impact, hoppy behemoth made with 100% malt. The malt base gives this beer a sweet, balanced complexity while the combination of New Zealand and German hops merges new world tropical juiciness with old world peppery spice.</description>
 	<style>Lager</style>
-	<temp>149F</temp>
-	<time>75</time>
-	<fermtemp>50F</fermtemp>
-	<abv>5.5%</abv>
-	<targetfg>1010</targetfg>
-	<targetog>1052</targetog>
-	<ibu>40</ibu>
+	<temp>Boil for 75 minutes at 149F</temp>
+    	<time>75</time>
+    	<fermtemp>Ferment at 50F</fermtemp>
+    	<abv>5.5% ABV | IBU 40</abv>
+    	<targetfg>Final Gravity 1010</targetfg>
+    	<targetog>Original Gravity 1052</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -254,13 +250,12 @@
 	<name>Peroxide Punk</name>
 	<description>Peroxide Punk has a depth of flavor that belies its modest ABV. Zesty, aromatic and thirst quenching.</description>
 	<style>Pale Ale</style>
-	<temp>149F</temp>
-	<time>75</time>
-	<fermtemp>66F</fermtemp>
-	<abv>4%</abv>
-	<targetfg>1009</targetfg>
-	<targetog>1039</targetog>
-	<ibu>40</ibu>
+	<temp>Boil for 75 minutes at 149F</temp>
+    	<time>75</time>
+    	<fermtemp>Ferment at 66F</fermtemp>
+    	<abv>4% ABV | IBU 40</abv>
+    	<targetfg>Final Gravity 1009</targetfg>
+    	<targetog>Original Gravity 1039</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -313,13 +308,12 @@
 	<name>Dogma</name>
 	<description>A strong ale, brewed with guarana, Californian poppy, kola nut and Scottish heather honey. A conspiracy of trans-continental ingredients.</description>
 	<style>Ale</style>
-	<temp>143F</temp>
-	<time>75</time>
-	<fermtemp>70F</fermtemp>
-	<abv>7.8%</abv>
-	<targetfg>1012</targetfg>
-	<targetog>1071.3</targetog>
-	<ibu>60</ibu>
+	<temp>Boil for 75 minutes at 143F</temp>
+        	<time>75</time>
+        	<fermtemp>Ferment at 70F</fermtemp>
+        	<abv>7.8% ABV | IBU 60</abv>
+        	<targetfg>Final Gravity 1012</targetfg>
+        	<targetog>Original Gravity 1071.3</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -384,13 +378,12 @@
 	<name>Bad Pixie</name>
 	<description>4.7% wheat ale with crushed juniper berries and citrus peel.</description>
 	<style>Wheat Beer</style>
-	<temp>153F</temp>
-	<time>75</time>
-	<fermtemp>66F</fermtemp>
-	<abv>4.7%</abv>
-	<targetfg>1010</targetfg>
-	<targetog>1047</targetog>
-	<ibu>45</ibu>
+	<temp>Boil for 75 minutes at 153F</temp>
+        	<time>75</time>
+        	<fermtemp>Ferment at 66F</fermtemp>
+        	<abv>4.7% ABV | IBU 45</abv>
+        	<targetfg>Final Gravity 1010</targetfg>
+        	<targetog>Original Gravity 1047</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -437,13 +430,12 @@
 	<name>Coffee Imperial Stout</name>
 	<description> Deep, dark, roasted flavours make this a perfect Sunday brunch beer.</description>
 	<style>Stout</style>
-	<temp>147F</temp>
-	<time>90</time>
-	<fermtemp>66F</fermtemp>
-	<abv>9%</abv>
-	<targetfg>1019</targetfg>
-	<targetog>1080</targetog>
-	<ibu>65</ibu>
+	<temp>Boil for 90 minutes at 147F</temp>
+        	<time>90</time>
+        	<fermtemp>Ferment at 66F</fermtemp>
+        	<abv>9% ABV | IBU 65</abv>
+        	<targetfg>Final Gravity 1019</targetfg>
+        	<targetog>Original Gravity 1080</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -505,13 +497,12 @@
 					in leather trousers. Think banana bread, bubble gum and 
 					David Hasselhoff.</description>
 	<style>Wheat</style>
-	<temp>147F</temp>
-	<time>60</time>
-	<fermtemp>70F</fermtemp>
-	<abv>10.27%</abv>
-	<targetfg>1014</targetfg>
-	<targetog>1092</targetog>
-	<ibu>26</ibu>
+	<temp>Boil for 60 minutes at 147F</temp>
+        	<time>60</time>
+        	<fermtemp>Ferment at 70F</fermtemp>
+        	<abv>10.27% ABV | IBU 26</abv>
+        	<targetfg>Final Gravity 1014</targetfg>
+        	<targetog>Original Gravity 1092</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
@@ -554,6 +545,12 @@
 	<targetfg>1014</targetfg>
 	<targetog>1053</targetog>
 	<ibu>50</ibu>
+	<temp>Boil for 75 minutes at 149F</temp>
+        	<time>75</time>
+        	<fermtemp>Ferment at 66F</fermtemp>
+        	<abv>5% ABV | IBU 50</abv>
+        	<targetfg>Final Gravity 1014</targetfg>
+        	<targetog>Original Gravity 1053</targetog>
 	<ingredients>
 		<malts>
 			<malt1>
