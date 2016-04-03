@@ -51,6 +51,10 @@ public class XMLFileProcessor_New {
                             newBeer.setFermentTemperature(text);
                         }else if (name.equalsIgnoreCase("abv")) {
                             newBeer.setValueOfABV(text);
+                        }else if (name.equalsIgnoreCase("targetfg")) {
+                            newBeer.setFinalGravity(text);
+                        }else if (name.equalsIgnoreCase("targetog")) {
+                            newBeer.setOriginalGravity(text);
                         }
 
                         break;
