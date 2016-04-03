@@ -22,7 +22,6 @@ public class RecipePage extends AppCompatActivity {
         int positionInRecipeIndex = bundle.getInt("recipePosition");
         runParser(positionInRecipeIndex);
 
-
         timeSet = (Button) findViewById(R.id.badPixTimer);
         timeSet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,14 +61,18 @@ public class RecipePage extends AppCompatActivity {
         TextView timeTextView = (TextView) findViewById(R.id.textView3);
         timeTextView.setText();
 
+
         TextView fermentTextView = (TextView) findViewById(R.id.textView4);
         fermentTextView.setText();
+
 
         TextView abvTextView = (TextView) findViewById(R.id.textView5);
         abvTextView.setText();
 
+
         TextView oGravTextView = (TextView) findViewById(R.id.textView6);
         oGravTextView.setText();
+
 
         TextView fGravTextView = (TextView) findViewById(R.id.textView7);
         fGravTextView.setText();*/

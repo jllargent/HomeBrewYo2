@@ -9,6 +9,7 @@ public class Beer {
     private int valueOfABV;
 
 
+
     public Beer(){
         titleOfBeer = getTitleOfBeer();
         styleOfBeer = getStyleOfBeer();
