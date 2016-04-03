@@ -75,11 +75,11 @@ public class RecipePage extends AppCompatActivity {
         abvTextView.setText(currentBeer.getValueOfABV());
 
 
-        TextView oGravTextView = (TextView) findViewById(R.id.textView6);
+        TextView oGravTextView = (TextView) findViewById(R.id.textView7);
         oGravTextView.setText(currentBeer.getOriginalGravity());
 
 
-        TextView fGravTextView = (TextView) findViewById(R.id.textView7);
+        TextView fGravTextView = (TextView) findViewById(R.id.textView8);
         fGravTextView.setText(currentBeer.getFinalGravity());
 
     }
