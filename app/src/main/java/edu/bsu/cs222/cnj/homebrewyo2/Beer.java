@@ -1,5 +1,7 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
+import java.sql.CallableStatement;
+
 public class Beer {
     private String titleOfBeer;
     private String styleOfBeer;
@@ -7,13 +9,16 @@ public class Beer {
     private int valueOfABV;
 
 
-    public Beer(String name){
-        titleOfBeer = name;
+    public Beer(){
+        titleOfBeer = getTitleOfBeer();
         styleOfBeer = getStyleOfBeer();
         descriptionOfBeer = getDescriptionOfBeer();
     }
 
-
+    public void setTitleOfBeer(String name){
+        titleOfBeer = name;
+        //String bnerljname = context.getResources().getString(R.string.beerName);
+    }
     public void setStyleOfBeer(String beerStyle){
         styleOfBeer = beerStyle;
     }
@@ -36,4 +41,6 @@ public class Beer {
     public String getValueOfABV(){
         return valueOfABV + "%";
     }
+
+
 }
