@@ -6,11 +6,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BeerClassUnitTest {
-    Beer testBeer = new Beer("Test Beer");
+    Beer testBeer = new Beer();
     String description = "This is a description to test.";
 
     @Before
     public void createTestBeerElements(){
+        testBeer.setTitleOfBeer("Test Beer");
         testBeer.setStyleOfBeer("TestingBeerType");
         testBeer.setDescriptionOfBeer(description);
         testBeer.setValueOfABV(5);
