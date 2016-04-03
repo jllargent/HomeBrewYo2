@@ -14,8 +14,8 @@ public class WheatBeer extends AppCompatActivity {
         setContentView(R.layout.activity_wheat_beer);
     }
     public void goBeerRecipe(View view){
-        int i = Integer.parseInt((String) String.valueOf(view.getTag()));
-        Log.i("testing", "" + i);
+        int positionInRecipeIndex = Integer.parseInt((String) String.valueOf(view.getTag()));
+        Log.i("testing", "" + positionInRecipeIndex);
         //startActivity(new Intent(getBaseContext(), activities.get(i)));
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
         startActivity(recipeStyleIntent);

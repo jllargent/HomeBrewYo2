@@ -19,13 +19,15 @@
         android:src="@drawable/ale"/>
 
     <ImageButton
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/imageButton11"
         android:src="@drawable/dogma"
         android:background="#00ffffff"
         android:onClick="goBeerRecipe"
-        android:tag="5"/>
+        android:tag="5"
+        android:layout_below="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_marginTop="54dp" />
 
 </RelativeLayout>
