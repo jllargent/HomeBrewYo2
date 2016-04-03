@@ -17,7 +17,6 @@ public class Beer {
 
     public void setTitleOfBeer(String name){
         titleOfBeer = name;
-        //String bnerljname = context.getResources().getString(R.string.beerName);
     }
     public void setStyleOfBeer(String beerStyle){
         styleOfBeer = beerStyle;
