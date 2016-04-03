@@ -18,5 +18,14 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/paleale"/>
 
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:id="@+id/imageButton15"
+        android:src="@drawable/peroxidepunk"
+        android:background="#00ffffff"
+        android:onClick="goBeerRecipe"
+        android:tag="4"/>
 
 </RelativeLayout>

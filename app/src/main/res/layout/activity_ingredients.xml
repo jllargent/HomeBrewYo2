@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="edu.bsu.cs222.cnj.homebrewyo2.BadPixieIngredients"
+    tools:context=".IngredientsPage"
     android:background="#d3af60">
 
     <ImageView

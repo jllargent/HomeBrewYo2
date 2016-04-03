@@ -19,4 +19,13 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/amberale"/>
 
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:id="@+id/imageButton12"
+        android:src="@drawable/physics"
+        android:onClick="goBeerRecipe"
+        android:background="#00ffffff"
+        android:tag="1"/>
 </RelativeLayout>

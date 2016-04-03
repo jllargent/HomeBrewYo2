@@ -6,14 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class BadPixie extends AppCompatActivity {
+public class RecipePage extends AppCompatActivity {
 
     private Button timeSet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bad_pixie);
+        setContentView(R.layout.activity_recipe);
 
         timeSet = (Button) findViewById(R.id.badPixTimer);
         timeSet.setOnClickListener(new View.OnClickListener() {
@@ -25,7 +25,7 @@ public class BadPixie extends AppCompatActivity {
     }
 
     public void goBadPixieIngredients(View view){
-        Intent onClick = new Intent(this, BadPixieIngredients.class);
+        Intent onClick = new Intent(this, IngredientsPage.class);
         startActivity(onClick);
     }
 }

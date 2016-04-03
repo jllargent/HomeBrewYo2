@@ -19,14 +19,23 @@
         android:src="@drawable/wheatbeer"/>
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton10"
-        android:layout_marginTop="89dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:id="@+id/imageButton19"
         android:src="@drawable/badpixie"
+        android:onClick="goBeerRecipe"
         android:background="#00ffffff"
-        android:onClick="goBadPixieRecipes"
-        android:layout_below="@+id/imageView8"
-        android:layout_alignStart="@+id/imageView8" />
+        android:tag="6" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:id="@+id/imageButton20"
+        android:src="@drawable/rabiator"
+        android:background="#00ffffff"
+        android:onClick="goBeerRecipe"
+        android:tag="8"/>
 
 </RelativeLayout>

@@ -26,9 +26,9 @@
         <activity android:name=".PaleAleStyles" />
         <activity android:name=".PorterStyles" />
         <activity android:name=".Stout" />
-        <activity android:name=".BadPixie" />
+        <activity android:name=".RecipePage" />
         <activity android:name=".WheatBeer" />
-        <activity android:name=".BadPixieIngredients" />
+        <activity android:name=".IngredientsPage" />
     </application>
 
 </manifest>

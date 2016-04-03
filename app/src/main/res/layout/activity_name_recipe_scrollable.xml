@@ -44,9 +44,9 @@
                     android:layout_weight="1"
                     android:id="@+id/imageButton19"
                     android:src="@drawable/badpixie"
-                    android:onClick="goBadPixieRecipes"
+                    android:onClick="goBeerRecipe"
                     android:background="#00ffffff"
-                    android:clickable="false" />
+                    android:tag="6" />
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -55,7 +55,8 @@
                     android:id="@+id/imageButton16"
                     android:src="@drawable/brixtonporter"
                     android:background="#00ffffff"
-                    android:onClick="goBrixtonPorter"/>
+                    android:onClick="goBeerRecipe"
+                    android:tag="9"/>
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -64,7 +65,8 @@
                     android:layout_weight="1"
                     android:src="@drawable/coffeeimp"
                     android:background="#00ffffff"
-                    android:onClick="goCoffeeImpRecipes"/>
+                    android:onClick="goBeerRecipe"
+                    android:tag="7"/>
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -73,7 +75,8 @@
                     android:id="@+id/imageButton11"
                     android:src="@drawable/dogma"
                     android:background="#00ffffff"
-                    android:onClick="goDogmaRecipes"/>
+                    android:onClick="goBeerRecipe"
+                    android:tag="5"/>
 
 
                 <ImageButton
@@ -83,7 +86,8 @@
                     android:id="@+id/imageButton14"
                     android:src="@drawable/hoprocker"
                     android:background="#00ffffff"
-                    android:onClick="goHoprockerRecipes"/>
+                    android:onClick="goBeerRecipe"
+                    android:tag="3"/>
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -91,8 +95,9 @@
                     android:layout_weight="1"
                     android:id="@+id/imageButton12"
                     android:src="@drawable/physics"
-                    android:onClick="goPhysicsRecipes"
-                    android:background="#00ffffff"/>
+                    android:onClick="goBeerRecipe"
+                    android:background="#00ffffff"
+                    android:tag="1"/>
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -101,7 +106,8 @@
                     android:id="@+id/imageButton13"
                     android:src="@drawable/punk"
                     android:background="#00ffffff"
-                    android:onClick="goPunkRecipes"/>
+                    android:onClick="goBeerRecipe"
+                    android:tag="0"/>
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -110,7 +116,8 @@
                     android:id="@+id/imageButton15"
                     android:src="@drawable/peroxidepunk"
                     android:background="#00ffffff"
-                    android:onClick="goPeroxidePunkIngredients"/>
+                    android:onClick="goBeerRecipe"
+                    android:tag="4"/>
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -119,7 +126,8 @@
                     android:id="@+id/imageButton20"
                     android:src="@drawable/rabiator"
                     android:background="#00ffffff"
-                    android:onClick="goRabiatorRecipes"/>
+                    android:onClick="goBeerRecipe"
+                    android:tag="8"/>
 
                 <ImageButton
                     android:layout_width="match_parent"
@@ -128,7 +136,8 @@
                     android:id="@+id/imageButton17"
                     android:src="@drawable/riptide"
                     android:background="#00ffffff"
-                    android:onClick="goRiptideIngredients"/>
+                    android:onClick="goBeerRecipe"
+                    android:tag="2"/>
             </LinearLayout>
         </ScrollView>
 
