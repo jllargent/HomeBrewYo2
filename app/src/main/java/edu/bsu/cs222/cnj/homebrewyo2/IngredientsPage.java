@@ -9,5 +9,7 @@ public class IngredientsPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingredients);
+        Bundle bundle = getIntent().getExtras();
+        int positionInRecipeIndex = bundle.getInt("recipePosition");
     }
 }

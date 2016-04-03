@@ -3,6 +3,7 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,8 +34,12 @@ public class RecipePage extends AppCompatActivity {
     }
 
     public void goBadPixieIngredients(View view){
-        Intent onClick = new Intent(this, IngredientsPage.class);
-        startActivity(onClick);
+        int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
+        Intent recipeStyleIntent = new Intent(this, IngredientsPage.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("recipePosition", positionInRecipeIndex);
+        recipeStyleIntent.putExtras(bundle);
+        startActivity(recipeStyleIntent);
     }
 
     public void runParser(int positionInRecipeIndex){
