@@ -9,8 +9,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.util.ArrayList;
 
 public class XMLFileProcessor_New {
-    private ArrayList<Beer> listOfBeers = new ArrayList<>();
-    private Beer newBeer;
+    private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
+    private Beer_New newBeer;
 
     public XMLFileProcessor_New(Context context){
         String text = null;
@@ -24,7 +24,7 @@ public class XMLFileProcessor_New {
                 switch (event) {
                     case XmlPullParser.START_TAG:
                         if(name.equals("recipe")){
-                            newBeer = new Beer();
+                            newBeer = new Beer_New();
                         }
                         break;
 
@@ -43,7 +43,16 @@ public class XMLFileProcessor_New {
                             newBeer.setStyleOfBeer(text);
                         } else if (name.equalsIgnoreCase("description")) {
                             newBeer.setDescriptionOfBeer(text);
+                        }else if (name.equalsIgnoreCase("temp")) {
+                            newBeer.setBoilDescription(text);
+                        }else if (name.equalsIgnoreCase("time")) {
+                            newBeer.setTimeInMins(text);
+                        }else if (name.equalsIgnoreCase("fermtemp")) {
+                            newBeer.setFermentTemperature(text);
+                        }else if (name.equalsIgnoreCase("abv")) {
+                            newBeer.setValueOfABV(text);
                         }
+
                         break;
                 }
                 event = myParser.next();
@@ -57,7 +66,7 @@ public class XMLFileProcessor_New {
         }
     }
 
-    public ArrayList<Beer> getListOfBeers(){
+    public ArrayList<Beer_New> getListOfBeers(){
         return listOfBeers;
     }
 

@@ -1,20 +1,19 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-import java.sql.CallableStatement;
-
-public class Beer {
+public class Beer_New {
     private String titleOfBeer;
     private String styleOfBeer;
     private String descriptionOfBeer;
-    private int valueOfABV;
-    private Gravity gravity;
-    private int timeInMins;
-    private int boilTemp;
-    private int fermentTemperature;
-    private int ibuValue;
+    private String valueOfABV;
+    private String originalGravity;
+    private String finalGravity;
+    private String timeInMins;
+    private String boilDescription;
+    private String fermentTemperature;
+    private String ibuValue;
 
 
-    public Beer(){
+    public Beer_New(){
         titleOfBeer = getTitleOfBeer();
         styleOfBeer = getStyleOfBeer();
         descriptionOfBeer = getDescriptionOfBeer();
@@ -32,24 +31,26 @@ public class Beer {
     public void setDescriptionOfBeer(String description){
         descriptionOfBeer = description;
     }
-    public void setValueOfABV(int abvValue){
+    public void setValueOfABV(String abvValue){
         valueOfABV = abvValue;
     }
-
-    public void setTimeInMins(int time){
+    public void setIBUValue(String info){
+        ibuValue = info;
+    }
+    public void setTimeInMins(String time){
         timeInMins = time;
     }
-    public void setBoilTemp(int temp){
-        boilTemp = temp;
+    public void setBoilDescription(String boil){
+        boilDescription = boil;
     }
-    public void setFermentTemperature(int temp){
-        fermentTemperature = temp;
+    public void setFermentTemperature(String fermentInfo){
+        fermentTemperature = fermentInfo;
     }
-    public void setOriginalGravity(int value){
-        gravity.setOriginalGravity(value);
+    public void setOriginalGravity(String gravity){
+        originalGravity = gravity;
     }
-    public void setFinalGravity(int value){
-        gravity.setFinalGravitiy(value);
+    public void setFinalGravity(String gravity){
+        finalGravity = gravity;
     }
 
     public String getTitleOfBeer(){
@@ -62,21 +63,24 @@ public class Beer {
         return descriptionOfBeer;
     }
     public String getValueOfABV(){
-        return valueOfABV + "%";
+        return valueOfABV;
     }
-    public int getTimeInMins(){
+    public String getIBUValue(){
+        return ibuValue;
+    }
+    public String getTimeInMins(){
         return timeInMins;
     }
     public String getBoilDescription(){
-        return "Boil for " + timeInMins + " minutes at " + boilTemp + "F";
+        return boilDescription;
     }
     public String getFermentTemp(){
-        return "Ferment at " + fermentTemperature + "F";
+        return fermentTemperature;
     }
     public String getOriginalGravity() {
-        return "Original Gravity: " + gravity.getOriginalGravity();
+        return originalGravity;
     }
     public String getFinalGravity(){
-        return "Final Gravity: " + gravity.getFinalGravity();
+        return finalGravity;
     }
 }

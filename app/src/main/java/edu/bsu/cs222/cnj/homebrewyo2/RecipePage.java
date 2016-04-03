@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class RecipePage extends AppCompatActivity {
 
     private Button timeSet;
-    ArrayList<Beer> listOfRecipies = new ArrayList<>();
+    ArrayList<Beer_New> listOfRecipies = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class RecipePage extends AppCompatActivity {
     }
 
     public void fillUIInformation(int positionInRecipeIndex) {
-        Beer currentBeer = listOfRecipies.get(positionInRecipeIndex);
+        Beer_New currentBeer = listOfRecipies.get(positionInRecipeIndex);
         setContentView(R.layout.activity_recipe);
         TextView nameTextView = (TextView) findViewById(R.id.textView16);
         nameTextView.setText(currentBeer.getTitleOfBeer());
@@ -57,25 +57,25 @@ public class RecipePage extends AppCompatActivity {
         TextView descriptionTextView = (TextView) findViewById(R.id.textView);
         descriptionTextView.setText(currentBeer.getDescriptionOfBeer());
 
-      /*
-        TextView timeTextView = (TextView) findViewById(R.id.textView3);
-        timeTextView.setText();
+
+        TextView boilTimeTextView = (TextView) findViewById(R.id.textView3);
+        boilTimeTextView.setText(currentBeer.getBoilDescription());
 
 
         TextView fermentTextView = (TextView) findViewById(R.id.textView4);
-        fermentTextView.setText();
+        fermentTextView.setText(currentBeer.getFermentTemp());
 
 
         TextView abvTextView = (TextView) findViewById(R.id.textView5);
-        abvTextView.setText();
+        abvTextView.setText(currentBeer.getValueOfABV());
 
 
         TextView oGravTextView = (TextView) findViewById(R.id.textView6);
-        oGravTextView.setText();
+        oGravTextView.setText(currentBeer.getOriginalGravity());
 
 
         TextView fGravTextView = (TextView) findViewById(R.id.textView7);
-        fGravTextView.setText();*/
+        fGravTextView.setText(currentBeer.getFinalGravity());
 
     }
 }
