@@ -18,6 +18,9 @@ public class RecipePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
+        Bundle bundle = getIntent().getExtras();
+        int positionInRecipeIndex = bundle.getInt("recipePosition");
+        runParser(positionInRecipeIndex);
 
 
         timeSet = (Button) findViewById(R.id.badPixTimer);
@@ -52,27 +55,22 @@ public class RecipePage extends AppCompatActivity {
         TextView nameTextView = (TextView) findViewById(R.id.textView16);
         nameTextView.setText(currentBeer.getTitleOfBeer());
 
-        setContentView(R.layout.activity_recipe);
         TextView descriptionTextView = (TextView) findViewById(R.id.textView);
         descriptionTextView.setText(currentBeer.getDescriptionOfBeer());
 
-      /*  setContentView(R.layout.activity_recipe);
+      /*
         TextView timeTextView = (TextView) findViewById(R.id.textView3);
         timeTextView.setText();
 
-        setContentView(R.layout.activity_recipe);
         TextView fermentTextView = (TextView) findViewById(R.id.textView4);
         fermentTextView.setText();
 
-        setContentView(R.layout.activity_recipe);
         TextView abvTextView = (TextView) findViewById(R.id.textView5);
         abvTextView.setText();
 
-        setContentView(R.layout.activity_recipe);
         TextView oGravTextView = (TextView) findViewById(R.id.textView6);
         oGravTextView.setText();
 
-        setContentView(R.layout.activity_recipe);
         TextView fGravTextView = (TextView) findViewById(R.id.textView7);
         fGravTextView.setText();*/
 

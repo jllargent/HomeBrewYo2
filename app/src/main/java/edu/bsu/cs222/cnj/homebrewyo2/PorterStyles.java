@@ -14,10 +14,11 @@ public class  PorterStyles extends AppCompatActivity {
         setContentView(R.layout.activity_porter_styles);
     }
     public void goBeerRecipe(View view){
-        int positionInRecipeIndex = Integer.parseInt((String) String.valueOf(view.getTag()));
-        Log.i("testing", "" + positionInRecipeIndex);
-        //startActivity(new Intent(getBaseContext(), activities.get(i)));
+        int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("recipePosition", positionInRecipeIndex);
+        recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
 }

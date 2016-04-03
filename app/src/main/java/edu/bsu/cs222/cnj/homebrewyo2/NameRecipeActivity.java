@@ -8,6 +8,7 @@ import android.view.View;
 
 public class NameRecipeActivity extends AppCompatActivity {
 
+    RecipePage recipePage = new RecipePage();
     Intent intent = getIntent();
 
     @Override
@@ -16,10 +17,12 @@ public class NameRecipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_name_recipe_scrollable);
     }
     public void goBeerRecipe(View view){
-        int positionInRecipeIndex = Integer.parseInt((String) String.valueOf(view.getTag()));
+        int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
         Log.i("testing", "" + positionInRecipeIndex);
-        //startActivity(new Intent(getBaseContext(), activities.get(i)));
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("recipePosition", positionInRecipeIndex);
+        recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
 
