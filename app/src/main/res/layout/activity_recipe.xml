@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/beerOrigGravity"
+                android:text=""
                 android:id="@+id/textView7"
                 android:layout_below="@+id/textView6"
                 android:layout_alignParentStart="true" />
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/beerTime"
+                android:text=""
                 android:id="@+id/textView3"
                 android:layout_below="@+id/textView2"
                 android:layout_alignParentStart="true" />
@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Gravities"
+                android:text="@string/gravity"
                 android:id="@+id/textView6"
                 android:layout_below="@+id/textView4"
                 android:layout_alignParentStart="true" />
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Temperature and Time"
+                android:text="@string/tempandtime"
                 android:id="@+id/textView2"
                 android:layout_below="@+id/textView"
                 android:layout_alignParentStart="true" />
@@ -59,7 +59,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/beerFinalGravity"
                 android:id="@+id/textView8"
                 android:layout_below="@+id/textView7"
                 android:layout_alignParentStart="true" />
@@ -68,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/beerFerment"
+                android:text=""
                 android:id="@+id/textView4"
                 android:layout_below="@+id/textView3"
                 android:layout_alignParentStart="true" />
@@ -77,8 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/beerABVIBU"
                 android:id="@+id/textView5"
+                android:text="abv"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true" />
 
@@ -117,7 +116,7 @@
                 android:id="@+id/badPixTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SET TIMER"
+                android:text="@string/setTimer"
                 android:layout_below="@+id/textView8"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>

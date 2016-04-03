@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Malts"
+                android:text="@string/Malts"
                 android:id="@+id/textView11"
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal" />
@@ -69,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Hops"
+                android:text="@string/hops"
                 android:id="@+id/textView13"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold" />
@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Yeast"
+                android:text="@string/yeast"
                 android:id="@+id/textView14"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold" />

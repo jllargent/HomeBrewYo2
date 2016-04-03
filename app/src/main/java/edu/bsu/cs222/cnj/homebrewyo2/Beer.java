@@ -14,7 +14,7 @@ public class Beer {
     private int ibuValue;
 
 
-    public Beer(){
+    public Beer(String s){
         titleOfBeer = getTitleOfBeer();
         styleOfBeer = getStyleOfBeer();
         descriptionOfBeer = getDescriptionOfBeer();

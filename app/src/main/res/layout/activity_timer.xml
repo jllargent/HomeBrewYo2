@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/timer1"
-        android:text="START"/>
+        android:text="@string/startTimer"/>
 
     <Button
         android:id="@+id/btnStop"
@@ -41,5 +41,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@id/timer1"
-        android:text="STOP"/>
+        android:text="@string/stopTimer"/>
 </RelativeLayout>

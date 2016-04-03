@@ -45,12 +45,7 @@ public class RecipePage extends AppCompatActivity {
         XMLFileProcessor_New parseInfo = new XMLFileProcessor_New(this);
         listOfRecipies = parseInfo.getListOfBeers();
         fillUIInformation(positionInRecipeIndex);
-        /*
-        Log.i("Testing Info Title", listOfRecipies.get(0).getTitleOfBeer());
 
-        Log.i("Testing Info Style", listOfRecipies.get(0).getStyleOfBeer());
-
-        Log.i("Testing Info Descriptio", listOfRecipies.get(0).getDescriptionOfBeer());*/
     }
 
     public void fillUIInformation(int positionInRecipeIndex) {
