@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 public class RecipePage extends AppCompatActivity {
 
+    private int positionInRecipeIndex;
+
     private Button timeSet;
     ArrayList<Beer_New> listOfRecipies = new ArrayList<>();
 
@@ -33,7 +35,6 @@ public class RecipePage extends AppCompatActivity {
     }
 
     public void goBadPixieIngredients(View view){
-        int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
         Intent recipeStyleIntent = new Intent(this, IngredientsPage.class);
         Bundle bundle = new Bundle();
         bundle.putInt("recipePosition", positionInRecipeIndex);
