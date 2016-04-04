@@ -15,7 +15,7 @@ public class TimerActivity extends AppCompatActivity {
     private Intent intent = getIntent();
     private Button btnStart, btnStop;
     private TextView textViewTime;
-    private static int milliseconds = 0;
+    private static int timerLength = 0;
     private CounterClass timer;
 
     public TimerActivity(){
@@ -26,6 +26,9 @@ public class TimerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
+        Bundle bundle = getIntent().getExtras();
+        timerLength = bundle.getInt("timerLength") * 1000;
+
 
         btnStart = (Button) findViewById(R.id.btnStart);
         btnStop = (Button) findViewById(R.id.btnStop);
@@ -36,7 +39,7 @@ public class TimerActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timer = new CounterClass(milliseconds, 1000, textViewTime);
+                timer = new CounterClass(timerLength, 1000, textViewTime);
                 timer.start();
             }
         });
@@ -49,9 +52,9 @@ public class TimerActivity extends AppCompatActivity {
         });
     }
 
-    public static void setTime(int seconds){
+   /* public static void setTime(int seconds){
         milliseconds = seconds * 1000;
-    }
+    }*/
 
     public TextView getTimerText(){
         return textViewTime;

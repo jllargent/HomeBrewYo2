@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-      //  XMLFileProcessor_New parseInfo = new XMLFileProcessor_New(this);
-       // ArrayList<Beer_New> listOfRecipies = new ArrayList<>();
     }
 
     public void goRecipes(View view){
@@ -25,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void goTimers(View view){
         Intent timerIntent = new Intent(this, TimerActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("timerLength", 0);
+        timerIntent.putExtras(bundle);
         startActivity(timerIntent);
     }
 

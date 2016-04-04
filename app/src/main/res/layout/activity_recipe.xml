@@ -110,7 +110,7 @@
                 android:layout_below="@+id/textView8"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="62dp"
-                android:onClick="goBadPixieIngredients"/>
+                android:onClick="goIngredients"/>
 
             <Button
                 android:id="@+id/badPixTimer"
@@ -118,7 +118,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/setTimer"
                 android:layout_below="@+id/textView8"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:onClick="goTimer"/>
         </RelativeLayout>
     </ScrollView>
 

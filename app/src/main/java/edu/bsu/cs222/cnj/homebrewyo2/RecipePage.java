@@ -14,7 +14,6 @@ public class RecipePage extends AppCompatActivity {
 
     private int positionInRecipeIndex;
 
-    private Button timeSet;
     ArrayList<Beer_New> listOfRecipies = new ArrayList<>();
 
     @Override
@@ -22,19 +21,11 @@ public class RecipePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
         Bundle bundle = getIntent().getExtras();
-        int positionInRecipeIndex = bundle.getInt("recipePosition");
+        positionInRecipeIndex = bundle.getInt("recipePosition");
         runParser(positionInRecipeIndex);
-
-        timeSet = (Button) findViewById(R.id.badPixTimer);
-        timeSet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TimerActivity.setTime(75 * 60);
-            }
-        });
     }
 
-    public void goBadPixieIngredients(View view){
+    public void goIngredients(View view){
         Intent recipeStyleIntent = new Intent(this, IngredientsPage.class);
         Bundle bundle = new Bundle();
         bundle.putInt("recipePosition", positionInRecipeIndex);
@@ -46,6 +37,18 @@ public class RecipePage extends AppCompatActivity {
         XMLFileProcessor_New parseInfo = new XMLFileProcessor_New(this);
         listOfRecipies = parseInfo.getListOfBeers();
         fillUIInformation(positionInRecipeIndex);
+
+    }
+
+    public void goTimer(View view){
+        Beer_New currentBeer = listOfRecipies.get(positionInRecipeIndex);
+        int timerLength = currentBeer.getTimeInMins() * 60;
+        Log.i("time is ", String.valueOf(timerLength));
+        Intent timerIntent = new Intent(this, TimerActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("timerLength", timerLength);
+        timerIntent.putExtras(bundle);
+        startActivity(timerIntent);
 
     }
 

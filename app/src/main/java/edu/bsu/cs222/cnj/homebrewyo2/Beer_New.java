@@ -68,8 +68,8 @@ public class Beer_New {
     public String getIBUValue(){
         return ibuValue;
     }
-    public String getTimeInMins(){
-        return timeInMins;
+    public int getTimeInMins(){
+        return Integer.parseInt(timeInMins);
     }
     public String getBoilDescription(){
         return boilDescription;
