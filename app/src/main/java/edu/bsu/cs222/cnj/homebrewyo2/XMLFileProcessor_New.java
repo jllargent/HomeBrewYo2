@@ -11,9 +11,9 @@ import java.util.ArrayList;
 public class XMLFileProcessor_New {
     private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
     private Beer_New newBeer;
-
+    private String text = null;
+    private String currentEndTag;
     public XMLFileProcessor_New(Context context){
-        String text = null;
         try{
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
             XmlPullParser myParser = xmlFactoryObject.newPullParser();
@@ -33,31 +33,9 @@ public class XMLFileProcessor_New {
                         break;
 
                     case XmlPullParser.END_TAG:
-                        if (name.equals("recipe")) {
-                            //Log.i("We got a hit", "Found a recipe here");
-
-                            listOfBeers.add(newBeer);
-                        } else if (name.equalsIgnoreCase("name")) {
-                            newBeer.setTitleOfBeer(text);
-                        } else if (name.equalsIgnoreCase("style")) {
-                            newBeer.setStyleOfBeer(text);
-                        } else if (name.equalsIgnoreCase("description")) {
-                            newBeer.setDescriptionOfBeer(text);
-                        }else if (name.equalsIgnoreCase("temp")) {
-                            newBeer.setBoilDescription(text);
-                        }else if (name.equalsIgnoreCase("time")) {
-                            newBeer.setTimeInMins(text);
-                        }else if (name.equalsIgnoreCase("fermtemp")) {
-                            newBeer.setFermentTemperature(text);
-                        }else if (name.equalsIgnoreCase("abv")) {
-                            newBeer.setValueOfABV(text);
-                        }else if (name.equalsIgnoreCase("targetfg")) {
-                            newBeer.setFinalGravity(text);
-                        }else if (name.equalsIgnoreCase("targetog")) {
-                            newBeer.setOriginalGravity(text);
-                        }
-
+                        addInfoIntoBeerObject(name);
                         break;
+
                 }
                 event = myParser.next();
             }while(event != XmlPullParser.END_DOCUMENT );
@@ -81,5 +59,34 @@ public class XMLFileProcessor_New {
         } else {
             return context.getString(nameResourceID);
         }
+    }
+
+    public void addInfoIntoBeerObject(String currentTag){
+        currentEndTag = currentTag;
+        if (checkCurrentEndTag("recipe")) {
+            listOfBeers.add(newBeer);
+        } else if (checkCurrentEndTag("name")) {
+            newBeer.setTitleOfBeer(text);
+        } else if (checkCurrentEndTag("style")) {
+            newBeer.setStyleOfBeer(text);
+        } else if (checkCurrentEndTag("description")) {
+            newBeer.setDescriptionOfBeer(text);
+        }else if (checkCurrentEndTag("temp")) {
+            newBeer.setBoilDescription(text);
+        }else if (checkCurrentEndTag("time")) {
+            newBeer.setTimeInMins(text);
+        }else if (checkCurrentEndTag("fermtemp")) {
+            newBeer.setFermentTemperature(text);
+        }else if (checkCurrentEndTag("abv")) {
+            newBeer.setValueOfABV(text);
+        }else if (checkCurrentEndTag("targetfg")) {
+            newBeer.setFinalGravity(text);
+        }else if (checkCurrentEndTag("targetog")) {
+            newBeer.setOriginalGravity(text);
+        }
+    }
+
+    public boolean checkCurrentEndTag(String tagToCheck){
+        return currentEndTag.equalsIgnoreCase(tagToCheck);
     }
 }
