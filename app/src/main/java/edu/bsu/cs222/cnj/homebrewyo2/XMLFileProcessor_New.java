@@ -84,6 +84,7 @@ public class XMLFileProcessor_New {
         }else if (checkCurrentEndTag("targetog")) {
             newBeer.setOriginalGravity(text);
         }
+
     }
 
     public boolean checkCurrentEndTag(String tagToCheck){
