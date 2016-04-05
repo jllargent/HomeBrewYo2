@@ -13,7 +13,7 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<maltName>Extra Pale<maltName>
+				<maltName>Extra Pale</maltName>
 				<maltweight>11.7lb</maltweight>
 			</maltIngredient>
 		</malts>	
@@ -486,7 +486,7 @@
 				<hopsamount>9.4g</hopsamount>
 				<hopstime>Dry Hop</hopstime>
 			</hopingredient>
-		</hopingredient>
+		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	</ingredients>
 </recipe>

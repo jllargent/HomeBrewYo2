@@ -2,7 +2,7 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 public class Hop {
     private String nameOfHop;
-    private double amountOfHopsInGrams = 0;
+    private String amountOfHopsInGrams;
     private String timeToAddHop;
 
     Hop(){
@@ -12,7 +12,7 @@ public class Hop {
         nameOfHop = name;
     }
 
-    public void setAmountOfHopsInGrams(double weight){
+    public void setAmountOfHopsInGrams(String weight){
         amountOfHopsInGrams = weight;
     }
 
@@ -24,7 +24,7 @@ public class Hop {
         return nameOfHop;
     }
     public String getAmountOfHops(){
-        return amountOfHopsInGrams + "g";
+        return amountOfHopsInGrams;
     }
     public String getTimeToAddHop(){
         return timeToAddHop;

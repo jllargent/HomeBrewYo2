@@ -16,6 +16,7 @@ public class XMLFileProcessor_New {
     private Malt malt;
     private String text = null;
     private String currentTag;
+    private String parentTag = "No Parent Tag";
 
 
     public XMLFileProcessor_New(Context context){
@@ -29,6 +30,7 @@ public class XMLFileProcessor_New {
                 switch (event) {
                     case XmlPullParser.START_TAG:
                         checkStartTagForNewObjectToCreate();
+                        Log.i("ParentTag*************", parentTag);
                         break;
 
                     case XmlPullParser.TEXT:
@@ -36,11 +38,17 @@ public class XMLFileProcessor_New {
                         break;
 
                     case XmlPullParser.END_TAG:
-                        addInfoIntoBeerObject();
-                        addInfoIntoMaltObject();
-                        addInfoIntoHopObject();
+                        if( isActiveObject("recipe"))
+                            addInfoIntoBeerObject();
+                        else if (isActiveObject("maltIngredient"))
+                            addInfoIntoMaltObject();
+                        else if (isActiveObject("hopingredient"))
+                            addInfoIntoHopObject();
                         addIngredientIntoIngredientsObject();
                         addBeerObjectToList();
+                        break;
+
+                    default:
                         break;
 
                 }
@@ -53,13 +61,6 @@ public class XMLFileProcessor_New {
         }catch(Exception e){
             Log.wtf("OOPS", e);
         }
-    }
-
-    public void addIngredientIntoIngredientsObject() {
-        if (checkCurrentTag("maltIngredient"))
-            listOfIngredients.addToMaltsList(malt);
-        else if (checkCurrentTag("hopingredient"))
-            listOfIngredients.addToHopsList(hop);
     }
 
     public ArrayList<Beer_New> getListOfBeers(){
@@ -92,7 +93,7 @@ public class XMLFileProcessor_New {
         if (checkCurrentTag("maltName"))
             malt.setNameOfMalt(text);
         else if (checkCurrentTag("maltweight")) {
-            malt.setWeightOfMaltsInPounds(Double.parseDouble(text));
+            malt.setWeightOfMaltsInPounds(text);
         }
     }
 
@@ -101,7 +102,7 @@ public class XMLFileProcessor_New {
             hop.setNameOfHop(text);
         }
         else if( checkCurrentTag("hopsamount")){
-            hop.setAmountOfHopsInGrams(Double.parseDouble(text));
+            hop.setAmountOfHopsInGrams(text);
         }
         else if( checkCurrentTag("hopstime")){
             hop.setTimeToAddHop(text);
@@ -117,16 +118,30 @@ public class XMLFileProcessor_New {
         return currentTag.equalsIgnoreCase(tagToCheck);
     }
 
+    public void addIngredientIntoIngredientsObject() {
+        if (checkCurrentTag("maltIngredient"))
+            listOfIngredients.addToMaltsList(malt);
+        else if (checkCurrentTag("hopingredient"))
+            listOfIngredients.addToHopsList(hop);
+    }
+
     public void checkStartTagForNewObjectToCreate(){
         if (checkCurrentTag("recipe")) {
             beer = new Beer_New();
+            parentTag = currentTag;
         } else if(checkCurrentTag("ingredients")){
             listOfIngredients = new Ingredients();
+            parentTag = currentTag;
         } else if(checkCurrentTag("maltIngredient")){
             malt = new Malt();
+            parentTag = currentTag;
         } else if(checkCurrentTag("hopingredient")){
             hop = new Hop();
+            parentTag = currentTag;
         }
     }
 
+    public boolean isActiveObject(String currentParentTag){
+        return currentParentTag.equalsIgnoreCase(parentTag);
+    }
 }

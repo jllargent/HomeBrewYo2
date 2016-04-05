@@ -2,7 +2,7 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 public class Malt {
     private String nameOfMalt;
-    private double amountOfMaltsInPounds = 0;
+    private String amountOfMaltsInPounds;
 
     public Malt(){
     }
@@ -10,7 +10,7 @@ public class Malt {
     public void setNameOfMalt(String name){
         nameOfMalt = name;
     }
-    public void setWeightOfMaltsInPounds(double weight){
+    public void setWeightOfMaltsInPounds(String weight){
         amountOfMaltsInPounds = weight;
     }
 
@@ -18,6 +18,6 @@ public class Malt {
         return nameOfMalt;
     }
     public String getAmountOfMalt(){
-        return amountOfMaltsInPounds + "lbs";
+        return amountOfMaltsInPounds;
     }
 }
