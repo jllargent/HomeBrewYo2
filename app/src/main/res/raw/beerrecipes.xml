@@ -12,10 +12,10 @@
 	<targetog>Original Gravity 1056</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Extra Pale</malt>
 				<maltweight>11.7lb</maltweight>
-			</malt1>
+			</maltIngredient>
 		</malts>	
 		<hops>
 			<hops1>
@@ -75,22 +75,22 @@
     	<targetog>Original Gravity 1048.5</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Extra Pale</malt>
 				<maltweight>8.95lb</maltweight>
-			</malt1>
-			<malt2>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Caramalt</malt>
 				<maltweight>0.69lb</maltweight>
-			</malt2>
-			<malt3>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Crystal 120</malt>
 				<maltweight>0.5lb</maltweight>
-			</malt3>
-			<malt4>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Dark Crystal 350</malt>
 				<maltweight>0.2lb</maltweight>
-			</malt4>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
@@ -130,34 +130,34 @@
     	<targetog>Original Gravity 1075</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Extra Pale - Maris Otter</malt>
 				<maltweight>11.8lb</maltweight>
-			</malt1>
-			<malt2>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Dark Crystal 350-400</malt>
 				<maltweight>1.6lb</maltweight>
-			</malt2>
-			<malt3>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Carafa Special Malt Type 3</malt>
 				<maltweight>0.4lb</maltweight>
-			</malt3>
-			<malt4>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Caramalt</malt>
 				<maltweight>1.2lb</maltweight>
-			</malt4>
-			<malt5>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Chocolate</malt>
 				<maltweight>0.6lb</maltweight>
-			</malt5>
-			<malt6>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Wheat</malt>
 				<maltweight>0.8lb</maltweight>
-			</malt6>
-			<malt7>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Flaked Oats</malt>
 				<maltweight>1.2lb</maltweight>
-			</malt7>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
@@ -202,18 +202,18 @@
     	<targetog>Original Gravity 1052</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Extra Pale Maris Otter</malt>
 				<maltweight>8.3lb</maltweight>
-			</malt1>
-			<malt2>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Caramalt</malt>
 				<maltweight>0.7lb</maltweight>
-			</malt2>
-			<malt3>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Munich</malt>
 				<maltweight>0.7lb</maltweight>
-			</malt3>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
@@ -258,10 +258,10 @@
     	<targetog>Original Gravity 1039</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Maris Otter</malt>
 				<maltweight>8.5lb</maltweight>
-			</malt1>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
@@ -316,22 +316,22 @@
         	<targetog>Original Gravity 1071.3</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Extra Pale</malt>
 				<maltweight>9.9lb</maltweight>
-			</malt1>
-			<malt2>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Munich</malt>
 				<maltweight>1.10lb</maltweight>
-			</malt2>
-			<malt3>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Amber</malt>
 				<maltweight>0.11lb</maltweight>
-			</malt3>
-			<malt4>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Dark Crystal</malt>
 				<maltweight>0.18lb</maltweight>
-			</malt4>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
@@ -386,14 +386,14 @@
         	<targetog>Original Gravity 1047</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Wheat</malt>
 				<maltweight>5.5lb</maltweight>
-			</malt1>
-			<malt2>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Extra Pale</malt>
 				<maltweight>4.54lb</maltweight>
-			</malt2>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
@@ -438,22 +438,22 @@
         	<targetog>Original Gravity 1080</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Extra Pale</malt>
 				<maltweight>16.52lb</maltweight>
-			</malt1>
-			<malt2>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Dark Crystal</malt>
 				<maltweight>1.38lb</maltweight>
-			</malt2>
-			<malt3>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Chocolate</malt>
 				<maltweight>0.69lb</maltweight>
-			</malt3>
-			<malt4>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Roast Barley</malt>
 				<maltweight>0.69lb</maltweight>
-			</malt4>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
@@ -505,18 +505,18 @@
         	<targetog>Original Gravity 1092</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Extra Pale</malt>
 				<maltweight>12.39lb</maltweight>
-			</malt1>
-			<malt2>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Wheat</malt>
 				<maltweight>15.14lb</maltweight>
-			</malt2>
-			<malt3>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Crystal</malt>
 				<maltweight>1.37lb</maltweight>
-			</malt3>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
@@ -553,30 +553,30 @@
         	<targetog>Original Gravity 1053</targetog>
 	<ingredients>
 		<malts>
-			<malt1>
+			<maltIngredient>
 				<malt>Extra Pale</malt>
 				<maltweight>8.40lb</maltweight>
-			</malt1>
-			<malt2>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Dark Crystal</malt>
 				<maltweight>0.41lb</maltweight>
-			</malt2>
-			<malt3>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Roasted Barley</malt>
 				<maltweight>0.69lb</maltweight>
-			</malt3>
-			<malt4>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Black</malt>
 				<maltweight>0.28lb</maltweight>
-			</malt4>
-			<malt5>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Amber</malt>
 				<maltweight>0.69lb</maltweight>
-			</malt5>
-			<malt6>
+			</maltIngredient>
+			<maltIngredient>
 				<malt>Flaked Oats</malt>
 				<maltweight>0.55lb</maltweight>
-			</malt6>
+			</maltIngredient>
 		</malts>
 		<hops>
 			<hops1>
