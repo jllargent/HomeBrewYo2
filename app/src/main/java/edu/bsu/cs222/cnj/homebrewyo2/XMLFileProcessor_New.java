@@ -11,12 +11,11 @@ import java.util.ArrayList;
 public class XMLFileProcessor_New {
     private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
     private Beer_New beer;
-    private Ingredients listOfIngredients;
     private Hop hop;
     private Malt malt;
     private String text = null;
     private String currentTag;
-    private String parentTag = "No Parent Tag";
+    private String parentTag = null;
 
 
     public XMLFileProcessor_New(Context context){
@@ -25,12 +24,13 @@ public class XMLFileProcessor_New {
             XmlPullParser myParser = xmlFactoryObject.newPullParser();
             myParser.setInput(context.getResources().openRawResource(R.raw.beerrecipes), null);
             int event = myParser.getEventType();
+
             do{
                 currentTag = myParser.getName();
+
                 switch (event) {
                     case XmlPullParser.START_TAG:
                         checkStartTagForNewObjectToCreate();
-                        Log.i("ParentTag*************", parentTag);
                         break;
 
                     case XmlPullParser.TEXT:
@@ -38,20 +38,20 @@ public class XMLFileProcessor_New {
                         break;
 
                     case XmlPullParser.END_TAG:
-                        if( isActiveObject("recipe"))
+                        if( isActiveObject("recipe") )
                             addInfoIntoBeerObject();
-                        else if (isActiveObject("maltIngredient"))
+                        else if ( isActiveObject("maltIngredient") )
                             addInfoIntoMaltObject();
-                        else if (isActiveObject("hopingredient"))
+                        else if ( isActiveObject("hopingredient") )
                             addInfoIntoHopObject();
-                        addIngredientIntoIngredientsObject();
+                        addIngredientIntoRecipe();
                         addBeerObjectToList();
                         break;
 
                     default:
                         break;
-
                 }
+
                 event = myParser.next();
             }while(event != XmlPullParser.END_DOCUMENT );
             /*Log.i("Beer Count", String.valueOf(listOfBeers.size()));
@@ -67,7 +67,11 @@ public class XMLFileProcessor_New {
         return listOfBeers;
     }
 
-    public void addInfoIntoBeerObject(){
+    private boolean checkCurrentTag(String tagToCheck){
+        return currentTag.equalsIgnoreCase(tagToCheck);
+    }
+
+    private void addInfoIntoBeerObject(){
         if (checkCurrentTag("name")) {
             beer.setTitleOfBeer(text);
         } else if (checkCurrentTag("style")) {
@@ -89,7 +93,7 @@ public class XMLFileProcessor_New {
         }
     }
 
-    public void addInfoIntoMaltObject(){
+    private void addInfoIntoMaltObject(){
         if (checkCurrentTag("maltName"))
             malt.setNameOfMalt(text);
         else if (checkCurrentTag("maltweight")) {
@@ -97,7 +101,7 @@ public class XMLFileProcessor_New {
         }
     }
 
-    public void addInfoIntoHopObject(){
+    private void addInfoIntoHopObject(){
         if(checkCurrentTag("hopsName")){
             hop.setNameOfHop(text);
         }
@@ -109,36 +113,35 @@ public class XMLFileProcessor_New {
         }
     }
 
-    public void addBeerObjectToList(){
+    private void addBeerObjectToList(){
         if (checkCurrentTag("recipe"))
             listOfBeers.add(beer);
     }
 
-    public boolean checkCurrentTag(String tagToCheck){
-        return currentTag.equalsIgnoreCase(tagToCheck);
-    }
-
-    public void addIngredientIntoIngredientsObject() {
+    private void addIngredientIntoRecipe() {
         if (checkCurrentTag("maltIngredient"))
-            listOfIngredients.addToMaltsList(malt);
+            beer.addMaltIngredient(malt);
         else if (checkCurrentTag("hopingredient"))
-            listOfIngredients.addToHopsList(hop);
+            beer.addHopingredient(hop);
+        else if (checkCurrentTag("yeast"))
+            beer.setYeastIngredient(text);
     }
 
-    public void checkStartTagForNewObjectToCreate(){
+    private void checkStartTagForNewObjectToCreate(){
         if (checkCurrentTag("recipe")) {
             beer = new Beer_New();
-            parentTag = currentTag;
-        } else if(checkCurrentTag("ingredients")){
-            listOfIngredients = new Ingredients();
-            parentTag = currentTag;
-        } else if(checkCurrentTag("maltIngredient")){
+            setParentTag();
+        }  else if(checkCurrentTag("maltIngredient")){
             malt = new Malt();
-            parentTag = currentTag;
+            setParentTag();
         } else if(checkCurrentTag("hopingredient")){
             hop = new Hop();
-            parentTag = currentTag;
+            setParentTag();
         }
+    }
+
+    private void setParentTag(){
+        parentTag = currentTag;
     }
 
     public boolean isActiveObject(String currentParentTag){

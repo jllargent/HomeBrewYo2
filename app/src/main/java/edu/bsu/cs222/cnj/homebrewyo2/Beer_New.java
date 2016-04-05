@@ -1,5 +1,7 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
+import java.util.ArrayList;
+
 public class Beer_New {
     private String titleOfBeer;
     private String styleOfBeer;
@@ -11,6 +13,7 @@ public class Beer_New {
     private String boilDescription;
     private String fermentTemperature;
     private String ibuValue;
+    private Ingredients ingredients = new Ingredients();
 
 
     public Beer_New(){
@@ -18,9 +21,6 @@ public class Beer_New {
         styleOfBeer = getStyleOfBeer();
         descriptionOfBeer = getDescriptionOfBeer();
     }
-
-
-
 
     public void setTitleOfBeer(String name){
         titleOfBeer = name;
@@ -83,4 +83,25 @@ public class Beer_New {
     public String getFinalGravity(){
         return finalGravity;
     }
+
+    public void addMaltIngredient(Malt malt){
+        ingredients.addToMaltsList(malt);
+    }
+    public void addHopingredient(Hop hop){
+        ingredients.addToHopsList(hop);
+    }
+    public void setYeastIngredient(String yeastIngredient){
+        ingredients.setYeast(yeastIngredient);
+    }
+
+    public ArrayList<Malt> getMaltIngredients(){
+        return ingredients.getListOfMalts();
+    }
+    public ArrayList<Hop> getHopIngredients(){
+        return ingredients.getListOfHops();
+    }
+    public String getYeastIngredient(){
+        return ingredients.getYeast();
+    }
+
 }
