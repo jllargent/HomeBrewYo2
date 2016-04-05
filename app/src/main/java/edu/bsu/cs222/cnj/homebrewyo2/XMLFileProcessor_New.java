@@ -11,8 +11,9 @@ import java.util.ArrayList;
 public class XMLFileProcessor_New {
     private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
     private Beer_New newBeer;
+    private Ingredients newIngredients;
     private String text = null;
-    private String currentEndTag;
+    private String currentTag;
     public XMLFileProcessor_New(Context context){
         try{
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
@@ -20,20 +21,23 @@ public class XMLFileProcessor_New {
             myParser.setInput(context.getResources().openRawResource(R.raw.beerrecipes), null);
             int event = myParser.getEventType();
             do{
-                String name = myParser.getName();
+                currentTag = myParser.getName();
                 switch (event) {
                     case XmlPullParser.START_TAG:
-                        if(name.equals("recipe")){
+                        if (checkCurrentTag("recipe")) {
                             newBeer = new Beer_New();
+                        } else if(checkCurrentTag("ingredients")){
+                            newIngredients = new Ingredients();
                         }
-                        break;
+                    break;
 
                     case XmlPullParser.TEXT:
                         text = myParser.getText();
                         break;
 
                     case XmlPullParser.END_TAG:
-                        addInfoIntoBeerObject(name);
+                        addInfoIntoBeerObject();
+                        addInfoIntoIngredientsObject();
                         break;
 
                 }
@@ -48,46 +52,41 @@ public class XMLFileProcessor_New {
         }
     }
 
+    private void addInfoIntoIngredientsObject() {
+
+    }
+
     public ArrayList<Beer_New> getListOfBeers(){
         return listOfBeers;
     }
 
-    public static String getResourceString(String name, Context context) {
-        int nameResourceID = context.getResources().getIdentifier(name, "xml", context.getApplicationInfo().packageName);
-        if (nameResourceID == 0) {
-            throw new IllegalArgumentException("No resource string found with name " + name);
-        } else {
-            return context.getString(nameResourceID);
-        }
-    }
-
-    public void addInfoIntoBeerObject(String currentTag){
-        currentEndTag = currentTag;
-        if (checkCurrentEndTag("recipe")) {
+    public void addInfoIntoBeerObject(){
+        if (checkCurrentTag("recipe")) {
             listOfBeers.add(newBeer);
-        } else if (checkCurrentEndTag("name")) {
+        } else if (checkCurrentTag("name")) {
             newBeer.setTitleOfBeer(text);
-        } else if (checkCurrentEndTag("style")) {
+        } else if (checkCurrentTag("style")) {
             newBeer.setStyleOfBeer(text);
-        } else if (checkCurrentEndTag("description")) {
+        } else if (checkCurrentTag("description")) {
             newBeer.setDescriptionOfBeer(text);
-        }else if (checkCurrentEndTag("temp")) {
+        }else if (checkCurrentTag("temp")) {
             newBeer.setBoilDescription(text);
-        }else if (checkCurrentEndTag("time")) {
+        }else if (checkCurrentTag("time")) {
             newBeer.setTimeInMins(text);
-        }else if (checkCurrentEndTag("fermtemp")) {
+        }else if (checkCurrentTag("fermtemp")) {
             newBeer.setFermentTemperature(text);
-        }else if (checkCurrentEndTag("abv")) {
+        }else if (checkCurrentTag("abv")) {
             newBeer.setValueOfABV(text);
-        }else if (checkCurrentEndTag("targetfg")) {
+        }else if (checkCurrentTag("targetfg")) {
             newBeer.setFinalGravity(text);
-        }else if (checkCurrentEndTag("targetog")) {
+        }else if (checkCurrentTag("targetog")) {
             newBeer.setOriginalGravity(text);
         }
 
     }
 
-    public boolean checkCurrentEndTag(String tagToCheck){
-        return currentEndTag.equalsIgnoreCase(tagToCheck);
+    public boolean checkCurrentTag(String tagToCheck){
+        return currentTag.equalsIgnoreCase(tagToCheck);
     }
+
 }
