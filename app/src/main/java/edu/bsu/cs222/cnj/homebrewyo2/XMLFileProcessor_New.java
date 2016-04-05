@@ -17,6 +17,7 @@ public class XMLFileProcessor_New {
     private String text = null;
     private String currentTag;
 
+
     public XMLFileProcessor_New(Context context){
         try{
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
@@ -36,7 +37,8 @@ public class XMLFileProcessor_New {
 
                     case XmlPullParser.END_TAG:
                         addInfoIntoBeerObject();
-
+                        addInfoIntoMaltObject();
+                        addInfoIntoHopObject();
                         addIngredientIntoIngredientsObject();
                         addBeerObjectToList();
                         break;
@@ -84,7 +86,26 @@ public class XMLFileProcessor_New {
         }else if (checkCurrentTag("targetog")) {
             beer.setOriginalGravity(text);
         }
+    }
 
+    public void addInfoIntoMaltObject(){
+        if (checkCurrentTag("maltName"))
+            malt.setNameOfMalt(text);
+        else if (checkCurrentTag("maltweight")) {
+            malt.setWeightOfMaltsInPounds(Double.parseDouble(text));
+        }
+    }
+
+    public void addInfoIntoHopObject(){
+        if(checkCurrentTag("hopsName")){
+            hop.setNameOfHop(text);
+        }
+        else if( checkCurrentTag("hopsamount")){
+            hop.setAmountOfHopsInGrams(Double.parseDouble(text));
+        }
+        else if( checkCurrentTag("hopstime")){
+            hop.setTimeToAddHop(text);
+        }
     }
 
     public void addBeerObjectToList(){
