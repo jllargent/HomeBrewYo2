@@ -10,12 +10,13 @@ import java.util.ArrayList;
 
 public class XMLFileProcessor_New {
     private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
-    private Beer_New newBeer;
-    private Ingredients newIngredients;
-    private Hop newHop;
-    private Malt newMalt;
+    private Beer_New beer;
+    private ArrayList<Ingredients> listOfIngredients;
+    private Hop hop;
+    private Malt malt;
     private String text = null;
     private String currentTag;
+
     public XMLFileProcessor_New(Context context){
         try{
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
@@ -35,8 +36,8 @@ public class XMLFileProcessor_New {
 
                     case XmlPullParser.END_TAG:
                         addInfoIntoBeerObject();
-                        addInfoIntoIngredientsObject();
 
+                        addIngredientIntoIngredientsObject();
                         addBeerObjectToList();
                         break;
 
@@ -52,8 +53,9 @@ public class XMLFileProcessor_New {
         }
     }
 
-    private void addInfoIntoIngredientsObject() {
-
+    public void addIngredientIntoIngredientsObject() {
+        if (checkCurrentTag("maltIngredient"))
+            listOfBeers.add(beer);
     }
 
     public ArrayList<Beer_New> getListOfBeers(){
@@ -62,30 +64,30 @@ public class XMLFileProcessor_New {
 
     public void addInfoIntoBeerObject(){
         if (checkCurrentTag("name")) {
-            newBeer.setTitleOfBeer(text);
+            beer.setTitleOfBeer(text);
         } else if (checkCurrentTag("style")) {
-            newBeer.setStyleOfBeer(text);
+            beer.setStyleOfBeer(text);
         } else if (checkCurrentTag("description")) {
-            newBeer.setDescriptionOfBeer(text);
+            beer.setDescriptionOfBeer(text);
         }else if (checkCurrentTag("temp")) {
-            newBeer.setBoilDescription(text);
+            beer.setBoilDescription(text);
         }else if (checkCurrentTag("time")) {
-            newBeer.setTimeInMins(text);
+            beer.setTimeInMins(text);
         }else if (checkCurrentTag("fermtemp")) {
-            newBeer.setFermentTemperature(text);
+            beer.setFermentTemperature(text);
         }else if (checkCurrentTag("abv")) {
-            newBeer.setValueOfABV(text);
+            beer.setValueOfABV(text);
         }else if (checkCurrentTag("targetfg")) {
-            newBeer.setFinalGravity(text);
+            beer.setFinalGravity(text);
         }else if (checkCurrentTag("targetog")) {
-            newBeer.setOriginalGravity(text);
+            beer.setOriginalGravity(text);
         }
 
     }
 
     public void addBeerObjectToList(){
         if (checkCurrentTag("recipe"))
-            listOfBeers.add(newBeer);
+            listOfBeers.add(beer);
     }
 
     public boolean checkCurrentTag(String tagToCheck){
@@ -94,13 +96,13 @@ public class XMLFileProcessor_New {
 
     public void checkStartTagForNewObjectToCreate(){
         if (checkCurrentTag("recipe")) {
-            newBeer = new Beer_New();
+            beer = new Beer_New();
         } else if(checkCurrentTag("ingredients")){
-            newIngredients = new Ingredients();
+            listOfIngredients = new ArrayList<Ingredients>();
         } else if(checkCurrentTag("maltIngredient")){
-            newMalt = new Malt();
+            malt = new Malt();
         } else if(checkCurrentTag("hopingredient")){
-            newHop = new Hop();
+            hop = new Hop();
         }
     }
 
