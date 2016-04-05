@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class XMLFileProcessor_New {
     private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
     private Beer_New beer;
-    private ArrayList<Ingredients> listOfIngredients;
+    private Ingredients listOfIngredients;
     private Hop hop;
     private Malt malt;
     private String text = null;
@@ -55,7 +55,9 @@ public class XMLFileProcessor_New {
 
     public void addIngredientIntoIngredientsObject() {
         if (checkCurrentTag("maltIngredient"))
-            listOfBeers.add(beer);
+            listOfIngredients.addToMaltsList(malt);
+        else if (checkCurrentTag("hopingredient"))
+            listOfIngredients.addToHopsList(hop);
     }
 
     public ArrayList<Beer_New> getListOfBeers(){
@@ -98,7 +100,7 @@ public class XMLFileProcessor_New {
         if (checkCurrentTag("recipe")) {
             beer = new Beer_New();
         } else if(checkCurrentTag("ingredients")){
-            listOfIngredients = new ArrayList<Ingredients>();
+            listOfIngredients = new Ingredients();
         } else if(checkCurrentTag("maltIngredient")){
             malt = new Malt();
         } else if(checkCurrentTag("hopingredient")){
