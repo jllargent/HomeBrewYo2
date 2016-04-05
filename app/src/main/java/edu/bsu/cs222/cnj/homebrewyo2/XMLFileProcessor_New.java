@@ -12,6 +12,8 @@ public class XMLFileProcessor_New {
     private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
     private Beer_New newBeer;
     private Ingredients newIngredients;
+    private Hop newHop;
+    private Malt newMalt;
     private String text = null;
     private String currentTag;
     public XMLFileProcessor_New(Context context){
@@ -24,12 +26,8 @@ public class XMLFileProcessor_New {
                 currentTag = myParser.getName();
                 switch (event) {
                     case XmlPullParser.START_TAG:
-                        if (checkCurrentTag("recipe")) {
-                            newBeer = new Beer_New();
-                        } else if(checkCurrentTag("ingredients")){
-                            newIngredients = new Ingredients();
-                        }
-                    break;
+                        checkStartTagForNewObjectToCreate();
+                        break;
 
                     case XmlPullParser.TEXT:
                         text = myParser.getText();
@@ -38,6 +36,8 @@ public class XMLFileProcessor_New {
                     case XmlPullParser.END_TAG:
                         addInfoIntoBeerObject();
                         addInfoIntoIngredientsObject();
+
+                        addBeerObjectToList();
                         break;
 
                 }
@@ -61,9 +61,7 @@ public class XMLFileProcessor_New {
     }
 
     public void addInfoIntoBeerObject(){
-        if (checkCurrentTag("recipe")) {
-            listOfBeers.add(newBeer);
-        } else if (checkCurrentTag("name")) {
+        if (checkCurrentTag("name")) {
             newBeer.setTitleOfBeer(text);
         } else if (checkCurrentTag("style")) {
             newBeer.setStyleOfBeer(text);
@@ -85,8 +83,25 @@ public class XMLFileProcessor_New {
 
     }
 
+    public void addBeerObjectToList(){
+        if (checkCurrentTag("recipe"))
+            listOfBeers.add(newBeer);
+    }
+
     public boolean checkCurrentTag(String tagToCheck){
         return currentTag.equalsIgnoreCase(tagToCheck);
+    }
+
+    public void checkStartTagForNewObjectToCreate(){
+        if (checkCurrentTag("recipe")) {
+            newBeer = new Beer_New();
+        } else if(checkCurrentTag("ingredients")){
+            newIngredients = new Ingredients();
+        } else if(checkCurrentTag("maltIngredient")){
+            newMalt = new Malt();
+        } else if(checkCurrentTag("hopingredient")){
+            newHop = new Hop();
+        }
     }
 
 }
