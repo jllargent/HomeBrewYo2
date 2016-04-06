@@ -15,7 +15,6 @@ public class IngredientsPage extends AppCompatActivity {
     ArrayList<Malt> listOfMaltsIngredients;
     ArrayList<Hop> listOfHopIngredients;
     Beer_New currentBeer;
-    private ListView listviewMalts;
 
 
     @Override
@@ -47,11 +46,10 @@ public class IngredientsPage extends AppCompatActivity {
         list.addAll(Arrays.asList(planets));
 
 
-
-        listviewMalts = (ListView) findViewById(R.id.listView);
+        ListView listviewMalts = (ListView) findViewById(R.id.listView);
         assert listviewMalts != null;
         listviewMalts.setClickable(true);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, list);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, list);
         listviewMalts.setAdapter(arrayAdapter);
     }
 

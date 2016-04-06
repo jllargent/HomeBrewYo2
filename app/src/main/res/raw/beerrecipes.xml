@@ -13,7 +13,7 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Extra Pale</malt>
+				<maltName>Extra Pale</maltName>
 				<maltweight>11.7lb</maltweight>
 			</maltIngredient>
 		</malts>	
@@ -76,19 +76,19 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Extra Pale</malt>
+				<maltName>Extra Pale</maltName>
 				<maltweight>8.95lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Caramalt</malt>
+				<maltName>Caramalt</maltName>
 				<maltweight>0.69lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Crystal 120</malt>
+				<maltName>Crystal 120</maltName>
 				<maltweight>0.5lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Dark Crystal 350</malt>
+				<maltName>Dark Crystal 350</maltName>
 				<maltweight>0.2lb</maltweight>
 			</maltIngredient>
 		</malts>
@@ -131,31 +131,31 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Extra Pale - Maris Otter</malt>
+				<maltName>Extra Pale - Maris Otter</maltName>
 				<maltweight>11.8lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Dark Crystal 350-400</malt>
+				<maltName>Dark Crystal 350-400</maltName>
 				<maltweight>1.6lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Carafa Special Malt Type 3</malt>
+				<maltName>Carafa Special Malt Type 3</maltName>
 				<maltweight>0.4lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Caramalt</malt>
+				<maltName>Caramalt</maltName>
 				<maltweight>1.2lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Chocolate</malt>
+				<maltName>Chocolate</maltName>
 				<maltweight>0.6lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Wheat</malt>
+				<maltName>Wheat</maltName>
 				<maltweight>0.8lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Flaked Oats</malt>
+				<maltName>Flaked Oats</maltName>
 				<maltweight>1.2lb</maltweight>
 			</maltIngredient>
 		</malts>
@@ -203,15 +203,15 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Extra Pale Maris Otter</malt>
+				<maltName>Extra Pale Maris Otter</maltName>
 				<maltweight>8.3lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Caramalt</malt>
+				<maltName>Caramalt</maltName>
 				<maltweight>0.7lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Munich</malt>
+				<maltName>Munich</maltName>
 				<maltweight>0.7lb</maltweight>
 			</maltIngredient>
 		</malts>
@@ -259,7 +259,7 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Maris Otter</malt>
+				<maltName>Maris Otter</maltName>
 				<maltweight>8.5lb</maltweight>
 			</maltIngredient>
 		</malts>
@@ -317,19 +317,19 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Extra Pale</malt>
+				<maltName>Extra Pale</maltName>
 				<maltweight>9.9lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Munich</malt>
+				<maltName>Munich</maltName>
 				<maltweight>1.10lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Amber</malt>
+				<maltName>Amber</maltName>
 				<maltweight>0.11lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Dark Crystal</malt>
+				<maltName>Dark Crystal</maltName>
 				<maltweight>0.18lb</maltweight>
 			</maltIngredient>
 		</malts>
@@ -387,11 +387,11 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Wheat</malt>
+				<maltName>Wheat</maltName>
 				<maltweight>5.5lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Extra Pale</malt>
+				<maltName>Extra Pale</maltName>
 				<maltweight>4.54lb</maltweight>
 			</maltIngredient>
 		</malts>
@@ -439,19 +439,19 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Extra Pale</malt>
+				<maltName>Extra Pale</maltName>
 				<maltweight>16.52lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Dark Crystal</malt>
+				<maltName>Dark Crystal</maltName>
 				<maltweight>1.38lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Chocolate</malt>
+				<maltName>Chocolate</maltName>
 				<maltweight>0.69lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Roast Barley</malt>
+				<maltName>Roast Barley</maltName>
 				<maltweight>0.69lb</maltweight>
 			</maltIngredient>
 		</malts>
@@ -486,7 +486,7 @@
 				<hopsamount>9.4g</hopsamount>
 				<hopstime>Dry Hop</hopstime>
 			</hopingredient>
-		</hopingredient>
+		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	</ingredients>
 </recipe>
@@ -506,15 +506,15 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Extra Pale</malt>
+				<maltName>Extra Pale</maltName>
 				<maltweight>12.39lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Wheat</malt>
+				<maltName>Wheat</maltName>
 				<maltweight>15.14lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Crystal</malt>
+				<maltName>Crystal</maltName>
 				<maltweight>1.37lb</maltweight>
 			</maltIngredient>
 		</malts>
@@ -554,27 +554,27 @@
 	<ingredients>
 		<malts>
 			<maltIngredient>
-				<malt>Extra Pale</malt>
+				<maltName>Extra Pale</maltName>
 				<maltweight>8.40lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Dark Crystal</malt>
+				<maltName>Dark Crystal</maltName>
 				<maltweight>0.41lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Roasted Barley</malt>
+				<maltName>Roasted Barley</maltName>
 				<maltweight>0.69lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Black</malt>
+				<maltName>Black</maltName>
 				<maltweight>0.28lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Amber</malt>
+				<maltName>Amber</maltName>
 				<maltweight>0.69lb</maltweight>
 			</maltIngredient>
 			<maltIngredient>
-				<malt>Flaked Oats</malt>
+				<maltName>Flaked Oats</maltName>
 				<maltweight>0.55lb</maltweight>
 			</maltIngredient>
 		</malts>
