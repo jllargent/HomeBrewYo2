@@ -3,7 +3,6 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -33,7 +32,7 @@ public class RecipePage extends AppCompatActivity {
     }
 
     public void runParser(int positionInRecipeIndex){
-        XMLFileProcessor_New parseInfo = new XMLFileProcessor_New(this);
+        XMLFileProcessor parseInfo = new XMLFileProcessor(this);
         listOfRecipies = parseInfo.getListOfBeers();
         fillUIInformation(positionInRecipeIndex);
 

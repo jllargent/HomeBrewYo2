@@ -1,31 +1,36 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
 import android.content.Context;
-import android.content.res.AssetManager;
-import android.content.res.Resources;
-import android.os.Environment;
 import android.util.Log;
-import org.w3c.dom.*;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import javax.xml.parsers.*;
-import java.io.*;
+import java.util.ArrayList;
 
-public class XMLFileProcessor{
+public class XMLFileProcessor {
+    private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
+    private Beer_New beer;
+    private Hop hop;
+    private Malt malt;
+    private String text = null;
+    private String currentTag;
+    private String parentTag = null;
+
 
     public XMLFileProcessor(Context context){
-        String text = null;
         try{
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
             XmlPullParser myParser = xmlFactoryObject.newPullParser();
             myParser.setInput(context.getResources().openRawResource(R.raw.beerrecipes), null);
             int event = myParser.getEventType();
-            while (event != XmlPullParser.END_DOCUMENT)
-            {
-                String name=myParser.getName();
-                switch (event){
+
+            do{
+                currentTag = myParser.getName();
+
+                switch (event) {
                     case XmlPullParser.START_TAG:
+                        checkStartTagForNewObjectToCreate();
                         break;
 
                     case XmlPullParser.TEXT:
@@ -33,36 +38,109 @@ public class XMLFileProcessor{
                         break;
 
                     case XmlPullParser.END_TAG:
-                        if(name.equals("recipe")){
-                            Log.i("We got a hit", "Found a recipe here");
-                        }
-                        else if(name.equalsIgnoreCase("description")){
-                            Log.i("Description", "Here's a description");
-                            Log.i("Description", text);
-                        }
-                        else if (name.equalsIgnoreCase("name")){
-                            Log.i("Name", "A name appears");
-                            Log.i("Name", text);
-                        }
-                        else if (name.equalsIgnoreCase("style")){
-                            Log.i("Style", "Here is the style");
-                            Log.i("Style", text);
-                        }
+                        if( isActiveObject("recipe") )
+                            addInfoIntoBeerObject();
+                        else if ( isActiveObject("maltIngredient") )
+                            addInfoIntoMaltObject();
+                        else if ( isActiveObject("hopingredient") )
+                            addInfoIntoHopObject();
+                        addIngredientIntoRecipe();
+                        addBeerObjectToList();
+                        break;
+
+                    default:
                         break;
                 }
+
                 event = myParser.next();
-            }
+            }while(event != XmlPullParser.END_DOCUMENT );
         }catch(Exception e){
             Log.wtf("OOPS", e);
         }
     }
 
-    public static String getResourceString(String name, Context context) {
-        int nameResourceID = context.getResources().getIdentifier(name, "xml", context.getApplicationInfo().packageName);
-        if (nameResourceID == 0) {
-            throw new IllegalArgumentException("No resource string found with name " + name);
-        } else {
-            return context.getString(nameResourceID);
+    public ArrayList<Beer_New> getListOfBeers(){
+        return listOfBeers;
+    }
+
+    private boolean checkCurrentTag(String tagToCheck){
+        return currentTag.equalsIgnoreCase(tagToCheck);
+    }
+
+    private void addInfoIntoBeerObject(){
+        if (checkCurrentTag("name")) {
+            beer.setTitleOfBeer(text);
+        } else if (checkCurrentTag("style")) {
+            beer.setStyleOfBeer(text);
+        } else if (checkCurrentTag("description")) {
+            beer.setDescriptionOfBeer(text);
+        }else if (checkCurrentTag("temp")) {
+            beer.setBoilDescription(text);
+        }else if (checkCurrentTag("time")) {
+            beer.setTimeInMins(text);
+        }else if (checkCurrentTag("fermtemp")) {
+            beer.setFermentTemperature(text);
+        }else if (checkCurrentTag("abv")) {
+            beer.setValueOfABV(text);
+        }else if (checkCurrentTag("targetfg")) {
+            beer.setFinalGravity(text);
+        }else if (checkCurrentTag("targetog")) {
+            beer.setOriginalGravity(text);
         }
+    }
+
+    private void addInfoIntoMaltObject(){
+        if (checkCurrentTag("maltName"))
+            malt.setNameOfMalt(text);
+       else if (checkCurrentTag("maltweight")) {
+           malt.setWeightOfMaltsInPounds(text);
+        }
+    }
+
+    private void addInfoIntoHopObject(){
+        if(checkCurrentTag("hopsName")){
+            hop.setNameOfHop(text);
+        }
+        else if( checkCurrentTag("hopsamount")){
+            hop.setAmountOfHopsInGrams(text);
+        }
+        else if( checkCurrentTag("hopstime")){
+            hop.setTimeToAddHop(text);
+        }
+    }
+
+    private void addBeerObjectToList(){
+        if (checkCurrentTag("recipe"))
+            listOfBeers.add(beer);
+    }
+
+    private void addIngredientIntoRecipe() {
+        if (checkCurrentTag("maltIngredient"))
+            beer.addMaltIngredient(malt);
+        else if (checkCurrentTag("hopingredient"))
+            beer.addHopingredient(hop);
+        else if (checkCurrentTag("yeast"))
+            beer.setYeastIngredient(text);
+    }
+
+    private void checkStartTagForNewObjectToCreate(){
+        if (checkCurrentTag("recipe")) {
+            beer = new Beer_New();
+            setParentTag();
+        }  else if(checkCurrentTag("maltIngredient")){
+            malt = new Malt();
+            setParentTag();
+        } else if(checkCurrentTag("hopingredient")){
+            hop = new Hop();
+            setParentTag();
+        }
+    }
+
+    private void setParentTag(){
+        parentTag = currentTag;
+    }
+
+    public boolean isActiveObject(String currentParentTag){
+        return currentParentTag.equalsIgnoreCase(parentTag);
     }
 }

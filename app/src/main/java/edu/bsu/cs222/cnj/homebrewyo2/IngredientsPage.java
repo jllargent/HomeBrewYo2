@@ -11,10 +11,10 @@ import java.util.Arrays;
 
 public class IngredientsPage extends AppCompatActivity {
 
-    ArrayList<Beer_New> listOfRecipies;
-    ArrayList<Malt> listOfMaltsIngredients;
-    ArrayList<Hop> listOfHopIngredients;
-    Beer_New currentBeer;
+    private ArrayList<Beer_New> listOfRecipies;
+    private ArrayList<Malt> listOfMaltsIngredients;
+    private ArrayList<Hop> listOfHopIngredients;
+    private Beer_New currentBeer;
 
 
     @Override
@@ -31,7 +31,7 @@ public class IngredientsPage extends AppCompatActivity {
     }
 
     public void runParser(int positionInRecipeIndex){
-        XMLFileProcessor_New parseInfo = new XMLFileProcessor_New(this);
+        XMLFileProcessor parseInfo = new XMLFileProcessor(this);
         listOfRecipies = parseInfo.getListOfBeers();
         currentBeer = listOfRecipies.get(positionInRecipeIndex);
     }

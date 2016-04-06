@@ -1,7 +1,5 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-import android.app.Application;
-import android.support.v7.app.AppCompatActivity;
 import android.test.ApplicationTestCase;
 
 import org.junit.Before;
@@ -23,7 +21,7 @@ public class XmlParserUnitTest extends ApplicationTestCase {
     @Before
     public void createTheListOfBeers() {
 
-        XMLFileProcessor_New parseInfo = new XMLFileProcessor_New(super.getContext());
+        XMLFileProcessor parseInfo = new XMLFileProcessor(super.getContext());
         listOfRecipies=parseInfo.getListOfBeers();
 
     }
