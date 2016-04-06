@@ -11,9 +11,10 @@ import java.util.Arrays;
 
 public class IngredientsPage extends AppCompatActivity {
 
-    ArrayList<Beer_New> listOfRecipies = new ArrayList<>();
-    ArrayList<Beer_New> listOfMalts = new ArrayList<>();
-
+    ArrayList<Beer_New> listOfRecipies;
+    ArrayList<Malt> listOfMaltsIngredients;
+    ArrayList<Hop> listOfHopIngredients;
+    Beer_New currentBeer;
     private ListView listviewMalts;
 
 
@@ -24,30 +25,43 @@ public class IngredientsPage extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         int positionInRecipeIndex = bundle.getInt("recipePosition");
         runParser(positionInRecipeIndex);
+
+        fillMaltUiInfo();
+        fillHopUiInfo();
+        fillYeastUiInfo();
     }
 
     public void runParser(int positionInRecipeIndex){
         XMLFileProcessor_New parseInfo = new XMLFileProcessor_New(this);
         listOfRecipies = parseInfo.getListOfBeers();
-        fillUIInformation(positionInRecipeIndex);
+        currentBeer = listOfRecipies.get(positionInRecipeIndex);
     }
 
-    public void fillUIInformation(int positionInRecipeIndex){
-        Beer_New currentBeerIngredients = listOfRecipies.get(positionInRecipeIndex);
-        //listOfMalts.addAll(XMLFileProcessor_New.getListOfBeers());
+    public void fillMaltUiInfo(){
         //TODO need a function to call the array list for malt
+        listOfMaltsIngredients = currentBeer.getMaltIngredients();
 
         String[] planets = new String[] { "Mercury", "Venus", "Earth", "Mars",
                 "Jupiter", "Saturn", "Uranus", "Neptune"};
         ArrayList<String> list = new ArrayList<>();
-        list.addAll( Arrays.asList(planets));
+        list.addAll(Arrays.asList(planets));
 
-        TextView nameTextView = (TextView) findViewById(R.id.textView15);
-        nameTextView.setText(currentBeerIngredients.getYeastIngredient());
+
 
         listviewMalts = (ListView) findViewById(R.id.listView);
+        assert listviewMalts != null;
         listviewMalts.setClickable(true);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, list);
         listviewMalts.setAdapter(arrayAdapter);
+    }
+
+    public void fillHopUiInfo(){
+        listOfHopIngredients = currentBeer.getHopIngredients();
+
+    }
+    public void fillYeastUiInfo() {
+        TextView nameTextView = (TextView) findViewById(R.id.textView15);
+        assert nameTextView != null;
+        nameTextView.setText(currentBeer.getYeastIngredient());
     }
 }
