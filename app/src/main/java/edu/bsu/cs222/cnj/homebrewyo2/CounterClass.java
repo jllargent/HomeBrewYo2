@@ -33,5 +33,6 @@ public class CounterClass extends CountDownTimer {
     @Override
     public void onFinish() {
         viewTime.setText("DONE");
+        //TODO use this spot to create the notification
     }
 }

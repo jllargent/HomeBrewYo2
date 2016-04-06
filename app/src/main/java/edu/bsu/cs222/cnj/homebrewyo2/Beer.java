@@ -1,7 +1,5 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-import java.sql.CallableStatement;
-
 public class Beer {
     private String titleOfBeer;
     private String styleOfBeer;

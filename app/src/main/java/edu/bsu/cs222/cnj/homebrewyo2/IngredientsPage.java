@@ -23,14 +23,14 @@ public class IngredientsPage extends AppCompatActivity {
     public void runParser(int positionInRecipeIndex){
         XMLFileProcessor_New parseInfo = new XMLFileProcessor_New(this);
         listOfRecipies = parseInfo.getListOfBeers();
-      //  fillUIInformation(positionInRecipeIndex);
+        fillUIInformation(positionInRecipeIndex);
     }
 
-   /* public void fillUIInformation(int positionInRecipeIndex){
-        Ingredients currentBeerIngredients = listOfRecipies.get(positionInRecipeIndex);
+    public void fillUIInformation(int positionInRecipeIndex){
+        Beer_New currentBeerIngredients = listOfRecipies.get(positionInRecipeIndex);
         setContentView(R.layout.activity_ingredients);
 
         TextView nameTextView = (TextView) findViewById(R.id.textView15);
-        nameTextView.setText(currentBeerIngredients.getYeast());
-    }*/
+        nameTextView.setText(currentBeerIngredients.getYeastIngredient());
+    }
 }

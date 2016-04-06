@@ -8,7 +8,6 @@ import android.view.View;
 
 public class NameRecipeActivity extends AppCompatActivity {
 
-    RecipePage recipePage = new RecipePage();
     Intent intent = getIntent();
 
     @Override
@@ -18,7 +17,6 @@ public class NameRecipeActivity extends AppCompatActivity {
     }
     public void goBeerRecipe(View view){
         int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
-        Log.i("testing", "" + positionInRecipeIndex);
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
         Bundle bundle = new Bundle();
         bundle.putInt("recipePosition", positionInRecipeIndex);
