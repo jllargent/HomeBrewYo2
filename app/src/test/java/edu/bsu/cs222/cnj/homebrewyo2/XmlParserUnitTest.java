@@ -1,5 +1,6 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
+import android.app.Application;
 import android.test.ApplicationTestCase;
 
 import org.junit.Before;
@@ -9,19 +10,16 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public class XmlParserUnitTest extends ApplicationTestCase {
+public class XmlParserUnitTest extends Application {
 
     private ArrayList<Beer> listOfRecipies = new ArrayList<>();
     private ArrayList<Malt> maltIngredients;
 
-    public XmlParserUnitTest(Class applicationClass) {
-        super(applicationClass);
-    }
 
     @Before
     public void createTheListOfBeers() {
 
-        XMLFileProcessor parseInfo = new XMLFileProcessor(super.getContext());
+        XMLFileProcessor parseInfo = new XMLFileProcessor(super.getApplicationContext());
         listOfRecipies=parseInfo.getListOfBeers();
 
     }

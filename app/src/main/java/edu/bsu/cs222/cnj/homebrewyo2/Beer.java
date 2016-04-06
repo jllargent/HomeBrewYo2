@@ -16,9 +16,6 @@ public class Beer {
 
 
     public Beer(){
-        titleOfBeer = getTitleOfBeer();
-        styleOfBeer = getStyleOfBeer();
-        descriptionOfBeer = getDescriptionOfBeer();
     }
 
     public void setTitleOfBeer(String name){

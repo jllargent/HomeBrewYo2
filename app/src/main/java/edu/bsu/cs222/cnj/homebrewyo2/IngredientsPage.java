@@ -39,24 +39,36 @@ public class IngredientsPage extends AppCompatActivity {
     public void fillMaltUiInfo(){
         //TODO need a function to call the array list for malt
         listOfMaltsIngredients = currentBeer.getMaltIngredients();
-
-        String[] planets = new String[] { "Mercury", "Venus", "Earth", "Mars",
-                "Jupiter", "Saturn", "Uranus", "Neptune"};
-        ArrayList<String> list = new ArrayList<>();
-        list.addAll(Arrays.asList(planets));
-
+        ArrayList<String> detailedIngredientList = new ArrayList<>();
+        for( int i =0; i < listOfMaltsIngredients.size(); i++){
+            String s = listOfMaltsIngredients.get(i).getNameOfMalt();
+            s += " | " + listOfMaltsIngredients.get(i).getAmountOfMalt();
+            detailedIngredientList.add(s);
+        }
 
         ListView listviewMalts = (ListView) findViewById(R.id.listView);
         assert listviewMalts != null;
         listviewMalts.setClickable(true);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, list);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, detailedIngredientList);
         listviewMalts.setAdapter(arrayAdapter);
     }
 
     public void fillHopUiInfo(){
         listOfHopIngredients = currentBeer.getHopIngredients();
-
+        ArrayList<String> detailedIngredientList = new ArrayList<>();
+        for( int i =0; i < listOfHopIngredients.size(); i++){
+            String s = listOfHopIngredients.get(i).getNameOfHop();
+            s += " | " + listOfHopIngredients.get(i).getAmountOfHops();
+            s += " | " + listOfHopIngredients.get(i).getTimeToAddHop();
+            detailedIngredientList.add(s);
+        }
+        ListView listviewMalts = (ListView) findViewById(R.id.listView2);
+        assert listviewMalts != null;
+        listviewMalts.setClickable(true);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, detailedIngredientList);
+        listviewMalts.setAdapter(arrayAdapter);
     }
+
     public void fillYeastUiInfo() {
         TextView nameTextView = (TextView) findViewById(R.id.textView15);
         assert nameTextView != null;
