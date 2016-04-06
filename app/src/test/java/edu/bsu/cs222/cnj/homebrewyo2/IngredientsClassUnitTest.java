@@ -20,13 +20,13 @@ public class IngredientsClassUnitTest {
     @Before
     public void createIngredients() {
         wheat.setNameOfMalt("wheat");
-        wheat.setWeightOfMaltsInPounds(5.5);
+        wheat.setWeightOfMaltsInPounds("5.5lbs");
         ingredients.addToMaltsList(wheat);
 
         ingredients.addToMaltsList(extraPale);
 
         gold.setNameOfHop("First Gold");
-        gold.setAmountOfHopsInGrams(18.75);
+        gold.setAmountOfHopsInGrams("18.75g");
         ingredients.addToHopsList(gold);
 
         ingredients.addToHopsList(lemon);
