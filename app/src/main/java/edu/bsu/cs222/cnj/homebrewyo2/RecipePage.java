@@ -82,4 +82,6 @@ public class RecipePage extends AppCompatActivity {
 
     }
 
+    //TODO for iteration 3 create new button. this button marks it as the current beer you are working on. It takes all the info from the currentbeer and creates a new arraylist of the info. new screen then uses the info from that arraylist.
+
 }

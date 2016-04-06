@@ -54,10 +54,6 @@ public class XMLFileProcessor_New {
 
                 event = myParser.next();
             }while(event != XmlPullParser.END_DOCUMENT );
-            /*Log.i("Beer Count", String.valueOf(listOfBeers.size()));
-            Log.i("Did it", listOfBeers.get(0).getTitleOfBeer() + " Was added");
-
-            Log.i("Did it", listOfBeers.get(1).getTitleOfBeer() + " Was added");*/
         }catch(Exception e){
             Log.wtf("OOPS", e);
         }
@@ -96,8 +92,8 @@ public class XMLFileProcessor_New {
     private void addInfoIntoMaltObject(){
         if (checkCurrentTag("maltName"))
             malt.setNameOfMalt(text);
-        else if (checkCurrentTag("maltweight")) {
-            malt.setWeightOfMaltsInPounds(text);
+       else if (checkCurrentTag("maltweight")) {
+           malt.setWeightOfMaltsInPounds(text);
         }
     }
 
