@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BeerClassUnitTest {
-    Beer_New testBeer = new Beer_New();
+    Beer testBeer = new Beer();
     String description = "This is a description to test.";
 
     @Before

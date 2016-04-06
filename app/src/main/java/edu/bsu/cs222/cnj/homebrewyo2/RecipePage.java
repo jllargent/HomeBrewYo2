@@ -12,7 +12,7 @@ public class RecipePage extends AppCompatActivity {
 
     private int positionInRecipeIndex;
 
-    ArrayList<Beer_New> listOfRecipies = new ArrayList<>();
+    ArrayList<Beer> listOfRecipies = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class RecipePage extends AppCompatActivity {
 
 
     public void fillUIInformation(int positionInRecipeIndex) {
-        Beer_New currentBeer = listOfRecipies.get(positionInRecipeIndex);
+        Beer currentBeer = listOfRecipies.get(positionInRecipeIndex);
         setContentView(R.layout.activity_recipe);
         TextView nameTextView = (TextView) findViewById(R.id.textView16);
         nameTextView.setText(currentBeer.getTitleOfBeer());
@@ -71,7 +71,7 @@ public class RecipePage extends AppCompatActivity {
     }
 
     public void goTimer(View view){
-        Beer_New currentBeer = listOfRecipies.get(positionInRecipeIndex);
+        Beer currentBeer = listOfRecipies.get(positionInRecipeIndex);
         int timerLength = currentBeer.getTimeInMins() * 60;
         Intent timerIntent = new Intent(this, TimerActivity.class);
         Bundle bundle = new Bundle();

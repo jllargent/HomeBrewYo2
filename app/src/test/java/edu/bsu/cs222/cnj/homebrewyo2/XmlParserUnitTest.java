@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class XmlParserUnitTest extends ApplicationTestCase {
 
-    private ArrayList<Beer_New> listOfRecipies = new ArrayList<>();
+    private ArrayList<Beer> listOfRecipies = new ArrayList<>();
     private ArrayList<Malt> maltIngredients;
 
     public XmlParserUnitTest(Class applicationClass) {

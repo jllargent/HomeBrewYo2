@@ -11,10 +11,10 @@ import java.util.Arrays;
 
 public class IngredientsPage extends AppCompatActivity {
 
-    private ArrayList<Beer_New> listOfRecipies;
+    private ArrayList<Beer> listOfRecipies;
     private ArrayList<Malt> listOfMaltsIngredients;
     private ArrayList<Hop> listOfHopIngredients;
-    private Beer_New currentBeer;
+    private Beer currentBeer;
 
 
     @Override

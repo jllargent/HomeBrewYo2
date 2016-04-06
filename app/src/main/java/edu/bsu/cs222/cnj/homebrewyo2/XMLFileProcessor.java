@@ -9,8 +9,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.util.ArrayList;
 
 public class XMLFileProcessor {
-    private ArrayList<Beer_New> listOfBeers = new ArrayList<>();
-    private Beer_New beer;
+    private ArrayList<Beer> listOfBeers = new ArrayList<>();
+    private Beer beer;
     private Hop hop;
     private Malt malt;
     private String text = null;
@@ -59,7 +59,7 @@ public class XMLFileProcessor {
         }
     }
 
-    public ArrayList<Beer_New> getListOfBeers(){
+    public ArrayList<Beer> getListOfBeers(){
         return listOfBeers;
     }
 
@@ -125,7 +125,7 @@ public class XMLFileProcessor {
 
     private void checkStartTagForNewObjectToCreate(){
         if (checkCurrentTag("recipe")) {
-            beer = new Beer_New();
+            beer = new Beer();
             setParentTag();
         }  else if(checkCurrentTag("maltIngredient")){
             malt = new Malt();

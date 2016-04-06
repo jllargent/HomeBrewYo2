@@ -1,23 +1,23 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
 public class Gravity {
-    private int originalGravity;
-    private int finalGravity;
+    private String originalGravity;
+    private String finalGravity;
 
     public Gravity(){
     }
 
-    public void setOriginalGravity(int gravity){
+    public void setOriginalGravity(String gravity){
         originalGravity = gravity;
     }
-    public void setFinalGravitiy( int gravity){
+    public void setFinalGravitiy( String gravity){
         finalGravity = gravity;
     }
 
-    public int getOriginalGravity(){
+    public String getOriginalGravity(){
         return originalGravity;
     }
-    public int getFinalGravity(){
+    public String getFinalGravity(){
         return finalGravity;
     }
 }
