@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -40,17 +39,6 @@ public class RecipePage extends AppCompatActivity {
 
     }
 
-    public void goTimer(View view){
-        Beer_New currentBeer = listOfRecipies.get(positionInRecipeIndex);
-        int timerLength = currentBeer.getTimeInMins() * 60;
-        Log.i("time is ", String.valueOf(timerLength));
-        Intent timerIntent = new Intent(this, TimerActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("timerLength", timerLength);
-        timerIntent.putExtras(bundle);
-        startActivity(timerIntent);
-
-    }
 
     public void fillUIInformation(int positionInRecipeIndex) {
         Beer_New currentBeer = listOfRecipies.get(positionInRecipeIndex);
@@ -82,4 +70,18 @@ public class RecipePage extends AppCompatActivity {
         fGravTextView.setText(currentBeer.getFinalGravity());
 
     }
+
+    public void goTimer(View view){
+        Beer_New currentBeer = listOfRecipies.get(positionInRecipeIndex);
+        int timerLength = currentBeer.getTimeInMins() * 60;
+        Intent timerIntent = new Intent(this, TimerActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("timerLength", timerLength);
+        timerIntent.putExtras(bundle);
+        startActivity(timerIntent);
+
+    }
+
+    //TODO for iteration 3 create new button. this button marks it as the current beer you are working on. It takes all the info from the currentbeer and creates a new arraylist of the info. new screen then uses the info from that arraylist.
+
 }
