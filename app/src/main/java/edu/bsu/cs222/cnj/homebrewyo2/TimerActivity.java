@@ -2,6 +2,7 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 import android.app.AlertDialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -39,7 +40,7 @@ public class TimerActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timer = new CounterClass(timerLength, 1000, textViewTime);
+                timer = new CounterClass(timerLength, 1000, textViewTime, TimerActivity.this);
                 timer.start();
             }
         });
