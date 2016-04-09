@@ -49,7 +49,7 @@ public class IngredientsPage extends AppCompatActivity {
         ListView listviewMalts = (ListView) findViewById(R.id.listView);
         assert listviewMalts != null;
         listviewMalts.setClickable(true);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, detailedIngredientList);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview_layout, R.id.checkBox, detailedIngredientList);
         listviewMalts.setAdapter(arrayAdapter);
     }
 
@@ -65,7 +65,7 @@ public class IngredientsPage extends AppCompatActivity {
         ListView listviewMalts = (ListView) findViewById(R.id.listView2);
         assert listviewMalts != null;
         listviewMalts.setClickable(true);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, detailedIngredientList);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview_layout, R.id.checkBox, detailedIngredientList);
         listviewMalts.setAdapter(arrayAdapter);
     }
 
