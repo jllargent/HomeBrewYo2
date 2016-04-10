@@ -36,7 +36,6 @@ public class TimerActivity extends AppCompatActivity {
         textViewTime = (TextView) findViewById(R.id.timer1);
 
         textViewTime.setText("PREP");
-//TODO leave in onCreate and put in onCreateView
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

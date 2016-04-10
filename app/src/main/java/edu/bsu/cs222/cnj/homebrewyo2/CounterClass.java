@@ -1,11 +1,15 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-import android.app.AlertDialog;
-import android.app.DialogFragment;
+
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
+
 import android.os.CountDownTimer;
+import android.support.v7.app.NotificationCompat;
 import android.widget.TextView;
 
 import java.sql.Time;
@@ -40,5 +44,18 @@ public class CounterClass extends CountDownTimer {
         timerDialog.setMessage("Timer's done!");
         timerDialog.setCancelable(true);
         timerDialog.show();
+        showNotification();
+    }
+
+    public void showNotification() {
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(this)
+                .setSmallIcon(android.R.drawable.ic_menu_report_image)
+                .setContentTitle("HomeBrewYo")
+                .setContentText("Boil's Done!")
+                .setAutoCancel(true)
+                .build();
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(0, notification);
     }
 }
