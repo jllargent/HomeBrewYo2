@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.NotificationCompat;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
@@ -22,11 +23,12 @@ public class CounterClass extends CountDownTimer {
     private TextView viewTime;
     private long initialMillis;
     private ProgressDialog timerDialog;
+    private Context actContext;
     public CounterClass(long millisInFuture, long countDownInterval, TextView textViewTime, Context context){
         super(millisInFuture, countDownInterval);
         this.initialMillis = millisInFuture;
         viewTime = textViewTime;
-        timerDialog = new ProgressDialog(context);
+        actContext = context;
     }
 
     @Override
@@ -41,21 +43,6 @@ public class CounterClass extends CountDownTimer {
     @Override
     public void onFinish() {
         viewTime.setText("DONE");
-        timerDialog.setMessage("Timer's done!");
-        timerDialog.setCancelable(true);
-        timerDialog.show();
-        showNotification();
-    }
-
-    public void showNotification() {
-        NotificationCompat.Builder notification = new NotificationCompat.Builder(this)
-                .setSmallIcon(android.R.drawable.ic_menu_report_image)
-                .setContentTitle("HomeBrewYo")
-                .setContentText("Boil's Done!")
-                .setAutoCancel(true)
-                .build();
-
-        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(0, notification);
+        Toast.makeText(actContext, "Your beer is done brewing.", Toast.LENGTH_LONG).show();
     }
 }
