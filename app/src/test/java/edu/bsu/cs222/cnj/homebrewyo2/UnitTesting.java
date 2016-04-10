@@ -7,9 +7,6 @@ import android.test.suitebuilder.annotation.LargeTest;
 import android.widget.Button;
 import android.widget.ImageView;
 
-/**
- * Created by Cody on 4/2/2016.
- */
 public class UnitTesting extends ActivityInstrumentationTestCase2<MainActivity>{
     private Solo solo;
 
@@ -27,6 +24,10 @@ public class UnitTesting extends ActivityInstrumentationTestCase2<MainActivity>{
     public void tearDown() throws Exception{
         solo.finishOpenedActivities();
         super.tearDown();
+    }
+
+    public void test_Preconditions() {
+        assertNotNull(solo);
     }
 
     public void test_MainChangeActivityToTimerOnButtonPress() throws Exception{
