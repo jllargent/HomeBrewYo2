@@ -12,23 +12,30 @@ import static org.junit.Assert.assertEquals;
 
 public class XmlParserUnitTest extends Application {
 
-    private ArrayList<Beer> listOfRecipies = new ArrayList<>();
+
+    private XMLFileProcessor parseInfo = new XMLFileProcessor(super.getApplicationContext());
+
+    private ArrayList<Beer> listOfRecipies;
+    private Beer riptide;
     private ArrayList<Malt> maltIngredients;
+    private ArrayList<Malt> hopIngredients;
+
 
 
     @Before
     public void createTheListOfBeers() {
-
-        XMLFileProcessor parseInfo = new XMLFileProcessor(super.getApplicationContext());
-        listOfRecipies=parseInfo.getListOfBeers();
+        listOfRecipies = parseInfo.getListOfBeers();
+        riptide = listOfRecipies.get(3);
 
     }
 
     @Test
-    public void isMaltAmountOnBeer01171lbs(){
-        maltIngredients = listOfRecipies.get(2).getMaltIngredients();
-        assertEquals(maltIngredients.get(2).getNameOfMalt(), "Caramalt");
+    public void isLengthOfRecipies10(){
+        assertEquals(10, listOfRecipies.size());
     }
+
+
+
 
 
 }
