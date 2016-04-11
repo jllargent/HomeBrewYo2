@@ -1,7 +1,6 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
 import android.app.Application;
-import android.test.ApplicationTestCase;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,12 +12,12 @@ import static org.junit.Assert.assertEquals;
 public class XmlParserUnitTest extends Application {
 
 
-    private XMLFileProcessor parseInfo = new XMLFileProcessor(super.getApplicationContext());
+    private XMLFileProcessor parseInfo = new XMLFileProcessor();
 
     private ArrayList<Beer> listOfRecipies;
     private Beer riptide;
-    private ArrayList<Malt> maltIngredients;
-    private ArrayList<Malt> hopIngredients;
+    private ArrayList<Malt> maltIngredientsForRiptide;
+    private ArrayList<Hop> hopIngredientsForRiptide;
 
 
 
@@ -26,7 +25,8 @@ public class XmlParserUnitTest extends Application {
     public void createTheListOfBeers() {
         listOfRecipies = parseInfo.getListOfBeers();
         riptide = listOfRecipies.get(2);
-
+        maltIngredientsForRiptide = listOfRecipies.get(2).getMaltIngredients();
+        hopIngredientsForRiptide = listOfRecipies.get(2).getHopIngredients();
     }
 
     @Test
@@ -41,38 +41,38 @@ public class XmlParserUnitTest extends Application {
 
     @Test
     public void isThere7MaltsForRiptide(){
-        int sizeOfMaltList = riptide.getMaltIngredients().size();
+        int sizeOfMaltList = maltIngredientsForRiptide.size();
         assertEquals(7, sizeOfMaltList);
     }
     @Test
     public void isMaltIngredient3ForRiptideCaramalt(){
-        String nameOfMalt = riptide.getMaltIngredients().get(3).getNameOfMalt();
+        String nameOfMalt = maltIngredientsForRiptide.get(3).getNameOfMalt();
         assertEquals("Caramalt", nameOfMalt);
     }
     @Test
     public void isAmountOfMaltIngredient2ForRiptide12lb(){
-        String amountOfMalt = riptide.getMaltIngredients().get(1).getAmountOfMalt();
+        String amountOfMalt = maltIngredientsForRiptide.get(1).getAmountOfMalt();
         assertEquals("1.2lb", amountOfMalt);
     }
 
     @Test
     public void isThere5HopsForRiptide(){
-        int sizeOfHopList = riptide.getHopIngredients().size();
+        int sizeOfHopList = hopIngredientsForRiptide.size();
         assertEquals(5, sizeOfHopList);
     }
     @Test
     public void isHopIngredient4ForRiptideColumbus(){
-        String nameOfHop = riptide.getHopIngredients().get(4).getNameOfHop();
+        String nameOfHop = hopIngredientsForRiptide.get(4).getNameOfHop();
         assertEquals("Columbus", nameOfHop);
     }
     @Test
     public void isAmountOfHopIngredient0ForRiptide143g(){
-        String amountOfHop = riptide.getHopIngredients().get(0).getAmountOfHops();
+        String amountOfHop = hopIngredientsForRiptide.get(0).getAmountOfHops();
         assertEquals("14.3g", amountOfHop);
     }
     @Test
     public void isStartTimeForHopIngredient1ForRiptideStart(){
-        String timeToPlaceHop = riptide.getHopIngredients().get(1).getTimeToAddHop();
+        String timeToPlaceHop = hopIngredientsForRiptide.get(1).getTimeToAddHop();
         assertEquals("Start", timeToPlaceHop);
     }
 
