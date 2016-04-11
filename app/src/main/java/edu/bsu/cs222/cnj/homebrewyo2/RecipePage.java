@@ -32,7 +32,7 @@ public class RecipePage extends AppCompatActivity {
     }
 
     public void runParser(int positionInRecipeIndex){
-        XMLFileProcessor parseInfo = new XMLFileProcessor(this);
+        XMLFileProcessor parseInfo = new XMLFileProcessor();
         listOfRecipies = parseInfo.getListOfBeers();
         fillUIInformation(positionInRecipeIndex);
 
