@@ -41,7 +41,6 @@ public class TimerActivity extends AppCompatActivity {
                 decrement.setActContext(TimerActivity.this);
                 decrement.setViewTime(textViewTime);
                 decrement.start();
-
             }
         });
 
