@@ -72,8 +72,4 @@ public class IngredientsClassUnitTest {
         assertEquals("18.75g", listOfHops.get(0).getAmountOfHops());
     }
 
-
-
-
-
 }

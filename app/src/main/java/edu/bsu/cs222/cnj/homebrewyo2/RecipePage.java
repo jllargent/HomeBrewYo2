@@ -35,39 +35,44 @@ public class RecipePage extends AppCompatActivity {
         XMLFileProcessor parseInfo = new XMLFileProcessor();
         listOfRecipies = parseInfo.getListOfBeers();
         fillUIInformation(positionInRecipeIndex);
-
     }
 
-
+    //TODO: Clean Up DRY Violation
     public void fillUIInformation(int positionInRecipeIndex) {
         Beer currentBeer = listOfRecipies.get(positionInRecipeIndex);
         setContentView(R.layout.activity_recipe);
         TextView nameTextView = (TextView) findViewById(R.id.textView16);
+        assert nameTextView != null;
         nameTextView.setText(currentBeer.getTitleOfBeer());
 
         TextView descriptionTextView = (TextView) findViewById(R.id.textView);
+        assert descriptionTextView != null;
         descriptionTextView.setText(currentBeer.getDescriptionOfBeer());
 
 
         TextView boilTimeTextView = (TextView) findViewById(R.id.textView3);
+        assert boilTimeTextView != null;
         boilTimeTextView.setText(currentBeer.getBoilDescription());
 
 
         TextView fermentTextView = (TextView) findViewById(R.id.textView4);
+        assert fermentTextView != null;
         fermentTextView.setText(currentBeer.getFermentTemp());
 
 
         TextView abvTextView = (TextView) findViewById(R.id.textView5);
+        assert abvTextView != null;
         abvTextView.setText(currentBeer.getValueOfABV());
 
 
         TextView oGravTextView = (TextView) findViewById(R.id.textView7);
+        assert oGravTextView != null;
         oGravTextView.setText(currentBeer.getOriginalGravity());
 
 
         TextView fGravTextView = (TextView) findViewById(R.id.textView8);
+        assert fGravTextView != null;
         fGravTextView.setText(currentBeer.getFinalGravity());
-
     }
 
     public void goTimer(View view){

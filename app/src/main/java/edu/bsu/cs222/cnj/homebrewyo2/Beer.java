@@ -10,10 +10,8 @@ public class Beer {
     private String timeInMins;
     private String boilDescription;
     private String fermentTemperature;
-    private String ibuValue;
     private Ingredients ingredients = new Ingredients();
     private Gravity gravity = new Gravity();
-
 
     public Beer(){
     }
@@ -30,9 +28,6 @@ public class Beer {
     public void setValueOfABV(String abvValue){
         valueOfABV = abvValue;
     }
-    public void setIBUValue(String info){
-        ibuValue = info;
-    }
     public void setTimeInMins(String time){
         timeInMins = time;
     }
@@ -42,7 +37,6 @@ public class Beer {
     public void setFermentTemperature(String fermentInfo){
         fermentTemperature = fermentInfo;
     }
-
 
     public String getTitleOfBeer(){
         return titleOfBeer;
@@ -55,9 +49,6 @@ public class Beer {
     }
     public String getValueOfABV(){
         return valueOfABV;
-    }
-    public String getIBUValue(){
-        return ibuValue;
     }
     public int getTimeInMins(){
         return Integer.parseInt(timeInMins);

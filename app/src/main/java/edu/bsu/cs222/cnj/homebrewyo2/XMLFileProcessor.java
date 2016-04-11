@@ -18,13 +18,13 @@ public class XMLFileProcessor {
     private String text = null;
     private String currentTag;
     private String parentTag = null;
-    private ClassLoader classLoader = this.getClass().getClassLoader();
-    private InputStream resource = classLoader.getResourceAsStream("res/raw/beerrecipes.xml");
 
     public XMLFileProcessor(){
         try{
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
             XmlPullParser myParser = xmlFactoryObject.newPullParser();
+            ClassLoader classLoader = this.getClass().getClassLoader();
+            InputStream resource = classLoader.getResourceAsStream("res/raw/beerrecipes.xml");
             myParser.setInput(resource, null);
             int event = myParser.getEventType();
 
@@ -143,7 +143,7 @@ public class XMLFileProcessor {
         parentTag = currentTag;
     }
 
-    public boolean isActiveObject(String currentParentTag){
+    private boolean isActiveObject(String currentParentTag){
         return currentParentTag.equalsIgnoreCase(parentTag);
     }
 }

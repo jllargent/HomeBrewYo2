@@ -11,9 +11,6 @@ import java.util.Arrays;
 
 public class IngredientsPage extends AppCompatActivity {
 
-    private ArrayList<Beer> listOfRecipies;
-    private ArrayList<Malt> listOfMaltsIngredients;
-    private ArrayList<Hop> listOfHopIngredients;
     private Beer currentBeer;
 
 
@@ -32,14 +29,15 @@ public class IngredientsPage extends AppCompatActivity {
 
     public void runParser(int positionInRecipeIndex){
         XMLFileProcessor parseInfo = new XMLFileProcessor();
-        listOfRecipies = parseInfo.getListOfBeers();
+        ArrayList<Beer> listOfRecipies = parseInfo.getListOfBeers();
         currentBeer = listOfRecipies.get(positionInRecipeIndex);
     }
 
     public void fillMaltUiInfo(){
         //TODO need a function to call the array list for malt
-        listOfMaltsIngredients = currentBeer.getMaltIngredients();
+        ArrayList<Malt> listOfMaltsIngredients = currentBeer.getMaltIngredients();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
+
         for( int i =0; i < listOfMaltsIngredients.size(); i++){
             String s = listOfMaltsIngredients.get(i).getNameOfMalt();
             s += " | " + listOfMaltsIngredients.get(i).getAmountOfMalt();
@@ -54,14 +52,16 @@ public class IngredientsPage extends AppCompatActivity {
     }
 
     public void fillHopUiInfo(){
-        listOfHopIngredients = currentBeer.getHopIngredients();
+        ArrayList<Hop> listOfHopIngredients = currentBeer.getHopIngredients();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
+
         for( int i =0; i < listOfHopIngredients.size(); i++){
             String s = listOfHopIngredients.get(i).getNameOfHop();
             s += " | " + listOfHopIngredients.get(i).getAmountOfHops();
             s += " | " + listOfHopIngredients.get(i).getTimeToAddHop();
             detailedIngredientList.add(s);
         }
+
         ListView listviewMalts = (ListView) findViewById(R.id.listView2);
         assert listviewMalts != null;
         listviewMalts.setClickable(true);
