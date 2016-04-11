@@ -15,11 +15,6 @@ public class DisplayRecipesMain extends AppCompatActivity {
         setContentView(R.layout.activity_display_recipes_main);
     }
 
-    public void goStyleRecipes(View view){
-        Intent recipeStyleIntent = new Intent(this, RecipesStylesActivity.class);
-        startActivity(recipeStyleIntent);
-    }
-
     public void goNameRecipes(View view){
         Intent recipeNameIntent = new Intent(this, NameRecipeActivity.class);
         startActivity(recipeNameIntent);
