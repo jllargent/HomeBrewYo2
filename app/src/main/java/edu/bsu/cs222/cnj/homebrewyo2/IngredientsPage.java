@@ -31,7 +31,7 @@ public class IngredientsPage extends AppCompatActivity {
     }
 
     public void runParser(int positionInRecipeIndex){
-        XMLFileProcessor parseInfo = new XMLFileProcessor(this);
+        XMLFileProcessor parseInfo = new XMLFileProcessor();
         listOfRecipies = parseInfo.getListOfBeers();
         currentBeer = listOfRecipies.get(positionInRecipeIndex);
     }

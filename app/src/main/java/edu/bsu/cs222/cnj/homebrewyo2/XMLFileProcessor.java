@@ -6,6 +6,8 @@ import android.util.Log;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class XMLFileProcessor {
@@ -16,13 +18,14 @@ public class XMLFileProcessor {
     private String text = null;
     private String currentTag;
     private String parentTag = null;
+    private ClassLoader classLoader = this.getClass().getClassLoader();
+    private InputStream resource = classLoader.getResourceAsStream("res/raw/beerrecipes.xml");
 
-
-    public XMLFileProcessor(Context context){
+    public XMLFileProcessor(){
         try{
             XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
             XmlPullParser myParser = xmlFactoryObject.newPullParser();
-            myParser.setInput(context.getResources().openRawResource(R.raw.beerrecipes), null);
+            myParser.setInput(resource, null);
             int event = myParser.getEventType();
 
             do{
