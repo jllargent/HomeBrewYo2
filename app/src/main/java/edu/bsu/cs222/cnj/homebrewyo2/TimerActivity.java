@@ -1,6 +1,5 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,11 +8,10 @@ import android.widget.TextView;
 
 public class TimerActivity extends AppCompatActivity {
 
-    private Intent intent = getIntent();
-    private Button buttonStart, buttonStop;
     private TextView textViewTime;
-    private static int timerLength = 0;
-    private CounterClass timer;
+    private Timer timer = new Timer();
+
+    private CounterClass decrement;
 
     public TimerActivity(){
     }
@@ -22,30 +20,36 @@ public class TimerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        long countDownInterval = 1000;
+
         setContentView(R.layout.activity_timer);
         Bundle bundle = getIntent().getExtras();
-        timerLength = bundle.getInt("timerLength") * 1000;
-
-
-        buttonStart = (Button) findViewById(R.id.btnStart);
-        buttonStop = (Button) findViewById(R.id.btnStop);
+        timer.setInitialTime(bundle.getInt("timerLength") * 1000);
+        timer.setCountDownInterval(countDownInterval);
+        decrement = new CounterClass(timer);
+        Button buttonStart = (Button) findViewById(R.id.btnStart);
+        Button buttonStop = (Button) findViewById(R.id.btnStop);
         textViewTime = (TextView) findViewById(R.id.timer1);
 
+        assert textViewTime != null;
         textViewTime.setText("PREP");
+
+        assert buttonStart != null;
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timer = new CounterClass(timerLength, 1000);
-                timer.setActContext(TimerActivity.this);
-                timer.setViewTime(textViewTime);
-                timer.start();
+                decrement.setActContext(TimerActivity.this);
+                decrement.setViewTime(textViewTime);
+                decrement.start();
+
             }
         });
 
+        assert buttonStop != null;
         buttonStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timer.cancel();
+                decrement.cancel();
             }
         });
     }

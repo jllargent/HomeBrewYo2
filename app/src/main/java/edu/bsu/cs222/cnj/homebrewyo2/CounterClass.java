@@ -11,27 +11,19 @@ import android.widget.Toast;
 
 public class CounterClass extends CountDownTimer {
     private TextView viewTime;
-    private long initialMillis;
     private ProgressDialog timerDialog;
     private Context actContext;
 
-    TextView textViewTime;
-    Context context;
-
-    public CounterClass(long totalMillis, long countDownInterval){
-        super(totalMillis, countDownInterval);
-        setInitialMillis(totalMillis);
+    public CounterClass(Timer timerInfo){
+        super(timerInfo.getInitialTime(), timerInfo.getCountDownInterval());
     }
+
     public void setViewTime( TextView textView){
         viewTime = textView;
     }
     public void setActContext(Context context){
         actContext = context;
     }
-    public void setInitialMillis(long milliseconds){
-        initialMillis = milliseconds;
-    }
-
     @Override
     public void onTick(long millisUntilFinished) {
         viewTime.setText(convertToReadableTime(millisUntilFinished));
@@ -47,9 +39,5 @@ public class CounterClass extends CountDownTimer {
         int seconds = (int) ((milliseconds / 1000) % 60);
         int minutes = (int) (((milliseconds / 1000) / 60));
         return String.format("%02d:%02d", minutes, seconds);
-    }
-
-    public long getInitialMillis() {
-        return initialMillis;
     }
 }
