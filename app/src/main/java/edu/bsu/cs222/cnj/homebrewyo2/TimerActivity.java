@@ -13,6 +13,7 @@ public class TimerActivity extends AppCompatActivity {
     private Counter decrement;
     private Button buttonStart;
     private Button buttonStop;
+    long countDownInterval = 1000;
 
     public TimerActivity(){
     }
@@ -21,22 +22,8 @@ public class TimerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        long countDownInterval = 1000;
-
-        setContentView(R.layout.activity_timer);
-        Bundle bundle = getIntent().getExtras();
-        time.setInitialTime(bundle.getInt("timerLength") * 1000);
-        time.setCountDownInterval(countDownInterval);
-        time.setCurrentTime(time.getInitialTime());
-        decrement = new Counter(time);
-
-
-        buttonStart = (Button) findViewById(R.id.btnStart);
-        buttonStop = (Button) findViewById(R.id.btnStop);
-        textViewTime = (TextView) findViewById(R.id.timer1);
-
-        textViewTime.setText("PREP");
-        buttonStart.setText("START");
+        setUpTimerForCurrentBeer();
+        setUpPage();
 
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,5 +60,21 @@ public class TimerActivity extends AppCompatActivity {
 
     boolean isCurrentButtonTitle(String titleOfButton){
         return buttonStart.getText().equals(titleOfButton);
+    }
+
+    public void setUpTimerForCurrentBeer(){
+        setContentView(R.layout.activity_timer);
+        Bundle bundle = getIntent().getExtras();
+        time.setInitialTime(bundle.getInt("timerLength") * 1000);
+        time.setCountDownInterval(countDownInterval);
+        time.setCurrentTime(time.getInitialTime());
+        decrement = new Counter(time);
+    }
+    public void setUpPage(){
+        buttonStart = (Button) findViewById(R.id.btnStart);
+        buttonStop = (Button) findViewById(R.id.btnStop);
+        textViewTime = (TextView) findViewById(R.id.timer1);
+        decrement.setViewTime(textViewTime);
+        buttonStart.setText("START");
     }
 }

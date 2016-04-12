@@ -17,10 +17,12 @@ public class Counter extends CountDownTimer {
 
     public Counter(Time timeInfo){
         super(timeInfo.getCurrentTime(), timeInfo.getCountDownInterval());
+        milliSecondsLeft = timeInfo.getCurrentTime();
     }
 
-    public void setViewTime( TextView textView){
+    public void setViewTime(TextView textView){
         viewTime = textView;
+        textView.setText(convertToReadableTime(milliSecondsLeft));
     }
     public void setActContext(Context context){
         actContext = context;
