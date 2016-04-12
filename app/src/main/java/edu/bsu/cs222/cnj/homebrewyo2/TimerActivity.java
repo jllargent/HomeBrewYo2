@@ -8,12 +8,11 @@ import android.widget.TextView;
 
 public class TimerActivity extends AppCompatActivity {
 
-    private TextView textViewTime = (TextView) findViewById(R.id.timer1);
+    private TextView textViewTime;
     private Time time = new Time();
-    Button buttonStart = (Button) findViewById(R.id.btnStart);
-    Button buttonStop = (Button) findViewById(R.id.btnStop);
-
     private Counter decrement;
+    private Button buttonStart;
+    private Button buttonStop;
 
     public TimerActivity(){
     }
@@ -30,6 +29,11 @@ public class TimerActivity extends AppCompatActivity {
         time.setCountDownInterval(countDownInterval);
         time.setCurrentTime(time.getInitialTime());
         decrement = new Counter(time);
+
+
+        buttonStart = (Button) findViewById(R.id.btnStart);
+        buttonStop = (Button) findViewById(R.id.btnStop);
+        textViewTime = (TextView) findViewById(R.id.timer1);
 
         textViewTime.setText("PREP");
         buttonStart.setText("START");

@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:textSize="48sp"
         android:layout_below="@+id/imageView3"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text=" "/>
 
     <Button
         android:id="@+id/btnStart"
@@ -33,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/timer1"
-        android:text=""/>
+        android:text=" "/>
 
     <Button
         android:id="@+id/btnStop"
