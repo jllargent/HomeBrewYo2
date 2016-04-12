@@ -9,13 +9,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class CounterClass extends CountDownTimer {
+public class Counter extends CountDownTimer {
     private TextView viewTime;
     private ProgressDialog timerDialog;
     private Context actContext;
+    private long milliSecondsLeft;
 
-    public CounterClass(Timer timerInfo){
-        super(timerInfo.getInitialTime(), timerInfo.getCountDownInterval());
+    public Counter(Time timeInfo){
+        super(timeInfo.getCurrentTime(), timeInfo.getCountDownInterval());
     }
 
     public void setViewTime( TextView textView){
@@ -27,12 +28,19 @@ public class CounterClass extends CountDownTimer {
     @Override
     public void onTick(long millisUntilFinished) {
         viewTime.setText(convertToReadableTime(millisUntilFinished));
+        milliSecondsLeft = millisUntilFinished;
     }
 
     @Override
     public void onFinish() {
         viewTime.setText("DONE");
         Toast.makeText(actContext, "Your beer is done brewing.", Toast.LENGTH_LONG).show();
+    }
+    public void setMilliSecondsLeft(long milliSeconds){
+        milliSecondsLeft = milliSeconds;
+    }
+    public long getMilliSecondsLeft(){
+        return milliSecondsLeft;
     }
 
     private String convertToReadableTime(long milliseconds){

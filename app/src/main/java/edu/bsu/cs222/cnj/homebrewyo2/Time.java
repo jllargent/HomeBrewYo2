@@ -1,11 +1,11 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-public class Timer {
+public class Time {
     private long initialTime = 0;
     private long currentTime;
     private long countDownInterval;
 
-    public Timer(){
+    public Time(){
     }
     public void setInitialTime(long millis){
         initialTime = millis;
