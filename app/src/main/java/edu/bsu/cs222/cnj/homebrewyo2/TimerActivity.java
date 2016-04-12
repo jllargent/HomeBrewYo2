@@ -8,8 +8,10 @@ import android.widget.TextView;
 
 public class TimerActivity extends AppCompatActivity {
 
-    private TextView textViewTime;
+    private TextView textViewTime = (TextView) findViewById(R.id.timer1);
     private Time time = new Time();
+    Button buttonStart = (Button) findViewById(R.id.btnStart);
+    Button buttonStop = (Button) findViewById(R.id.btnStop);
 
     private Counter decrement;
 
@@ -28,23 +30,18 @@ public class TimerActivity extends AppCompatActivity {
         time.setCountDownInterval(countDownInterval);
         time.setCurrentTime(time.getInitialTime());
         decrement = new Counter(time);
-        final Button buttonStart = (Button) findViewById(R.id.btnStart);
-        Button buttonStop = (Button) findViewById(R.id.btnStop);
-        textViewTime = (TextView) findViewById(R.id.timer1);
 
-        assert textViewTime != null;
         textViewTime.setText("PREP");
         buttonStart.setText("START");
 
-        assert buttonStart != null;
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(buttonStart.getText().equals("RESUME")){
+                if(isCurrentButtonTitle("RESUME")){
                     decrement = new Counter(time);
                     buttonStart.setText("RESTART");
                 }
-                else if(buttonStart.getText().equals("RESTART")){
+                else if(isCurrentButtonTitle("RESTART")) {
                     decrement.cancel();
                     time.setCurrentTime(time.getInitialTime());
                     decrement = new Counter(time);
@@ -56,8 +53,6 @@ public class TimerActivity extends AppCompatActivity {
             }
         });
 
-
-        assert buttonStop != null;
         buttonStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,5 +65,9 @@ public class TimerActivity extends AppCompatActivity {
 
     public TextView getTimerText(){
         return textViewTime;
+    }
+
+    boolean isCurrentButtonTitle(String titleOfButton){
+        return buttonStart.getText().equals(titleOfButton);
     }
 }
