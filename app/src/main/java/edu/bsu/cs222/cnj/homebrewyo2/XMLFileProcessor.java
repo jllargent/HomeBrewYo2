@@ -1,13 +1,11 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-import android.content.Context;
 import android.util.Log;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class XMLFileProcessor {
@@ -66,74 +64,74 @@ public class XMLFileProcessor {
         return listOfBeers;
     }
 
-    private boolean checkCurrentTag(String tagToCheck){
+    private boolean isCurrentTag(String tagToCheck){
         return currentTag.equalsIgnoreCase(tagToCheck);
     }
 
     private void addInfoIntoBeerObject(){
-        if (checkCurrentTag("name")) {
+        if (isCurrentTag("name")) {
             beer.setTitleOfBeer(text);
-        } else if (checkCurrentTag("style")) {
+        } else if (isCurrentTag("style")) {
             beer.setStyleOfBeer(text);
-        } else if (checkCurrentTag("description")) {
+        } else if (isCurrentTag("description")) {
             beer.setDescriptionOfBeer(text);
-        }else if (checkCurrentTag("temp")) {
+        }else if (isCurrentTag("temp")) {
             beer.setBoilDescription(text);
-        }else if (checkCurrentTag("time")) {
+        }else if (isCurrentTag("time")) {
             beer.setTimeInMins(text);
-        }else if (checkCurrentTag("fermtemp")) {
+        }else if (isCurrentTag("fermtemp")) {
             beer.setFermentTemperature(text);
-        }else if (checkCurrentTag("abv")) {
+        }else if (isCurrentTag("abv")) {
             beer.setValueOfABV(text);
-        }else if (checkCurrentTag("targetfg")) {
+        }else if (isCurrentTag("targetfg")) {
             beer.setFinalGravity(text);
-        }else if (checkCurrentTag("targetog")) {
+        }else if (isCurrentTag("targetog")) {
             beer.setOriginalGravity(text);
         }
     }
 
     private void addInfoIntoMaltObject(){
-        if (checkCurrentTag("maltName"))
+        if (isCurrentTag("maltName"))
             malt.setNameOfMalt(text);
-       else if (checkCurrentTag("maltweight")) {
+       else if (isCurrentTag("maltweight")) {
            malt.setWeightOfMaltsInPounds(text);
         }
     }
 
     private void addInfoIntoHopObject(){
-        if(checkCurrentTag("hopsName")){
+        if(isCurrentTag("hopsName")){
             hop.setNameOfHop(text);
         }
-        else if( checkCurrentTag("hopsamount")){
+        else if( isCurrentTag("hopsamount")){
             hop.setAmountOfHopsInGrams(text);
         }
-        else if( checkCurrentTag("hopstime")){
+        else if( isCurrentTag("hopstime")){
             hop.setTimeToAddHop(text);
         }
     }
 
     private void addBeerObjectToList(){
-        if (checkCurrentTag("recipe"))
+        if (isCurrentTag("recipe"))
             listOfBeers.add(beer);
     }
 
     private void addIngredientIntoRecipe() {
-        if (checkCurrentTag("maltIngredient"))
+        if (isCurrentTag("maltIngredient"))
             beer.addMaltIngredient(malt);
-        else if (checkCurrentTag("hopingredient"))
+        else if (isCurrentTag("hopingredient"))
             beer.addHopingredient(hop);
-        else if (checkCurrentTag("yeast"))
+        else if (isCurrentTag("yeast"))
             beer.setYeastIngredient(text);
     }
 
     private void checkStartTagForNewObjectToCreate(){
-        if (checkCurrentTag("recipe")) {
+        if (isCurrentTag("recipe")) {
             beer = new Beer();
             setParentTag();
-        }  else if(checkCurrentTag("maltIngredient")){
+        }  else if(isCurrentTag("maltIngredient")){
             malt = new Malt();
             setParentTag();
-        } else if(checkCurrentTag("hopingredient")){
+        } else if(isCurrentTag("hopingredient")){
             hop = new Hop();
             setParentTag();
         }
