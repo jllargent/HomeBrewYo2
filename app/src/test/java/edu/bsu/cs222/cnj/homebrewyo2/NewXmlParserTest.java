@@ -40,4 +40,9 @@ public class NewXmlParserTest {
     public void testThatThereAre10Recipies(){
         assertEquals(10, parser.recipeNodeList.getLength());
     }
+
+    @Test
+    public void testThatPunkIPAisinList(){
+        assertEquals("Punk IPA", parser.recipeNodeList.item(0));
+    }
 }
