@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.net.URL;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
 public class NewXmlParserTest {
 
 
@@ -21,8 +23,8 @@ public class NewXmlParserTest {
         parser = new NewXmlParser(input.openStream());
     }
 
-    /*@Test
+    @Test
     public void parserHasXmlFile(){
-        assertEquals(parser);
-    }*/
+        assertNotEquals(null, parser.xmlData);
+    }
 }
