@@ -27,6 +27,7 @@ public class NewXmlParser {
         DocumentBuilder builder = factory.newDocumentBuilder();
         document = builder.parse(xmlData);
         document.getElementsByTagName("recipe");
+        recipeNodeList = document.getElementsByTagName("recipe");
     }
 
 }
