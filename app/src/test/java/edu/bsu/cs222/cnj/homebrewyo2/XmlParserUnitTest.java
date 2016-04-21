@@ -15,8 +15,8 @@ public class XmlParserUnitTest extends Application {
 
     private XMLFileProcessor parseInfo = new XMLFileProcessor();
 
-    private ArrayList<Beer> listOfRecipies;
-    private Beer riptide;
+    private ArrayList<Recipe> listOfRecipies;
+    private Recipe riptide;
     private ArrayList<Malt> maltIngredientsForRiptide;
     private ArrayList<Hop> hopIngredientsForRiptide;
 
@@ -24,7 +24,7 @@ public class XmlParserUnitTest extends Application {
 
     @Before
     public void createTheListOfBeers() {
-        listOfRecipies = parseInfo.getListOfBeers();
+        listOfRecipies = parseInfo.getListOfRecipes();
         riptide = listOfRecipies.get(2);
         maltIngredientsForRiptide = listOfRecipies.get(2).getMaltIngredients();
         hopIngredientsForRiptide = listOfRecipies.get(2).getHopIngredients();

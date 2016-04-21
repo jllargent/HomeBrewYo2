@@ -7,11 +7,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class IngredientsPage extends AppCompatActivity {
 
-    private Beer currentBeer;
+    private Recipe currentRecipe;
 
 
     @Override
@@ -29,13 +28,13 @@ public class IngredientsPage extends AppCompatActivity {
 
     public void runParser(int positionInRecipeIndex){
         XMLFileProcessor parseInfo = new XMLFileProcessor();
-        ArrayList<Beer> listOfRecipies = parseInfo.getListOfBeers();
-        currentBeer = listOfRecipies.get(positionInRecipeIndex);
+        ArrayList<Recipe> listOfRecipies = parseInfo.getListOfRecipes();
+        currentRecipe = listOfRecipies.get(positionInRecipeIndex);
     }
 
     public void fillMaltUiInfo(){
         //TODO need a function to call the array list for malt
-        ArrayList<Malt> listOfMaltsIngredients = currentBeer.getMaltIngredients();
+        ArrayList<Malt> listOfMaltsIngredients = currentRecipe.getMaltIngredients();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
 
         for( int i =0; i < listOfMaltsIngredients.size(); i++){
@@ -52,7 +51,7 @@ public class IngredientsPage extends AppCompatActivity {
     }
 
     public void fillHopUiInfo(){
-        ArrayList<Hop> listOfHopIngredients = currentBeer.getHopIngredients();
+        ArrayList<Hop> listOfHopIngredients = currentRecipe.getHopIngredients();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
 
         for( int i =0; i < listOfHopIngredients.size(); i++){
@@ -72,6 +71,6 @@ public class IngredientsPage extends AppCompatActivity {
     public void fillYeastUiInfo() {
         TextView nameTextView = (TextView) findViewById(R.id.textView15);
         assert nameTextView != null;
-        nameTextView.setText(currentBeer.getYeastIngredient());
+        nameTextView.setText(currentRecipe.getYeastIngredient());
     }
 }

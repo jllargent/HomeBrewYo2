@@ -43,6 +43,6 @@ public class NewXmlParserTest {
 
     @Test
     public void testThatPunkIPAisinList(){
-        assertEquals("Punk IPA", parser.recipeNodeList.item(0));
+        assertEquals("Punk IPA", parser.recipeChildNodeList.item(1).getTextContent());
     }
 }

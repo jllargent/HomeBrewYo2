@@ -9,8 +9,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class XMLFileProcessor {
-    private ArrayList<Beer> listOfBeers = new ArrayList<>();
-    private Beer beer;
+    private ArrayList<Recipe> listOfRecipes = new ArrayList<>();
+    private Recipe recipe;
     private Hop hop;
     private Malt malt;
     private String text = null;
@@ -60,8 +60,8 @@ public class XMLFileProcessor {
         }
     }
 
-    public ArrayList<Beer> getListOfBeers(){
-        return listOfBeers;
+    public ArrayList<Recipe> getListOfRecipes(){
+        return listOfRecipes;
     }
 
     private boolean isCurrentTag(String tagToCheck){
@@ -70,23 +70,23 @@ public class XMLFileProcessor {
 
     private void addInfoIntoBeerObject(){
         if (isCurrentTag("name")) {
-            beer.setTitleOfBeer(text);
+            recipe.setTitleOfBeer(text);
         } else if (isCurrentTag("style")) {
-            beer.setStyleOfBeer(text);
+            recipe.setStyleOfBeer(text);
         } else if (isCurrentTag("description")) {
-            beer.setDescriptionOfBeer(text);
+            recipe.setDescriptionOfBeer(text);
         }else if (isCurrentTag("temp")) {
-            beer.setBoilDescription(text);
+            recipe.setBoilDescription(text);
         }else if (isCurrentTag("time")) {
-            beer.setTimeInMins(text);
+            recipe.setTimeInMins(text);
         }else if (isCurrentTag("fermtemp")) {
-            beer.setFermentTemperature(text);
+            recipe.setFermentTemperature(text);
         }else if (isCurrentTag("abv")) {
-            beer.setValueOfABV(text);
+            recipe.setValueOfABV(text);
         }else if (isCurrentTag("targetfg")) {
-            beer.setFinalGravity(text);
+            recipe.setFinalGravity(text);
         }else if (isCurrentTag("targetog")) {
-            beer.setOriginalGravity(text);
+            recipe.setOriginalGravity(text);
         }
     }
 
@@ -112,21 +112,21 @@ public class XMLFileProcessor {
 
     private void addBeerObjectToList(){
         if (isCurrentTag("recipe"))
-            listOfBeers.add(beer);
+            listOfRecipes.add(recipe);
     }
 
     private void addIngredientIntoRecipe() {
         if (isCurrentTag("maltIngredient"))
-            beer.addMaltIngredient(malt);
+            recipe.addMaltIngredient(malt);
         else if (isCurrentTag("hopingredient"))
-            beer.addHopingredient(hop);
+            recipe.addHopingredient(hop);
         else if (isCurrentTag("yeast"))
-            beer.setYeastIngredient(text);
+            recipe.setYeastIngredient(text);
     }
 
     private void checkStartTagForNewObjectToCreate(){
         if (isCurrentTag("recipe")) {
-            beer = new Beer();
+            recipe = new Recipe();
             setParentTag();
         }  else if(isCurrentTag("maltIngredient")){
             malt = new Malt();

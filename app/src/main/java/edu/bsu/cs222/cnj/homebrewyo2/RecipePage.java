@@ -12,7 +12,7 @@ public class RecipePage extends AppCompatActivity {
 
     private int positionInRecipeIndex;
 
-    ArrayList<Beer> listOfRecipies = new ArrayList<>();
+    ArrayList<Recipe> listOfRecipies = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,51 +33,51 @@ public class RecipePage extends AppCompatActivity {
 
     public void runParser(int positionInRecipeIndex){
         XMLFileProcessor parseInfo = new XMLFileProcessor();
-        listOfRecipies = parseInfo.getListOfBeers();
+        listOfRecipies = parseInfo.getListOfRecipes();
         fillUIInformation(positionInRecipeIndex);
     }
 
     //TODO: Clean Up DRY Violation
     public void fillUIInformation(int positionInRecipeIndex) {
-        Beer currentBeer = listOfRecipies.get(positionInRecipeIndex);
+        Recipe currentRecipe = listOfRecipies.get(positionInRecipeIndex);
         setContentView(R.layout.activity_recipe);
         TextView nameTextView = (TextView) findViewById(R.id.textView16);
         assert nameTextView != null;
-        nameTextView.setText(currentBeer.getTitleOfBeer());
+        nameTextView.setText(currentRecipe.getTitleOfBeer());
 
         TextView descriptionTextView = (TextView) findViewById(R.id.textView);
         assert descriptionTextView != null;
-        descriptionTextView.setText(currentBeer.getDescriptionOfBeer());
+        descriptionTextView.setText(currentRecipe.getDescriptionOfBeer());
 
 
         TextView boilTimeTextView = (TextView) findViewById(R.id.textView3);
         assert boilTimeTextView != null;
-        boilTimeTextView.setText(currentBeer.getBoilDescription());
+        boilTimeTextView.setText(currentRecipe.getBoilDescription());
 
 
         TextView fermentTextView = (TextView) findViewById(R.id.textView4);
         assert fermentTextView != null;
-        fermentTextView.setText(currentBeer.getFermentTemp());
+        fermentTextView.setText(currentRecipe.getFermentTemp());
 
 
         TextView abvTextView = (TextView) findViewById(R.id.textView5);
         assert abvTextView != null;
-        abvTextView.setText(currentBeer.getValueOfABV());
+        abvTextView.setText(currentRecipe.getValueOfABV());
 
 
         TextView oGravTextView = (TextView) findViewById(R.id.textView7);
         assert oGravTextView != null;
-        oGravTextView.setText(currentBeer.getOriginalGravity());
+        oGravTextView.setText(currentRecipe.getOriginalGravity());
 
 
         TextView fGravTextView = (TextView) findViewById(R.id.textView8);
         assert fGravTextView != null;
-        fGravTextView.setText(currentBeer.getFinalGravity());
+        fGravTextView.setText(currentRecipe.getFinalGravity());
     }
 
     public void goTimer(View view){
-        Beer currentBeer = listOfRecipies.get(positionInRecipeIndex);
-        int timerLength = currentBeer.getTimeInMins() * 60;
+        Recipe currentRecipe = listOfRecipies.get(positionInRecipeIndex);
+        int timerLength = currentRecipe.getTimeInMins() * 60;
         Intent timerIntent = new Intent(this, TimerActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("timerLength", timerLength);
