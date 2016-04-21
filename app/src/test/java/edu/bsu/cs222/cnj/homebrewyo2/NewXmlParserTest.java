@@ -27,12 +27,17 @@ public class NewXmlParserTest {
     }
 
     @Test
-    public void parserHasXmlFile(){
+    public void testHasXmlFile(){
         assertNotEquals(null, parser.xmlData);
     }
 
     @Test
-    public void parserBuilderExist(){
+    public void testBuilderExist(){
         assertNotEquals(null, parser.document);
+    }
+
+    @Test
+    public void testThatThereAre10Recipies(){
+        assertEquals(10, parser.recipeNodeList.getLength());
     }
 }
