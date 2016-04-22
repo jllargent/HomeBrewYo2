@@ -77,7 +77,6 @@
                     android:onClick="goBeerRecipe"
                     android:tag="5"/>
 
-
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
