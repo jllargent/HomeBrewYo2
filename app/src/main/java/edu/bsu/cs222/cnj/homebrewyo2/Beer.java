@@ -20,4 +20,12 @@ public class Beer {
     public String returnName(){
         return name;
     }
+
+    public void addMalt(Malt malt){
+        this.malts.add(malt);
+    }
+
+    public List<Malt> getMalts(){
+        return this.malts;
+    }
 }
