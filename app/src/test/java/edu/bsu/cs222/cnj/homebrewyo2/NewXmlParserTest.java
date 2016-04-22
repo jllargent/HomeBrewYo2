@@ -6,7 +6,6 @@ import org.xml.sax.SAXException;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -43,6 +42,11 @@ public class NewXmlParserTest {
 
     @Test
     public void testThatPunkIPAisinList(){
-        assertEquals("Punk IPA", parser.recipeChildNodeList.item(1).getTextContent());
+        assertEquals("Punk IPA", parser.name);
     }
+/*
+    @Test
+    public void testPunkIPAHasDescription(){
+        assertNotEquals(null, parser);
+    }*/
 }
