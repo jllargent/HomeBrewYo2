@@ -9,7 +9,11 @@ public class Beer {
     private String name;
 
 
-    public Beer(Node node){
-        this.name = name;
+    public Beer(String nameFromFile){
+        this.name = nameFromFile;
+    }
+
+    public String returnName(){
+        return name;
     }
 }

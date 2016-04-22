@@ -34,6 +34,7 @@ public class XmlParserUnitTest extends Application {
     public void isLengthOfRecipies10(){
         assertEquals(10, listOfRecipies.size());
     }
+
     @Test
     public void isRiptideBeer2(){
         String nameOfBeer = riptide.getTitleOfBeer();
