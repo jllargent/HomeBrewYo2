@@ -99,4 +99,9 @@ public class BeerBuilderTest {
     public void testBeerHasStyle(){
         assertNotEquals(null, testBeer.getStyle());
     }
+
+    @Test
+    public void testBeerHasFermentTemp(){
+        assertNotEquals(null, testBeer.getFermentTemperature());
+    }
 }
