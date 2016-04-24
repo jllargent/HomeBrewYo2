@@ -95,6 +95,11 @@ public class NewXmlParserTest {
     }
 
     @Test
+    public void testBadPixieABVPercent(){
+        assertEquals(4.7, recipeList.get(0).getABCPercent());
+    }
+
+    @Test
     public void testThatThereIsABeerArrayList(){
         assertNotEquals(null, parser.beerList);
     }
