@@ -16,22 +16,22 @@
         <malts>
             <maltIngredient>
                 <maltName>Wheat</maltName>
-                <maltweight>5.5lb</maltweight>
+                <maltweight>5.5</maltweight>
             </maltIngredient>
             <maltIngredient>
                 <maltName>Extra Pale</maltName>
-                <maltweight>4.54lb</maltweight>
+                <maltweight>4.54</maltweight>
             </maltIngredient>
         </malts>
         <hops>
             <hopingredient>
                 <hopsname>First Gold</hopsname>
-                <hopsamount>18.75g</hopsamount>
+                <hopsamount>18.75</hopsamount>
                 <hopstime>Start</hopstime>
             </hopingredient>
             <hopingredient>
                 <hopsname>First Gold</hopsname>
-                <hopsamount>25g</hopsamount>
+                <hopsamount>25</hopsamount>
                 <hopstime>End</hopstime>
             </hopingredient>
             <hopingredient>
@@ -41,12 +41,12 @@
             </hopingredient>
             <hopingredient>
                 <hopsname>Crushed Juniper Berries</hopsname>
-                <hopsamount>12.5g</hopsamount>
+                <hopsamount>12.5</hopsamount>
                 <hopstime>End</hopstime>
             </hopingredient>
             <hopingredient>
                 <hopsname>Lemon Peel</hopsname>
-                <hopsamount>18.8g</hopsamount>
+                <hopsamount>18.8</hopsamount>
                 <hopstime>End</hopstime>
             </hopingredient>
         </hops>
@@ -69,43 +69,43 @@
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>8.40lb</maltweight>
+                    <maltweight>8.40</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal</maltName>
-                    <maltweight>0.41lb</maltweight>
+                    <maltweight>0.41</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Roasted Barley</maltName>
-                    <maltweight>0.69lb</maltweight>
+                    <maltweight>0.69</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Black</maltName>
-                    <maltweight>0.28lb</maltweight>
+                    <maltweight>0.28</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Amber</maltName>
-                    <maltweight>0.69lb</maltweight>
+                    <maltweight>0.69</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Flaked Oats</maltName>
-                    <maltweight>0.55lb</maltweight>
+                    <maltweight>0.55</maltweight>
                 </maltIngredient>
             </malts>
             <hops>
                 <hopingredient>
                     <hopsname>Bravo</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Bramling Cross</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Middle</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Challenger</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Middle</hopstime>
                 </hopingredient>
             </hops>
