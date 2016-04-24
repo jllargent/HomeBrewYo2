@@ -14,6 +14,7 @@ public class Beer {
     private int time;
     private int temperature;
     private int fermentTemperature;
+    private int ibuValue;
     private double abvPercent;
 
 /*
@@ -91,5 +92,13 @@ public class Beer {
 
     public double getABVPercent(){
         return this.abvPercent;
+    }
+
+    protected void setIbuValue(int ibu){
+        this.ibuValue = ibu;
+    }
+
+    public int getIbuValue(){
+        return this.ibuValue;
     }
 }

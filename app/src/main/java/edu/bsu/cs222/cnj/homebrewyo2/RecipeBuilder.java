@@ -46,5 +46,8 @@ public class RecipeBuilder extends BeerBuilder{
         thisBeer.setAbvPercent(abvPercent);
     }
 
-
+    @Override
+    public void buildIBUValue(int ibuValue) {
+        thisBeer.setIbuValue(ibuValue);
+    }
 }
