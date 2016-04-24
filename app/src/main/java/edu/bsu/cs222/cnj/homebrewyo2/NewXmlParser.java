@@ -25,20 +25,25 @@ public class NewXmlParser {
     public NodeList recipeChildNodeList;
     Element eElement;
     String name;
+    private BeerBuilder builder = new RecipeBuilder();
+    private Beer currentBeer;
+    public List<Beer> beerList = new ArrayList();
 
     public NewXmlParser(InputStream input) throws IOException, SAXException, ParserConfigurationException {
         this.xmlData = input;
         createXMLParser();
         //recipeNodeList = element.getChildNodes();
         for(int temp = 0; temp < recipeNodeList.getLength(); temp++){
-            Node currentNode = recipeNodeList.item(0);
-
+            Node currentNode = recipeNodeList.item(temp);
+            builder.createBeer();
             if(isFirstNode(currentNode)){
                 continue;
             }
 
             findCurrentName((Element) currentNode);
-
+            findCurrentDescription((Element) currentNode);
+            currentBeer = builder.getBeer();
+            beerList.add(currentBeer);
 
         }/*
         recipeChildNodeList = recipeNodeList.item(0).getChildNodes();
@@ -46,7 +51,10 @@ public class NewXmlParser {
     }
 
     private void findCurrentName(Element currentElement) {
-        name = currentElement.getElementsByTagName("name").item(0).getTextContent();
+        builder.buildName(currentElement.getElementsByTagName("name").item(0).getTextContent());
+    }
+    private void findCurrentDescription(Element currentElement) {
+        builder.buildDescription(currentElement.getElementsByTagName("description").item(0).getTextContent());
     }
 
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {
@@ -62,5 +70,8 @@ public class NewXmlParser {
         return currentNode.getNodeType() != Node.ELEMENT_NODE;
     }
 
+    public List<Beer> getBeerList(){
+        return new ArrayList<>(beerList);
+    }
 
 }

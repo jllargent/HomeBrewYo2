@@ -33,7 +33,6 @@ public class IngredientsPage extends AppCompatActivity {
     }
 
     public void fillMaltUiInfo(){
-        //TODO need a function to call the array list for malt
         ArrayList<Malt> listOfMaltsIngredients = currentRecipe.getMaltIngredients();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
 

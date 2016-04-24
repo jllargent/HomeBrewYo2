@@ -23,5 +23,6 @@ public class NameRecipeActivity extends AppCompatActivity {
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
+    
 
 }
