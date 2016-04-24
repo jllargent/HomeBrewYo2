@@ -57,4 +57,9 @@ public class BeerBuilderTest {
     public void testBeerHasMultipleMalts(){
         assertNotEquals(null, testBeer.getMalts().get(1));
     }
+
+    @Test
+    public void testBeerHasHop(){
+        assertNotEquals(null, testBeer.getHops());
+    }
 }
