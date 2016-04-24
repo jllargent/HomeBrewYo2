@@ -11,6 +11,7 @@ public class Beer {
     private List<Malt> malts = new ArrayList<>();
     private List<Hop> hops = new ArrayList<>();
     private int time;
+    private int temperature;
 
 /*
     public Beer(String nameFromFile){
@@ -55,5 +56,13 @@ public class Beer {
 
     public int getTimeInMinutes(){
         return this.time;
+    }
+
+    protected void setTempInFahrenheit(int temp){
+        this.temperature = temp;
+    }
+
+    public int getTemperatureInFahrenheit(){
+        return this.temperature;
     }
 }

@@ -88,4 +88,9 @@ public class BeerBuilderTest {
     public void testBeerTime_5Minutes(){
         assertEquals(5, testBeer.getTimeInMinutes());
     }
+
+    @Test
+    public void testBeerHasTemp(){
+        assertNotEquals(null, testBeer.getTemperatureInFahrenheit());
+    }
 }

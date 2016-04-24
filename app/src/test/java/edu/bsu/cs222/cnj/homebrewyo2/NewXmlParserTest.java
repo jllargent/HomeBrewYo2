@@ -70,6 +70,11 @@ public class NewXmlParserTest {
     }
 
     @Test
+    public void testBrixtonPorterBuildTime(){
+        assertEquals(75, recipeList.get(1).getTimeInMinutes());
+    }
+
+    @Test
     public void testThatThereIsABeerArrayList(){
         assertNotEquals(null, parser.beerList);
     }

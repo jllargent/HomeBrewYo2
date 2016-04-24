@@ -25,4 +25,9 @@ public class RecipeBuilder extends BeerBuilder{
     public void buildTime(int time) {
         thisBeer.setTimeInMinutes(time);
     }
+
+    @Override
+    public void buildTemp(int temp) {
+        thisBeer.setTempInFahrenheit(temp);
+    }
 }
