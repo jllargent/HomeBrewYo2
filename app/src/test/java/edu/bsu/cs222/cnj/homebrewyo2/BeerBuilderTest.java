@@ -11,14 +11,26 @@ public class BeerBuilderTest {
     
     @Before
     public void setUpBeer(){
-        builder = new BeerBuilder();
+        builder = new RecipeBuilder();
+        builder.createBeer();
+        builder.buildName("test");
+        builder.buildDescription("Test Description");
     }
 
     @Test
-    public void testBeerHasName(){
-        assertEquals("test", builder.thisBeer.returnName());
+    public void testBeerExist(){
+        assertNotEquals(null, builder.getBeer());
     }
 
 
+    @Test
+    public void testBeerHasName(){
+        assertEquals("test", builder.getBeer().returnName());
+    }
+
+    @Test
+    public void testBeerHasDescription(){
+        assertEquals("Test Description", builder.getBeer().returnDescription());
+    }
 
 }
