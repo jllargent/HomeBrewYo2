@@ -50,4 +50,9 @@ public class RecipeBuilder extends BeerBuilder{
     public void buildIBUValue(int ibuValue) {
         thisBeer.setIbuValue(ibuValue);
     }
+
+    @Override
+    public void buildTargetFinalGravity(int targetFinalGravity) {
+        thisBeer.setTargetFinalGravity(targetFinalGravity);
+    }
 }

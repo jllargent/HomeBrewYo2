@@ -15,6 +15,7 @@ public class Beer {
     private int temperature;
     private int fermentTemperature;
     private int ibuValue;
+    private int targetFinalGravity;
     private double abvPercent;
 
 /*
@@ -100,5 +101,13 @@ public class Beer {
 
     public int getIbuValue(){
         return this.ibuValue;
+    }
+
+    protected void setTargetFinalGravity(int targetFG){
+        this.targetFinalGravity = targetFG;
+    }
+
+    public int getTargetFinalGravity(){
+        return this.targetFinalGravity;
     }
 }
