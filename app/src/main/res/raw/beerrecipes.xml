@@ -2,115 +2,110 @@
 <resources>
 
     <recipe>
-    <name>Bad Pixie</name>
-    <description>4.7% wheat ale with crushed juniper berries and citrus peel.</description>
-    <style>Wheat Beer</style>
-    <temp>Boil for 75 minutes at 153F</temp>
-    <time>75</time>
-    <fermtemp>Ferment at 66F</fermtemp>
-    <abv>4.7% ABV | IBU 45</abv>
-    <targetfg>Final Gravity 1010</targetfg>
-    <targetog>Original Gravity 1047</targetog>
-    <ingredients>
-        <malts>
-            <maltIngredient>
-                <maltName>Wheat</maltName>
-                <maltweight>5.5lb</maltweight>
-            </maltIngredient>
-            <maltIngredient>
-                <maltName>Extra Pale</maltName>
-                <maltweight>4.54lb</maltweight>
-            </maltIngredient>
-        </malts>
-        <hops>
-            <hopingredient>
-                <hopsname>First Gold</hopsname>
-                <hopsamount>18.75g</hopsamount>
-                <hopstime>Start</hopstime>
-            </hopingredient>
-            <hopingredient>
-                <hopsname>First Gold</hopsname>
-                <hopsamount>25g</hopsamount>
-                <hopstime>End</hopstime>
-            </hopingredient>
-            <hopingredient>
-                <hopsname>Sorachi Ace</hopsname>
-                <hopsamount>16.25</hopsamount>
-                <hopstime>End</hopstime>
-            </hopingredient>
-            <hopingredient>
-                <hopsname>Crushed Juniper Berries</hopsname>
-                <hopsamount>12.5g</hopsamount>
-                <hopstime>End</hopstime>
-            </hopingredient>
-            <hopingredient>
-                <hopsname>Lemon Peel</hopsname>
-                <hopsamount>18.8g</hopsamount>
-                <hopstime>End</hopstime>
-            </hopingredient>
-        </hops>
-        <yeast>Wyeast 1056 - American Ale</yeast>
-    </ingredients>
-    <picture>@drawable/badpixie</picture>
-</recipe>
+        <name>Bad Pixie</name>
+        <description>4.7% wheat ale with crushed juniper berries and citrus peel.</description>
+        <style>Wheat Beer</style>
+        <temp>153</temp>
+        <time>75</time>
+        <fermtemp>66</fermtemp>
+        <abvpercent>4.7</abvpercent>
+        <ibu>45</ibu>
+        <targetfg>1010</targetfg>
+        <targetog>1047</targetog>
+        <ingredients>
+            <malts>
+                <maltIngredient>
+                    <maltName>Wheat</maltName>
+                    <maltweight>5.5</maltweight>
+                </maltIngredient>
+                <maltIngredient>
+                    <maltName>Extra Pale</maltName>
+                    <maltweight>4.54</maltweight>
+                </maltIngredient>
+            </malts>
+            <hops>
+                <hopingredient>
+                    <hopsname>First Gold</hopsname>
+                    <hopsamount>18.75</hopsamount>
+                    <hopstime>Start</hopstime>
+                </hopingredient>
+                <hopingredient>
+                    <hopsname>First Gold</hopsname>
+                    <hopsamount>25</hopsamount>
+                    <hopstime>End</hopstime>
+                </hopingredient>
+                <hopingredient>
+                    <hopsname>Sorachi Ace</hopsname>
+                    <hopsamount>16.25</hopsamount>
+                    <hopstime>End</hopstime>
+                </hopingredient>
+                <hopingredient>
+                    <hopsname>Crushed Juniper Berries</hopsname>
+                    <hopsamount>12.5</hopsamount>
+                    <hopstime>End</hopstime>
+                </hopingredient>
+                <hopingredient>
+                    <hopsname>Lemon Peel</hopsname>
+                    <hopsamount>18.8</hopsamount>
+                    <hopstime>End</hopstime>
+                </hopingredient>
+            </hops>
+            <yeast>Wyeast 1056 - American Ale</yeast>
+        </ingredients>
+        <picture>@drawable/badpixie</picture>
+    </recipe>
     <recipe>
         <name>Brixton Porter</name>
         <description>Brixton Porter delivers bold chocolate and coffee flavours with light smokiness and hints of autumn fruit all but built on a low ABV, lighter bodied backbone. Complex and intriguing, with spicy bitterness, but very sessionable.</description>
         <style>Porter</style>
-        <temp>149F</temp>
+        <temp>149</temp>
         <time>75</time>
-        <fermtemp>66F</fermtemp>
-        <abv>5%</abv>
+        <fermtemp>66</fermtemp>
+        <abvpercent>5</abvpercent>
+        <ibu>50</ibu>
         <targetfg>1014</targetfg>
         <targetog>1053</targetog>
-        <ibu>50</ibu>
-        <temp>Boil for 75 minutes at 149F</temp>
-        <time>75</time>
-        <fermtemp>Ferment at 66F</fermtemp>
-        <abv>5% ABV | IBU 50</abv>
-        <targetfg>Final Gravity 1014</targetfg>
-        <targetog>Original Gravity 1053</targetog>
         <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>8.40lb</maltweight>
+                    <maltweight>8.40</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal</maltName>
-                    <maltweight>0.41lb</maltweight>
+                    <maltweight>0.41</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Roasted Barley</maltName>
-                    <maltweight>0.69lb</maltweight>
+                    <maltweight>0.69</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Black</maltName>
-                    <maltweight>0.28lb</maltweight>
+                    <maltweight>0.28</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Amber</maltName>
-                    <maltweight>0.69lb</maltweight>
+                    <maltweight>0.69</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Flaked Oats</maltName>
-                    <maltweight>0.55lb</maltweight>
+                    <maltweight>0.55</maltweight>
                 </maltIngredient>
             </malts>
             <hops>
                 <hopingredient>
                     <hopsname>Bravo</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Bramling Cross</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Middle</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Challenger</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Middle</hopstime>
                 </hopingredient>
             </hops>
@@ -122,60 +117,61 @@
         <name>Coffee Imperial</name>
         <description> Deep, dark, roasted flavours make this a perfect Sunday brunch beer.</description>
         <style>Stout</style>
-        <temp>Boil for 90 minutes at 147F</temp>
+        <temp>147</temp>
         <time>90</time>
-        <fermtemp>Ferment at 66F</fermtemp>
-        <abv>9% ABV | IBU 65</abv>
-        <targetfg>Final Gravity 1019</targetfg>
-        <targetog>Original Gravity 1080</targetog>
+        <fermtemp>66</fermtemp>
+        <abvpercent>9</abvpercent>
+        <ibu>65</ibu>
+        <targetfg>1019</targetfg>
+        <targetog>1080</targetog>
         <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>16.52lb</maltweight>
+                    <maltweight>16.52</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal</maltName>
-                    <maltweight>1.38lb</maltweight>
+                    <maltweight>1.38</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Chocolate</maltName>
-                    <maltweight>0.69lb</maltweight>
+                    <maltweight>0.69</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Roast Barley</maltName>
-                    <maltweight>0.69lb</maltweight>
+                    <maltweight>0.69</maltweight>
                 </maltIngredient>
             </malts>
             <hops>
                 <hopingredient>
                     <hopsname>Chinook</hopsname>
-                    <hopsamount>25g</hopsamount>
+                    <hopsamount>25</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Galena</hopsname>
-                    <hopsamount>25g</hopsamount>
+                    <hopsamount>25</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Galena</hopsname>
-                    <hopsamount>25g</hopsamount>
+                    <hopsamount>25</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>First Gold</hopsname>
-                    <hopsamount>25g</hopsamount>
+                    <hopsamount>25</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Coffee</hopsname>
-                    <hopsamount>9.4g</hopsamount>
+                    <hopsamount>9.4</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Coffee</hopsname>
-                    <hopsamount>9.4g</hopsamount>
+                    <hopsamount>9.4</hopsamount>
                     <hopstime>Dry Hop</hopstime>
                 </hopingredient>
             </hops>
@@ -187,65 +183,66 @@
         <name>Dogma</name>
         <description>A strong ale, brewed with guarana, Californian poppy, kola nut and Scottish heather honey. A conspiracy of trans-continental ingredients.</description>
         <style>Ale</style>
-        <temp>Boil for 75 minutes at 143F</temp>
+        <temp>143</temp>
         <time>75</time>
-        <fermtemp>Ferment at 70F</fermtemp>
-        <abv>7.8% ABV | IBU 60</abv>
-        <targetfg>Final Gravity 1012</targetfg>
-        <targetog>Original Gravity 1071.3</targetog>
+        <fermtemp>70</fermtemp>
+        <abvpercent>7.8</abvpercent>
+        <ibu>60</ibu>
+        <targetfg>1012</targetfg>
+        <targetog>1071.3</targetog>
         <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>9.9lb</maltweight>
+                    <maltweight>9.9</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Munich</maltName>
-                    <maltweight>1.10lb</maltweight>
+                    <maltweight>1.10</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Amber</maltName>
-                    <maltweight>0.11lb</maltweight>
+                    <maltweight>0.11</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal</maltName>
-                    <maltweight>0.18lb</maltweight>
+                    <maltweight>0.18</maltweight>
                 </maltIngredient>
             </malts>
             <hops>
                 <hopingredient>
                     <hopsname>Amarillo</hopsname>
-                    <hopsamount>30g</hopsamount>
+                    <hopsamount>30</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Amarillo</hopsname>
-                    <hopsamount>10g</hopsamount>
+                    <hopsamount>10</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Bobek</hopsname>
-                    <hopsamount>10g</hopsamount>
+                    <hopsamount>10</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Guarana Powder</hopsname>
-                    <hopsamount>6g</hopsamount>
+                    <hopsamount>6</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Kola Nut Powder</hopsname>
-                    <hopsamount>6g</hopsamount>
+                    <hopsamount>6</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Poppy Seed</hopsname>
-                    <hopsamount>6g</hopsamount>
+                    <hopsamount>6</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Heather Honey</hopsname>
-                    <hopsamount>100g</hopsamount>
+                    <hopsamount>100</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
             </hops>
@@ -257,46 +254,47 @@
         <name>Hop Rocker</name>
         <description>Hop Rocker is a high impact, hoppy behemoth made with 100% malt. The malt base gives this beer a sweet, balanced complexity while the combination of New Zealand and German hops merges new world tropical juiciness with old world peppery spice.</description>
         <style>Lager</style>
-        <temp>Boil for 75 minutes at 149F</temp>
+        <temp>149</temp>
         <time>75</time>
-        <fermtemp>Ferment at 50F</fermtemp>
-        <abv>5.5% ABV | IBU 40</abv>
-        <targetfg>Final Gravity 1010</targetfg>
-        <targetog>Original Gravity 1052</targetog>
+        <fermtemp>50</fermtemp>
+        <abvpercent>5.5</abvpercent>
+        <ibu>40</ibu>
+        <targetfg>1010</targetfg>
+        <targetog>1052</targetog>
         <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale Maris Otter</maltName>
-                    <maltweight>8.3lb</maltweight>
+                    <maltweight>8.3</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Caramalt</maltName>
-                    <maltweight>0.7lb</maltweight>
+                    <maltweight>0.7</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Munich</maltName>
-                    <maltweight>0.7lb</maltweight>
+                    <maltweight>0.7</maltweight>
                 </maltIngredient>
             </malts>
             <hops>
                 <hopingredient>
                     <hopsname>Cascade</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Saaz</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Cascade</hopsname>
-                    <hopsamount>25g</hopsamount>
+                    <hopsamount>25</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Motueka</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
@@ -313,50 +311,51 @@
         <name>The Physics</name>
         <description>Malt and hops are in perfect harmony in this incredibly balanced beer. Biscuity, bitter and packing a surprisingly hoppy punch.</description>
         <style>Amber Ale</style>
-        <temp>Boil for 75 minutes at 149F</temp>
+        <temp>149</temp>
         <time>75</time>
-        <fermtemp>Ferment at 66F</fermtemp>
-        <abv>5% ABV | IBU 47</abv>
-        <targetfg>Final Gravity 1010</targetfg>
-        <targetog>Original Gravity 1048.5</targetog>
+        <fermtemp>66</fermtemp>
+        <abvpercent>5</abvpercent>
+        <ibu>47</ibu>
+        <targetfg>1010</targetfg>
+        <targetog>1048.5</targetog>
         <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>8.95lb</maltweight>
+                    <maltweight>8.95</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Caramalt</maltName>
-                    <maltweight>0.69lb</maltweight>
+                    <maltweight>0.69</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Crystal 120</maltName>
-                    <maltweight>0.5lb</maltweight>
+                    <maltweight>0.5</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal 350</maltName>
-                    <maltweight>0.2lb</maltweight>
+                    <maltweight>0.2</maltweight>
                 </maltIngredient>
             </malts>
             <hops>
                 <hopingredient>
                     <hopsname>Amarillo</hopsname>
-                    <hopsamount>25g</hopsamount>
+                    <hopsamount>25</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Amarillo</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Middle</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Bramling Cross</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Amarillo</hopsname>
-                    <hopsamount>50g</hopsamount>
+                    <hopsamount>50</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
             </hops>
@@ -368,33 +367,34 @@
 	<name>Punk IPA</name>
 	<description>An original take on an American IPA, subverted with punchy New Zealand hops. Layered with new world hops to create an all-out riot of grapefruit, pineapple and lychee before a spiky, mouth-puckering bitter finish.</description>
 	<style>IPA</style>
-	<temp>Boil for 75 minutes at 150F</temp>
+	<temp>150</temp>
 	<time>75</time>
-	<fermtemp>Ferment at 66F</fermtemp>
-	<abv>6% ABV | IBU 60</abv>
-	<targetfg>Final Gravity 1010</targetfg>
-	<targetog>Original Gravity 1056</targetog>
+	<fermtemp>66</fermtemp>
+    <abvpercent>6</abvpercent>
+    <ibu>60</ibu>
+	<targetfg>1010</targetfg>
+	<targetog>1056</targetog>
 	<ingredients>
 		<malts>
 			<maltIngredient>
 				<maltName>Extra Pale</maltName>
-				<maltweight>11.7lb</maltweight>
+				<maltweight>11.7l</maltweight>
 			</maltIngredient>
 		</malts>	
 		<hops>
 			<hopingredient>
 				<hopsname>Ahtanum</hopsname>
-				<hopsamount>17.5g</hopsamount>
+				<hopsamount>17.5</hopsamount>
 				<hopstime>Start</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Chinook</hopsname>
-				<hopsamount>15g</hopsamount>
+				<hopsamount>15</hopsamount>
 				<hopstime>Start</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Crystal</hopsname>
-				<hopsamount>17.5g</hopsamount>
+				<hopsamount>17.5</hopsamount>
 				<hopstime>Middle</hopstime>
 			</hopingredient>
 			<hopingredient>
@@ -404,22 +404,22 @@
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Ahtanum</hopsname>
-				<hopsamount>17.5g</hopsamount>
+				<hopsamount>17.5</hopsamount>
 				<hopstime>End</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Chinook</hopsname>
-				<hopsamount>27.5g</hopsamount>
+				<hopsamount>27.5</hopsamount>
 				<hopstime>End</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Crystal</hopsname>
-				<hopsamount>17.5g</hopsamount>
+				<hopsamount>17.5</hopsamount>
 				<hopstime>End</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Motueka</hopsname>
-				<hopsamount>17.5g</hopsamount>
+				<hopsamount>17.5</hopsamount>
 				<hopstime>End</hopstime>
 			</hopingredient>
 		</hops>
@@ -431,33 +431,34 @@
         <name>Peroxide Punk</name>
         <description>Peroxide Punk has a depth of flavor that belies its modest ABV. Zesty, aromatic and thirst quenching.</description>
         <style>Pale Ale</style>
-        <temp>Boil for 75 minutes at 149F</temp>
+        <temp>149</temp>
         <time>75</time>
-        <fermtemp>Ferment at 66F</fermtemp>
-        <abv>4% ABV | IBU 40</abv>
+        <fermtemp>66</fermtemp>
+        <abvpercent>4</abvpercent>
+        <ibu>40</ibu>
         <targetfg>Final Gravity 1009</targetfg>
         <targetog>Original Gravity 1039</targetog>
         <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Maris Otter</maltName>
-                    <maltweight>8.5lb</maltweight>
+                    <maltweight>8.5</maltweight>
                 </maltIngredient>
             </malts>
             <hops>
                 <hopingredient>
                     <hopsname>Amarillo</hopsname>
-                    <hopsamount>25g</hopsamount>
+                    <hopsamount>25</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Simcoe</hopsname>
-                    <hopsamount>20g</hopsamount>
+                    <hopsamount>20</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Amarillo</hopsname>
-                    <hopsamount>25g</hopsamount>
+                    <hopsamount>25</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
@@ -467,17 +468,17 @@
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Liberty</hopsname>
-                    <hopsamount>20g</hopsamount>
+                    <hopsamount>20</hopsamount>
                     <hopstime>End</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Simcoe</hopsname>
-                    <hopsamount>50g</hopsamount>
+                    <hopsamount>50</hopsamount>
                     <hopstime>Dry Hop</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Amarillo</hopsname>
-                    <hopsamount>50g</hopsamount>
+                    <hopsamount>50</hopsamount>
                     <hopstime>Dry Hop</hopstime>
                 </hopingredient>
             </hops>
@@ -491,36 +492,37 @@
             in leather trousers. Think banana bread, bubble gum and
             David Hasselhoff.</description>
         <style>Wheat</style>
-        <temp>Boil for 60 minutes at 147F</temp>
+        <temp>147</temp>
         <time>60</time>
-        <fermtemp>Ferment at 70F</fermtemp>
-        <abv>10.27% ABV | IBU 26</abv>
-        <targetfg>Final Gravity 1014</targetfg>
-        <targetog>Original Gravity 1092</targetog>
+        <fermtemp>70</fermtemp>
+        <abvpercent>10.27</abvpercent>
+        <ibu>26</ibu>
+        <targetfg>1014</targetfg>
+        <targetog>1092</targetog>
         <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>12.39lb</maltweight>
+                    <maltweight>12.39</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Wheat</maltName>
-                    <maltweight>15.14lb</maltweight>
+                    <maltweight>15.14</maltweight>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Crystal</maltName>
-                    <maltweight>1.37lb</maltweight>
+                    <maltweight>1.37</maltweight>
                 </maltIngredient>
             </malts>
             <hops>
                 <hopingredient>
                     <hopsname>Columbus</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Start</hopstime>
                 </hopingredient>
                 <hopingredient>
                     <hopsname>Hersbrucker</hopsname>
-                    <hopsamount>12.5g</hopsamount>
+                    <hopsamount>12.5</hopsamount>
                     <hopstime>Middle</hopstime>
                 </hopingredient>
             </hops>
@@ -532,67 +534,68 @@
 	<name>Riptide</name>
 	<description>Soft, smooth, dark, chocolatey and a force to be reckoned with. This gentle giant will never bite, but you'll still want to be on your best behaviour!</description>
 	<style>Stout</style>
-	<temp>Boil for 75 minutes at 149F</temp>
+	<temp>149</temp>
     	<time>75</time>
-    	<fermtemp>Ferment at 68F</fermtemp>
-    	<abv>8% ABV | IBU 45</abv>
-    	<targetfg>Final Gravity 1014</targetfg>
-    	<targetog>Original Gravity 1075</targetog>
+    	<fermtemp>68</fermtemp>
+        <abvpercent>8</abvpercent>
+        <ibu>45</ibu>
+    	<targetfg>1014</targetfg>
+    	<targetog>1075</targetog>
 	<ingredients>
 		<malts>
 			<maltIngredient>
 				<maltName>Extra Pale - Maris Otter</maltName>
-				<maltweight>11.8lb</maltweight>
+				<maltweight>11.8</maltweight>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Dark Crystal 350-400</maltName>
-				<maltweight>1.6lb</maltweight>
+				<maltweight>1.6</maltweight>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Carafa Special Malt Type 3</maltName>
-				<maltweight>0.4lb</maltweight>
+				<maltweight>0.4</maltweight>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Caramalt</maltName>
-				<maltweight>1.2lb</maltweight>
+				<maltweight>1.2</maltweight>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Chocolate</maltName>
-				<maltweight>0.6lb</maltweight>
+				<maltweight>0.6</maltweight>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Wheat</maltName>
-				<maltweight>0.8lb</maltweight>
+				<maltweight>0.8</maltweight>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Flaked Oats</maltName>
-				<maltweight>1.2lb</maltweight>
+				<maltweight>1.2</maltweight>
 			</maltIngredient>
 		</malts>
 		<hops>
 			<hopingredient>
 				<hopsname>Columbus</hopsname>
-				<hopsamount>14.3g</hopsamount>
+				<hopsamount>14.3</hopsamount>
 				<hopstime>Start</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Galena</hopsname>
-				<hopsamount>14.3g</hopsamount>
+				<hopsamount>14.3</hopsamount>
 				<hopstime>Start</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Galena</hopsname>
-				<hopsamount>21.4g</hopsamount>
+				<hopsamount>21.4</hopsamount>
 				<hopstime>Start</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Cascade</hopsname>
-				<hopsamount>21.4g</hopsamount>
+				<hopsamount>21.4</hopsamount>
 				<hopstime>End</hopstime>
 			</hopingredient>
 			<hopingredient>
 				<hopsname>Columbus</hopsname>
-				<hopsamount>21.4g</hopsamount>
+				<hopsamount>21.4</hopsamount>
 				<hopstime>End</hopstime>
 			</hopingredient>
 		</hops>
