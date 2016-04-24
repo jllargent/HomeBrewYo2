@@ -91,7 +91,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testBadPixieFermentTemp(){
-        assertEquals(66, recipeList.get(0).getFermentTemp());
+        assertEquals(66, recipeList.get(0).getFermentTemperature());
     }
 
     @Test

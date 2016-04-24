@@ -45,6 +45,7 @@ public class NewXmlParser {
             findCurrentBuildTime((Element) currentNode);
             findCurrentTemp((Element) currentNode);
             findCurrentStyle((Element) currentNode);
+            findCurrentFermentTemp((Element) currentNode);
 
             currentBeer = builder.getBeer();
             beerList.add(currentBeer);
@@ -71,6 +72,10 @@ public class NewXmlParser {
 
     private void findCurrentStyle(Element currentElement){
         builder.buildStyle(currentElement.getElementsByTagName("style").item(0).getTextContent());
+    }
+
+    private void findCurrentFermentTemp(Element currentElement){
+        builder.buildFermentTemp(Integer.parseInt(currentElement.getElementsByTagName("fermtemp").item(0).getTextContent()));
     }
 
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {
