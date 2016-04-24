@@ -14,6 +14,7 @@ public class Beer {
     private int time;
     private int temperature;
     private int fermentTemperature;
+    private double abvPercent;
 
 /*
     public Beer(String nameFromFile){
@@ -82,5 +83,13 @@ public class Beer {
 
     public int getFermentTemperature(){
         return this.fermentTemperature;
+    }
+
+    protected void setAbvPercent(double abv){
+        this.abvPercent = abv;
+    }
+
+    public double getABVPercent(){
+        return this.abvPercent;
     }
 }

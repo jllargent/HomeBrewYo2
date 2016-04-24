@@ -41,5 +41,10 @@ public class RecipeBuilder extends BeerBuilder{
         thisBeer.setFermentTemp(fermentTemp);
     }
 
+    @Override
+    public void buildABVPercent(double abvPercent) {
+        thisBeer.setAbvPercent(abvPercent);
+    }
+
 
 }

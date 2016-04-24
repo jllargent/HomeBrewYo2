@@ -96,7 +96,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testBadPixieABVPercent(){
-        assertEquals(4.7, recipeList.get(0).getABCPercent());
+        assertEquals(4.7, recipeList.get(0).getABVPercent());
     }
 
     @Test
