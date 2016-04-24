@@ -114,4 +114,9 @@ public class BeerBuilderTest {
     public void testBeerHasIBUValue(){
         assertNotEquals(null, testBeer.getIbuValue());
     }
+
+    @Test
+    public void testBeerHasTargetFinalGravity(){
+        assertNotEquals(null, testBeer.getTargetFinalGravity());
+    }
 }
