@@ -101,7 +101,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testBadPixieIBU(){
-        assertEquals(45, recipeList.get(0).getIBU());
+        assertEquals(45, recipeList.get(0).getIbuValue());
     }
 
     @Test
