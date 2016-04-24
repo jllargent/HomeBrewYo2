@@ -75,6 +75,11 @@ public class NewXmlParserTest {
     }
 
     @Test
+    public void testBadPixieTemperature(){
+        assertEquals(153, recipeList.get(0).getTemperatureInFahrenheit());
+    }
+
+    @Test
     public void testThatThereIsABeerArrayList(){
         assertNotEquals(null, parser.beerList);
     }

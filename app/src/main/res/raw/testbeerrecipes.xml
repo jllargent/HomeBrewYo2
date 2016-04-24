@@ -5,7 +5,7 @@
     <name>Bad Pixie</name>
     <description>4.7% wheat ale with crushed juniper berries and citrus peel.</description>
     <style>Wheat Beer</style>
-    <temp>Boil for 75 minutes at 153F</temp>
+    <temp>153</temp>
     <time>75</time>
     <fermtemp>Ferment at 66F</fermtemp>
     <abv>4.7% ABV | IBU 45</abv>
@@ -57,7 +57,7 @@
         <name>Brixton Porter</name>
         <description>Brixton Porter delivers bold chocolate and coffee flavours with light smokiness and hints of autumn fruit all but built on a low ABV, lighter bodied backbone. Complex and intriguing, with spicy bitterness, but very sessionable.</description>
         <style>Porter</style>
-        <temp>149F</temp>
+        <temp>149</temp>
         <time>75</time>
         <fermtemp>66F</fermtemp>
         <abv>5%</abv>
