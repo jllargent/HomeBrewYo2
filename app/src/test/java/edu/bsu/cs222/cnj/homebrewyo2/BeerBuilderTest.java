@@ -25,6 +25,7 @@ public class BeerBuilderTest {
         builder.createBeer();
         builder.buildName("test");
         builder.buildDescription("Test Description");
+        builder.buildStyle("porter");
         builder.buildMalt(testMalt);
         builder.buildMalt(secondMalt);
         builder.buildHop(testHop);
@@ -40,7 +41,7 @@ public class BeerBuilderTest {
 
 
     @Test
-    public void testBeerHasName(){
+    public void testBeerHasName() {
         assertEquals("test", testBeer.getName());
     }
 
@@ -50,17 +51,17 @@ public class BeerBuilderTest {
     }
 
     @Test
-    public void testBeerHasMalt(){
+    public void testBeerHasMalt() {
         assertNotEquals(null, testBeer.getMalts());
     }
 
     @Test
-    public void testBeerHasTestMalt(){
+    public void testBeerHasTestMalt() {
         assertEquals("TESTMALT", testBeer.getMalts().get(0).getNameOfMalt());
     }
 
     @Test
-    public void testBeerHasMultipleMalts(){
+    public void testBeerHasMultipleMalts() {
         assertNotEquals(null, testBeer.getMalts().get(1));
     }
 
@@ -70,12 +71,12 @@ public class BeerBuilderTest {
     }
 
     @Test
-    public void testBeerHasTestHop(){
+    public void testBeerHasTestHop() {
         assertEquals("TESTHOP", testBeer.getHops().get(0).getNameOfHop());
     }
 
     @Test
-    public void testBeerHasMultipleHops(){
+    public void testBeerHasMultipleHops() {
         assertNotEquals(null, testBeer.getHops().get(1));
     }
 
@@ -85,12 +86,17 @@ public class BeerBuilderTest {
     }
 
     @Test
-    public void testBeerTime_5Minutes(){
+    public void testBeerTime_5Minutes() {
         assertEquals(5, testBeer.getTimeInMinutes());
     }
 
     @Test
-    public void testBeerHasTemp(){
+    public void testBeerHasTemp() {
         assertNotEquals(null, testBeer.getTemperatureInFahrenheit());
+    }
+
+    @Test
+    public void testBeerHasStyle(){
+        assertNotEquals(null, testBeer.getStyle());
     }
 }
