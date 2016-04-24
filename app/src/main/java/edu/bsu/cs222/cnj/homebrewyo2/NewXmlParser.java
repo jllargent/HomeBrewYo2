@@ -42,6 +42,7 @@ public class NewXmlParser {
 
             findCurrentName((Element) currentNode);
             findCurrentDescription((Element) currentNode);
+            findCurrentBuildTime((Element) currentNode);
             currentBeer = builder.getBeer();
             beerList.add(currentBeer);
 
@@ -55,6 +56,10 @@ public class NewXmlParser {
     }
     private void findCurrentDescription(Element currentElement) {
         builder.buildDescription(currentElement.getElementsByTagName("description").item(0).getTextContent());
+    }
+    
+    private void findCurrentBuildTime(Element currentElement){
+        builder.buildTime(Integer.parseInt(currentElement.getElementsByTagName("time").item(0).getTextContent()));
     }
 
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {

@@ -65,6 +65,11 @@ public class NewXmlParserTest {
     }
 
     @Test
+    public void testBadPixieBuildTime(){
+        assertEquals(75, recipeList.get(0).getTimeInMinutes());
+    }
+
+    @Test
     public void testThatThereIsABeerArrayList(){
         assertNotEquals(null, parser.beerList);
     }
