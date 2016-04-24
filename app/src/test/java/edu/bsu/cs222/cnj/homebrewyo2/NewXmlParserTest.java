@@ -86,7 +86,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testBadPixieStyle(){
-        assertEquals("Wheat Beer", recipeList.get(0).getBeerStyle());
+        assertEquals("Wheat Beer", recipeList.get(0).getStyle());
     }
 
 
