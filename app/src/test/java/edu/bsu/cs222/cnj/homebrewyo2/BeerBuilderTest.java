@@ -33,4 +33,9 @@ public class BeerBuilderTest {
         assertEquals("Test Description", builder.getBeer().returnDescription());
     }
 
+    @Test
+    public void testBeerHasMalt(){
+        assertNotEquals(null, builder.getBeer().returnMalts());
+    }
+
 }
