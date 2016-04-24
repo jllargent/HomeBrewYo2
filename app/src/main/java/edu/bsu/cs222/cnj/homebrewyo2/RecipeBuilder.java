@@ -10,4 +10,9 @@ public class RecipeBuilder extends BeerBuilder{
     public void buildDescription(String description) {
         thisBeer.setDescription(description);
     }
+
+    @Override
+    public void buildMalt(Malt malt) {
+        thisBeer.addMalt(malt);
+    }
 }

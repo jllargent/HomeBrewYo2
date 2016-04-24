@@ -2,32 +2,33 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 import org.w3c.dom.Node;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Beer {
     private String name;
     private String description;
-    private List<Malt> malts;
-    private List<Hop> hops;
+    private List<Malt> malts = new ArrayList<>();
+    private List<Hop> hops = new ArrayList<>();
 
 /*
     public Beer(String nameFromFile){
         this.name = nameFromFile;
     }*/
 
-    public void setName(String name){
+    protected void setName(String name){
         this.name = name;
     }
 
-    public void setDescription(String description){
+    protected void setDescription(String description){
         this.description = description;
     }
 
-    public String returnName(){
+    public String getName(){
         return name;
     }
 
-    public String returnDescription(){
+    public String getDescription(){
         return description;
     }
 
@@ -36,6 +37,6 @@ public class Beer {
     }
 
     public List<Malt> getMalts(){
-        return this.malts;
+        return new ArrayList<>(this.malts);
     }
 }

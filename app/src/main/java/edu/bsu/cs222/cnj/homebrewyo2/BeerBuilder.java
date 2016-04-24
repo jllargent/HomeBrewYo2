@@ -1,6 +1,6 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-public abstract class BeerBuilder {
+public abstract class BeerBuilder extends Beer {
     public Beer thisBeer;
 
     public Beer getBeer(){
@@ -14,6 +14,7 @@ public abstract class BeerBuilder {
 
     public abstract void buildName(String name);
     public abstract void buildDescription(String description);
+    public abstract void buildMalt(Malt malt);
     //public abstract void
 
 /*
