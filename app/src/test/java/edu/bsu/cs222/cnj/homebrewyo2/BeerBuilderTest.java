@@ -14,6 +14,7 @@ public class BeerBuilderTest {
     public void setUpBeer(){
         builder = new RecipeBuilder();
         testMalt = new Malt();
+        testMalt.setNameOfMalt("TESTMALT");
         builder.createBeer();
         builder.buildName("test");
         builder.buildDescription("Test Description");
@@ -44,4 +45,8 @@ public class BeerBuilderTest {
         assertNotEquals(null, testBeer.getMalts());
     }
 
+    @Test
+    public void testBeerHasTestMalt(){
+        assertEquals("TESTMALT", testBeer.getMalts().get(0).getNameOfMalt());
+    }
 }
