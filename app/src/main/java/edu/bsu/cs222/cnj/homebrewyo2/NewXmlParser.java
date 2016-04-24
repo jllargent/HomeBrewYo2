@@ -43,6 +43,7 @@ public class NewXmlParser {
             findCurrentName((Element) currentNode);
             findCurrentDescription((Element) currentNode);
             findCurrentBuildTime((Element) currentNode);
+            findCurrentTemp((Element) currentNode);
 
             currentBeer = builder.getBeer();
             beerList.add(currentBeer);
