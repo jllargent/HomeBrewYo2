@@ -74,4 +74,9 @@ public class BeerBuilderTest {
     public void testBeerHasTestHop(){
         assertEquals("TESTHOP", testBeer.getHops().get(0).getNameOfHop());
     }
+
+    @Test
+    public void testBeerHasMultipleHops(){
+        assertNotEquals(null, testBeer.getHops().get(1));
+    }
 }
