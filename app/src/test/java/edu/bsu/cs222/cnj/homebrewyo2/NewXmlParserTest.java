@@ -7,6 +7,7 @@ import org.xml.sax.SAXException;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -17,12 +18,15 @@ public class NewXmlParserTest {
 
 
     NewXmlParser parser;
+    List<Beer> recipeList;
+
 
     @Before
     public void setUpParser() throws IOException, ParserConfigurationException, SAXException {
         File xmlFile = new File("src/main/res/raw/testbeerrecipes.xml");
         URL input = xmlFile.toURI().toURL();
         parser = new NewXmlParser(input.openStream());
+        recipeList = parser.getBeerList();
     }
 
     @Test
@@ -42,12 +46,12 @@ public class NewXmlParserTest {
 
     @Test
     public void testThatBadPixieIsInList(){
-        assertEquals("Bad Pixie", parser.name);
+        assertEquals("Bad Pixie", recipeList.get(0).getName());
     }
 
     @Test
     public void testThatBrixtonPorterIsInList(){
-        assertEquals("Brixton Porter", parser.name);
+        assertEquals("Brixton Porter", recipeList.get(1).getName());
     }
 
     @Test
