@@ -89,6 +89,10 @@ public class NewXmlParserTest {
         assertEquals("Wheat Beer", recipeList.get(0).getStyle());
     }
 
+    @Test
+    public void testBadPixieFermentTemp(){
+        assertEquals(66, recipeList.get(0).getFermentTemp());
+    }
 
     @Test
     public void testThatThereIsABeerArrayList(){
