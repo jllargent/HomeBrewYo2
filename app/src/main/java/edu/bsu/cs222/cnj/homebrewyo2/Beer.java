@@ -10,6 +10,7 @@ public class Beer {
     private String description;
     private List<Malt> malts = new ArrayList<>();
     private List<Hop> hops = new ArrayList<>();
+    private int time;
 
 /*
     public Beer(String nameFromFile){
@@ -46,5 +47,13 @@ public class Beer {
 
     public List<Hop> getHops(){
         return new ArrayList<>(this.hops);
+    }
+
+    protected void setTimeInMinutes(int minutes){
+        this.time = minutes;
+    }
+
+    public int getTimeInMinutes(){
+        return this.time;
     }
 }

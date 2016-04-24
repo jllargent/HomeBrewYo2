@@ -29,9 +29,8 @@ public class BeerBuilderTest {
         builder.buildMalt(secondMalt);
         builder.buildHop(testHop);
         builder.buildHop(secondHop);
+        builder.buildTime(5);
         testBeer = builder.getBeer();
-
-
     }
 
     @Test
@@ -81,7 +80,12 @@ public class BeerBuilderTest {
     }
 
     @Test
-    public void testBeerHasTemperature(){
-        assertNotEquals(null, testBeer.getTime());
+    public void testBeerHasTime(){
+        assertNotEquals(null, testBeer.getTimeInMinutes());
+    }
+
+    @Test
+    public void testBeerTime_5Minutes(){
+        assertEquals(5, testBeer.getTimeInMinutes());
     }
 }

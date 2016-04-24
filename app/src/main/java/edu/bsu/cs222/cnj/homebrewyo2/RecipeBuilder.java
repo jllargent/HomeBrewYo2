@@ -20,4 +20,9 @@ public class RecipeBuilder extends BeerBuilder{
     public void buildHop(Hop hop) {
         thisBeer.addHop(hop);
     }
+
+    @Override
+    public void buildTime(int time) {
+        thisBeer.setTimeInMinutes(time);
+    }
 }
