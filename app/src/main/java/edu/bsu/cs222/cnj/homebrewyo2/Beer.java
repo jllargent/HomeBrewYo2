@@ -32,11 +32,19 @@ public class Beer {
         return description;
     }
 
-    public void addMalt(Malt malt){
+    protected void addMalt(Malt malt){
         this.malts.add(malt);
     }
 
     public List<Malt> getMalts(){
         return new ArrayList<>(this.malts);
+    }
+
+    protected void addHop(Hop hop){
+        this.hops.add(hop);
+    }
+
+    public List<Hop> getHops(){
+        return new ArrayList<>(this.hops);
     }
 }

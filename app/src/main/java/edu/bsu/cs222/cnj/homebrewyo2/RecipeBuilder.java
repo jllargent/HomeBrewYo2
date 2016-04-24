@@ -15,4 +15,9 @@ public class RecipeBuilder extends BeerBuilder{
     public void buildMalt(Malt malt) {
         thisBeer.addMalt(malt);
     }
+
+    @Override
+    public void buildHop(Hop hop) {
+        thisBeer.addHop(hop);
+    }
 }
