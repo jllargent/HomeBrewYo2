@@ -20,7 +20,7 @@ public class NewXmlParserTest {
 
     @Before
     public void setUpParser() throws IOException, ParserConfigurationException, SAXException {
-        File xmlFile = new File("src/main/res/raw/beerrecipes.xml");
+        File xmlFile = new File("src/main/res/raw/testbeerrecipes.xml");
         URL input = xmlFile.toURI().toURL();
         parser = new NewXmlParser(input.openStream());
     }
@@ -36,17 +36,22 @@ public class NewXmlParserTest {
     }
 
     @Test
-    public void testThatThereAre10Recipies(){
-        assertEquals(10, parser.recipeNodeList.getLength());
+    public void testThatThereAre2Recipies(){
+        assertEquals(2, parser.recipeNodeList.getLength());
     }
 
     @Test
-    public void testThatPunkIPAisinList(){
-        assertEquals("Punk IPA", parser.name);
+    public void testThatBadPixieIsInList(){
+        assertEquals("Bad Pixie", parser.name);
     }
-/*
+
     @Test
-    public void testPunkIPAHasDescription(){
-        assertNotEquals(null, parser);
-    }*/
+    public void testThatBrixtonPorterIsInList(){
+        assertEquals("Brixton Porter", parser.name);
+    }
+
+    @Test
+    public void testThatThereIsABeerArrayList(){
+        assertNotEquals(null, parser.beerList);
+    }
 }

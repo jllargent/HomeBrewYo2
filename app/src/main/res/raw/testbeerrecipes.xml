@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <recipe>
+    <name>Bad Pixie</name>
+    <description>4.7% wheat ale with crushed juniper berries and citrus peel.</description>
+    <style>Wheat Beer</style>
+    <temp>Boil for 75 minutes at 153F</temp>
+    <time>75</time>
+    <fermtemp>Ferment at 66F</fermtemp>
+    <abv>4.7% ABV | IBU 45</abv>
+    <targetfg>Final Gravity 1010</targetfg>
+    <targetog>Original Gravity 1047</targetog>
+    <ingredients>
+        <malts>
+            <maltIngredient>
+                <maltName>Wheat</maltName>
+                <maltweight>5.5lb</maltweight>
+            </maltIngredient>
+            <maltIngredient>
+                <maltName>Extra Pale</maltName>
+                <maltweight>4.54lb</maltweight>
+            </maltIngredient>
+        </malts>
+        <hops>
+            <hopingredient>
+                <hopsname>First Gold</hopsname>
+                <hopsamount>18.75g</hopsamount>
+                <hopstime>Start</hopstime>
+            </hopingredient>
+            <hopingredient>
+                <hopsname>First Gold</hopsname>
+                <hopsamount>25g</hopsamount>
+                <hopstime>End</hopstime>
+            </hopingredient>
+            <hopingredient>
+                <hopsname>Sorachi Ace</hopsname>
+                <hopsamount>16.25</hopsamount>
+                <hopstime>End</hopstime>
+            </hopingredient>
+            <hopingredient>
+                <hopsname>Crushed Juniper Berries</hopsname>
+                <hopsamount>12.5g</hopsamount>
+                <hopstime>End</hopstime>
+            </hopingredient>
+            <hopingredient>
+                <hopsname>Lemon Peel</hopsname>
+                <hopsamount>18.8g</hopsamount>
+                <hopstime>End</hopstime>
+            </hopingredient>
+        </hops>
+        <yeast>Wyeast 1056 - American Ale</yeast>
+    </ingredients>
+    <picture>@drawable/badpixie</picture>
+</recipe>
+    <recipe>
+        <name>Brixton Porter</name>
+        <description>Brixton Porter delivers bold chocolate and coffee flavours with light smokiness and hints of autumn fruit all but built on a low ABV, lighter bodied backbone. Complex and intriguing, with spicy bitterness, but very sessionable.</description>
+        <style>Porter</style>
+        <temp>149F</temp>
+        <time>75</time>
+        <fermtemp>66F</fermtemp>
+        <abv>5%</abv>
+        <targetfg>1014</targetfg>
+        <targetog>1053</targetog>
+        <ibu>50</ibu>
+        <temp>Boil for 75 minutes at 149F</temp>
+        <time>75</time>
+        <fermtemp>Ferment at 66F</fermtemp>
+        <abv>5% ABV | IBU 50</abv>
+        <targetfg>Final Gravity 1014</targetfg>
+        <targetog>Original Gravity 1053</targetog>
+        <ingredients>
+            <malts>
+                <maltIngredient>
+                    <maltName>Extra Pale</maltName>
+                    <maltweight>8.40lb</maltweight>
+                </maltIngredient>
+                <maltIngredient>
+                    <maltName>Dark Crystal</maltName>
+                    <maltweight>0.41lb</maltweight>
+                </maltIngredient>
+                <maltIngredient>
+                    <maltName>Roasted Barley</maltName>
+                    <maltweight>0.69lb</maltweight>
+                </maltIngredient>
+                <maltIngredient>
+                    <maltName>Black</maltName>
+                    <maltweight>0.28lb</maltweight>
+                </maltIngredient>
+                <maltIngredient>
+                    <maltName>Amber</maltName>
+                    <maltweight>0.69lb</maltweight>
+                </maltIngredient>
+                <maltIngredient>
+                    <maltName>Flaked Oats</maltName>
+                    <maltweight>0.55lb</maltweight>
+                </maltIngredient>
+            </malts>
+            <hops>
+                <hopingredient>
+                    <hopsname>Bravo</hopsname>
+                    <hopsamount>12.5g</hopsamount>
+                    <hopstime>Start</hopstime>
+                </hopingredient>
+                <hopingredient>
+                    <hopsname>Bramling Cross</hopsname>
+                    <hopsamount>12.5g</hopsamount>
+                    <hopstime>Middle</hopstime>
+                </hopingredient>
+                <hopingredient>
+                    <hopsname>Challenger</hopsname>
+                    <hopsamount>12.5g</hopsamount>
+                    <hopstime>Middle</hopstime>
+                </hopingredient>
+            </hops>
+            <yeast>Wyeast 1056 - American Ale</yeast>
+        </ingredients>
+        <picture>@drawable/brixtonporter</picture>
+    </recipe>
+
+</resources>
