@@ -21,6 +21,7 @@ public abstract class BeerBuilder extends Beer {
     public abstract void buildStyle(String style);
     public abstract void buildFermentTemp(int fermentTemp);
     public abstract void buildABVPercent(double abvPercent);
+    public abstract void buildIBUValue(int ibuValue);
     //public abstract void
 
 /*

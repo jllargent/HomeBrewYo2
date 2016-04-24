@@ -109,4 +109,9 @@ public class BeerBuilderTest {
     public void testBeerHasABVPercent(){
         assertNotEquals(null, testBeer.getABVPercent());
     }
+
+    @Test
+    public void testBeerHasIBUValue(){
+        assertNotEquals(null, testBeer.getIbuValue());
+    }
 }

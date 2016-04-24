@@ -100,6 +100,11 @@ public class NewXmlParserTest {
     }
 
     @Test
+    public void testBadPixieIBU(){
+        assertEquals(45, recipeList.get(0).getIbuValue());
+    }
+
+    @Test
     public void testThatThereIsABeerArrayList(){
         assertNotEquals(null, parser.beerList);
     }
