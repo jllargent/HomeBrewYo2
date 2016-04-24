@@ -79,4 +79,9 @@ public class BeerBuilderTest {
     public void testBeerHasMultipleHops(){
         assertNotEquals(null, testBeer.getHops().get(1));
     }
+
+    @Test
+    public void testBeerHasTemperature(){
+        assertNotEquals(null, testBeer.getTime());
+    }
 }
