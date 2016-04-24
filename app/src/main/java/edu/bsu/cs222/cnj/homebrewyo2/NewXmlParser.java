@@ -47,6 +47,7 @@ public class NewXmlParser {
             findCurrentStyle((Element) currentNode);
             findCurrentFermentTemp((Element) currentNode);
             findCurrentABVPercent((Element) currentNode);
+            findCurrentIBUValue((Element) currentNode);
 
             currentBeer = builder.getBeer();
             beerList.add(currentBeer);
@@ -81,6 +82,10 @@ public class NewXmlParser {
 
     private void findCurrentABVPercent(Element currentElement){
         builder.buildABVPercent(Double.parseDouble(currentElement.getElementsByTagName("abvpercent").item(0).getTextContent()));
+    }
+
+    private void findCurrentIBUValue(Element currentElement){
+        builder.buildIBUValue(Integer.parseInt(currentElement.getElementsByTagName("ibu").item(0).getTextContent()));
     }
 
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {
