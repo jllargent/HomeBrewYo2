@@ -30,4 +30,10 @@ public class RecipeBuilder extends BeerBuilder{
     public void buildTemp(int temp) {
         thisBeer.setTempInFahrenheit(temp);
     }
+
+    @Override
+    public void buildStyle(String style) {
+        thisBeer.setStyle(style);
+    }
+
 }

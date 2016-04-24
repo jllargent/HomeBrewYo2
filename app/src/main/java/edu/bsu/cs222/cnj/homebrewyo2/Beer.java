@@ -8,6 +8,7 @@ import java.util.List;
 public class Beer {
     private String name;
     private String description;
+    private String style;
     private List<Malt> malts = new ArrayList<>();
     private List<Hop> hops = new ArrayList<>();
     private int time;
@@ -64,5 +65,13 @@ public class Beer {
 
     public int getTemperatureInFahrenheit(){
         return this.temperature;
+    }
+
+    protected void setStyle(String beerStyle){
+        this.style = beerStyle;
+    }
+
+    public String getStyle(){
+        return this.style;
     }
 }
