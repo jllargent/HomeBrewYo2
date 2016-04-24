@@ -11,17 +11,24 @@ public class BeerBuilderTest {
     Malt testMalt;
     Malt secondMalt;
     Beer testBeer;
+    Hop testHop;
+    Hop secondHop;
     @Before
     public void setUpBeer(){
         builder = new RecipeBuilder();
         testMalt = new Malt();
         secondMalt = new Malt();
+        testHop = new Hop();
+        secondHop = new Hop();
         testMalt.setNameOfMalt("TESTMALT");
+        testHop.setNameOfHop("TESTHOP");
         builder.createBeer();
         builder.buildName("test");
         builder.buildDescription("Test Description");
         builder.buildMalt(testMalt);
         builder.buildMalt(secondMalt);
+        builder.buildHop(testHop);
+        builder.buildHop(secondHop);
         testBeer = builder.getBeer();
 
 
@@ -61,5 +68,10 @@ public class BeerBuilderTest {
     @Test
     public void testBeerHasHop(){
         assertNotEquals(null, testBeer.getHops());
+    }
+
+    @Test
+    public void testBeerHasTestHop(){
+        assertEquals("TESTHOP", testBeer.getHops().get(0).getNameOfHop());
     }
 }
