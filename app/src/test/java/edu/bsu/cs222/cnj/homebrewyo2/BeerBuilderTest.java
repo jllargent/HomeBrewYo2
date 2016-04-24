@@ -9,16 +9,19 @@ import static org.junit.Assert.assertNotEquals;
 public class BeerBuilderTest {
     BeerBuilder builder;
     Malt testMalt;
+    Malt secondMalt;
     Beer testBeer;
     @Before
     public void setUpBeer(){
         builder = new RecipeBuilder();
         testMalt = new Malt();
+        secondMalt = new Malt();
         testMalt.setNameOfMalt("TESTMALT");
         builder.createBeer();
         builder.buildName("test");
         builder.buildDescription("Test Description");
         builder.buildMalt(testMalt);
+        builder.buildMalt(secondMalt);
         testBeer = builder.getBeer();
 
 
@@ -48,5 +51,10 @@ public class BeerBuilderTest {
     @Test
     public void testBeerHasTestMalt(){
         assertEquals("TESTMALT", testBeer.getMalts().get(0).getNameOfMalt());
+    }
+
+    @Test
+    public void testBeerHasMultipleMalts(){
+        assertNotEquals(null, testBeer.getMalts().get(1));
     }
 }
