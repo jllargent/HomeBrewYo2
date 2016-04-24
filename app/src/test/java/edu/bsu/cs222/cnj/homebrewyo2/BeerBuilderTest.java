@@ -104,4 +104,9 @@ public class BeerBuilderTest {
     public void testBeerHasFermentTemp(){
         assertNotEquals(null, testBeer.getFermentTemperature());
     }
+
+    @Test
+    public void testBeerHasABVPercent(){
+        assertNotEquals(null, testBeer.getABVPercent());
+    }
 }
