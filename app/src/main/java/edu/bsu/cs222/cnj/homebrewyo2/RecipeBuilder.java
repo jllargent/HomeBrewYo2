@@ -36,4 +36,10 @@ public class RecipeBuilder extends BeerBuilder{
         thisBeer.setStyle(style);
     }
 
+    @Override
+    public void buildFermentTemp(int fermentTemp) {
+        thisBeer.setFermentTemp(fermentTemp);
+    }
+
+
 }

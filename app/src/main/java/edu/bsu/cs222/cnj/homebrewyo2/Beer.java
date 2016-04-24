@@ -13,6 +13,7 @@ public class Beer {
     private List<Hop> hops = new ArrayList<>();
     private int time;
     private int temperature;
+    private int fermentTemperature;
 
 /*
     public Beer(String nameFromFile){
@@ -73,5 +74,13 @@ public class Beer {
 
     public String getStyle(){
         return this.style;
+    }
+
+    protected void setFermentTemp(int fermTemp){
+        this.fermentTemperature = fermTemp;
+    }
+
+    public int getFermentTemperature(){
+        return this.fermentTemperature;
     }
 }
