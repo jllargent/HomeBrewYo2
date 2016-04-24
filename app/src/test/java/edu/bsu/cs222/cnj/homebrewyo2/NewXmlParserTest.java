@@ -55,6 +55,16 @@ public class NewXmlParserTest {
     }
 
     @Test
+    public void testBadPixieDescription(){
+        assertEquals("4.7% wheat ale with crushed juniper berries and citrus peel.", recipeList.get(0).getDescription());
+    }
+
+    @Test
+    public void testBrixtonPorterDescription(){
+        assertEquals("Brixton Porter delivers bold chocolate and coffee flavours with light smokiness and hints of autumn fruit all but built on a low ABV, lighter bodied backbone. Complex and intriguing, with spicy bitterness, but very sessionable.", recipeList.get(1).getDescription());
+    }
+
+    @Test
     public void testThatThereIsABeerArrayList(){
         assertNotEquals(null, parser.beerList);
     }
