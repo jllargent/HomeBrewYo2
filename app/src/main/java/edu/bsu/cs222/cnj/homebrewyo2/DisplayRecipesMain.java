@@ -19,13 +19,17 @@ public class DisplayRecipesMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_recipes_main);
-        BeerListTransporter beerListTransporter = (BeerListTransporter) getIntent().getSerializableExtra("beerList");
-        recipeList = beerListTransporter.getBeerList();
+        Bundle bundle = getIntent().getExtras();
+        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        Log.i("Array List fucker", recipeList.toString());
     }
 
     public void goNameRecipes(View view){
         Intent recipeNameIntent = new Intent(this, NameRecipeActivity.class);
-        recipeNameIntent.putExtra("beerList", new BeerListTransporter((ArrayList<Beer>) recipeList));
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Recipe List", (Serializable) recipeList);
+        Log.i("Gsajldhkashgdahsdhfaks", recipeList.toString());
+        recipeNameIntent.putExtras(bundle);
         startActivity(recipeNameIntent);
     }
 

@@ -25,10 +25,6 @@ public class NameRecipeActivity extends AppCompatActivity {
         fillNameList();
     }
 
-    private void createButtonList() {
-
-    }
-
     public void goBeerRecipe(View view){
         int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
@@ -41,12 +37,12 @@ public class NameRecipeActivity extends AppCompatActivity {
     public void fillNameList(){
         List<String> beerNames = new ArrayList<>();
 
-        int i = 0;
-        while(i < 10){
+        for (int i = 0; i < recipeList.size(); i++){
             beerNames.add(recipeList.get(i).getName());
-            i++;
-            Log.i("Beer Name", beerNames.get(i));
+            Log.i("you got beer", beerNames.get(i));
+
         }
+
 
 
 

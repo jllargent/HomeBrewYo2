@@ -1,9 +1,10 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Beer {
+public class Beer implements Serializable{
     private String name;
     private String description;
     private String style;

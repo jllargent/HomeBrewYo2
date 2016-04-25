@@ -22,8 +22,7 @@ import javax.xml.parsers.ParserConfigurationException;
 public class MainActivity extends AppCompatActivity {
 
     NewXmlParser parser;
-    public List<Beer> recipeList = new ArrayList<>();
-    File xmlFile = new File("src/main/res/raw/beerrecipes.xml");
+    ArrayList<Beer> recipeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             runParser();
-            recipeList = parser.getBeerList();
+            recipeList = (ArrayList<Beer>) parser.getBeerList();
         }catch(Exception e){
         }
         Log.i("Heeeeepjgsurhluhsldfg", String.valueOf(recipeList));
@@ -40,11 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void goRecipes(View view){
         Intent recipeIntent = new Intent(this, DisplayRecipesMain.class);
-        //Bundle bundle = new Bundle();
-        //bundle.putSerializable("Recipe List", (Serializable) recipeList);
-
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Recipe List", recipeList);
         Log.i("Gsajldhkashgdahsdhfaks", recipeList.toString());
-        recipeIntent.putExtra("list", recipeList.toString());
+        recipeIntent.putExtras(bundle);
         startActivity(recipeIntent);
     }
 
