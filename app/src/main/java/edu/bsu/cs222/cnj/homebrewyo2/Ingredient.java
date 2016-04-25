@@ -9,13 +9,13 @@ public class Ingredient {
     public Ingredient(int typeNum){
         switch(typeNum){
             case 0:
-                this.type = "malt";
+                this.type = "Malt";
                 break;
             case 1:
-                this.type = "hop";
+                this.type = "Hop";
                 break;
             case 2:
-                this.type = "yeast";
+                this.type = "Yeast";
                 break;
             default:
                 this.type = "DNE";
