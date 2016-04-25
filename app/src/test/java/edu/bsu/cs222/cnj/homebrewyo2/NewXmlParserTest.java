@@ -110,6 +110,11 @@ public class NewXmlParserTest {
     }
 
     @Test
+    public void testBadPixieTargetOriginalGravity(){
+        assertEquals(1047, recipeList.get(0).getTargetOriginalGravity());
+    }
+
+    @Test
     public void testThatThereIsABeerArrayList(){
         assertNotEquals(null, parser.beerList);
     }
