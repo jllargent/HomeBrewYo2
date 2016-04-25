@@ -8,7 +8,6 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class NewXmlParser{
     public NodeList recipeChildNodeList;
     Element eElement;
     String name;
-    private BeerBuilder builder = new RecipeBuilder();
+    private BeerBuilder beerBuilder = new RecipeBuilder();
     private Beer currentBeer;
     public List<Beer> beerList = new ArrayList();
 
@@ -36,7 +35,7 @@ public class NewXmlParser{
         //recipeNodeList = element.getChildNodes();
         for(int temp = 0; temp < recipeNodeList.getLength(); temp++){
             Node currentNode = recipeNodeList.item(temp);
-            builder.createBeer();
+            beerBuilder.createBeer();
             if(isFirstNode(currentNode)){
                 continue;
             }
@@ -52,7 +51,7 @@ public class NewXmlParser{
             findCurrentTargetFinalGravity((Element) currentNode);
             findCurrentTargetOriginalGravity((Element) currentNode);
 
-            currentBeer = builder.getBeer();
+            currentBeer = beerBuilder.getBeer();
             beerList.add(currentBeer);
 
         }/*
@@ -61,42 +60,42 @@ public class NewXmlParser{
     }
 
     private void findCurrentName(Element currentElement) {
-        builder.buildName(currentElement.getElementsByTagName("name").item(0).getTextContent());
+        beerBuilder.buildName(currentElement.getElementsByTagName("name").item(0).getTextContent());
     }
     private void findCurrentDescription(Element currentElement) {
-        builder.buildDescription(currentElement.getElementsByTagName("description").item(0).getTextContent());
+        beerBuilder.buildDescription(currentElement.getElementsByTagName("description").item(0).getTextContent());
     }
     
     private void findCurrentBuildTime(Element currentElement){
-        builder.buildTime(Integer.parseInt(currentElement.getElementsByTagName("time").item(0).getTextContent()));
+        beerBuilder.buildTime(Integer.parseInt(currentElement.getElementsByTagName("time").item(0).getTextContent()));
     }
 
     private void findCurrentTemp(Element currentElement){
-        builder.buildTemp(Integer.parseInt(currentElement.getElementsByTagName("temp").item(0).getTextContent()));
+        beerBuilder.buildTemp(Integer.parseInt(currentElement.getElementsByTagName("temp").item(0).getTextContent()));
     }
 
     private void findCurrentStyle(Element currentElement){
-        builder.buildStyle(currentElement.getElementsByTagName("style").item(0).getTextContent());
+        beerBuilder.buildStyle(currentElement.getElementsByTagName("style").item(0).getTextContent());
     }
 
     private void findCurrentFermentTemp(Element currentElement){
-        builder.buildFermentTemp(Integer.parseInt(currentElement.getElementsByTagName("fermtemp").item(0).getTextContent()));
+        beerBuilder.buildFermentTemp(Integer.parseInt(currentElement.getElementsByTagName("fermtemp").item(0).getTextContent()));
     }
 
     private void findCurrentABVPercent(Element currentElement){
-        builder.buildABVPercent(Double.parseDouble(currentElement.getElementsByTagName("abvpercent").item(0).getTextContent()));
+        beerBuilder.buildABVPercent(Double.parseDouble(currentElement.getElementsByTagName("abvpercent").item(0).getTextContent()));
     }
 
     private void findCurrentIBUValue(Element currentElement){
-        builder.buildIBUValue(Integer.parseInt(currentElement.getElementsByTagName("ibu").item(0).getTextContent()));
+        beerBuilder.buildIBUValue(Integer.parseInt(currentElement.getElementsByTagName("ibu").item(0).getTextContent()));
     }
 
     private void findCurrentTargetFinalGravity(Element currentElement){
-        builder.buildTargetFinalGravity(Integer.parseInt(currentElement.getElementsByTagName("targetfg").item(0).getTextContent()));
+        beerBuilder.buildTargetFinalGravity(Integer.parseInt(currentElement.getElementsByTagName("targetfg").item(0).getTextContent()));
     }
 
     private void findCurrentTargetOriginalGravity(Element currentElement){
-        builder.buildTargetOriginalGravity(Integer.parseInt(currentElement.getElementsByTagName("targetog").item(0).getTextContent()));
+        beerBuilder.buildTargetOriginalGravity(Integer.parseInt(currentElement.getElementsByTagName("targetog").item(0).getTextContent()));
     }
 
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {

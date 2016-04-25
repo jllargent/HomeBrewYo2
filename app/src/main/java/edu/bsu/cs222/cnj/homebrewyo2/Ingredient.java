@@ -22,5 +22,17 @@ public class Ingredient {
                 this.type = "DNE";
         }
     }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public double getAmount(){
+        return this.amount;
+    }
+
+    public String getTimingToAdd() {
+        return this.getTimingToAdd();
+    }
 }
 

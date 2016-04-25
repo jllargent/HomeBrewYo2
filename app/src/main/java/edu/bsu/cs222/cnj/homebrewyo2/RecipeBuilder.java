@@ -12,12 +12,12 @@ public class RecipeBuilder extends BeerBuilder{
     }
 
     @Override
-    public void buildMalt(Malt malt) {
+    public void buildMalt(Ingredient malt) {
         thisBeer.addMalt(malt);
     }
 
     @Override
-    public void buildHop(Hop hop) {
+    public void buildHop(Ingredient hop) {
         thisBeer.addHop(hop);
     }
 

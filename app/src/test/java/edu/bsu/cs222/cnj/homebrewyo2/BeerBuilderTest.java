@@ -7,31 +7,32 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class BeerBuilderTest {
-    BeerBuilder builder;
-    Malt testMalt;
-    Malt secondMalt;
+    BeerBuilder beerBuilder;
+    IngredientBuilder ingredientBuilder;
+    Ingredient testMalt;
+    Ingredient secondMalt;
     Beer testBeer;
-    Hop testHop;
-    Hop secondHop;
+    Ingredient testHop;
+    Ingredient secondHop;
     @Before
     public void setUpBeer(){
-        builder = new RecipeBuilder();
-        testMalt = new Malt();
-        secondMalt = new Malt();
-        testHop = new Hop();
-        secondHop = new Hop();
-        testMalt.setNameOfMalt("TESTMALT");
-        testHop.setNameOfHop("TESTHOP");
-        builder.createBeer();
-        builder.buildName("test");
-        builder.buildDescription("Test Description");
-        builder.buildStyle("porter");
-        builder.buildMalt(testMalt);
-        builder.buildMalt(secondMalt);
-        builder.buildHop(testHop);
-        builder.buildHop(secondHop);
-        builder.buildTime(5);
-        testBeer = builder.getBeer();
+        beerBuilder = new RecipeBuilder();
+        testMalt = new Ingredient(0);
+        secondMalt = new Ingredient(0);
+        testHop = new Ingredient(1);
+        secondHop = new Ingredient(1);
+        testMalt.name = "TESTMALT";
+        testHop.name = "TESTHOP";
+        beerBuilder.createBeer();
+        beerBuilder.buildName("test");
+        beerBuilder.buildDescription("Test Description");
+        beerBuilder.buildStyle("porter");
+        beerBuilder.buildMalt(testMalt);
+        beerBuilder.buildMalt(secondMalt);
+        beerBuilder.buildHop(testHop);
+        beerBuilder.buildHop(secondHop);
+        beerBuilder.buildTime(5);
+        testBeer = beerBuilder.getBeer();
     }
 
     @Test
@@ -57,7 +58,7 @@ public class BeerBuilderTest {
 
     @Test
     public void testBeerHasTestMalt() {
-        assertEquals("TESTMALT", testBeer.getMalts().get(0).getNameOfMalt());
+        assertEquals("TESTMALT", testBeer.getMalts().get(0).getName());
     }
 
     @Test
@@ -72,7 +73,7 @@ public class BeerBuilderTest {
 
     @Test
     public void testBeerHasTestHop() {
-        assertEquals("TESTHOP", testBeer.getHops().get(0).getNameOfHop());
+        assertEquals("TESTHOP", testBeer.getHops().get(0).getName());
     }
 
     @Test

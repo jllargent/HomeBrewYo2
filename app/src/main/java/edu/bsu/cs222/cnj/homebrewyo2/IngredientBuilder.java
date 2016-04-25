@@ -25,7 +25,7 @@ public class IngredientBuilder {
     }
 
     public Double getAmount(){
-        return thisIngredient.amount;
+        return thisIngredient.getAmount();
     }
 
     protected void setName(String name){
@@ -33,7 +33,7 @@ public class IngredientBuilder {
     }
 
     public String getName() {
-        return thisIngredient.name;
+        return thisIngredient.getName();
     }
 
     protected void setTimeToAdd(String timing){
@@ -41,6 +41,6 @@ public class IngredientBuilder {
     }
 
     public String getTimeToAdd(){
-        return thisIngredient.timingToAdd;
+        return thisIngredient.getTimingToAdd();
     }
 }

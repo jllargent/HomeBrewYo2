@@ -28,11 +28,11 @@ public class IngredientBuilderTest {
 
     @Test
     public void testIngredientHasName(){
-        assertEquals("TESTING", builder.getName());
+        assertEquals("TESTING", testIngredient.getName());
     }
 
     @Test
     public void testIngredientHasAmount(){
-        assertEquals(12, builder.getAmount(), 0);
+        assertEquals(12, testIngredient.getAmount(), 0);
     }
 }
