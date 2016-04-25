@@ -17,11 +17,6 @@ public class Beer {
     private int ibuValue;
     private double abvPercent;
 
-/*
-    public Beer(String nameFromFile){
-        this.name = nameFromFile;
-    }*/
-
     protected void setName(String name){
         this.name = name;
     }

@@ -2,7 +2,7 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 public class IngredientBuilder extends Ingredient {
 
-    private Ingredient thisIngredient;
+    public Ingredient thisIngredient;
 
     public Ingredient getIngredient(){
         return thisIngredient;

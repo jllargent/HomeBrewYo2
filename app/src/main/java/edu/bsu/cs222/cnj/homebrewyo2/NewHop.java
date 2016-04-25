@@ -6,20 +6,12 @@ public class NewHop extends Ingredient{
 
     private String timeToAddHop;
 
-    public void setName(String nameOfHop){
-        this.name = nameOfHop;
-    }
-
-    public void setAmountInGrams(String weight){
-        this.amount = weight;
+    public void setAmount(String weightInGrams){
+        this.amount = weightInGrams;
     }
 
     public void setTimeToAdd(String time) {
         this.timeToAddHop = time;
-    }
-
-    public String getName(){
-        return this.name;
     }
 
     public String getAmount(){
