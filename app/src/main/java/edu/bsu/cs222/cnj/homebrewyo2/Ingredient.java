@@ -3,14 +3,23 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 public class Ingredient {
 
     protected String name;
-    protected String amount;
+    protected double amount;
+    protected String type;
 
-    protected void setName(String name){
-        this.name = name;
-    }
-
-    public String getName(){
-        return this.name;
+    public Ingredient(int typeNum){
+        switch(typeNum){
+            case 0:
+                this.type = "malt";
+                break;
+            case 1:
+                this.type = "hop";
+                break;
+            case 2:
+                this.type = "yeast";
+                break;
+            default:
+                this.type = "DNE";
+        }
     }
 }
 
