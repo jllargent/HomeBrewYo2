@@ -119,4 +119,9 @@ public class BeerBuilderTest {
     public void testBeerHasTargetFinalGravity(){
         assertNotEquals(null, testBeer.getTargetFinalGravity());
     }
+
+    @Test
+    public void testBeerHasTargetOriginalGravity(){
+        assertNotEquals(null, testBeer.getTargetOriginalGravity);
+    }
 }
