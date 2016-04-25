@@ -6,16 +6,21 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import java.util.List;
+
 public class NameRecipeActivity extends AppCompatActivity {
 
     Intent intent = getIntent();
-
+    List<Beer> recipeList;
+    int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_recipe_scrollable);
-
+        Bundle bundle = getIntent().getExtras();
+        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
     }
+
     public void goBeerRecipe(View view){
         int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);

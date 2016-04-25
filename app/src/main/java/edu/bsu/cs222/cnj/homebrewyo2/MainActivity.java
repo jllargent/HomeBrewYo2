@@ -9,6 +9,7 @@ import org.xml.sax.SAXException;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     NewXmlParser parser;
     List<Beer> recipeList = new ArrayList<>();
     File xmlFile = new File("src/main/res/raw/beerrecipes.xml");
+    Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,20 +32,22 @@ public class MainActivity extends AppCompatActivity {
         try {
             runParser(xmlFile);
             recipeList = parser.getBeerList();
+            bundle.putSerializable("Recipe List", (Serializable) recipeList);
         }catch(Exception e){
         }
     }
 
     public void goRecipes(View view){
         Intent recipeIntent = new Intent(this, DisplayRecipesMain.class);
+        recipeIntent.putExtras(bundle);
         startActivity(recipeIntent);
     }
 
     public void goTimers(View view){
         Intent timerIntent = new Intent(this, TimerActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("timerLength", 0);
-        timerIntent.putExtras(bundle);
+        Bundle timerBundle = new Bundle();
+        timerBundle.putInt("timerLength", 0);
+        timerIntent.putExtras(timerBundle);
         startActivity(timerIntent);
     }
 
