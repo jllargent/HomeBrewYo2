@@ -40,8 +40,13 @@ public class NameRecipeActivity extends AppCompatActivity {
         for (int i = 0; i < recipeList.size(); i++){
             beerNames.add(recipeList.get(i).getName());
             Log.i("you got beer", beerNames.get(i));
-
         }
+
+        ListView beerNamesListView = (ListView) findViewById(R.id.listView3);
+        assert beerNamesListView != null;
+        beerNamesListView.setClickable(true);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button2, beerNames);
+        beerNamesListView.setAdapter(arrayAdapter);
 
 
 

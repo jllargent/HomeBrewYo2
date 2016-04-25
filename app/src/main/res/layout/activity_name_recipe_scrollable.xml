@@ -17,19 +17,17 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_weight=".5">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:id="@+id/imageView5"
-            android:src="@drawable/namebutton"/>
+        android:layout_weight=".5"
+        android:weightSum="1">
 
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="506dp"
             android:id="@+id/listView3"
-            android:fastScrollEnabled="false" />
+            android:fastScrollEnabled="false"
+            android:layout_weight="1.09"
+            android:clickable="false"
+            android:foregroundGravity="center" />
 
 
     </LinearLayout>
