@@ -14,6 +14,7 @@ public class NameRecipeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_recipe_scrollable);
+
     }
     public void goBeerRecipe(View view){
         int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
