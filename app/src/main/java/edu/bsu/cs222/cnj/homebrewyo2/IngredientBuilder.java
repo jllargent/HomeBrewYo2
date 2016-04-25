@@ -2,7 +2,7 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 public class IngredientBuilder {
 
-    public Ingredient thisIngredient;
+    private Ingredient thisIngredient;
 
     public Ingredient getIngredient(){
         return thisIngredient;
@@ -20,7 +20,7 @@ public class IngredientBuilder {
         thisIngredient = new Ingredient(2);
     }
 
-    public void setAmount(double weightInPounds){
+    protected void setAmount(double weightInPounds){
         thisIngredient.amount = weightInPounds;
     }
 
@@ -34,5 +34,13 @@ public class IngredientBuilder {
 
     public String getName() {
         return thisIngredient.name;
+    }
+
+    protected void setTimeToAdd(String timing){
+        thisIngredient.timingToAdd = timing;
+    }
+
+    public String getTimeToAdd(){
+        return thisIngredient.timingToAdd;
     }
 }

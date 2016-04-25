@@ -5,6 +5,7 @@ public class Ingredient {
     protected String name;
     protected double amount;
     protected String type;
+    protected String timingToAdd;
 
     public Ingredient(int typeNum){
         switch(typeNum){

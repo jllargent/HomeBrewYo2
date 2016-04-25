@@ -9,8 +9,8 @@ public class Beer {
     private String name;
     private String description;
     private String style;
-    private List<Malt> malts = new ArrayList<>();
-    private List<Hop> hops = new ArrayList<>();
+    private List<Ingredient> malts = new ArrayList<>();
+    private List<Ingredient> hops = new ArrayList<>();
     private int time;
     private int temperature;
     private int fermentTemperature;
@@ -35,19 +35,19 @@ public class Beer {
         return description;
     }
 
-    protected void addMalt(Malt malt){
+    protected void addMalt(Ingredient malt){
         this.malts.add(malt);
     }
 
-    public List<Malt> getMalts(){
+    public List<Ingredient> getMalts(){
         return new ArrayList<>(this.malts);
     }
 
-    protected void addHop(Hop hop){
+    protected void addHop(Ingredient hop){
         this.hops.add(hop);
     }
 
-    public List<Hop> getHops(){
+    public List<Ingredient> getHops(){
         return new ArrayList<>(this.hops);
     }
 
