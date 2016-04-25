@@ -16,7 +16,7 @@ public class IngredientBuilderTest {
         builder = new IngredientBuilder();
         builder.createMaltIngredient();
         builder.setName("TESTING");
-        builder.setAmount(10);
+        builder.setAmount(12);
         testIngredient = builder.getIngredient();
 
     }
@@ -33,6 +33,6 @@ public class IngredientBuilderTest {
 
     @Test
     public void testIngredientHasAmount(){
-        assertEquals(10, builder.getAmount(), 0);
+        assertEquals(12, builder.getAmount(), 0);
     }
 }
