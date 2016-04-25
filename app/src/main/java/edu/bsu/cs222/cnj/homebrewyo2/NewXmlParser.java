@@ -91,11 +91,11 @@ public class NewXmlParser{
     }
 
     private void findCurrentTargetFinalGravity(Element currentElement){
-        beerBuilder.buildTargetFinalGravity(Integer.parseInt(currentElement.getElementsByTagName("targetfg").item(0).getTextContent()));
+        beerBuilder.buildTargetFinalGravity(Double.parseDouble(currentElement.getElementsByTagName("targetfg").item(0).getTextContent()));
     }
 
     private void findCurrentTargetOriginalGravity(Element currentElement){
-        beerBuilder.buildTargetOriginalGravity(Integer.parseInt(currentElement.getElementsByTagName("targetog").item(0).getTextContent()));
+        beerBuilder.buildTargetOriginalGravity(Double.parseDouble(currentElement.getElementsByTagName("targetog").item(0).getTextContent()));
     }
 
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {

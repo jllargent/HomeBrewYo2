@@ -14,13 +14,14 @@ import java.util.List;
 public class NameRecipeActivity extends AppCompatActivity {
 
     Intent intent = getIntent();
-    List<Beer> recipeList;
+    List<Beer> recipeList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_recipe_scrollable);
         Bundle bundle = getIntent().getExtras();
         recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        Log.i("Array List", recipeList.toString());
         fillNameList();
     }
 
@@ -41,7 +42,7 @@ public class NameRecipeActivity extends AppCompatActivity {
         List<String> beerNames = new ArrayList<>();
 
         int i = 0;
-        while(beerNames.size() < recipeList.size()){
+        while(i < 10){
             beerNames.add(recipeList.get(i).getName());
             i++;
             Log.i("Beer Name", beerNames.get(i));

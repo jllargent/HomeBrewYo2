@@ -13,8 +13,8 @@ public class Beer {
     private int temperature;
     private int fermentTemperature;
     private int ibuValue;
-    private int targetFinalGravity;
-    private int targetOriginalGravity;
+    private double targetFinalGravity;
+    private double targetOriginalGravity;
     private double abvPercent;
 
     protected void setName(String name){
@@ -97,19 +97,19 @@ public class Beer {
         return this.ibuValue;
     }
 
-    protected void setTargetFinalGravity(int targetFG){
+    protected void setTargetFinalGravity(double targetFG){
         this.targetFinalGravity = targetFG;
     }
 
-    public int getTargetFinalGravity(){
+    public double getTargetFinalGravity(){
         return this.targetFinalGravity;
     }
 
-    protected void setTargetOriginalGravity(int targetOG){
+    protected void setTargetOriginalGravity(double targetOG){
         this.targetOriginalGravity = targetOG;
     }
 
-    public int getTargetOriginalGravity(){
+    public double getTargetOriginalGravity(){
         return this.targetOriginalGravity;
     }
 }

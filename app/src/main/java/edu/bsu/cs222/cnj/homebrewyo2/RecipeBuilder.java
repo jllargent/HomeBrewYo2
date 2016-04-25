@@ -53,12 +53,12 @@ public class RecipeBuilder extends BeerBuilder{
     }
 
     @Override
-    public void buildTargetFinalGravity(int targetFinalGravity) {
+    public void buildTargetFinalGravity(double targetFinalGravity) {
         thisBeer.setTargetFinalGravity(targetFinalGravity);
     }
 
     @Override
-    public void buildTargetOriginalGravity(int targetOriginalGravity) {
+    public void buildTargetOriginalGravity(double targetOriginalGravity) {
         thisBeer.setTargetOriginalGravity(targetOriginalGravity);
     }
 }

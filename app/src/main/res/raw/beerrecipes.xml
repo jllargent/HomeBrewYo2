@@ -436,8 +436,8 @@
         <fermtemp>66</fermtemp>
         <abvpercent>4</abvpercent>
         <ibu>40</ibu>
-        <targetfg>Final Gravity 1009</targetfg>
-        <targetog>Original Gravity 1039</targetog>
+        <targetfg>1009</targetfg>
+        <targetog>1039</targetog>
         <ingredients>
             <malts>
                 <maltIngredient>
