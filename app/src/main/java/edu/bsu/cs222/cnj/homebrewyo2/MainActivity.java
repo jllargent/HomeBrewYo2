@@ -3,6 +3,7 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import org.xml.sax.SAXException;
@@ -20,26 +21,25 @@ import javax.xml.parsers.ParserConfigurationException;
 public class MainActivity extends AppCompatActivity {
 
     NewXmlParser parser;
-    List<Beer> recipeList = new ArrayList<>();
-    File xmlFile = new File("src/main/res/raw/beerrecipes.xml");
-    Bundle bundle = new Bundle();
+    List<Beer> recipeList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         try {
-            runParser(xmlFile);
+            runParser(R.raw.beerrecipes);
             recipeList = parser.getBeerList();
-            bundle.putSerializable("Recipe List", (Serializable) recipeList);
-        }catch(Exception e){
+        }catch(Exception e) {
+            Log.i("damn it", String.valueOf(e));
         }
+        Log.i("HELPPPPPPPPPPPP", String.valueOf(recipeList));
+
     }
 
     public void goRecipes(View view){
         Intent recipeIntent = new Intent(this, DisplayRecipesMain.class);
-        recipeIntent.putExtras(bundle);
+        recipeIntent.putExtra("beerList", new BeerListTransporter((ArrayList<Beer>) recipeList));
         startActivity(recipeIntent);
     }
 
@@ -52,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void runParser(File fileToParse) throws IOException, ParserConfigurationException, SAXException {
-        URL input = xmlFile.toURI().toURL();
+        URL input = fileToParse.toURI().toURL();
         parser = new NewXmlParser(input.openStream());
+        Log.i("Im running", "");
     }
-
 
 }

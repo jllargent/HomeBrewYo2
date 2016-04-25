@@ -6,26 +6,25 @@ import android.os.Bundle;
 import android.view.View;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DisplayRecipesMain extends AppCompatActivity {
 
     Intent intent = getIntent();
-    List<Beer> recipeList;
+    List<Beer> recipeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_recipes_main);
-        Bundle bundle = getIntent().getExtras();
-        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        BeerListTransporter beerListTransporter = (BeerListTransporter) getIntent().getSerializableExtra("beerList");
+        recipeList = beerListTransporter.getBeerList();
     }
 
     public void goNameRecipes(View view){
         Intent recipeNameIntent = new Intent(this, NameRecipeActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("RecipeList", (Serializable) recipeList);
-        recipeNameIntent.putExtras(bundle);
+        recipeNameIntent.putExtra("beerList", new BeerListTransporter((ArrayList<Beer>) recipeList));
         startActivity(recipeNameIntent);
     }
 
