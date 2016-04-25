@@ -23,6 +23,7 @@ public class RecipeBuilder extends BeerBuilder{
 
     @Override
     public void buildTime(int time) {
+
         thisBeer.setTimeInMinutes(time);
     }
 
@@ -49,5 +50,15 @@ public class RecipeBuilder extends BeerBuilder{
     @Override
     public void buildIBUValue(int ibuValue) {
         thisBeer.setIbuValue(ibuValue);
+    }
+
+    @Override
+    public void buildTargetFinalGravity(int targetFinalGravity) {
+        thisBeer.setTargetFinalGravity(targetFinalGravity);
+    }
+
+    @Override
+    public void buildTargetOriginalGravity(int targetOriginalGravity) {
+        thisBeer.setTargetOriginalGravity(targetOriginalGravity);
     }
 }
