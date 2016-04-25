@@ -8,5 +8,7 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/button2"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:onClick="goBeerRecipe" />
 </LinearLayout>

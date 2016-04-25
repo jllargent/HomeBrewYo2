@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -26,10 +27,10 @@ public class NameRecipeActivity extends AppCompatActivity {
     }
 
     public void goBeerRecipe(View view){
-        int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
+        //int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
         Bundle bundle = new Bundle();
-        bundle.putInt("recipePosition", positionInRecipeIndex);
+        bundle.putInt("recipePosition", 0);
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
@@ -42,15 +43,12 @@ public class NameRecipeActivity extends AppCompatActivity {
             Log.i("you got beer", beerNames.get(i));
         }
 
+
         ListView beerNamesListView = (ListView) findViewById(R.id.listView3);
         assert beerNamesListView != null;
         beerNamesListView.setClickable(true);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button2, beerNames);
         beerNamesListView.setAdapter(arrayAdapter);
 
-
-
-
     }
-
 }
