@@ -19,11 +19,6 @@ public class Beer {
     private int targetOriginalGravity;
     private double abvPercent;
 
-/*
-    public Beer(String nameFromFile){
-        this.name = nameFromFile;
-    }*/
-
     protected void setName(String name){
         this.name = name;
     }
