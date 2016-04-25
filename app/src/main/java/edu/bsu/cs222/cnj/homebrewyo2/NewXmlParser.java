@@ -48,6 +48,7 @@ public class NewXmlParser {
             findCurrentFermentTemp((Element) currentNode);
             findCurrentABVPercent((Element) currentNode);
             findCurrentIBUValue((Element) currentNode);
+            findCurrentTargetFinalGravity((Element) currentNode);
 
             currentBeer = builder.getBeer();
             beerList.add(currentBeer);
@@ -86,6 +87,10 @@ public class NewXmlParser {
 
     private void findCurrentIBUValue(Element currentElement){
         builder.buildIBUValue(Integer.parseInt(currentElement.getElementsByTagName("ibu").item(0).getTextContent()));
+    }
+
+    private void findCurrentTargetFinalGravity(Element currentElement){
+        builder.buildTargetFinalGravity(Integer.parseInt(currentElement.getElementsByTagName("targetfg").item(0).getTextContent()));
     }
 
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {
