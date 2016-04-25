@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.List;
 
@@ -19,6 +21,11 @@ public class NameRecipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_name_recipe_scrollable);
         Bundle bundle = getIntent().getExtras();
         recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        createButtonList();
+    }
+
+    private void createButtonList() {
+
     }
 
     public void goBeerRecipe(View view){
