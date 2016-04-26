@@ -141,4 +141,21 @@ public class NewXmlParserTest {
         assertEquals(8.40, recipeList.get(1).getMalts().get(0).getAmount(), 0);
     }
 
+    @Test
+    public void testHopsExist(){
+        assertNotEquals(null, recipeList.get(0).getHops());
+    }
+    @Test
+    public void testHopHasName(){
+        assertEquals("Challenger", recipeList.get(1).getHops().get(2).getName());
+    }
+    @Test
+    public void testHopHasAmount(){
+        assertEquals(12.5, recipeList.get(1).getHops().get(0).getAmount(), 0);
+    }
+    @Test
+    public void testHopHasTimeToAdd(){
+        assertEquals("Start", recipeList.get(0).getHops().get(1).getTimingToAdd());
+    }
+
 }
