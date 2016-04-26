@@ -23,6 +23,8 @@ public class NewXmlParser{
     public Document document;
     private NodeList recipeNodeList;
 
+    private int i = 0;
+
     private Beer.BeerBuilder beerBuilder = new Beer.BeerBuilder();
     private Beer currentBeer;
 
@@ -35,6 +37,7 @@ public class NewXmlParser{
         this.xmlData = input;
         createXMLParser();
         for(int temp = 0; temp < recipeNodeList.getLength(); temp++){
+            i =0;
             Node currentNode = recipeNodeList.item(temp);
             if(isFirstNode(currentNode)){
                 continue;
@@ -57,12 +60,11 @@ public class NewXmlParser{
             ingredientBuilder.buildName(getElementStringValueByTag("yeast"));
             Ingredient currentIngredient = ingredientBuilder.getIngredient();
             beerBuilder.buildYeast(currentIngredient);
-
-            int i = 0;
+            i = 0;
             do{
                 ingredientBuilder.createMaltIngredient();
-                ingredientBuilder.buildName(currentElement.getElementsByTagName("maltName").item(i).getTextContent());
-                ingredientBuilder.buildAmount(Double.parseDouble(currentElement.getElementsByTagName("maltweight").item(i).getTextContent()));
+                ingredientBuilder.buildName(getElementStringValueByTag("maltName"));
+                ingredientBuilder.buildAmount(getElementDoubleValueByTag("maltweight"));
                 currentIngredient = ingredientBuilder.getIngredient();
                 beerBuilder.addMalt(currentIngredient);
                 i++;
@@ -70,9 +72,9 @@ public class NewXmlParser{
             i=0;
             do{
                 ingredientBuilder.createHopIngredient();
-                ingredientBuilder.buildName(currentElement.getElementsByTagName("hopsname").item(i).getTextContent());
-                ingredientBuilder.buildAmount(Double.parseDouble(currentElement.getElementsByTagName("hopsamount").item(i).getTextContent()));
-                ingredientBuilder.buildTimeToAdd(currentElement.getElementsByTagName("hopstime").item(i).getTextContent());
+                ingredientBuilder.buildName(getElementStringValueByTag("hopsname"));
+                ingredientBuilder.buildAmount(getElementDoubleValueByTag("hopsamount"));
+                ingredientBuilder.buildTimeToAdd(getElementStringValueByTag("hopstime"));
                 currentIngredient = ingredientBuilder.getIngredient();
                 beerBuilder.addHop(currentIngredient);
                 i++;
@@ -89,13 +91,13 @@ public class NewXmlParser{
     }
 
     private String getElementStringValueByTag(String tag){
-         return currentElement.getElementsByTagName(tag).item(0).getTextContent();
+         return currentElement.getElementsByTagName(tag).item(i).getTextContent();
     }
     private int getElementIntValueByTag(String tag){
-        return Integer.parseInt(currentElement.getElementsByTagName(tag).item(0).getTextContent());
+        return Integer.parseInt(currentElement.getElementsByTagName(tag).item(i).getTextContent());
     }
     private double getElementDoubleValueByTag(String tag){
-        return Double.parseDouble(currentElement.getElementsByTagName(tag).item(0).getTextContent());
+        return Double.parseDouble(currentElement.getElementsByTagName(tag).item(i).getTextContent());
     }
 
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {
