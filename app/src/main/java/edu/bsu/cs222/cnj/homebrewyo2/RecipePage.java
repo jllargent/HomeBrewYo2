@@ -24,7 +24,7 @@ public class RecipePage extends AppCompatActivity {
         setContentView(R.layout.activity_recipe);
         Bundle bundle = getIntent().getExtras();
         recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
-        Log.i("this is from the main recipe page", recipeList.toString());
+        Log.i("from main recipe page", recipeList.toString());
         positionInRecipeIndex = bundle.getInt("recipePosition");
         fillUIInformation(positionInRecipeIndex);
     }
@@ -84,6 +84,5 @@ public class RecipePage extends AppCompatActivity {
         bundle.putInt("timerLength", timerLength);
         timerIntent.putExtras(bundle);
         startActivity(timerIntent);
-
     }
 }

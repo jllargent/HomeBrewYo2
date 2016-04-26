@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.io.Serializable;
@@ -16,13 +16,15 @@ import java.util.List;
 public class NameRecipeActivity extends AppCompatActivity {
 
     Intent intent = getIntent();
-    List<Beer> recipeList = new ArrayList<>();
+    List<Beer> recipeList;
+    List<String> beerNames;
+    int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_recipe_scrollable);
         Bundle bundle = getIntent().getExtras();
-        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        recipeList = (ArrayList<Beer>) bundle.getSerializable("Recipe List");
         Log.i("Array List", recipeList.toString());
         fillNameList();
     }
@@ -30,25 +32,37 @@ public class NameRecipeActivity extends AppCompatActivity {
     public void goBeerRecipe(View view){
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
         Bundle bundle = new Bundle();
-        bundle.putInt("recipePosition", 0);
+        findButtonPosition(view);
+        bundle.putInt("recipePosition", position);
         bundle.putSerializable("Recipe List", (Serializable) recipeList);
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
 
+    private void findButtonPosition(View view) {
+        Button button = (Button) view;
+        String clickedName = button.getText().toString();
+        for(int i = 0; i < beerNames.size(); i++){
+            if(clickedName == beerNames.get(i)){
+                position = i;
+                break;
+            }
+        }
+
+    }
+
     public void fillNameList(){
-        List<String> beerNames = new ArrayList<>();
+        beerNames = new ArrayList<>();
 
         for (int i = 0; i < recipeList.size(); i++){
             beerNames.add(recipeList.get(i).getName());
             Log.i("you got beer", beerNames.get(i));
         }
 
-
         ListView beerNamesListView = (ListView) findViewById(R.id.listView3);
         assert beerNamesListView != null;
         beerNamesListView.setClickable(true);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button2, beerNames);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button, beerNames);
         beerNamesListView.setAdapter(arrayAdapter);
 
     }

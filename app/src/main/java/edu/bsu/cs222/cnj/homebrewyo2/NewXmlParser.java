@@ -32,14 +32,12 @@ public class NewXmlParser{
     public NewXmlParser(InputStream input) throws IOException, SAXException, ParserConfigurationException {
         this.xmlData = input;
         createXMLParser();
-        //recipeNodeList = element.getChildNodes();
         for(int temp = 0; temp < recipeNodeList.getLength(); temp++){
             Node currentNode = recipeNodeList.item(temp);
             beerBuilder.createBeer();
             if(isFirstNode(currentNode)){
                 continue;
             }
-
             findCurrentName((Element) currentNode);
             findCurrentDescription((Element) currentNode);
             findCurrentBuildTime((Element) currentNode);
@@ -50,13 +48,9 @@ public class NewXmlParser{
             findCurrentIBUValue((Element) currentNode);
             findCurrentTargetFinalGravity((Element) currentNode);
             findCurrentTargetOriginalGravity((Element) currentNode);
-
             currentBeer = beerBuilder.getBeer();
             beerList.add(currentBeer);
-
-        }/*
-        recipeChildNodeList = recipeNodeList.item(0).getChildNodes();
-*/
+        }
     }
 
     private void findCurrentName(Element currentElement) {
