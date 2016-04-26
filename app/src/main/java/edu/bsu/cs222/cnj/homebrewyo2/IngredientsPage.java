@@ -2,28 +2,33 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class IngredientsPage extends AppCompatActivity {
 
     private Recipe currentRecipe;
 
+    List<Beer> recipeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingredients);
         Bundle bundle = getIntent().getExtras();
+        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        Log.i("this is from the main ingredients page", recipeList.toString());
         int positionInRecipeIndex = bundle.getInt("recipePosition");
-        runParser(positionInRecipeIndex);
+        //runParser(positionInRecipeIndex);
 
-        fillMaltUiInfo();
-        fillHopUiInfo();
-        fillYeastUiInfo();
+       // fillMaltUiInfo();
+       // fillHopUiInfo();
+        //fillYeastUiInfo();
     }
 
     public void runParser(int positionInRecipeIndex){

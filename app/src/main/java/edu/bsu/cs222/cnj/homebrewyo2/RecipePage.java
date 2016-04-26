@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +33,7 @@ public class RecipePage extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, IngredientsPage.class);
         Bundle bundle = new Bundle();
         bundle.putInt("recipePosition", positionInRecipeIndex);
+        bundle.putSerializable("Recipe List", (Serializable) recipeList);
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
