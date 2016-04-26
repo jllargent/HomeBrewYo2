@@ -1,6 +1,8 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-public class Ingredient {
+import java.io.Serializable;
+
+public class Ingredient implements Serializable {
 
     private String name;
     private double amount;

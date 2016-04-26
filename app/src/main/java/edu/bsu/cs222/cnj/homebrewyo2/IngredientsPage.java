@@ -12,38 +12,33 @@ import java.util.List;
 
 public class IngredientsPage extends AppCompatActivity {
 
-    private Recipe currentRecipe;
+    private Beer currentRecipe;
 
     List<Beer> recipeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ingredients);
-        Bundle bundle = getIntent().getExtras();
+        setContentView(R.layout.activity_ingredients);Bundle bundle = getIntent().getExtras();
         recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
-        Log.i("this is from the main ingredients page", recipeList.toString());
+        Log.i("from main recipe page", recipeList.toString());
         int positionInRecipeIndex = bundle.getInt("recipePosition");
+
+        currentRecipe = recipeList.get(positionInRecipeIndex);
         //runParser(positionInRecipeIndex);
 
-       // fillMaltUiInfo();
-       // fillHopUiInfo();
-        //fillYeastUiInfo();
-    }
-
-    public void runParser(int positionInRecipeIndex){
-        XMLFileProcessor parseInfo = new XMLFileProcessor();
-        ArrayList<Recipe> listOfRecipies = parseInfo.getListOfRecipes();
-        currentRecipe = listOfRecipies.get(positionInRecipeIndex);
+        fillMaltUiInfo();
+        fillHopUiInfo();
+        fillYeastUiInfo();
     }
 
     public void fillMaltUiInfo(){
-        ArrayList<Malt> listOfMaltsIngredients = currentRecipe.getMaltIngredients();
+        List<Ingredient> listOfMaltsIngredients = currentRecipe.getMalts();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
 
         for( int i =0; i < listOfMaltsIngredients.size(); i++){
-            String s = listOfMaltsIngredients.get(i).getNameOfMalt();
-            s += " | " + listOfMaltsIngredients.get(i).getAmountOfMalt();
+            String s = listOfMaltsIngredients.get(i).getName();
+            s += " | " + listOfMaltsIngredients.get(i).getAmount();
             detailedIngredientList.add(s);
         }
 
@@ -55,13 +50,13 @@ public class IngredientsPage extends AppCompatActivity {
     }
 
     public void fillHopUiInfo(){
-        ArrayList<Hop> listOfHopIngredients = currentRecipe.getHopIngredients();
+        List<Ingredient> listOfHopIngredients = currentRecipe.getHops();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
 
         for( int i =0; i < listOfHopIngredients.size(); i++){
-            String s = listOfHopIngredients.get(i).getNameOfHop();
-            s += " | " + listOfHopIngredients.get(i).getAmountOfHops();
-            s += " | " + listOfHopIngredients.get(i).getTimeToAddHop();
+            String s = listOfHopIngredients.get(i).getName();
+            s += " | " + listOfHopIngredients.get(i).getAmount();
+            s += " | " + listOfHopIngredients.get(i).getTimingToAdd();
             detailedIngredientList.add(s);
         }
 
@@ -75,6 +70,6 @@ public class IngredientsPage extends AppCompatActivity {
     public void fillYeastUiInfo() {
         TextView nameTextView = (TextView) findViewById(R.id.textView15);
         assert nameTextView != null;
-        nameTextView.setText(currentRecipe.getYeastIngredient());
+        nameTextView.setText(currentRecipe.getYeast().getName());
     }
 }
