@@ -41,7 +41,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testThatThereAre2Recipies(){
-        assertEquals(2, parser.recipeNodeList.getLength());
+        assertEquals(2, recipeList.size());
     }
 
     @Test
@@ -106,16 +106,17 @@ public class NewXmlParserTest {
 
     @Test
     public void testBadPixieTargetFinalGravity(){
-        assertEquals(1010, recipeList.get(0).getTargetFinalGravity());
+        assertEquals(1010, recipeList.get(0).getTargetFinalGravity(),0);
     }
 
     @Test
     public void testBadPixieTargetOriginalGravity(){
-        assertEquals(1047, recipeList.get(0).getTargetOriginalGravity());
+        assertEquals(1047, recipeList.get(0).getTargetOriginalGravity(), 0);
     }
 
     @Test
     public void testThatThereIsABeerArrayList(){
         assertNotEquals(null, parser.beerList);
     }
+
 }

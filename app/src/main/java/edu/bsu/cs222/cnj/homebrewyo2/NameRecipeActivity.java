@@ -26,7 +26,8 @@ public class NameRecipeActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         recipeList = (ArrayList<Beer>) bundle.getSerializable("Recipe List");
         Log.i("Array List", recipeList.toString());
-        fillNameList();
+        fillListWithBeerNames();
+        createListOfButtons();
     }
 
     public void goBeerRecipe(View view){
@@ -43,27 +44,26 @@ public class NameRecipeActivity extends AppCompatActivity {
         Button button = (Button) view;
         String clickedName = button.getText().toString();
         for(int i = 0; i < beerNames.size(); i++){
-            if(clickedName == beerNames.get(i)){
+            if(clickedName.equalsIgnoreCase(beerNames.get(i))){
                 position = i;
                 break;
             }
         }
-
     }
 
-    public void fillNameList(){
+    public void fillListWithBeerNames(){
         beerNames = new ArrayList<>();
-
         for (int i = 0; i < recipeList.size(); i++){
             beerNames.add(recipeList.get(i).getName());
             Log.i("you got beer", beerNames.get(i));
         }
+    }
 
+    private void createListOfButtons(){
         ListView beerNamesListView = (ListView) findViewById(R.id.listView3);
         assert beerNamesListView != null;
         beerNamesListView.setClickable(true);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button, beerNames);
         beerNamesListView.setAdapter(arrayAdapter);
-
     }
 }

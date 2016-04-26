@@ -18,6 +18,72 @@ public class Beer implements Serializable{
     private double targetOriginalGravity;
     private double abvPercent;
 
+    public static class BeerBuilder{
+        public Beer thisBeer;
+
+        public Beer getBeer(){
+            return thisBeer;
+        }
+
+        public void createBeer(){
+            thisBeer = new Beer();
+        }
+
+        public void buildName(String name) {
+            thisBeer.setName(name);
+        }
+
+        public void buildDescription(String description) {
+            thisBeer.setDescription(description);
+        }
+
+        public void buildMalt(Ingredient malt) {
+            thisBeer.addMalt(malt);
+        }
+
+        public void buildHop(Ingredient hop) {
+            thisBeer.addHop(hop);
+        }
+
+        public void buildTime(int time) {
+
+            thisBeer.setTimeInMinutes(time);
+        }
+
+        public void buildTemp(int temp) {
+            thisBeer.setTempInFahrenheit(temp);
+        }
+
+        public void buildStyle(String style) {
+            thisBeer.setStyle(style);
+        }
+
+        public void buildFermentTemp(int fermentTemp) {
+            thisBeer.setFermentTemp(fermentTemp);
+        }
+
+        public void buildABVPercent(double abvPercent) {
+            thisBeer.setAbvPercent(abvPercent);
+        }
+
+        public void buildIBUValue(int ibuValue) {
+            thisBeer.setIbuValue(ibuValue);
+        }
+
+        public void buildTargetFinalGravity(double targetFinalGravity) {
+            thisBeer.setTargetFinalGravity(targetFinalGravity);
+        }
+
+        public void buildTargetOriginalGravity(double targetOriginalGravity) {
+            thisBeer.setTargetOriginalGravity(targetOriginalGravity);
+        }
+
+        public Beer returnBeer(){
+            return thisBeer;
+        }
+    }
+
+
     protected void setName(String name){
         this.name = name;
     }

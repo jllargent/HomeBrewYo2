@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class BeerBuilderTest {
-    BeerBuilder beerBuilder;
+    Beer.BeerBuilder beerBuilder;
     IngredientBuilder ingredientBuilder;
     Ingredient testMalt;
     Ingredient secondMalt;
@@ -16,7 +16,7 @@ public class BeerBuilderTest {
     Ingredient secondHop;
     @Before
     public void setUpBeer(){
-        beerBuilder = new RecipeBuilder();
+        beerBuilder = new Beer.BeerBuilder();
         testMalt = new Ingredient(0);
         secondMalt = new Ingredient(0);
         testHop = new Ingredient(1);
