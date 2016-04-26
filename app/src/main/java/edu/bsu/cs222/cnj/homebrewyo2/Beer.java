@@ -30,11 +30,11 @@ public class Beer implements Serializable{
         }
 
         public void buildName(String name) {
-            thisBeer.setName(name);
+            thisBeer.name = name;
         }
 
         public void buildDescription(String description) {
-            thisBeer.setDescription(description);
+            thisBeer.description = description;
         }
 
         public void buildMalt(Ingredient malt) {
@@ -47,49 +47,36 @@ public class Beer implements Serializable{
 
         public void buildTime(int time) {
 
-            thisBeer.setTimeInMinutes(time);
+            thisBeer.time = time;
         }
 
         public void buildTemp(int temp) {
-            thisBeer.setTempInFahrenheit(temp);
+            thisBeer.temperature = temp;
         }
 
         public void buildStyle(String style) {
-            thisBeer.setStyle(style);
+            thisBeer.style = style;
         }
 
         public void buildFermentTemp(int fermentTemp) {
-            thisBeer.setFermentTemp(fermentTemp);
+            thisBeer.fermentTemperature = fermentTemp;
         }
 
         public void buildABVPercent(double abvPercent) {
-            thisBeer.setAbvPercent(abvPercent);
+            thisBeer.abvPercent = abvPercent;
         }
 
         public void buildIBUValue(int ibuValue) {
-            thisBeer.setIbuValue(ibuValue);
+            thisBeer.ibuValue = ibuValue;
         }
 
         public void buildTargetFinalGravity(double targetFinalGravity) {
-            thisBeer.setTargetFinalGravity(targetFinalGravity);
+            thisBeer.targetFinalGravity = targetFinalGravity;
         }
 
         public void buildTargetOriginalGravity(double targetOriginalGravity) {
-            thisBeer.setTargetOriginalGravity(targetOriginalGravity);
+            thisBeer.targetOriginalGravity = targetOriginalGravity;
         }
-
-        public Beer returnBeer(){
-            return thisBeer;
-        }
-    }
-
-
-    protected void setName(String name){
-        this.name = name;
-    }
-
-    protected void setDescription(String description){
-        this.description = description;
     }
 
     public String getName(){
@@ -116,17 +103,11 @@ public class Beer implements Serializable{
         return new ArrayList<>(this.hops);
     }
 
-    protected void setTimeInMinutes(int minutes){
-        this.time = minutes;
-    }
 
     public int getTimeInMinutes(){
         return this.time;
     }
 
-    protected void setTempInFahrenheit(int temp){
-        this.temperature = temp;
-    }
 
     public int getTemperatureInFahrenheit(){
         return this.temperature;
@@ -140,40 +121,24 @@ public class Beer implements Serializable{
         return this.style;
     }
 
-    protected void setFermentTemp(int fermTemp){
-        this.fermentTemperature = fermTemp;
-    }
 
     public int getFermentTemperature(){
         return this.fermentTemperature;
     }
 
-    protected void setAbvPercent(double abv){
-        this.abvPercent = abv;
-    }
 
     public double getABVPercent(){
         return this.abvPercent;
     }
 
-    protected void setIbuValue(int ibu){
-        this.ibuValue = ibu;
-    }
 
     public int getIbuValue(){
         return this.ibuValue;
     }
 
-    protected void setTargetFinalGravity(double targetFG){
-        this.targetFinalGravity = targetFG;
-    }
 
     public double getTargetFinalGravity(){
         return this.targetFinalGravity;
-    }
-
-    protected void setTargetOriginalGravity(double targetOG){
-        this.targetOriginalGravity = targetOG;
     }
 
     public double getTargetOriginalGravity(){
