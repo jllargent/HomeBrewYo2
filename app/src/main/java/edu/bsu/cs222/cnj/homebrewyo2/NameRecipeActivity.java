@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,10 +28,10 @@ public class NameRecipeActivity extends AppCompatActivity {
     }
 
     public void goBeerRecipe(View view){
-        //int positionInRecipeIndex = Integer.parseInt(String.valueOf(view.getTag()));
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
         Bundle bundle = new Bundle();
         bundle.putInt("recipePosition", 0);
+        bundle.putSerializable("Recipe List", (Serializable) recipeList);
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }

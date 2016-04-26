@@ -3,24 +3,29 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecipePage extends AppCompatActivity {
 
     private int positionInRecipeIndex;
 
-    ArrayList<Recipe> listOfRecipies = new ArrayList<>();
+
+    List<Beer> recipeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
         Bundle bundle = getIntent().getExtras();
+        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        Log.i("this is from the main recipe page", recipeList.toString());
         positionInRecipeIndex = bundle.getInt("recipePosition");
-        runParser(positionInRecipeIndex);
+        fillUIInformation(positionInRecipeIndex);
     }
 
     public void goIngredients(View view){
@@ -31,52 +36,46 @@ public class RecipePage extends AppCompatActivity {
         startActivity(recipeStyleIntent);
     }
 
-    public void runParser(int positionInRecipeIndex){
-        XMLFileProcessor parseInfo = new XMLFileProcessor();
-        listOfRecipies = parseInfo.getListOfRecipes();
-        fillUIInformation(positionInRecipeIndex);
-    }
-
     //TODO: Clean Up DRY Violation
     public void fillUIInformation(int positionInRecipeIndex) {
-        Recipe currentRecipe = listOfRecipies.get(positionInRecipeIndex);
+        Beer currentBeer = recipeList.get(positionInRecipeIndex);
         setContentView(R.layout.activity_recipe);
         TextView nameTextView = (TextView) findViewById(R.id.textView16);
         assert nameTextView != null;
-        nameTextView.setText(currentRecipe.getTitleOfBeer());
+        nameTextView.setText(currentBeer.getName());
 
         TextView descriptionTextView = (TextView) findViewById(R.id.textView);
         assert descriptionTextView != null;
-        descriptionTextView.setText(currentRecipe.getDescriptionOfBeer());
+        descriptionTextView.setText(currentBeer.getDescription());
 
 
         TextView boilTimeTextView = (TextView) findViewById(R.id.textView3);
         assert boilTimeTextView != null;
-        boilTimeTextView.setText(currentRecipe.getBoilDescription());
+        boilTimeTextView.setText("Boil for " + currentBeer.getTimeInMinutes() + " minutes at " + currentBeer.getTemperatureInFahrenheit() + "F");
 
 
         TextView fermentTextView = (TextView) findViewById(R.id.textView4);
         assert fermentTextView != null;
-        fermentTextView.setText(currentRecipe.getFermentTemp());
+        fermentTextView.setText("Ferment at " + currentBeer.getFermentTemperature() + "F");
 
 
         TextView abvTextView = (TextView) findViewById(R.id.textView5);
         assert abvTextView != null;
-        abvTextView.setText(currentRecipe.getValueOfABV());
+        abvTextView.setText(currentBeer.getABVPercent() + "% | " + currentBeer.getIbuValue());
 
 
         TextView oGravTextView = (TextView) findViewById(R.id.textView7);
         assert oGravTextView != null;
-        oGravTextView.setText(currentRecipe.getOriginalGravity());
+        oGravTextView.setText(""+currentBeer.getTargetOriginalGravity());
 
 
         TextView fGravTextView = (TextView) findViewById(R.id.textView8);
         assert fGravTextView != null;
-        fGravTextView.setText(currentRecipe.getFinalGravity());
+        fGravTextView.setText(""+currentBeer.getTargetFinalGravity());
     }
 
-    public void goTimer(View view){
-        Recipe currentRecipe = listOfRecipies.get(positionInRecipeIndex);
+   /* public void goTimer(View view){
+        Recipe currentRecipe = recipeList.get(positionInRecipeIndex);
         int timerLength = currentRecipe.getTimeInMins() * 60;
         Intent timerIntent = new Intent(this, TimerActivity.class);
         Bundle bundle = new Bundle();
@@ -84,5 +83,5 @@ public class RecipePage extends AppCompatActivity {
         timerIntent.putExtras(bundle);
         startActivity(timerIntent);
 
-    }
+    }*/
 }
