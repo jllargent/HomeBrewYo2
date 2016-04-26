@@ -62,6 +62,7 @@ public class NewXmlParser{
             do{
                 ingredientBuilder.createMaltIngredient();
                 ingredientBuilder.buildName(currentElement.getElementsByTagName("maltName").item(i).getTextContent());
+                ingredientBuilder.buildAmount(Double.parseDouble(currentElement.getElementsByTagName("maltweight").item(i).getTextContent()));
                 currentIngredient = ingredientBuilder.getIngredient();
                 beerBuilder.addMalt(currentIngredient);
                 i++;
