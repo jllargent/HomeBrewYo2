@@ -58,13 +58,30 @@ public class NewXmlParser{
             Ingredient currentIngredient = ingredientBuilder.getIngredient();
             beerBuilder.buildYeast(currentIngredient);
 
+            int i = 0;
+            do{
+                ingredientBuilder.createMaltIngredient();
+                ingredientBuilder.buildName(currentElement.getElementsByTagName("maltName").item(i).getTextContent());
+                currentIngredient = ingredientBuilder.getIngredient();
+                beerBuilder.addMalt(currentIngredient);
+                i++;
+            }while(i < currentElement.getElementsByTagName("maltIngredient").getLength());
+
+
+
+
+
             currentBeer = beerBuilder.getBeer();
             beerList.add(currentBeer);
         }
     }
 
+    public List<Beer> getBeerList(){
+        return new ArrayList<>(beerList);
+    }
+
     private String getElementStringValueByTag(String tag){
-         return (currentElement).getElementsByTagName(tag).item(0).getTextContent();
+         return currentElement.getElementsByTagName(tag).item(0).getTextContent();
     }
     private int getElementIntValueByTag(String tag){
         return Integer.parseInt(currentElement.getElementsByTagName(tag).item(0).getTextContent());
@@ -85,8 +102,5 @@ public class NewXmlParser{
         return currentNode.getNodeType() != Node.ELEMENT_NODE;
     }
 
-    public List<Beer> getBeerList(){
-        return new ArrayList<>(beerList);
-    }
 
 }
