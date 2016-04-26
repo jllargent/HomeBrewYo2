@@ -26,6 +26,8 @@ public class NewXmlParser{
     private Beer.BeerBuilder beerBuilder = new Beer.BeerBuilder();
     private Beer currentBeer;
 
+    private Ingredient.IngredientBuilder ingredientBuilder = new Ingredient.IngredientBuilder();
+
     public List<Beer> beerList = new ArrayList();
     private Element currentElement;
 
@@ -51,7 +53,10 @@ public class NewXmlParser{
             beerBuilder.buildTargetOriginalGravity(getElementDoubleValueByTag("targetog"));
             beerBuilder.buildTargetFinalGravity(getElementDoubleValueByTag("targetfg"));
 
-
+            ingredientBuilder.createYeastIngredient();
+            ingredientBuilder.buildName(getElementStringValueByTag("yeast"));
+            Ingredient currentIngredient = ingredientBuilder.getIngredient();
+            beerBuilder.buildYeast(currentIngredient);
 
             currentBeer = beerBuilder.getBeer();
             beerList.add(currentBeer);
