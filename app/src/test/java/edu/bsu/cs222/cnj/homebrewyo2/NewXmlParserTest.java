@@ -155,7 +155,7 @@ public class NewXmlParserTest {
     }
     @Test
     public void testHopHasTimeToAdd(){
-        assertEquals("Start", recipeList.get(0).getHops().get(1).getTimingToAdd());
+        assertEquals("End", recipeList.get(0).getHops().get(1).getTimingToAdd());
     }
 
 }

@@ -67,14 +67,16 @@ public class NewXmlParser{
                 beerBuilder.addMalt(currentIngredient);
                 i++;
             }while(i < currentElement.getElementsByTagName("maltIngredient").getLength());
-
-
-
-
-
-
-
-
+            i=0;
+            do{
+                ingredientBuilder.createHopIngredient();
+                ingredientBuilder.buildName(currentElement.getElementsByTagName("hopsname").item(i).getTextContent());
+                ingredientBuilder.buildAmount(Double.parseDouble(currentElement.getElementsByTagName("hopsamount").item(i).getTextContent()));
+                ingredientBuilder.buildTimeToAdd(currentElement.getElementsByTagName("hopstime").item(i).getTextContent());
+                currentIngredient = ingredientBuilder.getIngredient();
+                beerBuilder.addHop(currentIngredient);
+                i++;
+            }while(i < currentElement.getElementsByTagName("hopingredient").getLength());
 
 
             currentBeer = beerBuilder.getBeer();
