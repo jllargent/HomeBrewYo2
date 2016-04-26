@@ -12,7 +12,6 @@
         <ibu>45</ibu>
         <targetfg>1010</targetfg>
         <targetog>1047</targetog>
-        <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Wheat</maltName>
@@ -51,7 +50,6 @@
                 </hopingredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
-        </ingredients>
         <picture>@drawable/badpixie</picture>
     </recipe>
     <recipe>
@@ -65,7 +63,6 @@
         <ibu>50</ibu>
         <targetfg>1014</targetfg>
         <targetog>1053</targetog>
-        <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
@@ -110,7 +107,6 @@
                 </hopingredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
-        </ingredients>
         <picture>@drawable/brixtonporter</picture>
     </recipe>
     <recipe>
@@ -124,7 +120,6 @@
         <ibu>65</ibu>
         <targetfg>1019</targetfg>
         <targetog>1080</targetog>
-        <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
@@ -176,7 +171,6 @@
                 </hopingredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
-        </ingredients>
         <picture>@drawable/coffeeimp</picture>
     </recipe>
     <recipe>
@@ -190,7 +184,6 @@
         <ibu>60</ibu>
         <targetfg>1012</targetfg>
         <targetog>1071.3</targetog>
-        <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
@@ -247,7 +240,6 @@
                 </hopingredient>
             </hops>
             <yeast>Safale US-05</yeast>
-        </ingredients>
         <picture>@drawable/dogma</picture>
     </recipe>
     <recipe>
@@ -261,7 +253,6 @@
         <ibu>40</ibu>
         <targetfg>1010</targetfg>
         <targetog>1052</targetog>
-        <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale Maris Otter</maltName>
@@ -304,7 +295,6 @@
                 </hopingredient>
             </hops>
             <yeast>Saflager S189</yeast>
-        </ingredients>
         <picture>@drawable/hoprocker</picture>
     </recipe>
     <recipe>
@@ -318,7 +308,6 @@
         <ibu>47</ibu>
         <targetfg>1010</targetfg>
         <targetog>1048.5</targetog>
-        <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
@@ -360,7 +349,6 @@
                 </hopingredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
-        </ingredients>
         <picture>@drawable/physics</picture>
     </recipe>
     <recipe>
@@ -374,7 +362,6 @@
     <ibu>60</ibu>
 	<targetfg>1010</targetfg>
 	<targetog>1056</targetog>
-	<ingredients>
 		<malts>
 			<maltIngredient>
 				<maltName>Extra Pale</maltName>
@@ -424,7 +411,6 @@
 			</hopingredient>
 		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
-	</ingredients>
 	<picture>@drawable/punk</picture>
 </recipe>
     <recipe>
@@ -438,7 +424,6 @@
         <ibu>40</ibu>
         <targetfg>1009</targetfg>
         <targetog>1039</targetog>
-        <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Maris Otter</maltName>
@@ -483,7 +468,6 @@
                 </hopingredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
-        </ingredients>
         <picture>@drawable/peroxidepunk</picture>
     </recipe>
     <recipe>
@@ -499,7 +483,6 @@
         <ibu>26</ibu>
         <targetfg>1014</targetfg>
         <targetog>1092</targetog>
-        <ingredients>
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
@@ -527,7 +510,6 @@
                 </hopingredient>
             </hops>
             <yeast>Wyeast 3333 German Wheat</yeast>
-        </ingredients>
         <picture>@drawable/rabiator</picture>
     </recipe>
     <recipe>
@@ -541,7 +523,6 @@
         <ibu>45</ibu>
     	<targetfg>1014</targetfg>
     	<targetog>1075</targetog>
-	<ingredients>
 		<malts>
 			<maltIngredient>
 				<maltName>Extra Pale - Maris Otter</maltName>
@@ -600,7 +581,6 @@
 			</hopingredient>
 		</hops>
 		<yeast>Wyeast 1272 - American Ale II</yeast>
-	</ingredients>
     <picture>@drawable/riptide</picture>
 </recipe>
 
