@@ -136,5 +136,9 @@ public class NewXmlParserTest {
         }
         assertEquals("Wheat", recipeList.get(0).getMalts().get(0).getName());
     }
+    @Test
+    public void testMaltHasAmount(){
+        assertEquals(8.40, recipeList.get(1).getMalts().get(0).getAmount(), 0);
+    }
 
 }

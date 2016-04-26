@@ -71,6 +71,8 @@ public class NewXmlParser{
 
 
 
+
+
             currentBeer = beerBuilder.getBeer();
             beerList.add(currentBeer);
         }
