@@ -8,7 +8,7 @@ import static org.junit.Assert.assertNotEquals;
 
 public class BeerBuilderTest {
     Beer.BeerBuilder beerBuilder;
-    IngredientBuilder ingredientBuilder;
+    Ingredient.IngredientBuilder ingredientBuilder;
     Ingredient testMalt;
     Ingredient secondMalt;
     Beer testBeer;
@@ -17,12 +17,22 @@ public class BeerBuilderTest {
     @Before
     public void setUpBeer(){
         beerBuilder = new Beer.BeerBuilder();
-        testMalt = new Ingredient();
-        secondMalt = new Ingredient();
-        testHop = new Ingredient();
-        secondHop = new Ingredient();
-        testMalt.name = "TESTMALT";
-        testHop.name = "TESTHOP";
+        ingredientBuilder = new Ingredient.IngredientBuilder();
+
+        ingredientBuilder.createMaltIngredient();
+        ingredientBuilder.buildName("TESTMALT");
+        testMalt = ingredientBuilder.getIngredient();
+        ingredientBuilder.createMaltIngredient();
+        ingredientBuilder.buildName("TESTMALT2");
+        secondMalt = ingredientBuilder.getIngredient();
+
+        ingredientBuilder.createHopIngredient();
+        ingredientBuilder.buildName("TESTHOP");
+        testHop = ingredientBuilder.getIngredient();
+        ingredientBuilder.createHopIngredient();
+        ingredientBuilder.buildName("TESTHOP2");
+        secondHop = ingredientBuilder.getIngredient();
+
         beerBuilder.createBeer();
         beerBuilder.buildName("test");
         beerBuilder.buildDescription("Test Description");

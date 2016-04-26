@@ -8,17 +8,17 @@ import static org.junit.Assert.assertNotEquals;
 
 public class IngredientBuilderTest {
 
-    IngredientBuilder builder;
+    Ingredient.IngredientBuilder builder;
     Ingredient testIngredient;
 
     @Before
     public void setUpIngredient(){
-        builder = new IngredientBuilder();
-        builder.createMaltIngredient();
-        builder.setName("TESTING");
-        builder.setAmount(12);
+        builder = new Ingredient.IngredientBuilder();
+        builder.createHopIngredient();
+        builder.buildName("TESTING");
+        builder.buildAmount(12);
+        builder.buildTimeToAdd("Start");
         testIngredient = builder.getIngredient();
-
     }
 
     @Test
@@ -34,5 +34,10 @@ public class IngredientBuilderTest {
     @Test
     public void testIngredientHasAmount(){
         assertEquals(12, testIngredient.getAmount(), 0);
+    }
+
+    @Test
+    public void testIngredientHasTimeToAdd(){
+        assertEquals("Start", testIngredient.getTimingToAdd());
     }
 }

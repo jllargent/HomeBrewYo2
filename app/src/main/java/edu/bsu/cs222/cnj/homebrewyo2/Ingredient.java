@@ -7,35 +7,38 @@ public class Ingredient {
     private String type;
     private String timingToAdd;
 
-    public class IngredientBuilder {
+    public static class IngredientBuilder {
 
-        private Ingredient thisIngredient;
+        public Ingredient thisIngredient;
 
         public Ingredient getIngredient(){
             return thisIngredient;
         }
 
         public void createMaltIngredient(){
+            thisIngredient = new Ingredient();
             thisIngredient.type = "Malt";
         }
 
         public void createHopIngredient(){
+            thisIngredient = new Ingredient();
             thisIngredient.type = "Hop";
         }
         public void createYeastIngredient() {
+            thisIngredient = new Ingredient();
             thisIngredient.type = "Yeast";
         }
 
-        private void buildName(String name){
+        public void buildName(String name){
             thisIngredient.name = name;
         }
 
 
-        private void buildAmount(double weightInPounds){
+        public void buildAmount(double weightInPounds){
             thisIngredient.amount = weightInPounds;
         }
 
-        private void buildTimeToAdd(String timing){
+        public void buildTimeToAdd(String timing){
             thisIngredient.timingToAdd = timing;
         }
 
