@@ -9,7 +9,8 @@ import static org.junit.Assert.assertNotEquals;
 public class IngredientBuilderTest {
 
     Ingredient.IngredientBuilder builder;
-    Ingredient testIngredient;
+    Ingredient testHop;
+    Ingredient testYeast;
 
     @Before
     public void setUpIngredient(){
@@ -18,26 +19,40 @@ public class IngredientBuilderTest {
         builder.buildName("TESTING");
         builder.buildAmount(12);
         builder.buildTimeToAdd("Start");
-        testIngredient = builder.getIngredient();
+        testHop = builder.getIngredient();
+
+        builder.createYeastIngredient();
+        builder.buildName("testYeast");
+        testYeast = builder.getIngredient();
     }
 
     @Test
     public void testIngredientExists(){
-        assertNotEquals(null, testIngredient);
+        assertNotEquals(null, testHop);
     }
 
     @Test
     public void testIngredientHasName(){
-        assertEquals("TESTING", testIngredient.getName());
+        assertEquals("TESTING", testHop.getName());
     }
 
     @Test
     public void testIngredientHasAmount(){
-        assertEquals(12, testIngredient.getAmount(), 0);
+        assertEquals(12, testHop.getAmount(), 0);
     }
 
     @Test
     public void testIngredientHasTimeToAdd(){
-        assertEquals("Start", testIngredient.getTimingToAdd());
+        assertEquals("Start", testHop.getTimingToAdd());
+    }
+
+    @Test
+    public void testThatThereIsYeastIngredient(){
+        assertNotEquals(null, testYeast);
+    }
+
+    @Test
+    public void testYeastHasName(){
+        assertEquals("testYeast", testYeast.getName());
     }
 }
