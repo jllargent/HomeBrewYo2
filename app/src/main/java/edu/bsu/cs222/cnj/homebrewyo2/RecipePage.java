@@ -66,7 +66,7 @@ public class RecipePage extends AppCompatActivity {
 
         TextView oGravTextView = (TextView) findViewById(R.id.textView7);
         assert oGravTextView != null;
-        oGravTextView.setText(""+currentBeer.getTargetOriginalGravity());
+        oGravTextView.setText("" + currentBeer.getTargetOriginalGravity());
 
 
         TextView fGravTextView = (TextView) findViewById(R.id.textView8);
@@ -74,14 +74,14 @@ public class RecipePage extends AppCompatActivity {
         fGravTextView.setText(""+currentBeer.getTargetFinalGravity());
     }
 
-   /* public void goTimer(View view){
-        Recipe currentRecipe = recipeList.get(positionInRecipeIndex);
-        int timerLength = currentRecipe.getTimeInMins() * 60;
+    public void goTimer(View view){
+        Beer currentRecipe = recipeList.get(positionInRecipeIndex);
+        int timerLength = currentRecipe.getTimeInMinutes() * 60;
         Intent timerIntent = new Intent(this, TimerActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("timerLength", timerLength);
         timerIntent.putExtras(bundle);
         startActivity(timerIntent);
 
-    }*/
+    }
 }
