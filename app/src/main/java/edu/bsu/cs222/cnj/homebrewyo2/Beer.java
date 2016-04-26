@@ -17,6 +17,7 @@ public class Beer implements Serializable{
     private double targetFinalGravity;
     private double targetOriginalGravity;
     private double abvPercent;
+    private Ingredient yeast;
 
     public static class BeerBuilder{
         public Beer thisBeer;
@@ -37,12 +38,16 @@ public class Beer implements Serializable{
             thisBeer.description = description;
         }
 
-        public void buildMalt(Ingredient malt) {
-            thisBeer.addMalt(malt);
+        public void addMalt(Ingredient malt) {
+            thisBeer.malts.add(malt);
         }
 
-        public void buildHop(Ingredient hop) {
-            thisBeer.addHop(hop);
+        public void addHop(Ingredient hop) {
+            thisBeer.hops.add(hop);
+        }
+
+        public void buildYeast(Ingredient yeast){
+            thisBeer.yeast = yeast;
         }
 
         public void buildTime(int time) {
@@ -87,16 +92,8 @@ public class Beer implements Serializable{
         return description;
     }
 
-    protected void addMalt(Ingredient malt){
-        this.malts.add(malt);
-    }
-
     public List<Ingredient> getMalts(){
         return new ArrayList<>(this.malts);
-    }
-
-    protected void addHop(Ingredient hop){
-        this.hops.add(hop);
     }
 
     public List<Ingredient> getHops(){
@@ -113,10 +110,6 @@ public class Beer implements Serializable{
         return this.temperature;
     }
 
-    protected void setStyle(String beerStyle){
-        this.style = beerStyle;
-    }
-
     public String getStyle(){
         return this.style;
     }
@@ -131,6 +124,9 @@ public class Beer implements Serializable{
         return this.abvPercent;
     }
 
+    public Ingredient getYeast(){
+        return this.yeast;
+    }
 
     public int getIbuValue(){
         return this.ibuValue;

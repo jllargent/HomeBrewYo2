@@ -2,25 +2,43 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 
 public class Ingredient {
 
-    protected String name;
-    protected double amount;
-    protected String type;
-    protected String timingToAdd;
+    private String name;
+    private double amount;
+    private String type;
+    private String timingToAdd;
 
-    public Ingredient(int typeNum){
-        switch(typeNum){
-            case 0:
-                this.type = "Malt";
-                break;
-            case 1:
-                this.type = "Hop";
-                break;
-            case 2:
-                this.type = "Yeast";
-                break;
-            default:
-                this.type = "DNE";
+    public class IngredientBuilder {
+
+        private Ingredient thisIngredient;
+
+        public Ingredient getIngredient(){
+            return thisIngredient;
         }
+
+        public void createMaltIngredient(){
+            thisIngredient.type = "Malt";
+        }
+
+        public void createHopIngredient(){
+            thisIngredient.type = "Hop";
+        }
+        public void createYeastIngredient() {
+            thisIngredient.type = "Yeast";
+        }
+
+        private void buildName(String name){
+            thisIngredient.name = name;
+        }
+
+
+        private void buildAmount(double weightInPounds){
+            thisIngredient.amount = weightInPounds;
+        }
+
+        private void buildTimeToAdd(String timing){
+            thisIngredient.timingToAdd = timing;
+        }
+
     }
 
     public String getName(){
@@ -31,8 +49,12 @@ public class Ingredient {
         return this.amount;
     }
 
+    public String getType(){
+        return this.type;
+    }
+
     public String getTimingToAdd() {
-        return this.getTimingToAdd();
+        return this.timingToAdd;
     }
 }
 

@@ -17,20 +17,20 @@ public class BeerBuilderTest {
     @Before
     public void setUpBeer(){
         beerBuilder = new Beer.BeerBuilder();
-        testMalt = new Ingredient(0);
-        secondMalt = new Ingredient(0);
-        testHop = new Ingredient(1);
-        secondHop = new Ingredient(1);
+        testMalt = new Ingredient();
+        secondMalt = new Ingredient();
+        testHop = new Ingredient();
+        secondHop = new Ingredient();
         testMalt.name = "TESTMALT";
         testHop.name = "TESTHOP";
         beerBuilder.createBeer();
         beerBuilder.buildName("test");
         beerBuilder.buildDescription("Test Description");
         beerBuilder.buildStyle("porter");
-        beerBuilder.buildMalt(testMalt);
-        beerBuilder.buildMalt(secondMalt);
-        beerBuilder.buildHop(testHop);
-        beerBuilder.buildHop(secondHop);
+        beerBuilder.addMalt(testMalt);
+        beerBuilder.addMalt(secondMalt);
+        beerBuilder.addHop(testHop);
+        beerBuilder.addHop(secondHop);
         beerBuilder.buildTime(5);
         testBeer = beerBuilder.getBeer();
     }
