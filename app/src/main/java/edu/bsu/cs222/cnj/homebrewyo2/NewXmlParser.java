@@ -22,8 +22,10 @@ public class NewXmlParser{
     public InputStream xmlData;
     public Document document;
     private NodeList recipeNodeList;
+
     private Beer.BeerBuilder beerBuilder = new Beer.BeerBuilder();
     private Beer currentBeer;
+
     public List<Beer> beerList = new ArrayList();
     private Element currentElement;
 

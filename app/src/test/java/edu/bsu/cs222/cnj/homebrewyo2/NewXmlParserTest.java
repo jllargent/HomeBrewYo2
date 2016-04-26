@@ -119,4 +119,14 @@ public class NewXmlParserTest {
         assertNotEquals(null, parser.beerList);
     }
 
+    @Test
+    public void testThatBeerHasMalt(){
+        assertNotEquals(null, recipeList.get(0).getMalts());
+    }
+
+    @Test
+    public void testMaltHasName(){
+        assertEquals("Wheat", recipeList.get(0).getMalts().get(0).getName());
+    }
+
 }
