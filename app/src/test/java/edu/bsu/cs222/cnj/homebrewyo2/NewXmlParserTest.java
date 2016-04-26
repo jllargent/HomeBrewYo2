@@ -126,7 +126,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testMaltHasName(){
-        assertEquals("Wheat", recipeList.get(0).getYeast().getName());
+        assertEquals("Wyeast 1056 - American Ale", recipeList.get(0).getYeast().getName());
     }
 
 }
