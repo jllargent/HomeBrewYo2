@@ -100,11 +100,9 @@ public class Beer implements Serializable{
         return new ArrayList<>(this.hops);
     }
 
-
     public int getTimeInMinutes(){
         return this.time;
     }
-
 
     public int getTemperatureInFahrenheit(){
         return this.temperature;
@@ -114,11 +112,9 @@ public class Beer implements Serializable{
         return this.style;
     }
 
-
     public int getFermentTemperature(){
         return this.fermentTemperature;
     }
-
 
     public double getABVPercent(){
         return this.abvPercent;
@@ -131,7 +127,6 @@ public class Beer implements Serializable{
     public int getIbuValue(){
         return this.ibuValue;
     }
-
 
     public double getTargetFinalGravity(){
         return this.targetFinalGravity;

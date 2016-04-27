@@ -23,7 +23,7 @@ public class NewXmlParserTest {
 
     @Before
     public void setUpParser() throws IOException, ParserConfigurationException, SAXException {
-        File xmlFile = new File("src/main/res/raw/beerrecipes.xml");
+        File xmlFile = new File("src/main/res/raw/testbeerrecipes.xml");
         URL input = xmlFile.toURI().toURL();
         parser = new NewXmlParser(input.openStream());
         recipeList = parser.getBeerList();
@@ -38,9 +38,6 @@ public class NewXmlParserTest {
                 System.out.println("\t\t" + recipeList.get(i).getMalts().get(x).getName());
             }
         }
-        for(int i = 0; i < recipeList.get(i).getMalts().size(); i++){
-            System.out.println(recipeList.get(1).getMalts().get(i).getName());
-        }
         assertNotEquals(null, parser.xmlData);
     }
 
@@ -51,7 +48,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testThatThereAre2Recipies(){
-        assertEquals(10, recipeList.size());
+        assertEquals(2, recipeList.size());
     }
 
     @Test
