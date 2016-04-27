@@ -4,7 +4,7 @@
     <recipe>
         <name>Bad Pixie</name>
         <description>4.7% wheat ale with crushed juniper berries and citrus peel.</description>
-        <style>Wheat Beer</style>
+        <style>Wheat</style>
         <temp>153</temp>
         <time>75</time>
         <fermtemp>66</fermtemp>
@@ -300,7 +300,7 @@
     <recipe>
         <name>The Physics</name>
         <description>Malt and hops are in perfect harmony in this incredibly balanced beer. Biscuity, bitter and packing a surprisingly hoppy punch.</description>
-        <style>Amber Ale</style>
+        <style>Ale</style>
         <temp>149</temp>
         <time>75</time>
         <fermtemp>66</fermtemp>
@@ -416,7 +416,7 @@
     <recipe>
         <name>Peroxide Punk</name>
         <description>Peroxide Punk has a depth of flavor that belies its modest ABV. Zesty, aromatic and thirst quenching.</description>
-        <style>Pale Ale</style>
+        <style>Ale</style>
         <temp>149</temp>
         <time>75</time>
         <fermtemp>66</fermtemp>
