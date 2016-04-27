@@ -472,9 +472,7 @@
     </recipe>
     <recipe>
         <name>Rabiator</name>
-        <description>Imperial Wheat beer / Weizenbock brewed by a homesick German
-            in leather trousers. Think banana bread, bubble gum and
-            David Hasselhoff.</description>
+        <description>Imperial Wheat beer / Weizenbock brewed by a homesick German in leather trousers. Think banana bread, bubble gum and David Hasselhoff.</description>
         <style>Wheat</style>
         <temp>147</temp>
         <time>60</time>
