@@ -10,6 +10,8 @@ import android.widget.ListView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class NameRecipeActivity extends AppCompatActivity {
@@ -29,6 +31,7 @@ public class NameRecipeActivity extends AppCompatActivity {
 
 
         fillListWithBeerNames();
+        sortBeerList();
         createListOfButtons();
     }
 
@@ -65,6 +68,7 @@ public class NameRecipeActivity extends AppCompatActivity {
             }
             beerNames.add(text + recipeList.get(i).getName());
         }
+
     }
 
     private void createListOfButtons(){
@@ -73,5 +77,9 @@ public class NameRecipeActivity extends AppCompatActivity {
         beerNamesListView.setClickable(true);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button, beerNames);
         beerNamesListView.setAdapter(arrayAdapter);
+    }
+
+    private void sortBeerList(){
+        Collections.sort(beerNames);
     }
 }
