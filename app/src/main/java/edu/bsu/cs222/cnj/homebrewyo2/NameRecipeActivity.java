@@ -17,12 +17,17 @@ public class NameRecipeActivity extends AppCompatActivity {
     List<Beer> recipeList;
     List<String> beerNames;
     int position;
+    String sortingTagType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_recipe_scrollable);
         Bundle bundle = getIntent().getExtras();
         recipeList = (ArrayList<Beer>) bundle.getSerializable("Recipe List");
+        sortingTagType = bundle.getString("Sorting Tag");
+
+
         fillListWithBeerNames();
         createListOfButtons();
     }
@@ -50,8 +55,15 @@ public class NameRecipeActivity extends AppCompatActivity {
 
     public void fillListWithBeerNames(){
         beerNames = new ArrayList<>();
+        String text ="";
         for (int i = 0; i < recipeList.size(); i++){
-            beerNames.add(recipeList.get(i).getName());
+            if(sortingTagType.equals("Style")){
+                text = recipeList.get(i).getStyle() + " - ";
+            }
+            if(sortingTagType.equals("Duration")){
+                text = Integer.toString(recipeList.get(i).getTimeInMinutes()) + " - " ;
+            }
+            beerNames.add(text + recipeList.get(i).getName());
         }
     }
 
