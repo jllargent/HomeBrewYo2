@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight=".25">
+        android:layout_weight=".125">
     </LinearLayout>
 
     <LinearLayout
@@ -17,17 +17,27 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:layout_weight=".5"
+        android:layout_weight=".75"
         android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView9"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
 
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="506dp"
+            android:layout_height="347dp"
             android:id="@+id/listView3"
             android:fastScrollEnabled="false"
-            android:layout_weight="1.09"
             android:clickable="false"
-            android:foregroundGravity="center" />
+            android:foregroundGravity="center"
+            android:textAlignment="center" />
 
 
     </LinearLayout>
@@ -36,7 +46,7 @@
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight=".25">
+        android:layout_weight=".125">
 
     </LinearLayout>
 </LinearLayout>

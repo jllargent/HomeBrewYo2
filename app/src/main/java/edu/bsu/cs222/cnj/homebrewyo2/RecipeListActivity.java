@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -28,9 +29,16 @@ public class RecipeListActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         recipeList = (ArrayList<Beer>) bundle.getSerializable("Recipe List");
         sortingTagType = bundle.getString("Sorting Tag");
+        createTitleOfPage();
         fillListWithBeerNames();
         sortBeerList();
         createListOfButtons();
+    }
+
+    private void createTitleOfPage(){
+        TextView sortingTitle = (TextView) findViewById(R.id.textView9);
+        assert sortingTitle != null;
+        sortingTitle.setText(sortingTagType);
     }
 
     public void goBeerRecipe(View view){
