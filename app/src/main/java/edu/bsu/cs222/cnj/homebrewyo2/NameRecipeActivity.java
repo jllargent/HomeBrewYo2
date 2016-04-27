@@ -10,16 +10,16 @@ import android.widget.ListView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 public class NameRecipeActivity extends AppCompatActivity {
 
     List<Beer> recipeList;
-    List<String> beerNames;
+    List<String> beerNamesWithTags;
     int position;
     String sortingTagType;
+    String tag ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,6 @@ public class NameRecipeActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         recipeList = (ArrayList<Beer>) bundle.getSerializable("Recipe List");
         sortingTagType = bundle.getString("Sorting Tag");
-
-
         fillListWithBeerNames();
         sortBeerList();
         createListOfButtons();
@@ -48,38 +46,59 @@ public class NameRecipeActivity extends AppCompatActivity {
     private void findButtonPosition(View view) {
         Button button = (Button) view;
         String clickedName = button.getText().toString();
-        for(int i = 0; i < beerNames.size(); i++){
-            if(clickedName.equalsIgnoreCase(beerNames.get(i))){
+        clickedName = clickedName.replace("","");
+        int i =0;
+        do{
+            if (clickedName.endsWith(recipeList.get(i).getName())){
                 position = i;
                 break;
             }
-        }
+            i++;
+        }while( i < recipeList.size());
     }
 
     public void fillListWithBeerNames(){
-        beerNames = new ArrayList<>();
-        String text ="";
+        beerNamesWithTags = new ArrayList<>();
         for (int i = 0; i < recipeList.size(); i++){
-            if(sortingTagType.equals("Style")){
-                text = recipeList.get(i).getStyle() + " - ";
-            }
-            if(sortingTagType.equals("Duration")){
-                text = Integer.toString(recipeList.get(i).getTimeInMinutes()) + " - " ;
-            }
-            beerNames.add(text + recipeList.get(i).getName());
+            addStyleTagIfNeeded(i);
+            addDurationTagIfNeeded(i);
+            addIBUValueTagIfNeeded(i);
+            addABVTagIfNeeded(i);
+            beerNamesWithTags.add(tag + recipeList.get(i).getName());
         }
 
+    }
+
+    private void addStyleTagIfNeeded(int index){
+        if(sortingTagType.equals("Style")){
+            tag = recipeList.get(index).getStyle() + " | ";
+        }
+    }
+    private void addDurationTagIfNeeded(int index){
+        if(sortingTagType.equals("Duration In Minutes")){
+            tag = Integer.toString(recipeList.get(index).getTimeInMinutes()) + "mins | " ;
+        }
+    }
+    private void addIBUValueTagIfNeeded(int index){
+        if(sortingTagType.equals("IBU Value")){
+            tag = "IBU:" + Integer.toString(recipeList.get(index).getIbuValue()) + " | " ;
+        }
+    }
+    private void addABVTagIfNeeded(int index){
+        if(sortingTagType.equals("ABV Percent")){
+            tag = "ABV:" + Double.toString(recipeList.get(index).getABVPercent()) + "% | " ;
+        }
     }
 
     private void createListOfButtons(){
         ListView beerNamesListView = (ListView) findViewById(R.id.listView3);
         assert beerNamesListView != null;
         beerNamesListView.setClickable(true);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button, beerNames);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button, beerNamesWithTags);
         beerNamesListView.setAdapter(arrayAdapter);
     }
 
     private void sortBeerList(){
-        Collections.sort(beerNames);
+        Collections.sort(beerNamesWithTags);
     }
 }
