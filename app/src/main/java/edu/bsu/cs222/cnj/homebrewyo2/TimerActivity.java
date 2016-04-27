@@ -96,7 +96,7 @@ public class TimerActivity extends AppCompatActivity {
 
         for( int i =0; i < listOfHopIngredients.size(); i++){
             String s = listOfHopIngredients.get(i).getName();
-            s += " | " + listOfHopIngredients.get(i).getAmount();
+            s += " | " + listOfHopIngredients.get(i).getAmount() + "g";
             s += " | " + listOfHopIngredients.get(i).getTimingToAdd();
             detailedIngredientList.add(s);
         }
