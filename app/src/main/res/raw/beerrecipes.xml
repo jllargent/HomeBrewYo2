@@ -300,7 +300,7 @@
     <recipe>
         <name>The Physics</name>
         <description>Malt and hops are in perfect harmony in this incredibly balanced beer. Biscuity, bitter and packing a surprisingly hoppy punch.</description>
-        <style>Ale</style>
+        <style>Ale Amber</style>
         <temp>149</temp>
         <time>75</time>
         <fermtemp>66</fermtemp>
@@ -416,7 +416,7 @@
     <recipe>
         <name>Peroxide Punk</name>
         <description>Peroxide Punk has a depth of flavor that belies its modest ABV. Zesty, aromatic and thirst quenching.</description>
-        <style>Ale</style>
+        <style>Ale Pale</style>
         <temp>149</temp>
         <time>75</time>
         <fermtemp>66</fermtemp>
