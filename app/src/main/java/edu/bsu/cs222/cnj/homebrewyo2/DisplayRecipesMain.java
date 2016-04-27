@@ -24,7 +24,7 @@ public class DisplayRecipesMain extends AppCompatActivity {
     }
 
     public void goRecipeList(View view){
-        Intent recipeNameIntent = new Intent(this, NameRecipeActivity.class);
+        Intent recipeNameIntent = new Intent(this, RecipeListActivity.class);
         findSortingType(view);
         Bundle bundle = new Bundle();
         bundle.putSerializable("Recipe List", (Serializable) recipeList);

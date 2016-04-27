@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class NameRecipeActivity extends AppCompatActivity {
+public class RecipeListActivity extends AppCompatActivity {
 
     List<Beer> recipeList;
     List<String> beerNamesWithTags;
