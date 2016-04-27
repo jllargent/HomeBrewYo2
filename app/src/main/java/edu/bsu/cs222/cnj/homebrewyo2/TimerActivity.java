@@ -37,17 +37,22 @@ public class TimerActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(isCurrentButtonTitle("RESUME")){
                     decrement = new Counter(time);
+                    decrement.start();
                     buttonStart.setText("RESTART");
                 }
                 else if(isCurrentButtonTitle("RESTART")) {
                     decrement.cancel();
                     time.setCurrentTime(time.getInitialTime());
                     decrement = new Counter(time);
+                    decrement.cancel();
+                    buttonStart.setText("START");
+                }
+                else if(isCurrentButtonTitle("START")){
+                    decrement.start();
+                    buttonStart.setText("RESTART");
                 }
                 decrement.setActContext(TimerActivity.this);
                 decrement.setViewTime(textViewTime);
-                decrement.start();
-                buttonStart.setText("RESTART");
             }
         });
 
