@@ -36,7 +36,7 @@ public class RecipeListActivity extends AppCompatActivity {
     }
 
     private void createTitleOfPage(){
-        TextView sortingTitle = (TextView) findViewById(R.id.textView9);
+        TextView sortingTitle = (TextView) findViewById(R.id.textView);
         assert sortingTitle != null;
         sortingTitle.setText(sortingTagType);
     }
@@ -99,7 +99,7 @@ public class RecipeListActivity extends AppCompatActivity {
     }
 
     private void createListOfButtons(){
-        ListView beerNamesListView = (ListView) findViewById(R.id.listView3);
+        ListView beerNamesListView = (ListView) findViewById(R.id.listView);
         assert beerNamesListView != null;
         beerNamesListView.setClickable(true);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.name_listview, R.id.button, beerNamesWithTags);
