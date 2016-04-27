@@ -3,7 +3,6 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,7 +14,6 @@ import java.util.List;
 
 public class NameRecipeActivity extends AppCompatActivity {
 
-    Intent intent = getIntent();
     List<Beer> recipeList;
     List<String> beerNames;
     int position;
@@ -25,7 +23,6 @@ public class NameRecipeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_name_recipe_scrollable);
         Bundle bundle = getIntent().getExtras();
         recipeList = (ArrayList<Beer>) bundle.getSerializable("Recipe List");
-        Log.i("Array List", recipeList.toString());
         fillListWithBeerNames();
         createListOfButtons();
     }
@@ -55,7 +52,6 @@ public class NameRecipeActivity extends AppCompatActivity {
         beerNames = new ArrayList<>();
         for (int i = 0; i < recipeList.size(); i++){
             beerNames.add(recipeList.get(i).getName());
-            Log.i("you got beer", beerNames.get(i));
         }
     }
 

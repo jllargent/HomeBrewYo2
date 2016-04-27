@@ -3,7 +3,6 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -24,7 +23,6 @@ public class RecipePage extends AppCompatActivity {
         setContentView(R.layout.activity_recipe);
         Bundle bundle = getIntent().getExtras();
         recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
-        Log.i("from main recipe page", recipeList.toString());
         positionInRecipeIndex = bundle.getInt("recipePosition");
         fillUIInformation(positionInRecipeIndex);
     }
