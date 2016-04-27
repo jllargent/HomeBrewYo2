@@ -10,5 +10,9 @@
         android:id="@+id/button"
         android:layout_gravity="center_horizontal"
         android:clickable="true"
-        android:onClick="goBeerRecipe" />
+        android:onClick="goBeerRecipe"
+        android:backgroundTint="#d3af60"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:width="300dp" />
 </LinearLayout>
