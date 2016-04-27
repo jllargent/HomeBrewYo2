@@ -79,6 +79,10 @@ public class RecipePage extends AppCompatActivity {
         int timerLength = currentRecipe.getTimeInMinutes() * 60;
         Intent timerIntent = new Intent(this, TimerActivity.class);
         Bundle bundle = new Bundle();
+
+        bundle.putInt("recipePosition", positionInRecipeIndex);
+        bundle.putSerializable("Recipe List", (Serializable) recipeList);
+
         bundle.putInt("timerLength", timerLength);
         timerIntent.putExtras(bundle);
         startActivity(timerIntent);

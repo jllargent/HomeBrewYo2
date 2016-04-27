@@ -18,10 +18,10 @@ public class IngredientsPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ingredients);Bundle bundle = getIntent().getExtras();
+        setContentView(R.layout.activity_ingredients);
+        Bundle bundle = getIntent().getExtras();
         recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
         int positionInRecipeIndex = bundle.getInt("recipePosition");
-
         currentRecipe = recipeList.get(positionInRecipeIndex);
 
         fillMaltUiInfo();

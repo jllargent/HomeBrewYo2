@@ -3,8 +3,13 @@ package edu.bsu.cs222.cnj.homebrewyo2;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TimerActivity extends AppCompatActivity {
 
@@ -14,6 +19,8 @@ public class TimerActivity extends AppCompatActivity {
     private Button buttonStart;
     private Button buttonStop;
     long countDownInterval = 1000;
+    private List<Beer> recipeList;
+    private Beer currentRecipe;
 
     public TimerActivity(){
     }
@@ -65,9 +72,15 @@ public class TimerActivity extends AppCompatActivity {
     public void setUpTimerForCurrentBeer(){
         setContentView(R.layout.activity_timer);
         Bundle bundle = getIntent().getExtras();
+        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        int positionInRecipeIndex = bundle.getInt("recipePosition");
+
+        currentRecipe = recipeList.get(positionInRecipeIndex);
+
         time.setInitialTime(bundle.getInt("timerLength") * 1000);
         time.setCountDownInterval(countDownInterval);
         time.setCurrentTime(time.getInitialTime());
+        fillHopUiInfo();
         decrement = new Counter(time);
     }
     public void setUpPage(){
@@ -76,5 +89,22 @@ public class TimerActivity extends AppCompatActivity {
         textViewTime = (TextView) findViewById(R.id.timer1);
         decrement.setViewTime(textViewTime);
         buttonStart.setText("START");
+    }
+    public void fillHopUiInfo(){
+        List<Ingredient> listOfHopIngredients = currentRecipe.getHops();
+        ArrayList<String> detailedIngredientList = new ArrayList<>();
+
+        for( int i =0; i < listOfHopIngredients.size(); i++){
+            String s = listOfHopIngredients.get(i).getName();
+            s += " | " + listOfHopIngredients.get(i).getAmount();
+            s += " | " + listOfHopIngredients.get(i).getTimingToAdd();
+            detailedIngredientList.add(s);
+        }
+
+        ListView listviewMalts = (ListView) findViewById(R.id.listView3);
+        assert listviewMalts != null;
+        listviewMalts.setClickable(true);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview_layout, R.id.checkBox, detailedIngredientList);
+        listviewMalts.setAdapter(arrayAdapter);
     }
 }

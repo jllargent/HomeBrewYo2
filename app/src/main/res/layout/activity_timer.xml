@@ -43,4 +43,30 @@
         android:layout_alignParentRight="true"
         android:layout_below="@id/timer1"
         android:text="@string/stopTimer"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnStart"
+        android:layout_toEndOf="@+id/btnStart"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hops To Add At Time:"
+            android:id="@+id/textView9"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"
+            android:textColor="#000000" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView3"
+            android:layout_gravity="left"
+            android:foregroundGravity="left" />
+    </LinearLayout>
 </RelativeLayout>
