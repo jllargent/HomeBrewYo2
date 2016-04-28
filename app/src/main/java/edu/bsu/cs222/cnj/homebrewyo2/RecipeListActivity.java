@@ -25,10 +25,8 @@ public class RecipeListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_name_recipe_scrollable);
-        Bundle bundle = getIntent().getExtras();
-        recipeList = (ArrayList<BeerRecipe>) bundle.getSerializable("Recipe List");
-        sortingTagType = bundle.getString("Sorting Tag");
+        createPageLayout();
+        unpackBundle();
         createTitleOfPage();
         fillListWithBeerNames();
         sortBeerList();
@@ -45,8 +43,7 @@ public class RecipeListActivity extends AppCompatActivity {
         Intent recipeStyleIntent = new Intent(this, RecipePage.class);
         Bundle bundle = new Bundle();
         findButtonPosition(view);
-        bundle.putInt("recipePosition", position);
-        bundle.putSerializable("Recipe List", (Serializable) recipeList);
+        placeInfoInBundle(bundle);
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
@@ -74,7 +71,6 @@ public class RecipeListActivity extends AppCompatActivity {
             addABVTagIfNeeded(i);
             beerNamesWithTags.add(tag + recipeList.get(i).getName());
         }
-
     }
 
     private void addStyleTagIfNeeded(int index){
@@ -108,5 +104,20 @@ public class RecipeListActivity extends AppCompatActivity {
 
     private void sortBeerList(){
         Collections.sort(beerNamesWithTags);
+    }
+
+    private void unpackBundle(){
+        Bundle bundle = getIntent().getExtras();
+        recipeList = (ArrayList<BeerRecipe>) bundle.getSerializable("Recipe List");
+        sortingTagType = bundle.getString("Sorting Tag");
+    }
+
+    private void placeInfoInBundle(Bundle bundle){
+        bundle.putInt("recipePosition", position);
+        bundle.putSerializable("Recipe List", (Serializable) recipeList);
+    }
+
+    private void createPageLayout(){
+        setContentView(R.layout.activity_name_recipe_scrollable);
     }
 }
