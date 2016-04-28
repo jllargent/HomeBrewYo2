@@ -580,13 +580,54 @@
 		</hops>
 		<yeast>Wyeast 1272 - American Ale II</yeast>
     <picture>@drawable/riptide</picture>
-</recipe>
-
-
-
-
-
-
-
-
+    </recipe>
+    <recipe>
+        <name>Example Beer</name>
+        <description>It's such a great beer that it'll make your head spin. Believe me. This beer's a winner.</description>
+        <style>CS222</style>
+        <temp>400</temp>
+        <time>1</time>
+        <fermtemp>68</fermtemp>
+        <abvpercent>8</abvpercent>
+        <ibu>45</ibu>
+        <targetfg>1014</targetfg>
+        <targetog>1075</targetog>
+        <malts>
+            <maltIngredient>
+                <maltName>Worst Day Ever</maltName>
+                <maltAmount>364.5</maltAmount>
+            </maltIngredient>
+            <maltIngredient>
+                <maltName>Dark Crystal 350-400</maltName>
+                <maltAmount>1.6</maltAmount>
+            </maltIngredient>
+            <maltIngredient>
+                <maltName>Carafa Special Malt Type 3</maltName>
+                <maltAmount>0.4</maltAmount>
+            </maltIngredient>
+            <maltIngredient>
+                <maltName>Caramalt</maltName>
+                <maltAmount>1.2</maltAmount>
+            </maltIngredient>
+        </malts>
+        <hops>
+            <hopIngredient>
+                <hopName>Something</hopName>
+                <hopAmount>14.3</hopAmount>
+                <hopTime>Start</hopTime>
+            </hopIngredient>
+            <hopIngredient>
+                <hopName>Doomslayer</hopName>
+                <hopAmount>11.11</hopAmount>
+                <hopTime>Middle</hopTime>
+            </hopIngredient>
+            <hopIngredient>
+                <hopName>Kakarot</hopName>
+                <hopAmount>9000.1</hopAmount>
+                <hopTime>End</hopTime>
+            </hopIngredient>
+        </hops>
+        <yeast>Yeasty Yeast McYeasterson</yeast>
+        <picture>@drawable/riptide</picture>
+    </recipe>
 </resources>
