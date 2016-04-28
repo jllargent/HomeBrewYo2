@@ -15,11 +15,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayRecipesMain" />
-        <activity android:name=".TimerActivity" />
-        <activity android:name=".RecipeListActivity" />
-        <activity android:name=".RecipePage" />
-        <activity android:name=".IngredientsPage" />
+        <activity
+            android:name=".DisplayRecipesMain"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".TimerActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".RecipeListActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".RecipePage"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".IngredientsPage"
+            android:launchMode="singleTask"/>
     </application>
 
 </manifest>
