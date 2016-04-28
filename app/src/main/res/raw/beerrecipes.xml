@@ -622,8 +622,23 @@
                 <hopTime>Middle</hopTime>
             </hopIngredient>
             <hopIngredient>
+                <hopName>HumanCorpse</hopName>
+                <hopAmount>5000.11</hopAmount>
+                <hopTime>Middle</hopTime>
+            </hopIngredient>
+            <hopIngredient>
+                <hopName>PapaRoach</hopName>
+                <hopAmount>69.69</hopAmount>
+                <hopTime>Middle</hopTime>
+            </hopIngredient>
+            <hopIngredient>
                 <hopName>Kakarot</hopName>
                 <hopAmount>9000.1</hopAmount>
+                <hopTime>End</hopTime>
+            </hopIngredient>
+            <hopIngredient>
+                <hopName>Jon</hopName>
+                <hopAmount>2.4</hopAmount>
                 <hopTime>End</hopTime>
             </hopIngredient>
         </hops>

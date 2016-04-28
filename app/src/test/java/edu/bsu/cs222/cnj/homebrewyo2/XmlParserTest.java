@@ -40,11 +40,6 @@ public class XmlParserTest {
     }
 
     @Test
-    public void testBuilderExist(){
-        assertNotEquals(null, parser.document);
-    }
-
-    @Test
     public void testThatThereAre2Recipies(){
         assertEquals(2, recipeList.size());
     }
@@ -91,7 +86,7 @@ public class XmlParserTest {
 
     @Test
     public void testBadPixieStyle(){
-        assertEquals("Wheat Beer", recipeList.get(0).getStyle());
+        assertEquals("Wheat", recipeList.get(0).getStyle());
     }
 
     @Test
