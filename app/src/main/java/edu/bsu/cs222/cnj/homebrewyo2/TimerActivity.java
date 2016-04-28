@@ -114,14 +114,12 @@ public class TimerActivity extends AppCompatActivity {
     public void fillHopUiInfo(){
         List<Ingredient> listOfHopIngredients = currentRecipe.getHops();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
-
         for( int i =0; i < listOfHopIngredients.size(); i++){
             String s = listOfHopIngredients.get(i).getName();
             s += " | " + listOfHopIngredients.get(i).getAmount() + "g";
             s += " | " + listOfHopIngredients.get(i).getTimingToAdd();
             detailedIngredientList.add(s);
         }
-
         ListView listviewMalts = (ListView) findViewById(R.id.listView3);
         assert listviewMalts != null;
         listviewMalts.setClickable(true);

@@ -171,7 +171,8 @@
                 android:text="@string/setTimer"
                 android:onClick="goTimer"
                 android:layout_below="@+id/fGravityText"
-                android:layout_alignEnd="@+id/timeTitle" />
+                android:layout_alignEnd="@+id/timeTitle"
+                android:background="#d3af60" />
 
         </RelativeLayout>
     </ScrollView>
