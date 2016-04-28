@@ -7,7 +7,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,9 +17,7 @@ public class TimerActivity extends AppCompatActivity {
     private Counter decrement;
     private Button buttonStart;
     private Button buttonStop;
-    private long countDownInterval = 1000;
     private BeerRecipe currentRecipe;
-    private int timerLength;
 
     public TimerActivity(){
     }
@@ -35,13 +32,11 @@ public class TimerActivity extends AppCompatActivity {
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isCurrentButtonTitle("START")){
+                if (isCurrentButtonTitle("START")) {
                     startTicking();
-                }
-                else if(isCurrentButtonTitle("RESUME")){
+                } else if (isCurrentButtonTitle("RESUME")) {
                     resumeTicking();
-                }
-                else if(isCurrentButtonTitle("RESTART")) {
+                } else if (isCurrentButtonTitle("RESTART")) {
                     restartTimerToInitialTime();
                 }
                 decrement.setActContext(TimerActivity.this);
@@ -59,14 +54,14 @@ public class TimerActivity extends AppCompatActivity {
 
     private void startTicking(){
             decrement.start();
-            buttonStart.setText("RESTART");
+            buttonStart.setText(R.string.restartTimer);
     }
 
     private void resumeTicking(){
         if(isCurrentButtonTitle("RESUME")){
             decrement = new Counter(time);
             decrement.start();
-            buttonStart.setText("RESTART");
+            buttonStart.setText(R.string.restartTimer);
         }
     }
 
@@ -75,13 +70,13 @@ public class TimerActivity extends AppCompatActivity {
             time.setCurrentTime(time.getInitialTime());
             decrement = new Counter(time);
             decrement.cancel();
-            buttonStart.setText("START");
+            buttonStart.setText(R.string.startTimer);
     }
 
     private void pauseTimer(){
         decrement.cancel();
         time.setCurrentTime(decrement.getMilliSecondsLeft());
-        buttonStart.setText("RESUME");
+        buttonStart.setText(R.string.resumeTimer);
     }
 
     private boolean isCurrentButtonTitle(String titleOfButton){
@@ -90,11 +85,12 @@ public class TimerActivity extends AppCompatActivity {
 
     public void setUpTimerForCurrentBeer(){
         Bundle bundle = getIntent().getExtras();
+        final int countDownInterval = 1000;
 
         currentRecipe = (BeerRecipe) bundle.getSerializable("Current Recipe");
         TextView descriptionTextView = (TextView) findViewById(R.id.beerTitle);
         assert descriptionTextView != null;
-        timerLength = currentRecipe.getTimeInMinutes() * 60;
+        int timerLength = currentRecipe.getTimeInMinutes() * 60;
         descriptionTextView.setText(currentRecipe.getName());
 
         time.setInitialTime(timerLength * 1000);
@@ -114,12 +110,14 @@ public class TimerActivity extends AppCompatActivity {
     public void fillHopUiInfo(){
         List<Ingredient> listOfHopIngredients = currentRecipe.getHops();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
+
         for( int i =0; i < listOfHopIngredients.size(); i++){
             String s = listOfHopIngredients.get(i).getName();
             s += " | " + listOfHopIngredients.get(i).getAmount() + "g";
             s += " | " + listOfHopIngredients.get(i).getTimingToAdd();
             detailedIngredientList.add(s);
         }
+
         ListView listviewMalts = (ListView) findViewById(R.id.hopList);
         assert listviewMalts != null;
         listviewMalts.setClickable(true);
@@ -130,5 +128,4 @@ public class TimerActivity extends AppCompatActivity {
     private void createPageLayout(){
         setContentView(R.layout.activity_timer);
     }
-
 }
