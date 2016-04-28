@@ -17,13 +17,25 @@ import javax.xml.parsers.ParserConfigurationException;
 
 public class XmlParser {
     private final String RECIPE_TAG = "recipe";
+    private final String NAME_TAG = "name";
+    private final String STYLE_TAG = "style";
+    private final String DESCRIPTION_TAG = "description";
+    private final String TIME_TAG = "time";
+    private final String TEMPERATURE_TAG = "temp";
+    private final String FERMENT_TAG = "fermtemp";
+    private final String IBU_TAG = "ibu";
+    private final String ABV_TAG = "abvpercent";
+    private final String ORGINAL_GRAVITY_TAG = "targetog";
+    private final String FINAL_GRAVITY_TAG = "targetfg";
+    private final String MALT_TAG = "malt";
+    private final String HOP_TAG = "hop";
+    private final String YEAST_TAG = "yeast";
+
     public InputStream xmlData;
-    public Document document;
+    public List<BeerRecipe> beerRecipeList = new ArrayList<>();
     private NodeList recipeNodeList;
     private BeerRecipe.BeerBuilder beerBuilder = new BeerRecipe.BeerBuilder();
-    private BeerRecipe currentBeerRecipe;
     private Ingredient.IngredientBuilder ingredientBuilder = new Ingredient.IngredientBuilder();
-    public List<BeerRecipe> beerRecipeList = new ArrayList();
     private Element currentElement;
     private Ingredient currentIngredient;
     private int i = 0;
@@ -41,18 +53,15 @@ public class XmlParser {
             beerBuilder.createBeer();
             parseBeerInformation();
             parseIngredientInformation();
-            currentBeerRecipe = beerBuilder.getBeer();
+            BeerRecipe currentBeerRecipe = beerBuilder.getBeer();
             beerRecipeList.add(currentBeerRecipe);
         }
     }
 
     private void parseIngredientInformation() {
-        ingredientBuilder.createIngredient();
-        ingredientBuilder.buildName(getElementStringValueByTag("yeast"));
-        currentIngredient = ingredientBuilder.getIngredient();
-        beerBuilder.buildYeast(currentIngredient);
-        createIngredientStoreInRecipe("malt");
-        createIngredientStoreInRecipe("hop");
+        parseYeastIngredient();
+        createIngredientStoreInRecipe(MALT_TAG);
+        createIngredientStoreInRecipe(HOP_TAG);
     }
 
     private void parseBeerInformation() {
@@ -68,40 +77,40 @@ public class XmlParser {
     }
 
     private void parseGravityValues() {
-        beerBuilder.buildTargetOriginalGravity(getElementDoubleValueByTag("targetog"));
-        beerBuilder.buildTargetFinalGravity(getElementDoubleValueByTag("targetfg"));
+        beerBuilder.buildTargetOriginalGravity(getElementDoubleValueByTag(ORGINAL_GRAVITY_TAG));
+        beerBuilder.buildTargetFinalGravity(getElementDoubleValueByTag(FINAL_GRAVITY_TAG));
     }
 
     private void parseABV() {
-        beerBuilder.buildABVPercent(getElementDoubleValueByTag("abvpercent"));
+        beerBuilder.buildABVPercent(getElementDoubleValueByTag(ABV_TAG));
     }
 
     private void parseIBU(){
-        beerBuilder.buildIBUValue(getElementIntValueByTag("ibu"));
+        beerBuilder.buildIBUValue(getElementIntValueByTag(IBU_TAG));
     }
 
     private void parseStyle() {
-        beerBuilder.buildStyle(getElementStringValueByTag("style"));
+        beerBuilder.buildStyle(getElementStringValueByTag(STYLE_TAG));
     }
 
     private void parseFermentingTemperature(){
-        beerBuilder.buildFermentTemp(getElementIntValueByTag("fermtemp"));
+        beerBuilder.buildFermentTemp(getElementIntValueByTag(FERMENT_TAG));
     }
 
     private void parseTemperature() {
-        beerBuilder.buildTime(getElementIntValueByTag("time"));
+        beerBuilder.buildTime(getElementIntValueByTag(TIME_TAG));
     }
 
     private void parseTime(){
-        beerBuilder.buildTemp(getElementIntValueByTag("temp"));
+        beerBuilder.buildTemp(getElementIntValueByTag(TEMPERATURE_TAG));
     }
 
     private void parseName() {
-        beerBuilder.buildName(getElementStringValueByTag("name"));
+        beerBuilder.buildName(getElementStringValueByTag(NAME_TAG));
     }
 
     private void parseDescription(){
-        beerBuilder.buildDescription(getElementStringValueByTag("description"));
+        beerBuilder.buildDescription(getElementStringValueByTag(DESCRIPTION_TAG));
     }
 
     public List<BeerRecipe> getBeerRecipeList(){
@@ -123,7 +132,7 @@ public class XmlParser {
     private void createXMLParser()throws IOException, SAXException, ParserConfigurationException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        document = builder.parse(xmlData);
+        Document document = builder.parse(xmlData);
         document.getDocumentElement().normalize();
         recipeNodeList = document.getElementsByTagName(RECIPE_TAG);
     }
@@ -145,17 +154,24 @@ public class XmlParser {
     }
 
     private void ifHopIngredient(String typeOfIngredient){
-        if(typeOfIngredient.equals("hop")) {
+        if(typeOfIngredient.equals(HOP_TAG)) {
             ingredientBuilder.buildTimeToAdd(getElementStringValueByTag(typeOfIngredient + "Time"));
             currentIngredient = ingredientBuilder.getIngredient();
             beerBuilder.addHop(currentIngredient);
         }
     }
     private void ifMaltIngredient(String typeOfIngredient){
-        if(typeOfIngredient.equals("malt")){
+        if(typeOfIngredient.equals(MALT_TAG)){
             currentIngredient = ingredientBuilder.getIngredient();
             beerBuilder.addMalt(currentIngredient);
         }
+    }
+
+    private void parseYeastIngredient(){
+        ingredientBuilder.createIngredient();
+        ingredientBuilder.buildName(getElementStringValueByTag(YEAST_TAG));
+        currentIngredient = ingredientBuilder.getIngredient();
+        beerBuilder.buildYeast(currentIngredient);
     }
 }
 
