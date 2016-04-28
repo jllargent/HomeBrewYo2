@@ -81,6 +81,9 @@ public class TimerActivity extends AppCompatActivity {
         int positionInRecipeIndex = bundle.getInt("recipePosition");
 
         currentRecipe = recipeList.get(positionInRecipeIndex);
+        TextView descriptionTextView = (TextView) findViewById(R.id.textView10);
+        assert descriptionTextView != null;
+        descriptionTextView.setText(recipeList.get(positionInRecipeIndex).getName());
 
         time.setInitialTime(bundle.getInt("timerLength") * 1000);
         time.setCountDownInterval(countDownInterval);
