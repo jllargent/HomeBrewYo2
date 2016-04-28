@@ -35,24 +35,9 @@ public class TimerActivity extends AppCompatActivity {
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isCurrentButtonTitle("RESUME")){
-                    decrement = new Counter(time);
-                    decrement.start();
-                    buttonStart.setText("RESTART");
-                }
-                else if(isCurrentButtonTitle("RESTART")) {
-                    decrement.cancel();
-                    time.setCurrentTime(time.getInitialTime());
-                    decrement = new Counter(time);
-                    decrement.cancel();
-                    buttonStart.setText("START");
-                }
-                else if(isCurrentButtonTitle("START")){
-                    decrement.start();
-                    buttonStart.setText("RESTART");
-                }
-                decrement.setActContext(TimerActivity.this);
-                decrement.setViewTime(textViewTime);
+                ifButtonIsStartChangeToRestart();
+                ifButtonisResumeChangeToRestart();
+                ifButtonisRestartChangeToStart();
             }
         });
 
@@ -66,6 +51,28 @@ public class TimerActivity extends AppCompatActivity {
         });
     }
 
+    private void ifButtonIsStartChangeToRestart(){
+        if(isCurrentButtonTitle("START")){
+            decrement.start();
+            buttonStart.setText("RESTART");
+        }
+    }
+    private void ifButtonisResumeChangeToRestart(){
+        if(isCurrentButtonTitle("RESUME")){
+            decrement = new Counter(time);
+            decrement.start();
+            buttonStart.setText("RESTART");
+        }
+    }
+    private void ifButtonisRestartChangeToStart(){
+        if(isCurrentButtonTitle("RESTART")) {
+            decrement.cancel();
+            time.setCurrentTime(time.getInitialTime());
+            decrement = new Counter(time);
+            decrement.cancel();
+            buttonStart.setText("START");
+        }
+    }
     public TextView getTimerText(){
         return textViewTime;
     }
@@ -96,7 +103,6 @@ public class TimerActivity extends AppCompatActivity {
         buttonStop = (Button) findViewById(R.id.btnStop);
         textViewTime = (TextView) findViewById(R.id.timer1);
         decrement.setViewTime(textViewTime);
-        buttonStart.setText("START");
     }
     public void fillHopUiInfo(){
         List<Ingredient> listOfHopIngredients = currentRecipe.getHops();
@@ -115,4 +121,5 @@ public class TimerActivity extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview_layout, R.id.checkBox, detailedIngredientList);
         listviewMalts.setAdapter(arrayAdapter);
     }
+
 }
