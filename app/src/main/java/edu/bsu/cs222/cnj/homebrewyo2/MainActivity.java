@@ -15,7 +15,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 public class MainActivity extends AppCompatActivity {
 
-    NewXmlParser parser;
+    XmlParser parser;
     ArrayList<BeerRecipe> recipeList = new ArrayList<>();
 
     @Override
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private void runParser() throws IOException, ParserConfigurationException, SAXException {
         ClassLoader classLoader = this.getClass().getClassLoader();
         InputStream resource = classLoader.getResourceAsStream("res/raw/beerrecipes.xml");
-        parser = new NewXmlParser(resource);
+        parser = new XmlParser(resource);
     }
 
 

@@ -14,10 +14,10 @@ import javax.xml.parsers.ParserConfigurationException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-public class NewXmlParserTest {
+public class XmlParserTest {
 
 
-    NewXmlParser parser;
+    XmlParser parser;
     List<BeerRecipe> recipeList;
 
 
@@ -25,7 +25,7 @@ public class NewXmlParserTest {
     public void setUpParser() throws IOException, ParserConfigurationException, SAXException {
         File xmlFile = new File("src/main/res/raw/testbeerrecipes.xml");
         URL input = xmlFile.toURI().toURL();
-        parser = new NewXmlParser(input.openStream());
+        parser = new XmlParser(input.openStream());
         recipeList = parser.getBeerRecipeList();
 
     }

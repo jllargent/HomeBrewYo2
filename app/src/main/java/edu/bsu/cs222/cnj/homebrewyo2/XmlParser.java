@@ -15,7 +15,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-public class NewXmlParser{
+public class XmlParser {
 
     private final String RECIPE_TAG = "recipe";
 
@@ -33,7 +33,7 @@ public class NewXmlParser{
     public List<BeerRecipe> beerRecipeList = new ArrayList();
     private Element currentElement;
 
-    public NewXmlParser(InputStream input) throws IOException, SAXException, ParserConfigurationException {
+    public XmlParser(InputStream input) throws IOException, SAXException, ParserConfigurationException {
         this.xmlData = input;
         createXMLParser();
         for(int temp = 0; temp < recipeNodeList.getLength(); temp++){
