@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void goTimers(View view){
         Intent timerIntent = new Intent(this, TimerActivity.class);
         Bundle timerBundle = new Bundle();
-        timerBundle.putSerializable("Current Recipe", recipeList.get(0));
+        timerBundle.putSerializable("Current Recipe", recipeList.get(10));
         timerIntent.putExtras(timerBundle);
         startActivity(timerIntent);
     }
