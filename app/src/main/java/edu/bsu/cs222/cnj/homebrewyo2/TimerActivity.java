@@ -19,9 +19,9 @@ public class TimerActivity extends AppCompatActivity {
     private Button buttonStart;
     private Button buttonStop;
     long countDownInterval = 1000;
-    private List<Beer> recipeList;
     private Beer currentRecipe;
 
+    int timerLength;
     public TimerActivity(){
     }
 
@@ -96,9 +96,10 @@ public class TimerActivity extends AppCompatActivity {
         currentRecipe = (Beer) bundle.getSerializable("Current Recipe");
         TextView descriptionTextView = (TextView) findViewById(R.id.textView10);
         assert descriptionTextView != null;
+        timerLength = currentRecipe.getTimeInMinutes() * 60;
         descriptionTextView.setText(currentRecipe.getName());
 
-        time.setInitialTime(bundle.getInt("timerLength") * 1000);
+        time.setInitialTime(timerLength * 1000);
         time.setCountDownInterval(countDownInterval);
         time.setCurrentTime(time.getInitialTime());
         fillHopUiInfo();

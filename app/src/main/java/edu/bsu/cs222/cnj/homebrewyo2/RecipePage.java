@@ -6,33 +6,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class RecipePage extends AppCompatActivity {
 
     private int positionInRecipeIndex;
-
-
-    List<Beer> recipeList = new ArrayList<>();
-    Beer currentBeer;
+    private List<Beer> recipeList = new ArrayList<>();
+    private Beer currentRecipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
-        Bundle bundle = getIntent().getExtras();
-        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
-        positionInRecipeIndex = bundle.getInt("recipePosition");
-        currentBeer = recipeList.get(positionInRecipeIndex);
+        createCurrentRecipe();
         fillUIInformation();
     }
 
     public void goIngredients(View view){
         Intent recipeStyleIntent = new Intent(this, IngredientsPage.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("Current Recipe", currentBeer);
+        bundle.putSerializable("Current Recipe", currentRecipe);
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
@@ -43,50 +37,52 @@ public class RecipePage extends AppCompatActivity {
         setContentView(R.layout.activity_recipe);
         TextView nameTextView = (TextView) findViewById(R.id.textView16);
         assert nameTextView != null;
-        nameTextView.setText(currentBeer.getName());
+        nameTextView.setText(currentRecipe.getName());
 
         TextView descriptionTextView = (TextView) findViewById(R.id.textView);
         assert descriptionTextView != null;
-        descriptionTextView.setText(currentBeer.getDescription());
+        descriptionTextView.setText(currentRecipe.getDescription());
 
 
         TextView boilTimeTextView = (TextView) findViewById(R.id.textView3);
         assert boilTimeTextView != null;
-        boilTimeTextView.setText("Boil for " + currentBeer.getTimeInMinutes() + " minutes at " + currentBeer.getTemperatureInFahrenheit() + "F");
+        boilTimeTextView.setText("Boil for " + currentRecipe.getTimeInMinutes() + " minutes at " + currentRecipe.getTemperatureInFahrenheit() + "F");
 
 
         TextView fermentTextView = (TextView) findViewById(R.id.textView4);
         assert fermentTextView != null;
-        fermentTextView.setText("Ferment at " + currentBeer.getFermentTemperature() + "F");
+        fermentTextView.setText("Ferment at " + currentRecipe.getFermentTemperature() + "F");
 
 
         TextView abvTextView = (TextView) findViewById(R.id.textView5);
         assert abvTextView != null;
-        abvTextView.setText(currentBeer.getABVPercent() + "% | " + currentBeer.getIbuValue());
+        abvTextView.setText(currentRecipe.getABVPercent() + "% | " + currentRecipe.getIbuValue());
 
 
         TextView oGravTextView = (TextView) findViewById(R.id.textView7);
         assert oGravTextView != null;
-        oGravTextView.setText("" + currentBeer.getTargetOriginalGravity());
+        oGravTextView.setText("" + currentRecipe.getTargetOriginalGravity());
 
 
         TextView fGravTextView = (TextView) findViewById(R.id.textView8);
         assert fGravTextView != null;
-        fGravTextView.setText(""+currentBeer.getTargetFinalGravity());
+        fGravTextView.setText("" + currentRecipe.getTargetFinalGravity());
     }
 
     public void goTimer(View view){
-        Beer currentRecipe = recipeList.get(positionInRecipeIndex);
         int timerLength = currentRecipe.getTimeInMinutes() * 60;
         Intent timerIntent = new Intent(this, TimerActivity.class);
         Bundle bundle = new Bundle();
-
-        bundle.putInt("recipePosition", positionInRecipeIndex);
-        bundle.putSerializable("Recipe List", (Serializable) recipeList);
-
         bundle.putSerializable("Current Recipe", currentRecipe);
         bundle.putInt("timerLength", timerLength);
         timerIntent.putExtras(bundle);
         startActivity(timerIntent);
+    }
+
+    private void createCurrentRecipe(){
+        Bundle bundle = getIntent().getExtras();
+        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        positionInRecipeIndex = bundle.getInt("recipePosition");
+        currentRecipe = recipeList.get(positionInRecipeIndex);
     }
 }
