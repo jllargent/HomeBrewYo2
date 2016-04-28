@@ -15,13 +15,13 @@ public class IngredientBuilderTest {
     @Before
     public void setUpIngredient(){
         builder = new Ingredient.IngredientBuilder();
-        builder.createHopIngredient();
+        builder.createIngredient();
         builder.buildName("TESTING");
         builder.buildAmount(12);
         builder.buildTimeToAdd("Start");
         testHop = builder.getIngredient();
 
-        builder.createYeastIngredient();
+        builder.createIngredient();
         builder.buildName("testYeast");
         testYeast = builder.getIngredient();
     }

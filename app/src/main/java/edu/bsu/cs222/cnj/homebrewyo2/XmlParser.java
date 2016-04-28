@@ -44,30 +44,70 @@ public class XmlParser {
                 continue;
             }
             currentElement = (Element) currentNode;
-
             beerBuilder.createBeer();
-            beerBuilder.buildName(getElementStringValueByTag("name"));
-            beerBuilder.buildDescription(getElementStringValueByTag("description"));
-            beerBuilder.buildTime(getElementIntValueByTag("time"));
-            beerBuilder.buildTemp(getElementIntValueByTag("temp"));
-            beerBuilder.buildStyle(getElementStringValueByTag("style"));
-            beerBuilder.buildFermentTemp(getElementIntValueByTag("fermtemp"));
-            beerBuilder.buildABVPercent(getElementDoubleValueByTag("abvpercent"));
-            beerBuilder.buildIBUValue(getElementIntValueByTag("ibu"));
-            beerBuilder.buildTargetOriginalGravity(getElementDoubleValueByTag("targetog"));
-            beerBuilder.buildTargetFinalGravity(getElementDoubleValueByTag("targetfg"));
-
-            ingredientBuilder.createIngredient();
-            ingredientBuilder.buildName(getElementStringValueByTag("yeast"));
-            currentIngredient = ingredientBuilder.getIngredient();
-            beerBuilder.buildYeast(currentIngredient);
-            createIngredientStoreInRecipe("malt");
-            createIngredientStoreInRecipe("hop");
-
-
+            parseBeerInformation();
+            parseIngredientInformation();
             currentBeerRecipe = beerBuilder.getBeer();
             beerRecipeList.add(currentBeerRecipe);
         }
+    }
+
+    private void parseIngredientInformation() {
+        ingredientBuilder.createIngredient();
+        ingredientBuilder.buildName(getElementStringValueByTag("yeast"));
+        currentIngredient = ingredientBuilder.getIngredient();
+        beerBuilder.buildYeast(currentIngredient);
+        createIngredientStoreInRecipe("malt");
+        createIngredientStoreInRecipe("hop");
+    }
+
+    private void parseBeerInformation() {
+        parseName();
+        parseDescription();
+        parseTemperature();
+        parseTime();
+        parseStyle();
+        parseFermentingTemperature();
+        parseABV();
+        parseIBU();
+        parseGravityValues();
+    }
+
+    private void parseGravityValues() {
+        beerBuilder.buildTargetOriginalGravity(getElementDoubleValueByTag("targetog"));
+        beerBuilder.buildTargetFinalGravity(getElementDoubleValueByTag("targetfg"));
+    }
+
+    private void parseABV() {
+        beerBuilder.buildABVPercent(getElementDoubleValueByTag("abvpercent"));
+    }
+
+    private void parseIBU(){
+        beerBuilder.buildIBUValue(getElementIntValueByTag("ibu"));
+    }
+
+    private void parseStyle() {
+        beerBuilder.buildStyle(getElementStringValueByTag("style"));
+    }
+
+    private void parseFermentingTemperature(){
+        beerBuilder.buildFermentTemp(getElementIntValueByTag("fermtemp"));
+    }
+
+    private void parseTemperature() {
+        beerBuilder.buildTime(getElementIntValueByTag("time"));
+    }
+
+    private void parseTime(){
+        beerBuilder.buildTemp(getElementIntValueByTag("temp"));
+    }
+
+    private void parseName() {
+        beerBuilder.buildName(getElementStringValueByTag("name"));
+    }
+
+    private void parseDescription(){
+        beerBuilder.buildDescription(getElementStringValueByTag("description"));
     }
 
     public List<BeerRecipe> getBeerRecipeList(){

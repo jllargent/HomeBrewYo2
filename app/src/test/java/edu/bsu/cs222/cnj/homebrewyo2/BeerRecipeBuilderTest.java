@@ -19,17 +19,17 @@ public class BeerRecipeBuilderTest {
         beerBuilder = new BeerRecipe.BeerBuilder();
         ingredientBuilder = new Ingredient.IngredientBuilder();
 
-        ingredientBuilder.createMaltIngredient();
+        ingredientBuilder.createIngredient();
         ingredientBuilder.buildName("TESTMALT");
         testMalt = ingredientBuilder.getIngredient();
-        ingredientBuilder.createMaltIngredient();
+        ingredientBuilder.createIngredient();
         ingredientBuilder.buildName("TESTMALT2");
         secondMalt = ingredientBuilder.getIngredient();
 
-        ingredientBuilder.createHopIngredient();
+        ingredientBuilder.createIngredient();
         ingredientBuilder.buildName("TESTHOP");
         testHop = ingredientBuilder.getIngredient();
-        ingredientBuilder.createHopIngredient();
+        ingredientBuilder.createIngredient();
         ingredientBuilder.buildName("TESTHOP2");
         secondHop = ingredientBuilder.getIngredient();
 
