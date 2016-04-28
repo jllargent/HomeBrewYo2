@@ -93,7 +93,7 @@ public class TimerActivity extends AppCompatActivity {
         int timerLength = currentRecipe.getTimeInMinutes() * 60;
         descriptionTextView.setText(currentRecipe.getName());
 
-        time.setInitialTime(timerLength * 1000);
+        time.setInitialTime(5 * 1000);
         time.setCountDownInterval(countDownInterval);
         time.setCurrentTime(time.getInitialTime());
         fillHopUiInfo();

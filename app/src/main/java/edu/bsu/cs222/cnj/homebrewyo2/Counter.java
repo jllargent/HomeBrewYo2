@@ -10,9 +10,11 @@ public class Counter extends CountDownTimer {
     private TextView viewTime;
     private Context actContext;
     private long milliSecondsLeft;
+    private Time time;
 
     public Counter(Time timeInfo){
         super(timeInfo.getCurrentTime(), timeInfo.getCountDownInterval());
+        time = timeInfo;
         milliSecondsLeft = timeInfo.getCurrentTime();
     }
 
@@ -28,7 +30,11 @@ public class Counter extends CountDownTimer {
     @Override
     public void onTick(long millisUntilFinished) {
         viewTime.setText(convertToReadableTime(millisUntilFinished));
+
         milliSecondsLeft = millisUntilFinished;
+        if(convertToReadableTime(millisUntilFinished).equals(convertToReadableTime(time.getInitialTime() / 2))){
+            Toast.makeText(actContext, R.string.toastAddMiddleHop, Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
