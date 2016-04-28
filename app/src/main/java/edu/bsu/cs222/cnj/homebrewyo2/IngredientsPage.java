@@ -48,9 +48,12 @@ public class IngredientsPage extends AppCompatActivity {
         detailedIngredientList = new ArrayList<>();
         for( int i =0; i < listOfIngredients.size(); i++){
             String s = listOfIngredients.get(i).getName();
-            s += " | " + listOfIngredients.get(i).getAmount() + "g";
+            s += " | " + listOfIngredients.get(i).getAmount();
             if(listOfIngredients.get(i).getTimingToAdd() != null) {
-                s += " | " + listOfIngredients.get(i).getTimingToAdd();
+                s += "g | " + listOfIngredients.get(i).getTimingToAdd();
+            }
+            else{
+                s += "lb";
             }
             detailedIngredientList.add(s);
         }
