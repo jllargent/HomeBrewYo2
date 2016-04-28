@@ -12,7 +12,7 @@ import java.util.List;
 
 public class DisplayRecipesMain extends AppCompatActivity {
 
-    List<Beer> recipeList = new ArrayList<>();
+    List<BeerRecipe> recipeList = new ArrayList<>();
     private String sortingTypeTag;
 
     @Override
@@ -20,7 +20,7 @@ public class DisplayRecipesMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_recipes_main);
         Bundle bundle = getIntent().getExtras();
-        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
+        recipeList = (List<BeerRecipe>) bundle.getSerializable("Recipe List");
     }
 
     public void goRecipeList(View view){

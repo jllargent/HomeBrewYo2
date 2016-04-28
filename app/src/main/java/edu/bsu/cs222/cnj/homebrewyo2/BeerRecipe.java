@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Beer implements Serializable{
+public class BeerRecipe implements Serializable{
     private String name;
     private String description;
     private String style;
@@ -20,67 +20,67 @@ public class Beer implements Serializable{
     private Ingredient yeast;
 
     public static class BeerBuilder{
-        private Beer thisBeer;
+        private BeerRecipe thisBeerRecipe;
 
-        public Beer getBeer(){
-            return thisBeer;
+        public BeerRecipe getBeer(){
+            return thisBeerRecipe;
         }
 
         public void createBeer(){
-            thisBeer = new Beer();
+            thisBeerRecipe = new BeerRecipe();
         }
 
         public void buildName(String name) {
-            thisBeer.name = name;
+            thisBeerRecipe.name = name;
         }
 
         public void buildDescription(String description) {
-            thisBeer.description = description;
+            thisBeerRecipe.description = description;
         }
 
         public void addMalt(Ingredient malt) {
-            thisBeer.malts.add(malt);
+            thisBeerRecipe.malts.add(malt);
         }
 
         public void addHop(Ingredient hop) {
-            thisBeer.hops.add(hop);
+            thisBeerRecipe.hops.add(hop);
         }
 
         public void buildYeast(Ingredient yeast){
-            thisBeer.yeast = yeast;
+            thisBeerRecipe.yeast = yeast;
         }
 
         public void buildTime(int time) {
 
-            thisBeer.time = time;
+            thisBeerRecipe.time = time;
         }
 
         public void buildTemp(int temp) {
-            thisBeer.temperature = temp;
+            thisBeerRecipe.temperature = temp;
         }
 
         public void buildStyle(String style) {
-            thisBeer.style = style;
+            thisBeerRecipe.style = style;
         }
 
         public void buildFermentTemp(int fermentTemp) {
-            thisBeer.fermentTemperature = fermentTemp;
+            thisBeerRecipe.fermentTemperature = fermentTemp;
         }
 
         public void buildABVPercent(double abvPercent) {
-            thisBeer.abvPercent = abvPercent;
+            thisBeerRecipe.abvPercent = abvPercent;
         }
 
         public void buildIBUValue(int ibuValue) {
-            thisBeer.ibuValue = ibuValue;
+            thisBeerRecipe.ibuValue = ibuValue;
         }
 
         public void buildTargetFinalGravity(double targetFinalGravity) {
-            thisBeer.targetFinalGravity = targetFinalGravity;
+            thisBeerRecipe.targetFinalGravity = targetFinalGravity;
         }
 
         public void buildTargetOriginalGravity(double targetOriginalGravity) {
-            thisBeer.targetOriginalGravity = targetOriginalGravity;
+            thisBeerRecipe.targetOriginalGravity = targetOriginalGravity;
         }
     }
 

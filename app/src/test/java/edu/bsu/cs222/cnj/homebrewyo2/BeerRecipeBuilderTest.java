@@ -6,17 +6,17 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-public class BeerBuilderTest {
-    Beer.BeerBuilder beerBuilder;
+public class BeerRecipeBuilderTest {
+    BeerRecipe.BeerBuilder beerBuilder;
     Ingredient.IngredientBuilder ingredientBuilder;
     Ingredient testMalt;
     Ingredient secondMalt;
-    Beer testBeer;
+    BeerRecipe testBeerRecipe;
     Ingredient testHop;
     Ingredient secondHop;
     @Before
     public void setUpBeer(){
-        beerBuilder = new Beer.BeerBuilder();
+        beerBuilder = new BeerRecipe.BeerBuilder();
         ingredientBuilder = new Ingredient.IngredientBuilder();
 
         ingredientBuilder.createMaltIngredient();
@@ -42,97 +42,97 @@ public class BeerBuilderTest {
         beerBuilder.addHop(testHop);
         beerBuilder.addHop(secondHop);
         beerBuilder.buildTime(5);
-        testBeer = beerBuilder.getBeer();
+        testBeerRecipe = beerBuilder.getBeer();
     }
 
     @Test
     public void testBeerExist(){
-        assertNotEquals(null, testBeer);
+        assertNotEquals(null, testBeerRecipe);
     }
 
 
     @Test
     public void testBeerHasName() {
-        assertEquals("test", testBeer.getName());
+        assertEquals("test", testBeerRecipe.getName());
     }
 
     @Test
     public void testBeerHasDescription(){
-        assertEquals("Test Description", testBeer.getDescription());
+        assertEquals("Test Description", testBeerRecipe.getDescription());
     }
 
     @Test
     public void testBeerHasMalt() {
-        assertNotEquals(null, testBeer.getMalts());
+        assertNotEquals(null, testBeerRecipe.getMalts());
     }
 
     @Test
     public void testBeerHasTestMalt() {
-        assertEquals("TESTMALT", testBeer.getMalts().get(0).getName());
+        assertEquals("TESTMALT", testBeerRecipe.getMalts().get(0).getName());
     }
 
     @Test
     public void testBeerHasMultipleMalts() {
-        assertNotEquals(null, testBeer.getMalts().get(1));
+        assertNotEquals(null, testBeerRecipe.getMalts().get(1));
     }
 
     @Test
     public void testBeerHasHop(){
-        assertNotEquals(null, testBeer.getHops());
+        assertNotEquals(null, testBeerRecipe.getHops());
     }
 
     @Test
     public void testBeerHasTestHop() {
-        assertEquals("TESTHOP", testBeer.getHops().get(0).getName());
+        assertEquals("TESTHOP", testBeerRecipe.getHops().get(0).getName());
     }
 
     @Test
     public void testBeerHasMultipleHops() {
-        assertNotEquals(null, testBeer.getHops().get(1));
+        assertNotEquals(null, testBeerRecipe.getHops().get(1));
     }
 
     @Test
     public void testBeerHasTime(){
-        assertNotEquals(null, testBeer.getTimeInMinutes());
+        assertNotEquals(null, testBeerRecipe.getTimeInMinutes());
     }
 
     @Test
     public void testBeerTime_5Minutes() {
-        assertEquals(5, testBeer.getTimeInMinutes());
+        assertEquals(5, testBeerRecipe.getTimeInMinutes());
     }
 
     @Test
     public void testBeerHasTemp() {
-        assertNotEquals(null, testBeer.getTemperatureInFahrenheit());
+        assertNotEquals(null, testBeerRecipe.getTemperatureInFahrenheit());
     }
 
     @Test
     public void testBeerHasStyle(){
-        assertNotEquals(null, testBeer.getStyle());
+        assertNotEquals(null, testBeerRecipe.getStyle());
     }
 
     @Test
     public void testBeerHasFermentTemp(){
-        assertNotEquals(null, testBeer.getFermentTemperature());
+        assertNotEquals(null, testBeerRecipe.getFermentTemperature());
     }
 
     @Test
     public void testBeerHasABVPercent(){
-        assertNotEquals(null, testBeer.getABVPercent());
+        assertNotEquals(null, testBeerRecipe.getABVPercent());
     }
 
     @Test
     public void testBeerHasIBUValue(){
-        assertNotEquals(null, testBeer.getIbuValue());
+        assertNotEquals(null, testBeerRecipe.getIbuValue());
     }
 
     @Test
     public void testBeerHasTargetFinalGravity(){
-        assertNotEquals(null, testBeer.getTargetFinalGravity());
+        assertNotEquals(null, testBeerRecipe.getTargetFinalGravity());
     }
 
     @Test
     public void testBeerHasTargetOriginalGravity(){
-        assertNotEquals(null, testBeer.getTargetOriginalGravity());
+        assertNotEquals(null, testBeerRecipe.getTargetOriginalGravity());
     }
 }

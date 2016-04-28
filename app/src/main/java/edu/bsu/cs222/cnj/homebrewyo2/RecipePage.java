@@ -6,14 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RecipePage extends AppCompatActivity {
 
-    private int positionInRecipeIndex;
-    private List<Beer> recipeList = new ArrayList<>();
-    private Beer currentRecipe;
+    private BeerRecipe currentRecipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +72,8 @@ public class RecipePage extends AppCompatActivity {
 
     private void createCurrentRecipe(){
         Bundle bundle = getIntent().getExtras();
-        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
-        positionInRecipeIndex = bundle.getInt("recipePosition");
+        List<BeerRecipe> recipeList = (List<BeerRecipe>) bundle.getSerializable("Recipe List");
+        int positionInRecipeIndex = bundle.getInt("recipePosition");
         currentRecipe = recipeList.get(positionInRecipeIndex);
     }
 

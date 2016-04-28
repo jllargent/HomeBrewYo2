@@ -11,7 +11,7 @@ import java.util.List;
 
 public class IngredientsPage extends AppCompatActivity {
 
-    private Beer currentRecipe;
+    private BeerRecipe currentRecipe;
     private List<String> detailedIngredientList;
 
     @Override
@@ -67,7 +67,7 @@ public class IngredientsPage extends AppCompatActivity {
 
     private void createCurrentRecipe(){
         Bundle bundle = getIntent().getExtras();
-        currentRecipe = (Beer) bundle.getSerializable("Current Recipe");
+        currentRecipe = (BeerRecipe) bundle.getSerializable("Current Recipe");
     }
 
     private void createPage(){

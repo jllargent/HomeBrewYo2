@@ -16,7 +16,7 @@ import javax.xml.parsers.ParserConfigurationException;
 public class MainActivity extends AppCompatActivity {
 
     NewXmlParser parser;
-    ArrayList<Beer> recipeList = new ArrayList<>();
+    ArrayList<BeerRecipe> recipeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             runParser();
-            recipeList = (ArrayList<Beer>) parser.getBeerList();
+            recipeList = (ArrayList<BeerRecipe>) parser.getBeerRecipeList();
         }catch(Exception e){
         }
     }

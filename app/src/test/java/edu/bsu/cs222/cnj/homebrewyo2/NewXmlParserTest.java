@@ -18,7 +18,7 @@ public class NewXmlParserTest {
 
 
     NewXmlParser parser;
-    List<Beer> recipeList;
+    List<BeerRecipe> recipeList;
 
 
     @Before
@@ -26,7 +26,7 @@ public class NewXmlParserTest {
         File xmlFile = new File("src/main/res/raw/testbeerrecipes.xml");
         URL input = xmlFile.toURI().toURL();
         parser = new NewXmlParser(input.openStream());
-        recipeList = parser.getBeerList();
+        recipeList = parser.getBeerRecipeList();
 
     }
 
@@ -93,7 +93,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testBadPixieStyle(){
-        assertEquals("Wheat Beer", recipeList.get(0).getStyle());
+        assertEquals("Wheat BeerRecipe", recipeList.get(0).getStyle());
     }
 
     @Test
@@ -123,7 +123,7 @@ public class NewXmlParserTest {
 
     @Test
     public void testThatThereIsABeerArrayList(){
-        assertNotEquals(null, parser.beerList);
+        assertNotEquals(null, parser.beerRecipeList);
     }
 
     @Test

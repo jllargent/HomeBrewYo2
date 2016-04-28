@@ -16,7 +16,7 @@ import java.util.List;
 
 public class RecipeListActivity extends AppCompatActivity {
 
-    List<Beer> recipeList;
+    List<BeerRecipe> recipeList;
     List<String> beerNamesWithTags;
     int position;
     String sortingTagType;
@@ -27,7 +27,7 @@ public class RecipeListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_recipe_scrollable);
         Bundle bundle = getIntent().getExtras();
-        recipeList = (ArrayList<Beer>) bundle.getSerializable("Recipe List");
+        recipeList = (ArrayList<BeerRecipe>) bundle.getSerializable("Recipe List");
         sortingTagType = bundle.getString("Sorting Tag");
         createTitleOfPage();
         fillListWithBeerNames();

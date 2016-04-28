@@ -25,12 +25,12 @@ public class NewXmlParser{
 
     private int i = 0;
 
-    private Beer.BeerBuilder beerBuilder = new Beer.BeerBuilder();
-    private Beer currentBeer;
+    private BeerRecipe.BeerBuilder beerBuilder = new BeerRecipe.BeerBuilder();
+    private BeerRecipe currentBeerRecipe;
 
     private Ingredient.IngredientBuilder ingredientBuilder = new Ingredient.IngredientBuilder();
 
-    public List<Beer> beerList = new ArrayList();
+    public List<BeerRecipe> beerRecipeList = new ArrayList();
     private Element currentElement;
 
     public NewXmlParser(InputStream input) throws IOException, SAXException, ParserConfigurationException {
@@ -81,13 +81,13 @@ public class NewXmlParser{
             }while(i < currentElement.getElementsByTagName("hopingredient").getLength());
 
 
-            currentBeer = beerBuilder.getBeer();
-            beerList.add(currentBeer);
+            currentBeerRecipe = beerBuilder.getBeer();
+            beerRecipeList.add(currentBeerRecipe);
         }
     }
 
-    public List<Beer> getBeerList(){
-        return new ArrayList<>(beerList);
+    public List<BeerRecipe> getBeerRecipeList(){
+        return new ArrayList<>(beerRecipeList);
     }
 
     private String getElementStringValueByTag(String tag){
