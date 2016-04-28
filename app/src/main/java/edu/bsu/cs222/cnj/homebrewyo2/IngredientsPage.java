@@ -64,12 +64,9 @@ public class IngredientsPage extends AppCompatActivity {
 
     private void createCurrentRecipe(){
         Bundle bundle = getIntent().getExtras();
-        List<Beer> recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
-        int positionInRecipeIndex = bundle.getInt("recipePosition");
-        if (recipeList != null) {
-            currentRecipe = recipeList.get(positionInRecipeIndex);
-        }
+        currentRecipe = (Beer) bundle.getSerializable("Current Recipe");
     }
+
     private void createPage(){
         setContentView(R.layout.activity_ingredients);
     }

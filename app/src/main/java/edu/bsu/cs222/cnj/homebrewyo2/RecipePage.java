@@ -16,6 +16,7 @@ public class RecipePage extends AppCompatActivity {
 
 
     List<Beer> recipeList = new ArrayList<>();
+    Beer currentBeer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,21 +25,22 @@ public class RecipePage extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
         positionInRecipeIndex = bundle.getInt("recipePosition");
-        fillUIInformation(positionInRecipeIndex);
+        currentBeer = recipeList.get(positionInRecipeIndex);
+        fillUIInformation();
     }
 
     public void goIngredients(View view){
         Intent recipeStyleIntent = new Intent(this, IngredientsPage.class);
         Bundle bundle = new Bundle();
         bundle.putInt("recipePosition", positionInRecipeIndex);
-        bundle.putSerializable("Recipe List", (Serializable) recipeList);
+        bundle.putSerializable("Current Recipe", currentBeer);
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
     }
 
     //TODO: Clean Up DRY Violation
-    public void fillUIInformation(int positionInRecipeIndex) {
-        Beer currentBeer = recipeList.get(positionInRecipeIndex);
+    public void fillUIInformation() {
+
         setContentView(R.layout.activity_recipe);
         TextView nameTextView = (TextView) findViewById(R.id.textView16);
         assert nameTextView != null;
