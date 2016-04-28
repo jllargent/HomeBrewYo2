@@ -80,17 +80,17 @@ public class RecipeListActivity extends AppCompatActivity {
     }
     private void addDurationTagIfNeeded(int index){
         if(sortingTagType.equals("Duration In Minutes")){
-            tag = Integer.toString(recipeList.get(index).getTimeInMinutes()) + "mins | " ;
+            tag = Integer.toString(recipeList.get(index).getTimeInMinutes()) + " mins | " ;
         }
     }
     private void addIBUValueTagIfNeeded(int index){
         if(sortingTagType.equals("IBU Value")){
-            tag = "IBU:" + Integer.toString(recipeList.get(index).getIbuValue()) + " | " ;
+            tag = "IBU: " + Integer.toString(recipeList.get(index).getIbuValue()) + " | " ;
         }
     }
     private void addABVTagIfNeeded(int index){
         if(sortingTagType.equals("ABV Percent")){
-            tag = "ABV:" + Double.toString(recipeList.get(index).getABVPercent()) + "% | " ;
+            tag = "ABV: " + Double.toString(recipeList.get(index).getABVPercent()) + "% | " ;
         }
     }
 
