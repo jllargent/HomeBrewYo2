@@ -15,39 +15,39 @@
             <malts>
                 <maltIngredient>
                     <maltName>Wheat</maltName>
-                    <maltweight>5.5</maltweight>
+                    <maltAmount>5.5</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>4.54</maltweight>
+                    <maltAmount>4.54</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>First Gold</hopsname>
-                    <hopsamount>18.75</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>First Gold</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Sorachi Ace</hopsname>
-                    <hopsamount>16.25</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Crushed Juniper Berries</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Lemon Peel</hopsname>
-                    <hopsamount>18.8</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>First Gold</hopName>
+                    <hopAmount>18.75</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>First Gold</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Sorachi Ace</hopName>
+                    <hopAmount>16.25</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Crushed Juniper Berries</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Lemon Peel</hopName>
+                    <hopAmount>18.8</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
         <picture>@drawable/badpixie</picture>
@@ -66,45 +66,45 @@
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>8.40</maltweight>
+                    <maltAmount>8.40</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal</maltName>
-                    <maltweight>0.41</maltweight>
+                    <maltAmount>0.41</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Roasted Barley</maltName>
-                    <maltweight>0.69</maltweight>
+                    <maltAmount>0.69</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Black</maltName>
-                    <maltweight>0.28</maltweight>
+                    <maltAmount>0.28</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Amber</maltName>
-                    <maltweight>0.69</maltweight>
+                    <maltAmount>0.69</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Flaked Oats</maltName>
-                    <maltweight>0.55</maltweight>
+                    <maltAmount>0.55</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>Bravo</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Bramling Cross</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Middle</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Challenger</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Middle</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>Bravo</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Bramling Cross</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Middle</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Challenger</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Middle</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
         <picture>@drawable/brixtonporter</picture>
@@ -123,52 +123,52 @@
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>16.52</maltweight>
+                    <maltAmount>16.52</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal</maltName>
-                    <maltweight>1.38</maltweight>
+                    <maltAmount>1.38</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Chocolate</maltName>
-                    <maltweight>0.69</maltweight>
+                    <maltAmount>0.69</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Roast Barley</maltName>
-                    <maltweight>0.69</maltweight>
+                    <maltAmount>0.69</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>Chinook</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Galena</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Galena</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>First Gold</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Coffee</hopsname>
-                    <hopsamount>9.4</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Coffee</hopsname>
-                    <hopsamount>9.4</hopsamount>
-                    <hopstime>Dry Hop</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>Chinook</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Galena</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Galena</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>First Gold</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Coffee</hopName>
+                    <hopAmount>9.4</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Coffee</hopName>
+                    <hopAmount>9.4</hopAmount>
+                    <hopTime>Dry Hop</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
         <picture>@drawable/coffeeimp</picture>
@@ -187,57 +187,57 @@
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>9.9</maltweight>
+                    <maltAmount>9.9</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Munich</maltName>
-                    <maltweight>1.10</maltweight>
+                    <maltAmount>1.10</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Amber</maltName>
-                    <maltweight>0.11</maltweight>
+                    <maltAmount>0.11</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal</maltName>
-                    <maltweight>0.18</maltweight>
+                    <maltAmount>0.18</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>Amarillo</hopsname>
-                    <hopsamount>30</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Amarillo</hopsname>
-                    <hopsamount>10</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Bobek</hopsname>
-                    <hopsamount>10</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Guarana Powder</hopsname>
-                    <hopsamount>6</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Kola Nut Powder</hopsname>
-                    <hopsamount>6</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Poppy Seed</hopsname>
-                    <hopsamount>6</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Heather Honey</hopsname>
-                    <hopsamount>100</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>Amarillo</hopName>
+                    <hopAmount>30</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Amarillo</hopName>
+                    <hopAmount>10</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Bobek</hopName>
+                    <hopAmount>10</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Guarana Powder</hopName>
+                    <hopAmount>6</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Kola Nut Powder</hopName>
+                    <hopAmount>6</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Poppy Seed</hopName>
+                    <hopAmount>6</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Heather Honey</hopName>
+                    <hopAmount>100</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Safale US-05</yeast>
         <picture>@drawable/dogma</picture>
@@ -256,43 +256,43 @@
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale Maris Otter</maltName>
-                    <maltweight>8.3</maltweight>
+                    <maltAmount>8.3</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Caramalt</maltName>
-                    <maltweight>0.7</maltweight>
+                    <maltAmount>0.7</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Munich</maltName>
-                    <maltweight>0.7</maltweight>
+                    <maltAmount>0.7</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>Cascade</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Saaz</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Cascade</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Motueka</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Chinook</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>Cascade</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Saaz</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Cascade</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Motueka</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Chinook</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Saflager S189</yeast>
         <picture>@drawable/hoprocker</picture>
@@ -311,42 +311,42 @@
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>8.95</maltweight>
+                    <maltAmount>8.95</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Caramalt</maltName>
-                    <maltweight>0.69</maltweight>
+                    <maltAmount>0.69</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Crystal 120</maltName>
-                    <maltweight>0.5</maltweight>
+                    <maltAmount>0.5</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal 350</maltName>
-                    <maltweight>0.2</maltweight>
+                    <maltAmount>0.2</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>Amarillo</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Amarillo</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Middle</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Bramling Cross</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Amarillo</hopsname>
-                    <hopsamount>50</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>Amarillo</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Amarillo</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Middle</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Bramling Cross</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Amarillo</hopName>
+                    <hopAmount>50</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
         <picture>@drawable/physics</picture>
@@ -365,50 +365,50 @@
 		<malts>
 			<maltIngredient>
 				<maltName>Extra Pale</maltName>
-				<maltweight>11.7</maltweight>
+				<maltAmount>11.7</maltAmount>
 			</maltIngredient>
 		</malts>	
 		<hops>
-			<hopingredient>
-				<hopsname>Ahtanum</hopsname>
-				<hopsamount>17.5</hopsamount>
-				<hopstime>Start</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Chinook</hopsname>
-				<hopsamount>15</hopsamount>
-				<hopstime>Start</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Crystal</hopsname>
-				<hopsamount>17.5</hopsamount>
-				<hopstime>Middle</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Chinook</hopsname>
-				<hopsamount>17.5</hopsamount>
-				<hopstime>Middle</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Ahtanum</hopsname>
-				<hopsamount>17.5</hopsamount>
-				<hopstime>End</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Chinook</hopsname>
-				<hopsamount>27.5</hopsamount>
-				<hopstime>End</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Crystal</hopsname>
-				<hopsamount>17.5</hopsamount>
-				<hopstime>End</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Motueka</hopsname>
-				<hopsamount>17.5</hopsamount>
-				<hopstime>End</hopstime>
-			</hopingredient>
+			<hopIngredient>
+				<hopName>Ahtanum</hopName>
+				<hopAmount>17.5</hopAmount>
+				<hopTime>Start</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Chinook</hopName>
+				<hopAmount>15</hopAmount>
+				<hopTime>Start</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Crystal</hopName>
+				<hopAmount>17.5</hopAmount>
+				<hopTime>Middle</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Chinook</hopName>
+				<hopAmount>17.5</hopAmount>
+				<hopTime>Middle</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Ahtanum</hopName>
+				<hopAmount>17.5</hopAmount>
+				<hopTime>End</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Chinook</hopName>
+				<hopAmount>27.5</hopAmount>
+				<hopTime>End</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Crystal</hopName>
+				<hopAmount>17.5</hopAmount>
+				<hopTime>End</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Motueka</hopName>
+				<hopAmount>17.5</hopAmount>
+				<hopTime>End</hopTime>
+			</hopIngredient>
 		</hops>
 		<yeast>Wyeast 1056 - American Ale</yeast>
 	<picture>@drawable/punk</picture>
@@ -427,45 +427,45 @@
             <malts>
                 <maltIngredient>
                     <maltName>Maris Otter</maltName>
-                    <maltweight>8.5</maltweight>
+                    <maltAmount>8.5</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>Amarillo</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Simcoe</hopsname>
-                    <hopsamount>20</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Amarillo</hopsname>
-                    <hopsamount>25</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Crystal</hopsname>
-                    <hopsamount>20</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Liberty</hopsname>
-                    <hopsamount>20</hopsamount>
-                    <hopstime>End</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Simcoe</hopsname>
-                    <hopsamount>50</hopsamount>
-                    <hopstime>Dry Hop</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Amarillo</hopsname>
-                    <hopsamount>50</hopsamount>
-                    <hopstime>Dry Hop</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>Amarillo</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Simcoe</hopName>
+                    <hopAmount>20</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Amarillo</hopName>
+                    <hopAmount>25</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Crystal</hopName>
+                    <hopAmount>20</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Liberty</hopName>
+                    <hopAmount>20</hopAmount>
+                    <hopTime>End</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Simcoe</hopName>
+                    <hopAmount>50</hopAmount>
+                    <hopTime>Dry Hop</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Amarillo</hopName>
+                    <hopAmount>50</hopAmount>
+                    <hopTime>Dry Hop</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
         <picture>@drawable/peroxidepunk</picture>
@@ -484,28 +484,28 @@
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>12.39</maltweight>
+                    <maltAmount>12.39</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Wheat</maltName>
-                    <maltweight>15.14</maltweight>
+                    <maltAmount>15.14</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Crystal</maltName>
-                    <maltweight>1.37</maltweight>
+                    <maltAmount>1.37</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>Columbus</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Hersbrucker</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Middle</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>Columbus</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Hersbrucker</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Middle</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Wyeast 3333 German Wheat</yeast>
         <picture>@drawable/rabiator</picture>
@@ -524,59 +524,59 @@
 		<malts>
 			<maltIngredient>
 				<maltName>Extra Pale - Maris Otter</maltName>
-				<maltweight>11.8</maltweight>
+				<maltAmount>11.8</maltAmount>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Dark Crystal 350-400</maltName>
-				<maltweight>1.6</maltweight>
+				<maltAmount>1.6</maltAmount>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Carafa Special Malt Type 3</maltName>
-				<maltweight>0.4</maltweight>
+				<maltAmount>0.4</maltAmount>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Caramalt</maltName>
-				<maltweight>1.2</maltweight>
+				<maltAmount>1.2</maltAmount>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Chocolate</maltName>
-				<maltweight>0.6</maltweight>
+				<maltAmount>0.6</maltAmount>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Wheat</maltName>
-				<maltweight>0.8</maltweight>
+				<maltAmount>0.8</maltAmount>
 			</maltIngredient>
 			<maltIngredient>
 				<maltName>Flaked Oats</maltName>
-				<maltweight>1.2</maltweight>
+				<maltAmount>1.2</maltAmount>
 			</maltIngredient>
 		</malts>
 		<hops>
-			<hopingredient>
-				<hopsname>Columbus</hopsname>
-				<hopsamount>14.3</hopsamount>
-				<hopstime>Start</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Galena</hopsname>
-				<hopsamount>14.3</hopsamount>
-				<hopstime>Start</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Galena</hopsname>
-				<hopsamount>21.4</hopsamount>
-				<hopstime>Start</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Cascade</hopsname>
-				<hopsamount>21.4</hopsamount>
-				<hopstime>End</hopstime>
-			</hopingredient>
-			<hopingredient>
-				<hopsname>Columbus</hopsname>
-				<hopsamount>21.4</hopsamount>
-				<hopstime>End</hopstime>
-			</hopingredient>
+			<hopIngredient>
+				<hopName>Columbus</hopName>
+				<hopAmount>14.3</hopAmount>
+				<hopTime>Start</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Galena</hopName>
+				<hopAmount>14.3</hopAmount>
+				<hopTime>Start</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Galena</hopName>
+				<hopAmount>21.4</hopAmount>
+				<hopTime>Start</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Cascade</hopName>
+				<hopAmount>21.4</hopAmount>
+				<hopTime>End</hopTime>
+			</hopIngredient>
+			<hopIngredient>
+				<hopName>Columbus</hopName>
+				<hopAmount>21.4</hopAmount>
+				<hopTime>End</hopTime>
+			</hopIngredient>
 		</hops>
 		<yeast>Wyeast 1272 - American Ale II</yeast>
     <picture>@drawable/riptide</picture>

@@ -16,16 +16,9 @@ public class Ingredient implements Serializable {
             return thisIngredient;
         }
 
-        public void createMaltIngredient(){
+        public void createIngredient(){
             thisIngredient = new Ingredient();
         }
-        public void createHopIngredient(){
-            thisIngredient = new Ingredient();
-        }
-        public void createYeastIngredient() {
-            thisIngredient = new Ingredient();
-        }
-
         public void buildName(String name){
             thisIngredient.name = name;
         }

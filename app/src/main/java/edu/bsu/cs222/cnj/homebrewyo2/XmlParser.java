@@ -32,6 +32,7 @@ public class XmlParser {
 
     public List<BeerRecipe> beerRecipeList = new ArrayList();
     private Element currentElement;
+    Ingredient currentIngredient;
 
     public XmlParser(InputStream input) throws IOException, SAXException, ParserConfigurationException {
         this.xmlData = input;
@@ -56,29 +57,12 @@ public class XmlParser {
             beerBuilder.buildTargetOriginalGravity(getElementDoubleValueByTag("targetog"));
             beerBuilder.buildTargetFinalGravity(getElementDoubleValueByTag("targetfg"));
 
-            ingredientBuilder.createYeastIngredient();
+            ingredientBuilder.createIngredient();
             ingredientBuilder.buildName(getElementStringValueByTag("yeast"));
-            Ingredient currentIngredient = ingredientBuilder.getIngredient();
+            currentIngredient = ingredientBuilder.getIngredient();
             beerBuilder.buildYeast(currentIngredient);
-            i = 0;
-            do{
-                ingredientBuilder.createMaltIngredient();
-                ingredientBuilder.buildName(getElementStringValueByTag("maltName"));
-                ingredientBuilder.buildAmount(getElementDoubleValueByTag("maltweight"));
-                currentIngredient = ingredientBuilder.getIngredient();
-                beerBuilder.addMalt(currentIngredient);
-                i++;
-            }while(i < currentElement.getElementsByTagName("maltIngredient").getLength());
-            i=0;
-            do{
-                ingredientBuilder.createHopIngredient();
-                ingredientBuilder.buildName(getElementStringValueByTag("hopsname"));
-                ingredientBuilder.buildAmount(getElementDoubleValueByTag("hopsamount"));
-                ingredientBuilder.buildTimeToAdd(getElementStringValueByTag("hopstime"));
-                currentIngredient = ingredientBuilder.getIngredient();
-                beerBuilder.addHop(currentIngredient);
-                i++;
-            }while(i < currentElement.getElementsByTagName("hopingredient").getLength());
+            createIngredientStoreInRecipe("malt");
+            createIngredientStoreInRecipe("hop");
 
 
             currentBeerRecipe = beerBuilder.getBeer();
@@ -112,5 +96,30 @@ public class XmlParser {
         return currentNode.getNodeType() != Node.ELEMENT_NODE;
     }
 
+    private void createIngredientStoreInRecipe(String typeOfIngredient){
+        i = 0;
+        do{
+            ingredientBuilder.createIngredient();
+            ingredientBuilder.buildName(getElementStringValueByTag(typeOfIngredient + "Name"));
+            ingredientBuilder.buildAmount(getElementDoubleValueByTag(typeOfIngredient + "Amount"));
+            ifHopIngredient(typeOfIngredient);
+            ifMaltIngredient(typeOfIngredient);
+            i++;
+        }while(i < currentElement.getElementsByTagName(typeOfIngredient + "Ingredient").getLength());
+    }
 
+    private void ifHopIngredient(String typeOfIngredient){
+        if(typeOfIngredient.equals("hop")) {
+            ingredientBuilder.buildTimeToAdd(getElementStringValueByTag(typeOfIngredient + "Time"));
+            currentIngredient = ingredientBuilder.getIngredient();
+            beerBuilder.addHop(currentIngredient);
+        }
+    }
+    private void ifMaltIngredient(String typeOfIngredient){
+        if(typeOfIngredient.equals("malt")){
+            currentIngredient = ingredientBuilder.getIngredient();
+            beerBuilder.addMalt(currentIngredient);
+        }
+    }
 }
+

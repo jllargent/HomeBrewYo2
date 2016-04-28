@@ -16,39 +16,39 @@
         <malts>
             <maltIngredient>
                 <maltName>Wheat</maltName>
-                <maltweight>5.5</maltweight>
+                <maltAmount>5.5</maltAmount>
             </maltIngredient>
             <maltIngredient>
                 <maltName>Extra Pale</maltName>
-                <maltweight>4.54</maltweight>
+                <maltAmount>4.54</maltAmount>
             </maltIngredient>
         </malts>
         <hops>
-            <hopingredient>
-                <hopsname>First Gold</hopsname>
-                <hopsamount>18.75</hopsamount>
-                <hopstime>Start</hopstime>
-            </hopingredient>
-            <hopingredient>
-                <hopsname>First Gold</hopsname>
-                <hopsamount>25</hopsamount>
-                <hopstime>End</hopstime>
-            </hopingredient>
-            <hopingredient>
-                <hopsname>Sorachi Ace</hopsname>
-                <hopsamount>16.25</hopsamount>
-                <hopstime>End</hopstime>
-            </hopingredient>
-            <hopingredient>
-                <hopsname>Crushed Juniper Berries</hopsname>
-                <hopsamount>12.5</hopsamount>
-                <hopstime>End</hopstime>
-            </hopingredient>
-            <hopingredient>
-                <hopsname>Lemon Peel</hopsname>
-                <hopsamount>18.8</hopsamount>
-                <hopstime>End</hopstime>
-            </hopingredient>
+            <hopIngredient>
+                <hopName>First Gold</hopName>
+                <hopAmount>18.75</hopAmount>
+                <hopTime>Start</hopTime>
+            </hopIngredient>
+            <hopIngredient>
+                <hopName>First Gold</hopName>
+                <hopAmount>25</hopAmount>
+                <hopTime>End</hopTime>
+            </hopIngredient>
+            <hopIngredient>
+                <hopName>Sorachi Ace</hopName>
+                <hopAmount>16.25</hopAmount>
+                <hopTime>End</hopTime>
+            </hopIngredient>
+            <hopIngredient>
+                <hopName>Crushed Juniper Berries</hopName>
+                <hopAmount>12.5</hopAmount>
+                <hopTime>End</hopTime>
+            </hopIngredient>
+            <hopIngredient>
+                <hopName>Lemon Peel</hopName>
+                <hopAmount>18.8</hopAmount>
+                <hopTime>End</hopTime>
+            </hopIngredient>
         </hops>
         <yeast>Wyeast 1056 - American Ale</yeast>
     </ingredients>
@@ -69,45 +69,45 @@
             <malts>
                 <maltIngredient>
                     <maltName>Extra Pale</maltName>
-                    <maltweight>8.40</maltweight>
+                    <maltAmount>8.40</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Dark Crystal</maltName>
-                    <maltweight>0.41</maltweight>
+                    <maltAmount>0.41</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Roasted Barley</maltName>
-                    <maltweight>0.69</maltweight>
+                    <maltAmount>0.69</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Black</maltName>
-                    <maltweight>0.28</maltweight>
+                    <maltAmount>0.28</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Amber</maltName>
-                    <maltweight>0.69</maltweight>
+                    <maltAmount>0.69</maltAmount>
                 </maltIngredient>
                 <maltIngredient>
                     <maltName>Flaked Oats</maltName>
-                    <maltweight>0.55</maltweight>
+                    <maltAmount>0.55</maltAmount>
                 </maltIngredient>
             </malts>
             <hops>
-                <hopingredient>
-                    <hopsname>Bravo</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Start</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Bramling Cross</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Middle</hopstime>
-                </hopingredient>
-                <hopingredient>
-                    <hopsname>Challenger</hopsname>
-                    <hopsamount>12.5</hopsamount>
-                    <hopstime>Middle</hopstime>
-                </hopingredient>
+                <hopIngredient>
+                    <hopName>Bravo</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Start</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Bramling Cross</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Middle</hopTime>
+                </hopIngredient>
+                <hopIngredient>
+                    <hopName>Challenger</hopName>
+                    <hopAmount>12.5</hopAmount>
+                    <hopTime>Middle</hopTime>
+                </hopIngredient>
             </hops>
             <yeast>Wyeast 1056 - American Ale</yeast>
         </ingredients>
