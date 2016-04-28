@@ -11,7 +11,7 @@ public class Ingredient implements Serializable {
 
     public static class IngredientBuilder {
 
-        public Ingredient thisIngredient;
+        private Ingredient thisIngredient;
 
         public Ingredient getIngredient(){
             return thisIngredient;

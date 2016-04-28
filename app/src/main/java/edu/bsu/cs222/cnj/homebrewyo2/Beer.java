@@ -20,7 +20,7 @@ public class Beer implements Serializable{
     private Ingredient yeast;
 
     public static class BeerBuilder{
-        public Beer thisBeer;
+        private Beer thisBeer;
 
         public Beer getBeer(){
             return thisBeer;

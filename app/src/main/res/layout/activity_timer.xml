@@ -81,7 +81,8 @@
             android:layout_height="101dp"
             android:id="@+id/listView3"
             android:layout_gravity="left"
-            android:foregroundGravity="left" />
+            android:foregroundGravity="left"
+            android:textAlignment="gravity" />
     </LinearLayout>
 
 </RelativeLayout>

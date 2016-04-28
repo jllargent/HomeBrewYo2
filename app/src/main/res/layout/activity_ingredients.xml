@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView9"
+        android:id="@+id/titleOfPage"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.05"
         android:src="@drawable/ingredients"/>
@@ -33,17 +33,16 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/Malts"
-                android:id="@+id/textView11"
+                android:id="@+id/maltTitle"
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal" />
 
             <ListView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/listView"
+                android:id="@+id/listViewMalts"
                 android:textAlignment="gravity"
                 android:layout_gravity="center_horizontal"
-                android:scrollIndicators="start|end|right"
                 android:foregroundGravity="fill_horizontal|center"
                 android:clickable="true" />
         </LinearLayout>
@@ -59,14 +58,14 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/hops"
-                android:id="@+id/textView13"
+                android:id="@+id/hopTitle"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold" />
 
             <ListView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/listView2" />
+                android:id="@+id/listViewHops" />
         </LinearLayout>
 
         <LinearLayout
@@ -80,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/yeast"
-                android:id="@+id/textView14"
+                android:id="@+id/yeastTitle"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold" />
 
@@ -89,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/textView15"
+                android:id="@+id/yeastTextView"
                 android:layout_gravity="center_horizontal" />
         </LinearLayout>
     </LinearLayout>
