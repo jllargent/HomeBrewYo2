@@ -27,13 +27,18 @@ public class DisplayRecipesMain extends AppCompatActivity {
         Intent recipeNameIntent = new Intent(this, RecipeListActivity.class);
         findSortingType(view);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("Recipe List", (Serializable) recipeList);
-        bundle.putString("Sorting Tag", sortingTypeTag);
+        placeInfoIntoBundle(bundle);
         recipeNameIntent.putExtras(bundle);
         startActivity(recipeNameIntent);
     }
+
     private void findSortingType(View view) {
         Button button = (Button) view;
         sortingTypeTag = button.getText().toString();
+    }
+
+    private void placeInfoIntoBundle(Bundle bundle){
+        bundle.putSerializable("Recipe List", (Serializable) recipeList);
+        bundle.putString("Sorting Tag", sortingTypeTag);
     }
 }

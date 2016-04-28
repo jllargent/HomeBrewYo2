@@ -6,7 +6,6 @@ public class Ingredient implements Serializable {
 
     private String name;
     private double amount;
-    private String type;
     private String timingToAdd;
 
     public static class IngredientBuilder {
@@ -19,16 +18,12 @@ public class Ingredient implements Serializable {
 
         public void createMaltIngredient(){
             thisIngredient = new Ingredient();
-            thisIngredient.type = "Malt";
         }
-
         public void createHopIngredient(){
             thisIngredient = new Ingredient();
-            thisIngredient.type = "Hop";
         }
         public void createYeastIngredient() {
             thisIngredient = new Ingredient();
-            thisIngredient.type = "Yeast";
         }
 
         public void buildName(String name){
@@ -52,10 +47,6 @@ public class Ingredient implements Serializable {
 
     public double getAmount(){
         return this.amount;
-    }
-
-    public String getType(){
-        return this.type;
     }
 
     public String getTimingToAdd() {
