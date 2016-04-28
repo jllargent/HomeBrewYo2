@@ -14,7 +14,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-public class XmlParserTest {
+public class XmlParserTest{
 
     XmlParser parser;
     List<BeerRecipe> recipeList;
@@ -25,17 +25,10 @@ public class XmlParserTest {
         URL input = xmlFile.toURI().toURL();
         parser = new XmlParser(input.openStream());
         recipeList = parser.getBeerRecipeList();
-
     }
 
     @Test
     public void testHasXmlFile(){
-        for(int i = 0; i < recipeList.size(); i++){
-            System.out.println(recipeList.get(i).getName());
-            for(int x = 0; x < recipeList.get(i).getMalts().size(); x++){
-                System.out.println("\t\t" + recipeList.get(i).getMalts().get(x).getName());
-            }
-        }
         assertNotEquals(null, parser.xmlData);
     }
 
