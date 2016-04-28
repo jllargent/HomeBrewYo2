@@ -11,6 +11,14 @@
     <string name="setTimer">SET TIMER</string>
     <string name="startTimer">START</string>
     <string name="stopTimer">STOP</string>
+    <string name="descriptionTitle">Description:</string>
+    <string name="descriptionExample">Description Of Beer</string>
+    <string name="styleExample">Style Type</string>
+    <string name="styleTitle">Style:</string>
+    <string name="beerTitle">Name Of Beer</string>
+    <string name="abvIBUExample">ABV: #% | IBU #</string>
+    <string name="beerImage">beerImage</string>
+    <string name="ingredientImage">ingredientImage</string>
 
 
 </resources>

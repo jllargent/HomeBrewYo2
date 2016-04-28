@@ -32,6 +32,21 @@ public class RecipePage extends AppCompatActivity {
         startActivity(recipeStyleIntent);
     }
 
+    private void createCurrentRecipe(){
+        Bundle bundle = getIntent().getExtras();
+        List<BeerRecipe> recipeList = (List<BeerRecipe>) bundle.getSerializable("Recipe List");
+        int positionInRecipeIndex = bundle.getInt("recipePosition");
+        if (recipeList != null) {
+            currentRecipe = recipeList.get(positionInRecipeIndex);
+        }
+    }
+
+    private void storeCurrentRecipeInIntent(Intent intent){
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Current Recipe", currentRecipe);
+        intent.putExtras(bundle);
+    }
+
     private void fillUIInformation() {
         setNameText();
         setStyleText();
@@ -98,20 +113,4 @@ public class RecipePage extends AppCompatActivity {
         text += currentRecipe.getTargetFinalGravity();
         currentTextView.setText(text);
     }
-
-    private void createCurrentRecipe(){
-        Bundle bundle = getIntent().getExtras();
-        List<BeerRecipe> recipeList = (List<BeerRecipe>) bundle.getSerializable("Recipe List");
-        int positionInRecipeIndex = bundle.getInt("recipePosition");
-        if (recipeList != null) {
-            currentRecipe = recipeList.get(positionInRecipeIndex);
-        }
-    }
-
-    private void storeCurrentRecipeInIntent(Intent intent){
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("Current Recipe", currentRecipe);
-        intent.putExtras(bundle);
-    }
-
 }
