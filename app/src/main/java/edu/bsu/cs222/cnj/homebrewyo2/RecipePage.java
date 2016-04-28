@@ -32,7 +32,6 @@ public class RecipePage extends AppCompatActivity {
     public void goIngredients(View view){
         Intent recipeStyleIntent = new Intent(this, IngredientsPage.class);
         Bundle bundle = new Bundle();
-        bundle.putInt("recipePosition", positionInRecipeIndex);
         bundle.putSerializable("Current Recipe", currentBeer);
         recipeStyleIntent.putExtras(bundle);
         startActivity(recipeStyleIntent);
@@ -85,6 +84,7 @@ public class RecipePage extends AppCompatActivity {
         bundle.putInt("recipePosition", positionInRecipeIndex);
         bundle.putSerializable("Recipe List", (Serializable) recipeList);
 
+        bundle.putSerializable("Current Recipe", currentRecipe);
         bundle.putInt("timerLength", timerLength);
         timerIntent.putExtras(bundle);
         startActivity(timerIntent);

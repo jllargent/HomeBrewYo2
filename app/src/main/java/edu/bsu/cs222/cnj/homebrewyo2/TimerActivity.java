@@ -92,13 +92,11 @@ public class TimerActivity extends AppCompatActivity {
     public void setUpTimerForCurrentBeer(){
         setContentView(R.layout.activity_timer);
         Bundle bundle = getIntent().getExtras();
-        recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
-        int positionInRecipeIndex = bundle.getInt("recipePosition");
 
-        currentRecipe = recipeList.get(positionInRecipeIndex);
+        currentRecipe = (Beer) bundle.getSerializable("Current Recipe");
         TextView descriptionTextView = (TextView) findViewById(R.id.textView10);
         assert descriptionTextView != null;
-        descriptionTextView.setText(recipeList.get(positionInRecipeIndex).getName());
+        descriptionTextView.setText(currentRecipe.getName());
 
         time.setInitialTime(bundle.getInt("timerLength") * 1000);
         time.setCountDownInterval(countDownInterval);
