@@ -35,49 +35,57 @@ public class TimerActivity extends AppCompatActivity {
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ifButtonIsStartChangeToRestart();
-                ifButtonisResumeChangeToRestart();
-                ifButtonisRestartChangeToStart();
+                if(isCurrentButtonTitle("START")){
+                    startTicking();
+                }
+                else if(isCurrentButtonTitle("RESUME")){
+                    resumeTicking();
+                }
+                else if(isCurrentButtonTitle("RESTART")) {
+                    restartTimerToInitialTime();
+                }
+                decrement.setActContext(TimerActivity.this);
+                decrement.setViewTime(textViewTime);
             }
         });
 
         buttonStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decrement.cancel();
-                time.setCurrentTime(decrement.getMilliSecondsLeft());
-                buttonStart.setText("RESUME");
+                pauseTimer();
             }
         });
     }
 
-    private void ifButtonIsStartChangeToRestart(){
-        if(isCurrentButtonTitle("START")){
+    private void startTicking(){
             decrement.start();
             buttonStart.setText("RESTART");
-        }
     }
-    private void ifButtonisResumeChangeToRestart(){
+    private void resumeTicking(){
         if(isCurrentButtonTitle("RESUME")){
             decrement = new Counter(time);
             decrement.start();
             buttonStart.setText("RESTART");
         }
     }
-    private void ifButtonisRestartChangeToStart(){
-        if(isCurrentButtonTitle("RESTART")) {
+    private void restartTimerToInitialTime(){
             decrement.cancel();
             time.setCurrentTime(time.getInitialTime());
             decrement = new Counter(time);
             decrement.cancel();
             buttonStart.setText("START");
-        }
     }
+    private void pauseTimer(){
+        decrement.cancel();
+        time.setCurrentTime(decrement.getMilliSecondsLeft());
+        buttonStart.setText("RESUME");
+    }
+
     public TextView getTimerText(){
         return textViewTime;
     }
 
-    boolean isCurrentButtonTitle(String titleOfButton){
+    private boolean isCurrentButtonTitle(String titleOfButton){
         return buttonStart.getText().equals(titleOfButton);
     }
 
