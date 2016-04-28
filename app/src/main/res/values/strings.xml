@@ -27,6 +27,7 @@
     <string name="toastAddMiddleHop">Time To Add Middle Hops!!</string>
     <string name="restartTimer">RESTART</string>
     <string name="resumeTimer">RESUME</string>
+    <string name="mainRecipeButton">BEER RECIPES</string>
 
 
 </resources>

@@ -10,25 +10,32 @@
     tools:context="edu.bsu.cs222.cnj.homebrewyo2.MainActivity"
     android:background="#d3af60">
 
-    <ImageButton
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/recipeButton"
         android:src="@drawable/recipes"
         android:onClick="goRecipes"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="72dp"
-        android:background="#00ffffff" />
+        android:background="#00ffffff"
+        android:text="@string/mainRecipeButton"
+        android:textSize="45sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:textColor="#000000"
+        android:textStyle="bold|italic"
+        android:textAlignment="center" />
 
     <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
         android:id="@+id/timerButton"
-        android:layout_below="@+id/recipeButton"
         android:src="@drawable/stopwatch"
-        android:layout_alignStart="@+id/recipeButton"
-        android:layout_marginTop="56dp"
         android:background="#00ffffff"
-        android:onClick="goTimers"/>
+        android:onClick="goTimers"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="clock" />
 </RelativeLayout>
