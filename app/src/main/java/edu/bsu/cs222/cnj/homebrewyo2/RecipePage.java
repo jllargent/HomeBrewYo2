@@ -11,6 +11,7 @@ import java.util.List;
 public class RecipePage extends AppCompatActivity {
 
     private BeerRecipe currentRecipe;
+    private TextView currentTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,50 +32,80 @@ public class RecipePage extends AppCompatActivity {
         startActivity(recipeStyleIntent);
     }
 
+    private void fillUIInformation() {
+        setNameText();
+        setStyleText();
+        setDescriptionText();
+        setBoilTimeText();
+        setFermentText();
+        setABVAndIBUText();
+        setOriginalGravityText();
+        setFinalGravityText();
+    }
 
-    //TODO: Clean Up DRY Violation
-    public void fillUIInformation() {
+    private void setNameText(){
+        currentTextView = (TextView) findViewById(R.id.beerTitle);
+        assert currentTextView != null;
+        currentTextView.setText(currentRecipe.getName());
+    }
 
-        setContentView(R.layout.activity_recipe);
-        TextView nameTextView = (TextView) findViewById(R.id.textView16);
-        assert nameTextView != null;
-        nameTextView.setText(currentRecipe.getName());
+    private void setStyleText(){
+        currentTextView = (TextView) findViewById(R.id.styleText);
+        assert currentTextView != null;
+        currentTextView.setText(" " + currentRecipe.getStyle());
+    }
 
-        TextView descriptionTextView = (TextView) findViewById(R.id.textView);
-        assert descriptionTextView != null;
-        descriptionTextView.setText(currentRecipe.getDescription());
+    private void setDescriptionText(){
+        currentTextView = (TextView) findViewById(R.id.description);
+        assert currentTextView != null;
+        currentTextView.setText(currentRecipe.getDescription());
+    }
 
+    private void setBoilTimeText(){
+        currentTextView = (TextView) findViewById(R.id.boilText);
+        String s = "Boil for " + currentRecipe.getTimeInMinutes() + " minutes at ";
+        s += currentRecipe.getTemperatureInFahrenheit() + "F";
+        assert currentTextView != null;
+        currentTextView.setText(s);
+    }
 
-        TextView boilTimeTextView = (TextView) findViewById(R.id.textView3);
-        assert boilTimeTextView != null;
-        boilTimeTextView.setText("Boil for " + currentRecipe.getTimeInMinutes() + " minutes at " + currentRecipe.getTemperatureInFahrenheit() + "F");
+    private void setFermentText(){
+        currentTextView = (TextView) findViewById(R.id.fermentText);
+        assert currentTextView != null;
+        currentTextView.setText("Ferment at " + currentRecipe.getFermentTemperature() + "F");
+    }
 
+    private void setABVAndIBUText(){
+        currentTextView = (TextView) findViewById(R.id.abvText);
+        assert currentTextView != null;
+        String abv = "ABV: " + currentRecipe.getABVPercent() + "% | ";
+        String ibu = "IBU: " + currentRecipe.getIbuValue();
+        currentTextView.setText(abv + ibu);
+    }
 
-        TextView fermentTextView = (TextView) findViewById(R.id.textView4);
-        assert fermentTextView != null;
-        fermentTextView.setText("Ferment at " + currentRecipe.getFermentTemperature() + "F");
+    private void setOriginalGravityText(){
+        currentTextView = (TextView) findViewById(R.id.oGravityText);
+        assert currentTextView != null;
+        String text = "Original Gravity: ";
+        text += currentRecipe.getTargetOriginalGravity();
+        currentTextView.setText(text);
+    }
 
-
-        TextView abvTextView = (TextView) findViewById(R.id.textView5);
-        assert abvTextView != null;
-        abvTextView.setText(currentRecipe.getABVPercent() + "% | " + currentRecipe.getIbuValue());
-
-
-        TextView oGravTextView = (TextView) findViewById(R.id.textView7);
-        assert oGravTextView != null;
-        oGravTextView.setText("" + currentRecipe.getTargetOriginalGravity());
-
-
-        TextView fGravTextView = (TextView) findViewById(R.id.textView8);
-        assert fGravTextView != null;
-        fGravTextView.setText("" + currentRecipe.getTargetFinalGravity());
+    private void setFinalGravityText(){
+        currentTextView = (TextView) findViewById(R.id.fGravityText);
+        assert currentTextView != null;
+        String text = "Final Gravity: ";
+        text += currentRecipe.getTargetFinalGravity();
+        currentTextView.setText(text);
     }
 
     private void createCurrentRecipe(){
         Bundle bundle = getIntent().getExtras();
         List<BeerRecipe> recipeList = (List<BeerRecipe>) bundle.getSerializable("Recipe List");
         int positionInRecipeIndex = bundle.getInt("recipePosition");
-        currentRecipe = recipeList.get(positionInRecipeIndex);
+        if (recipeList != null) {
+            currentRecipe = recipeList.get(positionInRecipeIndex);
+        }
     }
 
     private void storeCurrentRecipeInIntent(Intent intent){

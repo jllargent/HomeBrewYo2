@@ -36,7 +36,7 @@ public class RecipeListActivity extends AppCompatActivity {
     }
 
     private void createTitleOfPage(){
-        TextView sortingTitle = (TextView) findViewById(R.id.textView);
+        TextView sortingTitle = (TextView) findViewById(R.id.description);
         assert sortingTitle != null;
         sortingTitle.setText(sortingTagType);
     }
