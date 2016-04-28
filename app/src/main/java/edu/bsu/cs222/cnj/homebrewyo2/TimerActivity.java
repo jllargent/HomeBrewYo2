@@ -94,7 +94,7 @@ public class TimerActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         currentRecipe = (BeerRecipe) bundle.getSerializable("Current Recipe");
-        TextView descriptionTextView = (TextView) findViewById(R.id.textView10);
+        TextView descriptionTextView = (TextView) findViewById(R.id.beerTitle);
         assert descriptionTextView != null;
         timerLength = currentRecipe.getTimeInMinutes() * 60;
         descriptionTextView.setText(currentRecipe.getName());
@@ -108,7 +108,7 @@ public class TimerActivity extends AppCompatActivity {
     public void setUpPage(){
         buttonStart = (Button) findViewById(R.id.btnStart);
         buttonStop = (Button) findViewById(R.id.btnStop);
-        textViewTime = (TextView) findViewById(R.id.timer1);
+        textViewTime = (TextView) findViewById(R.id.timer);
         decrement.setViewTime(textViewTime);
     }
     public void fillHopUiInfo(){
@@ -120,7 +120,7 @@ public class TimerActivity extends AppCompatActivity {
             s += " | " + listOfHopIngredients.get(i).getTimingToAdd();
             detailedIngredientList.add(s);
         }
-        ListView listviewMalts = (ListView) findViewById(R.id.listView3);
+        ListView listviewMalts = (ListView) findViewById(R.id.hopList);
         assert listviewMalts != null;
         listviewMalts.setClickable(true);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview_layout, R.id.checkBox, detailedIngredientList);
