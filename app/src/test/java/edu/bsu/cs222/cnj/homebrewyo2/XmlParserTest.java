@@ -16,10 +16,8 @@ import static org.junit.Assert.assertNotEquals;
 
 public class XmlParserTest {
 
-
     XmlParser parser;
     List<BeerRecipe> recipeList;
-
 
     @Before
     public void setUpParser() throws IOException, ParserConfigurationException, SAXException {

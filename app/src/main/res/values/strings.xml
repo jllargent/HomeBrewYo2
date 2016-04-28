@@ -11,6 +11,8 @@
     <string name="setTimer">SET TIMER</string>
     <string name="startTimer">START</string>
     <string name="stopTimer">STOP</string>
+    <string name="doneTimer">DONE</string>
+    <string name="toastBeerDone">Your beer is done brewing.</string>
     <string name="descriptionTitle">Description:</string>
     <string name="descriptionExample">Description Of Beer</string>
     <string name="styleExample">Style Type</string>

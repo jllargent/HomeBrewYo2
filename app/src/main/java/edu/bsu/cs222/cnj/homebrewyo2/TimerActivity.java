@@ -18,13 +18,12 @@ public class TimerActivity extends AppCompatActivity {
     private Counter decrement;
     private Button buttonStart;
     private Button buttonStop;
-    long countDownInterval = 1000;
+    private long countDownInterval = 1000;
     private BeerRecipe currentRecipe;
+    private int timerLength;
 
-    int timerLength;
     public TimerActivity(){
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +61,7 @@ public class TimerActivity extends AppCompatActivity {
             decrement.start();
             buttonStart.setText("RESTART");
     }
+
     private void resumeTicking(){
         if(isCurrentButtonTitle("RESUME")){
             decrement = new Counter(time);
@@ -69,6 +69,7 @@ public class TimerActivity extends AppCompatActivity {
             buttonStart.setText("RESTART");
         }
     }
+
     private void restartTimerToInitialTime(){
             decrement.cancel();
             time.setCurrentTime(time.getInitialTime());
@@ -76,14 +77,11 @@ public class TimerActivity extends AppCompatActivity {
             decrement.cancel();
             buttonStart.setText("START");
     }
+
     private void pauseTimer(){
         decrement.cancel();
         time.setCurrentTime(decrement.getMilliSecondsLeft());
         buttonStart.setText("RESUME");
-    }
-
-    public TextView getTimerText(){
-        return textViewTime;
     }
 
     private boolean isCurrentButtonTitle(String titleOfButton){
@@ -105,12 +103,14 @@ public class TimerActivity extends AppCompatActivity {
         fillHopUiInfo();
         decrement = new Counter(time);
     }
+
     public void setUpPage(){
         buttonStart = (Button) findViewById(R.id.btnStart);
         buttonStop = (Button) findViewById(R.id.btnStop);
         textViewTime = (TextView) findViewById(R.id.timer);
         decrement.setViewTime(textViewTime);
     }
+
     public void fillHopUiInfo(){
         List<Ingredient> listOfHopIngredients = currentRecipe.getHops();
         ArrayList<String> detailedIngredientList = new ArrayList<>();

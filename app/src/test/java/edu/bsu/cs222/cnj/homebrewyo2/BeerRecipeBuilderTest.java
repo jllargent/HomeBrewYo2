@@ -14,6 +14,7 @@ public class BeerRecipeBuilderTest {
     BeerRecipe testBeerRecipe;
     Ingredient testHop;
     Ingredient secondHop;
+
     @Before
     public void setUpBeer(){
         beerBuilder = new BeerRecipe.BeerBuilder();

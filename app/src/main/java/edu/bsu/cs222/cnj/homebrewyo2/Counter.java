@@ -1,17 +1,13 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-
-import android.app.ProgressDialog;
 import android.content.Context;
-
 import android.os.CountDownTimer;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class Counter extends CountDownTimer {
+
     private TextView viewTime;
-    private ProgressDialog timerDialog;
     private Context actContext;
     private long milliSecondsLeft;
 
@@ -24,9 +20,11 @@ public class Counter extends CountDownTimer {
         viewTime = textView;
         textView.setText(convertToReadableTime(milliSecondsLeft));
     }
+
     public void setActContext(Context context){
         actContext = context;
     }
+
     @Override
     public void onTick(long millisUntilFinished) {
         viewTime.setText(convertToReadableTime(millisUntilFinished));
@@ -35,12 +33,10 @@ public class Counter extends CountDownTimer {
 
     @Override
     public void onFinish() {
-        viewTime.setText("DONE");
-        Toast.makeText(actContext, "Your beer is done brewing.", Toast.LENGTH_LONG).show();
+        viewTime.setText(R.string.doneTimer);
+        Toast.makeText(actContext, R.string.toastBeerDone, Toast.LENGTH_LONG).show();
     }
-    public void setMilliSecondsLeft(long milliSeconds){
-        milliSecondsLeft = milliSeconds;
-    }
+
     public long getMilliSecondsLeft(){
         return milliSecondsLeft;
     }
