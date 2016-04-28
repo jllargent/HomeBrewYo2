@@ -23,13 +23,17 @@ public class RecipePage extends AppCompatActivity {
         fillUIInformation();
     }
 
+    public void goTimer(View view){
+        Intent timerIntent = new Intent(this, TimerActivity.class);
+        storeCurrentRecipeInIntent(timerIntent);
+        startActivity(timerIntent);
+    }
     public void goIngredients(View view){
         Intent recipeStyleIntent = new Intent(this, IngredientsPage.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("Current Recipe", currentRecipe);
-        recipeStyleIntent.putExtras(bundle);
+        storeCurrentRecipeInIntent(recipeStyleIntent);
         startActivity(recipeStyleIntent);
     }
+
 
     //TODO: Clean Up DRY Violation
     public void fillUIInformation() {
@@ -69,20 +73,17 @@ public class RecipePage extends AppCompatActivity {
         fGravTextView.setText("" + currentRecipe.getTargetFinalGravity());
     }
 
-    public void goTimer(View view){
-        int timerLength = currentRecipe.getTimeInMinutes() * 60;
-        Intent timerIntent = new Intent(this, TimerActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("Current Recipe", currentRecipe);
-        bundle.putInt("timerLength", timerLength);
-        timerIntent.putExtras(bundle);
-        startActivity(timerIntent);
-    }
-
     private void createCurrentRecipe(){
         Bundle bundle = getIntent().getExtras();
         recipeList = (List<Beer>) bundle.getSerializable("Recipe List");
         positionInRecipeIndex = bundle.getInt("recipePosition");
         currentRecipe = recipeList.get(positionInRecipeIndex);
     }
+
+    private void storeCurrentRecipeInIntent(Intent intent){
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Current Recipe", currentRecipe);
+        intent.putExtras(bundle);
+    }
+
 }
