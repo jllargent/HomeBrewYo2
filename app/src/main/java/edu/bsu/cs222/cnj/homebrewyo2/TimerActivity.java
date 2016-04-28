@@ -1,5 +1,6 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -52,6 +53,15 @@ public class TimerActivity extends AppCompatActivity {
         });
     }
 
+    public void goMainPage(View view){
+        Intent mainIntent = new Intent(this, MainActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("Current Recipe", currentRecipe);
+        bundle.putSerializable("Current Time", time);
+        mainIntent.putExtras(bundle);
+        startActivity(mainIntent);
+    }
+
     private void startTicking(){
             decrement.start();
             buttonStart.setText(R.string.restartTimer);
@@ -93,7 +103,7 @@ public class TimerActivity extends AppCompatActivity {
         int timerLength = currentRecipe.getTimeInMinutes() * 60;
         descriptionTextView.setText(currentRecipe.getName());
 
-        time.setInitialTime(5 * 1000);
+        time.setInitialTime(timerLength  * 1000);
         time.setCountDownInterval(countDownInterval);
         time.setCurrentTime(time.getInitialTime());
         fillHopUiInfo();

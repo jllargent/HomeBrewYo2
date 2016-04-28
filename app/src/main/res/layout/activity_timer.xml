@@ -11,8 +11,8 @@
     android:background="#d3af60">
 
     <ImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/clockImage"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -79,11 +79,22 @@
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="101dp"
+            android:layout_height="58dp"
             android:id="@+id/hopList"
-            android:layout_gravity="left"
             android:foregroundGravity="left"
             android:textAlignment="gravity" />
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/houseView"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/house"
+        android:layout_alignParentStart="false"
+        android:clickable="true"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignParentEnd="true"
+        android:onClick="goMainPage" />
 
 </RelativeLayout>

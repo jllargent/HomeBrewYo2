@@ -1,6 +1,8 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-public class Time {
+import java.io.Serializable;
+
+public class Time implements Serializable{
 
     private long initialTime = 0;
     private long currentTime;
