@@ -16,23 +16,17 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 public class XmlParser {
-
     private final String RECIPE_TAG = "recipe";
-
     public InputStream xmlData;
     public Document document;
     private NodeList recipeNodeList;
-
-    private int i = 0;
-
     private BeerRecipe.BeerBuilder beerBuilder = new BeerRecipe.BeerBuilder();
     private BeerRecipe currentBeerRecipe;
-
     private Ingredient.IngredientBuilder ingredientBuilder = new Ingredient.IngredientBuilder();
-
     public List<BeerRecipe> beerRecipeList = new ArrayList();
     private Element currentElement;
-    Ingredient currentIngredient;
+    private Ingredient currentIngredient;
+    private int i = 0;
 
     public XmlParser(InputStream input) throws IOException, SAXException, ParserConfigurationException {
         this.xmlData = input;
@@ -117,9 +111,11 @@ public class XmlParser {
     private String getElementStringValueByTag(String tag){
          return currentElement.getElementsByTagName(tag).item(i).getTextContent();
     }
+
     private int getElementIntValueByTag(String tag){
         return Integer.parseInt(currentElement.getElementsByTagName(tag).item(i).getTextContent());
     }
+
     private double getElementDoubleValueByTag(String tag){
         return Double.parseDouble(currentElement.getElementsByTagName(tag).item(i).getTextContent());
     }
