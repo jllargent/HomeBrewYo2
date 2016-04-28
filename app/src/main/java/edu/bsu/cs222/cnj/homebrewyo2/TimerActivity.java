@@ -29,6 +29,7 @@ public class TimerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        createPageLayout();
         setUpTimerForCurrentBeer();
         setUpPage();
 
@@ -90,7 +91,6 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     public void setUpTimerForCurrentBeer(){
-        setContentView(R.layout.activity_timer);
         Bundle bundle = getIntent().getExtras();
 
         currentRecipe = (BeerRecipe) bundle.getSerializable("Current Recipe");
@@ -127,6 +127,10 @@ public class TimerActivity extends AppCompatActivity {
         listviewMalts.setClickable(true);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.listview_layout, R.id.checkBox, detailedIngredientList);
         listviewMalts.setAdapter(arrayAdapter);
+    }
+
+    private void createPageLayout(){
+        setContentView(R.layout.activity_timer);
     }
 
 }

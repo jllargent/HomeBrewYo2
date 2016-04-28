@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        createPageLayout();
 
         try {
             runParser();
@@ -52,5 +52,8 @@ public class MainActivity extends AppCompatActivity {
         parser = new XmlParser(resource);
     }
 
+    private void createPageLayout(){
+        setContentView(R.layout.activity_main);
+    }
 
 }

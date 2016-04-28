@@ -18,7 +18,7 @@ public class DisplayRecipesMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_recipes_main);
+        createPageLayout();
         Bundle bundle = getIntent().getExtras();
         recipeList = (List<BeerRecipe>) bundle.getSerializable("Recipe List");
     }
@@ -40,5 +40,9 @@ public class DisplayRecipesMain extends AppCompatActivity {
     private void placeInfoIntoBundle(Bundle bundle){
         bundle.putSerializable("Recipe List", (Serializable) recipeList);
         bundle.putString("Sorting Tag", sortingTypeTag);
+    }
+
+    private void createPageLayout(){
+        setContentView(R.layout.activity_display_recipes_main);
     }
 }

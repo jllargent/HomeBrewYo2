@@ -16,7 +16,7 @@ public class RecipePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipe);
+        createPageLayout();
         createCurrentRecipe();
         fillUIInformation();
     }
@@ -32,6 +32,9 @@ public class RecipePage extends AppCompatActivity {
         startActivity(recipeStyleIntent);
     }
 
+    private void createPageLayout(){
+        setContentView(R.layout.activity_recipe);
+    }
     private void createCurrentRecipe(){
         Bundle bundle = getIntent().getExtras();
         List<BeerRecipe> recipeList = (List<BeerRecipe>) bundle.getSerializable("Recipe List");

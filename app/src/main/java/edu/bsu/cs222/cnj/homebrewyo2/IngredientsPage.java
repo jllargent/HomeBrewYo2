@@ -17,7 +17,7 @@ public class IngredientsPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        createPage();
+        createPageLayout();
         createCurrentRecipe();
         fillMaltUiInfo();
         fillHopUiInfo();
@@ -70,7 +70,7 @@ public class IngredientsPage extends AppCompatActivity {
         currentRecipe = (BeerRecipe) bundle.getSerializable("Current Recipe");
     }
 
-    private void createPage(){
+    private void createPageLayout(){
         setContentView(R.layout.activity_ingredients);
     }
 }
