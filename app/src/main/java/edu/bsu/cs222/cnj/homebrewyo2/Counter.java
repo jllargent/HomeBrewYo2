@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class Counter extends CountDownTimer {
     private TextView viewTime;
-    private ProgressDialog timerDialog;
     private Context actContext;
     private long milliSecondsLeft;
 
@@ -24,9 +23,11 @@ public class Counter extends CountDownTimer {
         viewTime = textView;
         textView.setText(convertToReadableTime(milliSecondsLeft));
     }
+
     public void setActContext(Context context){
         actContext = context;
     }
+
     @Override
     public void onTick(long millisUntilFinished) {
         viewTime.setText(convertToReadableTime(millisUntilFinished));
@@ -38,9 +39,7 @@ public class Counter extends CountDownTimer {
         viewTime.setText("DONE");
         Toast.makeText(actContext, "Your beer is done brewing.", Toast.LENGTH_LONG).show();
     }
-    public void setMilliSecondsLeft(long milliSeconds){
-        milliSecondsLeft = milliSeconds;
-    }
+
     public long getMilliSecondsLeft(){
         return milliSecondsLeft;
     }

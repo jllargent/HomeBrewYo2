@@ -62,6 +62,7 @@ public class TimerActivity extends AppCompatActivity {
             decrement.start();
             buttonStart.setText("RESTART");
     }
+
     private void resumeTicking(){
         if(isCurrentButtonTitle("RESUME")){
             decrement = new Counter(time);
@@ -69,6 +70,7 @@ public class TimerActivity extends AppCompatActivity {
             buttonStart.setText("RESTART");
         }
     }
+
     private void restartTimerToInitialTime(){
             decrement.cancel();
             time.setCurrentTime(time.getInitialTime());
@@ -76,6 +78,7 @@ public class TimerActivity extends AppCompatActivity {
             decrement.cancel();
             buttonStart.setText("START");
     }
+
     private void pauseTimer(){
         decrement.cancel();
         time.setCurrentTime(decrement.getMilliSecondsLeft());
@@ -105,12 +108,14 @@ public class TimerActivity extends AppCompatActivity {
         fillHopUiInfo();
         decrement = new Counter(time);
     }
+
     public void setUpPage(){
         buttonStart = (Button) findViewById(R.id.btnStart);
         buttonStop = (Button) findViewById(R.id.btnStop);
         textViewTime = (TextView) findViewById(R.id.timer);
         decrement.setViewTime(textViewTime);
     }
+
     public void fillHopUiInfo(){
         List<Ingredient> listOfHopIngredients = currentRecipe.getHops();
         ArrayList<String> detailedIngredientList = new ArrayList<>();
