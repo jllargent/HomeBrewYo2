@@ -18,13 +18,12 @@ public class TimerActivity extends AppCompatActivity {
     private Counter decrement;
     private Button buttonStart;
     private Button buttonStop;
-    long countDownInterval = 1000;
+    private long countDownInterval = 1000;
     private BeerRecipe currentRecipe;
+    private int timerLength;
 
-    int timerLength;
     public TimerActivity(){
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,10 +82,6 @@ public class TimerActivity extends AppCompatActivity {
         decrement.cancel();
         time.setCurrentTime(decrement.getMilliSecondsLeft());
         buttonStart.setText("RESUME");
-    }
-
-    public TextView getTimerText(){
-        return textViewTime;
     }
 
     private boolean isCurrentButtonTitle(String titleOfButton){
