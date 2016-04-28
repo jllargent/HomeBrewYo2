@@ -1,6 +1,7 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
 public class Time {
+
     private long initialTime = 0;
     private long currentTime;
     private long countDownInterval;

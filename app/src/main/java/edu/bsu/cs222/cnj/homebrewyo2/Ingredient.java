@@ -19,10 +19,10 @@ public class Ingredient implements Serializable {
         public void createIngredient(){
             thisIngredient = new Ingredient();
         }
+
         public void buildName(String name){
             thisIngredient.name = name;
         }
-
 
         public void buildAmount(double weightInPounds){
             thisIngredient.amount = weightInPounds;
@@ -31,7 +31,6 @@ public class Ingredient implements Serializable {
         public void buildTimeToAdd(String timing){
             thisIngredient.timingToAdd = timing;
         }
-
     }
 
     public String getName(){

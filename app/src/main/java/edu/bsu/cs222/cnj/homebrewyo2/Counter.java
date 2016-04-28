@@ -1,15 +1,12 @@
 package edu.bsu.cs222.cnj.homebrewyo2;
 
-
-import android.app.ProgressDialog;
 import android.content.Context;
-
 import android.os.CountDownTimer;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class Counter extends CountDownTimer {
+
     private TextView viewTime;
     private Context actContext;
     private long milliSecondsLeft;
