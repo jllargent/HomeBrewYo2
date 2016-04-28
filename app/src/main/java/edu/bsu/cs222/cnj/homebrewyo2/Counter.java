@@ -33,8 +33,8 @@ public class Counter extends CountDownTimer {
 
     @Override
     public void onFinish() {
-        viewTime.setText("DONE");
-        Toast.makeText(actContext, "Your beer is done brewing.", Toast.LENGTH_LONG).show();
+        viewTime.setText(R.string.doneTimer);
+        Toast.makeText(actContext, R.string.toastBeerDone, Toast.LENGTH_LONG).show();
     }
 
     public long getMilliSecondsLeft(){
