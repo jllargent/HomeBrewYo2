@@ -22,10 +22,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         createPageLayout();
-
         try {
             runParser();
-            recipeList = (ArrayList<BeerRecipe>) parser.getBeerRecipeList();
+            createRecipeList();
         }catch(Exception e){
         }
     }
@@ -55,5 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private void createPageLayout(){
         setContentView(R.layout.activity_main);
     }
-
+    private void createRecipeList(){
+        recipeList = (ArrayList<BeerRecipe>) parser.getBeerRecipeList();
+    }
 }
